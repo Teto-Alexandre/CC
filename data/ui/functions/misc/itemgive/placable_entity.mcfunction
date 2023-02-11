@@ -1,0 +1,1 @@
+give @p minecraft:evoker_spawn_egg{tmw:{egg:12},display:{Name:'{"text":"ダメージテスター","italic":false,"color":"white"}',Lore:['[{"text":" 近くでしゃがむと回収できる","color":"gray","italic":false}]','[{"text":" 25m以内にダメージを表示する","color":"gray","italic":false}]']},EntityTag:{id:"minecraft:bat",Silent:1b,NoAI:1b,Tags:["ui_egg","ui_12"]}}
