@@ -13,6 +13,9 @@
 # 座標設定
     scoreboard players set $temp ui_temp 1
     scoreboard players set $temp2 ui_temp 1
+    scoreboard players operation $reach2 ui_temp = @s ui_use2
+    scoreboard players remove $reach2 ui_temp 10
+    scoreboard players operation $reach2 ui_temp > #0 ui_num
     execute rotated ~ 0 run function ui:tmw/237/attack/roll/set
 
 # 発射音
