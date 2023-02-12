@@ -78,19 +78,19 @@ execute if entity @s[scores={ui_tmw_id2=1..}] run function ui:tmw/237/anti.offha
 # バースト数
 # 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4
 #tellraw @a[scores={ui_use1=1..}] [{"score":{"objective":"ui_temp","name":"$bursttype"}}]
-execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/burst
-execute if score $bursttype ui_temp matches 2 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/burst
-execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst3
-execute if score $bursttype ui_temp matches 3 if score $burst ui_temp matches 1.. as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/burst3.stop
-execute if score $bursttype ui_temp matches 4 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst4
-execute if score $bursttype ui_temp matches 5 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst5
-execute if score $bursttype ui_temp matches 6 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/burst
-execute if score $bursttype ui_temp matches 7 run function ui:tmw/237/burst/burst7
-execute if score $bursttype ui_temp matches 8 run function ui:tmw/237/burst/burst8
-execute if score $bursttype ui_temp matches 9 run function ui:tmw/237/burst/burst9
-execute if score $bursttype ui_temp matches 10 run function ui:tmw/237/burst/burst10
-execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/burst/burst11
-execute if score $bursttype ui_temp matches 12 run function ui:tmw/237/burst/burst12
+execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/1
+execute if score $bursttype ui_temp matches 2 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/1
+execute if score $bursttype ui_temp matches 3 run function ui:tmw/237/burst/3_master
+execute if score $bursttype ui_temp matches 4 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/4
+execute if score $bursttype ui_temp matches 5 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/5
+execute if score $bursttype ui_temp matches 6 as @s[scores={ui_use2=1..}] run function ui:tmw/237/burst/1
+execute if score $bursttype ui_temp matches 7 run function ui:tmw/237/burst/7
+execute if score $bursttype ui_temp matches 8 run function ui:tmw/237/burst/8
+execute if score $bursttype ui_temp matches 9 run function ui:tmw/237/burst/9
+execute if score $bursttype ui_temp matches 10 run function ui:tmw/237/burst/10
+execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/burst/11
+execute if score $bursttype ui_temp matches 12 run function ui:tmw/237/burst/12
+execute if score $bursttype ui_temp matches 13..14 run function ui:tmw/237/burst/13
 
 # 常駐効果
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
