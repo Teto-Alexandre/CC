@@ -21,5 +21,11 @@
 # ジェットパック
     execute if score $activator ui_temp matches 455 run function ui:tmw/237/activator/time/455
 
+# 回数使用他
+    execute if score $activator ui_temp matches 456..458 run function ui:tmw/237/activator/time/456_
+
+# ロケッティア
+    execute if score $activator ui_temp matches 459 run function ui:tmw/237/activator/time/459
+
 # ナイスダマ
     execute if score $activator ui_temp matches 460 run function ui:tmw/237/activator/time/460

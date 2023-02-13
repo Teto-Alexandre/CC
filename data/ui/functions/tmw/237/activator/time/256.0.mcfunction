@@ -24,5 +24,5 @@
     effect clear @s resistance
 
 # スペシャル解除
-    scoreboard players set $subtime ui_temp 0
-    scoreboard players set $sptime ui_temp 0
+    execute if score $activator_type ui_temp matches 1 run scoreboard players set $subtime ui_temp 0
+    execute if score $activator_type ui_temp matches 2 run scoreboard players set $sptime ui_temp 0

@@ -1,5 +1,8 @@
 # スペシャルウェポン時間経過
 
+#
+    scoreboard players set $activator_type ui_temp 2
+
 # 隔離
     scoreboard players operation $time ui_temp = $sptime ui_temp
     scoreboard players operation $activator ui_temp = $sptype ui_temp

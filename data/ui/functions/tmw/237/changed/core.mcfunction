@@ -2,10 +2,10 @@
 execute store result storage ui:gun temp.now.Burst int 1 run scoreboard players get $burst ui_temp
 execute store result storage ui:gun temp.now.CT int 1 run scoreboard players get $cooltime ui_temp
 execute store result storage ui:gun temp.now.Ink int 1 run scoreboard players get $ink ui_temp
-execute if score $subtime ui_temp matches ..-1 run scoreboard players set $subtime ui_temp 0
+execute unless score $subtime ui_temp matches 1.. run scoreboard players set $subtime ui_temp 0
 execute store result storage ui:gun temp.now.SubTime int 1 run scoreboard players get $subtime ui_temp
 execute store result storage ui:gun temp.now.SP int 1 run scoreboard players get $sp ui_temp
-execute if score $sptime ui_temp matches ..-1 run scoreboard players set $sptime ui_temp 0
+execute unless score $sptime ui_temp matches 1.. run scoreboard players set $sptime ui_temp 0
 execute store result storage ui:gun temp.now.SPTime int 1 run scoreboard players get $sptime ui_temp
 execute store result storage ui:gun temp.now.IsHold int 1 run scoreboard players get $ishold ui_temp
 #execute store result storage ui:gun temp.now.Charge int 1 run scoreboard players get $charge ui_temp

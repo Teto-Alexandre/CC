@@ -1,4 +1,5 @@
 # ミサイル
+execute store result score $time ui_temp run time query gametime
 scoreboard players operation $time ui_temp %= #2 ui_num
 execute if score $time ui_temp matches 0 anchored eyes positioned ^ ^ ^ run function ui:tmw/237/activator/time/452.0
 execute if score $time ui_temp matches 1 anchored eyes positioned ^ ^ ^ run function ui:tmw/237/activator/time/452.1
@@ -12,3 +13,8 @@ execute at @e[tag=ui_temp_marker,tag=!ui_temp_target] run particle dust 1 0 0 1 
 
 tag @s remove ui_temp_this
 kill @e[tag=ui_temp_marker]
+
+# スペシャルゲージが減らない、隠れられない
+tag @s add cant_hide
+execute if score $activator_type ui_temp matches 1 run scoreboard players add $subtime ui_temp 1
+execute if score $activator_type ui_temp matches 2 run scoreboard players add $sptime ui_temp 1

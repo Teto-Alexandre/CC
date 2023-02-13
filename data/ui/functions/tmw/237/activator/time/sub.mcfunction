@@ -1,5 +1,8 @@
 # サブウェポン時間経過
 
+#
+    scoreboard players set $activator_type ui_temp 1
+
 # 隔離
     scoreboard players operation $time ui_temp = $subtime ui_temp
     scoreboard players operation $activator ui_temp = $subtype ui_temp
