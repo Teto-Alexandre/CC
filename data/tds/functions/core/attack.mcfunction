@@ -143,7 +143,7 @@
     execute if score $Damage tds_dmg matches 1.. if score $DisableParticle tds_dmg matches 0 run function tds:core/damage_indicator
 
 # 次のヒットに向けてこの攻撃者を記録する
-    scoreboard players operation @s tds_recent_attacked_by = $Attacker tds_dmg
+    execute if score $Attacker tds_dmg matches 1.. run scoreboard players operation @s tds_recent_attacked_by = $Attacker tds_dmg
 
 # リセット
     scoreboard players reset $Damage tds_dmg
@@ -151,6 +151,7 @@
     scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg
     scoreboard players reset $Attacker tds_dmg
+    scoreboard players reset $Assist tds_dmg
     tag @a[tag=tds_tempa] remove tds_tempa
     tag @a[tag=tds_tempb] remove tds_tempb
     data remove storage ui:temp Name

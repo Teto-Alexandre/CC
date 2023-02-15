@@ -1,14 +1,14 @@
 # 一秒にやること
 
 #
-    item replace entity @a hotbar.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.2 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    item replace entity @a hotbar.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.2 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
+    #item replace entity @a hotbar.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
 
 # オフハンドに持つんじゃない
     execute as @a if entity @s[scores={ui_tmw_id2=1..}] at @s run function ui:tmw/237/anti.offhand/text
