@@ -56,7 +56,7 @@
     execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1] if score @s ui_team matches 2 store result score $paint ui_temp at @s run fill ~ ~-2 ~ ~ ~2 ~ pink_wool replace #ui:wools
     execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1] if score @s ui_team matches 3 store result score $paint ui_temp at @s run fill ~ ~-2 ~ ~ ~2 ~ yellow_wool replace #ui:wools
     execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_107_1] if score @s ui_team matches 4 store result score $paint ui_temp at @s run fill ~ ~-2 ~ ~ ~2 ~ lime_wool replace #ui:wools
-    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # 死ぬ(同じidの奴らまとめて)
     execute if score @s ui_uses matches 80.. run tag @s add ui_237_sub_explode

@@ -5,7 +5,7 @@
     execute if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-2 ~ pink_wool replace #ui:wools
     execute if score $team ui_temp matches 3 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-2 ~ yellow_wool replace #ui:wools
     execute if score $team ui_temp matches 4 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-2 ~ lime_wool replace #ui:wools
-    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # 見た目
     execute if score $team ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.2 ~ 0 0 0 0 1 force

@@ -51,7 +51,7 @@
     #ペネ
     execute if score @s ui_bpart matches 108 run function ui:tmw/237/projectile/move/108/manager
     execute if score @s ui_bpart matches 112 run function ui:tmw/237/projectile/move/112
-    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # 移動値が無くなるまで繰り返す
     execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col] if score @s ui_br_temp < @s ui_br at @s run function ui:tmw/237/projectile/move

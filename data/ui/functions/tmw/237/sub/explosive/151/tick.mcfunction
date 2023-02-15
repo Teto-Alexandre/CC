@@ -46,10 +46,12 @@
     execute if score @s ui_uses matches 10..100 as @e[tag=ui_temp_obj,tag=tmw_237_sub_151_1_1] at @s run function ui:tmw/237/sub/explosive/151/tick.line
 
 # メイン
+    scoreboard players set $paint ui_temp 0
     execute if score @s ui_team matches 1 run function ui:tmw/237/sub/explosive/151/1
     execute if score @s ui_team matches 2 run function ui:tmw/237/sub/explosive/151/2
     execute if score @s ui_team matches 3 run function ui:tmw/237/sub/explosive/151/3
     execute if score @s ui_team matches 4 run function ui:tmw/237/sub/explosive/151/4
+    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
 
 # チームを認識
     execute as @e[type=!#ui:notmob] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team

@@ -22,15 +22,23 @@
 # ストレージにモデルデータを隔離
     item modify entity @s weapon.mainhand ui:gun/value/model_air
 
+# HP最大なら攻撃を受けた状態をリセット
+    execute store result score $health.max ui_temp run attribute @s generic.max_health get 10
+    execute store result score $health ui_temp run data get entity @s Health 10
+    scoreboard players operation $health ui_temp *= #100 ui_num
+    scoreboard players operation $health ui_temp /= $health.max ui_temp
+
+    execute if score $health ui_temp matches 100.. run scoreboard players reset @s tds_recent_attacked_by
+
 # エフェクト
     scoreboard players operation $temp ui_temp = @s ui_move_s
     scoreboard players operation $temp ui_temp += @s ui_move_d
     scoreboard players set @s ui_move_s 0
     scoreboard players set @s ui_move_d 0
-    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
-    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 2 run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
-    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 3 run particle block yellow_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
-    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 4 run particle block lime_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 1 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block light_blue_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 2 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 3 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block yellow_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
+    execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 4 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block lime_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 normal
     execute if score $world ui_tc matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
 
 # 素早く坂を上る挙動

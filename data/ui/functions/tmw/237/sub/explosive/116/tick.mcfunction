@@ -48,8 +48,9 @@
     execute if entity @s[tag=ui_237_sub_first] run data merge entity @e[tag=ui_temp_obj,tag=tmw_237_sub_116_1,limit=1] {Health:1000f}
 
 # 射撃
-    execute if entity @s[tag=ui_237_sub_stop] unless entity @e[distance=6..25,tag=!ui_temp_team,predicate=ui:load_unhurtable] run teleport @s ~ ~ ~ ~2 -15
-    execute if entity @s[tag=ui_237_sub_stop] if entity @e[distance=6..25,tag=!ui_temp_team,predicate=ui:load_unhurtable] positioned ~ ~5 ~ facing entity @e[distance=6..25,tag=!ui_temp_team,predicate=ui:load_unhurtable,sort=nearest,limit=1] eyes run teleport @s ~ ~-5 ~ ~ ~-20
+    execute if entity @s[tag=ui_237_sub_stop] run tag @e[distance=6..25,tag=!ui_temp_team,predicate=ui:load_unhurtable,nbt=!{ActiveEffects:[{Id:14}]},sort=nearest,limit=1] add ui_temp_target
+    execute if entity @s[tag=ui_237_sub_stop] unless entity @e[tag=ui_temp_target] run teleport @s ~ ~ ~ ~2 -15
+    execute if entity @s[tag=ui_237_sub_stop] if entity @e[tag=ui_temp_target] positioned ~ ~5 ~ facing entity @e[tag=ui_temp_target,limit=1] eyes run teleport @s ~ ~-5 ~ ~ ~-20
     execute if entity @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 positioned ^0.65 ^1.4 ^-0.1 rotated ~ ~ run function ui:tmw/237/sub/explosive/116/rain
     execute if entity @s[tag=ui_237_sub_stop] if score $time ui_temp matches 3 positioned ^-0.65 ^1.4 ^-0.1 rotated ~ ~ run function ui:tmw/237/sub/explosive/116/rain
 
@@ -63,3 +64,4 @@
 # 処理終了（消える）
     execute if entity @s[tag=ui_237_sub_explode] run function ui:tmw/237/sub/explosive/116/end
     tag @e[tag=ui_temp_obj] remove ui_temp_obj
+    tag @e[tag=ui_temp_target] remove ui_temp_target

@@ -126,8 +126,10 @@
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
-        execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[tag=!tds_nolog,type=!#ui:unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        #execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @e[tag=!tds_nolog,type=!#ui:unhurtable] if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
         execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @a if score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempa
+        scoreboard players operation $Assist tds_dmg = @s tds_recent_attacked_by
+        execute if score $Health tds_dmg matches ..0 if score $Assist tds_dmg matches 1.. as @a if score @s ui_id = $Assist tds_dmg unless score @s ui_id = $Attacker tds_dmg run tag @s add tds_tempb
         ## キルカウント + キルログ
         execute if entity @s[type=player] if score $DeathMessage tds_dmg matches 1.. if score $Health tds_dmg matches ..0 run function tds:core/killlog
 
@@ -140,12 +142,16 @@
 # 演出
     execute if score $Damage tds_dmg matches 1.. if score $DisableParticle tds_dmg matches 0 run function tds:core/damage_indicator
 
+# 次のヒットに向けてこの攻撃者を記録する
+    execute if score $Attacker tds_dmg matches 1.. run scoreboard players operation @s tds_recent_attacked_by = $Attacker tds_dmg
+
 # リセット
-    execute if score $Health tds_dmg matches ..0 if score $Attacker tds_dmg matches 1.. as @a if score @s ui_id = $Attacker tds_dmg run tag @s remove tds_tempa
     scoreboard players reset $Damage tds_dmg
     scoreboard players reset $DamageType tds_dmg
     scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg
     scoreboard players reset $Attacker tds_dmg
-    tag @e[tag=tds_tempa] remove tds_tempa
+    scoreboard players reset $Assist tds_dmg
+    tag @a[tag=tds_tempa] remove tds_tempa
+    tag @a[tag=tds_tempb] remove tds_tempb
     data remove storage ui:temp Name

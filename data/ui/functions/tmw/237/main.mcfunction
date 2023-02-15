@@ -60,14 +60,11 @@ execute if entity @s[tag=tmw_237_readtag] run function ui:tmw/237/tag/reader
 execute if score $amp ui_temp matches 1.. run function ui:tmw/237/amp/manager
 
 # 最後に持った時間と連続していなかった場合ペナルティ
-execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed/hand.sys
+#execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed/hand.sys
 
 # キー入力検知範囲拡大
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
 #tag @s[tag=tmw_oh_s] add tmw_oh_n
-
-# オフハンドに持つんじゃない
-execute if entity @s[scores={ui_tmw_id2=1..}] run function ui:tmw/237/anti.offhand/text
 
 # バースト数
 # 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4
@@ -85,6 +82,7 @@ execute if score $bursttype ui_temp matches 10 run function ui:tmw/237/burst/10
 execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/burst/11
 execute if score $bursttype ui_temp matches 12 run function ui:tmw/237/burst/12
 execute if score $bursttype ui_temp matches 13..14 run function ui:tmw/237/burst/13
+execute if score $bursttype ui_temp matches 15 run function ui:tmw/237/burst/15
 
 # 常駐効果
 scoreboard players remove @s[scores={ui_gct=0..}] ui_gct 1
@@ -141,9 +139,6 @@ execute if score $changed ui_temp matches 1 run function ui:tmw/237/changed/core
 # タグ消し
 tag @s remove ui_temp_move
 tag @s remove ui_temp_success
-
-# 死（液体に入ったら死ぬ）
-execute at @s[gamemode=!spectator] if block ~ ~ ~ #ui:liq if entity @e[type=player,dx=0] run function ui:common/highdamage
 
 # 一時的ストレージクリア
 data remove storage ui:gun temp

@@ -93,12 +93,19 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
 ## 必殺技カウント
     scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_survive dummy {"text":"UtilityItems_Tmw237_Survive","color":"dark_blue"}
-    scoreboard objectives add ui_tmw237_boost dummy {"text":"UtilityItems_Tmw237_boost","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_boost dummy {"text":"UtilityItems_Tmw237_Boost","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_sprint_particle dummy {"text":"UtilityItems_Tmw237_Sprint_Particle","color":"dark_blue"}
     scoreboard objectives add ui_uses dummy {"text":"UtilityItems_UseS","color":"dark_blue"}
 
 ## 復活、ゲームモード関連
     #復活までの時間
         scoreboard objectives add ui_rst dummy {"text":"UtilityItems_RespawnTime","color":"dark_blue"}
+
+## ゲーム内記録レコード
+    scoreboard objectives add ui_s_paint dummy
+
+## レコード
+    scoreboard objectives add ui_r_paint dummy
 
 ## コモン
 

@@ -30,6 +30,7 @@
     execute if score @s ui_is matches 17..18 run function ui:template/sphere_particle/5.5
     execute if score @s ui_is matches 19..20 run function ui:template/sphere_particle/6
     function ui:tmw/237/misc/particle_paint
+    execute if score @s ui_is matches 1..20 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
 
 # 塗りポイント加算

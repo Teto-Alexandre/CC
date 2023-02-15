@@ -10,3 +10,4 @@
     execute if score $time ui_temp matches 8 run playsound block.amethyst_block.chime player @a ~ ~ ~ 1.6 1 0
     execute if score $time ui_temp matches 1 run playsound block.conduit.deactivate player @a ~ ~ ~ 1 1.2 0
     particle happy_villager ~ ~1 ~ 0.5 0.5 0.5 0 2 force
+    tag @s add floor_proof
