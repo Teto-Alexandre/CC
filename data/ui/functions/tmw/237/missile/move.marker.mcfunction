@@ -6,7 +6,7 @@
 
 # 見た目
     function ui:tmw/237/missile/1
-    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # キル
     kill @e[tag=ui_temp_marker]

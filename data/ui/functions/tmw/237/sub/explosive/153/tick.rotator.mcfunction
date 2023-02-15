@@ -17,10 +17,11 @@
     execute if score $temp ui_temp matches 1.. as @e[tag=ui_temp_marker] positioned as @s run teleport @s ^ ^ ^0.3
     execute if score $temp ui_temp matches 1.. run scoreboard players remove $temp ui_temp 1
     execute as @e[tag=ui_temp_marker] at @s run function ui:tmw/237/sub/explosive/153/tick.line
-    execute if score @s ui_team matches 1 as @e[tag=ui_temp_marker] at @s run fill ~ ~-1 ~ ~ ~10 ~ light_blue_wool replace #ui:wools
-    execute if score @s ui_team matches 2 as @e[tag=ui_temp_marker] at @s run fill ~ ~-1 ~ ~ ~10 ~ pink_wool replace #ui:wools
-    execute if score @s ui_team matches 3 as @e[tag=ui_temp_marker] at @s run fill ~ ~-1 ~ ~ ~10 ~ yellow_wool replace #ui:wools
-    execute if score @s ui_team matches 4 as @e[tag=ui_temp_marker] at @s run fill ~ ~-1 ~ ~ ~10 ~ lime_wool replace #ui:wools
+    execute if score @s ui_team matches 1 at @e[tag=ui_temp_marker] store result score $paint ui_temp run fill ~ ~-1 ~ ~ ~10 ~ light_blue_wool replace #ui:wools
+    execute if score @s ui_team matches 2 at @e[tag=ui_temp_marker] store result score $paint ui_temp run fill ~ ~-1 ~ ~ ~10 ~ pink_wool replace #ui:wools
+    execute if score @s ui_team matches 3 at @e[tag=ui_temp_marker] store result score $paint ui_temp run fill ~ ~-1 ~ ~ ~10 ~ yellow_wool replace #ui:wools
+    execute if score @s ui_team matches 4 at @e[tag=ui_temp_marker] store result score $paint ui_temp run fill ~ ~-1 ~ ~ ~10 ~ lime_wool replace #ui:wools
+    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     kill @e[tag=ui_temp_marker]
 
 scoreboard players remove $count ui_temp 1

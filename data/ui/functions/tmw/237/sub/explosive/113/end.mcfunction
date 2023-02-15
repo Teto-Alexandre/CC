@@ -18,7 +18,7 @@
     execute positioned as @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] run particle flash ~ ~ ~ 0 0 0 0 1 force
 
 # 塗りポイント加算
-    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # パーティクルと本体を消去
     teleport @e[tag=ui_temp_obj] ~ -300 ~

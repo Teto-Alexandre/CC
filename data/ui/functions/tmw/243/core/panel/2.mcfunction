@@ -24,6 +24,8 @@
     item replace entity @s enderchest.18 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.19 with arrow{display:{Name:'{"text":"前のページ","color":"white","italic":false}'},ui:{ismenu:1}}
     
+    #item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:121117,display:{Name:'{"text":"[チョコレートボム・ブラック]","color":"gray","italic":false}',Lore:['{"text":"強力な爆発を起こすボム","color":"aqua","italic":false}','{"text":"範囲は限定的だが威力は極めて高い","color":"aqua","italic":false}','{"text":"残留する黒いインクを飛散させる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    #item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:121118,display:{Name:'{"text":"[チョコレートボム・ホワイト]","color":"gray","italic":false}',Lore:['{"text":"強力な爆発を起こすボム","color":"aqua","italic":false}','{"text":"範囲は大きいが塗ることはできない","color":"aqua","italic":false}','{"text":"爆発までの間に近づくことで、","color":"aqua","italic":false}','{"text":"移動形態時の飛沫を隠すことができる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

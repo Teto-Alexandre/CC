@@ -23,6 +23,9 @@ effect give @a night_vision 1000000 0 true
 scoreboard players set @a ui_paint 0
 scoreboard objectives remove ui_kills
 scoreboard objectives add ui_kills minecraft.custom:minecraft.player_kills
-scoreboard objectives setdisplay sidebar ui_kills
+scoreboard objectives remove ui_s_paint
+scoreboard objectives add ui_s_paint dummy
+#scoreboard objectives setdisplay sidebar ui_kills
+scoreboard objectives setdisplay sidebar ui_s_paint
 tag @a add tmw_237_readtag
 tag @a add tmw_237_tag_inkfill

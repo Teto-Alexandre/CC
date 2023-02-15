@@ -1,4 +1,15 @@
-execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_151_1] at @s run fill ~ ~-10 ~ ~ ~20 ~ yellow_wool replace #ui:wools
+scoreboard players set $temp ui_temp 0
+execute store result score $temp ui_temp at @e[tag=ui_temp_obj,tag=tmw_237_sub_151_2_1] run fill ~ ~-10 ~ ~ ~20 ~ yellow_wool replace #ui:wools
+scoreboard players operation $paint ui_temp = $temp ui_temp
+scoreboard players set $temp ui_temp 0
+execute store result score $temp ui_temp at @e[tag=ui_temp_obj,tag=tmw_237_sub_151_2_2] run fill ~ ~-10 ~ ~ ~20 ~ yellow_wool replace #ui:wools
+scoreboard players operation $paint ui_temp += $temp ui_temp
+scoreboard players set $temp ui_temp 0
+execute store result score $temp ui_temp at @e[tag=ui_temp_obj,tag=tmw_237_sub_151_3_1] run fill ~ ~-10 ~ ~ ~20 ~ yellow_wool replace #ui:wools
+scoreboard players operation $paint ui_temp += $temp ui_temp
+scoreboard players set $temp ui_temp 0
+execute store result score $temp ui_temp at @e[tag=ui_temp_obj,tag=tmw_237_sub_151_3_2] run fill ~ ~-10 ~ ~ ~20 ~ yellow_wool replace #ui:wools
+scoreboard players operation $paint ui_temp += $temp ui_temp
 execute if score @s ui_uses matches 2..20 at @s run particle block yellow_wool ~ ~8 ~ 0 8 0 0 10 force
 execute if score @s ui_uses matches 2..20 at @s run particle dust_color_transition 1 1 0.5 2.5 0.5 0.5 0 ~ ~8 ~ 0 8 0 0 2 force
 execute if score @s ui_uses matches 21..40 at @s run particle block yellow_wool ~ ~10 ~ 0.3 10 0.3 0 20 force

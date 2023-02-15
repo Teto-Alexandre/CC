@@ -35,7 +35,7 @@
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 1 run scoreboard players set $changed ui_temp 1
 
 # burst13_14 alt.idを利用するため下に配置
-    execute if score $bursttype ui_temp matches 13..14 run function ui:tmw/237/attack/shot/burst13_14
+    execute if score $bursttype ui_temp matches 13..15 run function ui:tmw/237/attack/shot/burst13_14
 
 # タイプごとに拡散して発射
     #function ui:tmw/237/attack/shot/loop

@@ -22,7 +22,7 @@
     playsound entity.generic.explode player @a ~ ~ ~ 1 1.2 0
 
 # 塗りポイント加算
-    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # パーティクルと本体を消去
     kill @s

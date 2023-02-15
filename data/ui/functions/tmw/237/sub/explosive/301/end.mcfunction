@@ -21,7 +21,7 @@
     particle flash ~ ~ ~ 0 0 0 0 1 force
 
 # 塗りポイント加算
-    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_paint += $paint ui_temp
+    execute as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
     execute as @a if score @s ui_id = $id ui_temp run playsound block.note_block.bell player @s ~ ~ ~ 0.8 1 0.8
 
 # パーティクルと本体を消去

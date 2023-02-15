@@ -18,7 +18,10 @@ execute if score @s ui_is matches 321..340 run particle dust 1 0.5 1 3.8 ~ ~ ~ 0
 execute if score @s ui_is matches 341..360 run particle dust 1 0.5 1 4.0 ~ ~ ~ 0 0 0 0 1 force
 execute if score @s ui_is matches 361..380 run particle dust 1 0.5 1 4.2 ~ ~ ~ 0 0 0 0 1 force
 execute if score @s ui_is matches 381..400 run particle dust 1 0.5 1 4.4 ~ ~ ~ 0 0 0 0 1 force
-execute if score @s ui_is matches 101..200 run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 pink_wool replace #ui:wools
-execute if score @s ui_is matches 201..300 run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 pink_wool replace #ui:wools
-execute if score @s ui_is matches 301..400 run fill ~-1.5 ~-1.5 ~-1.5 ~1.5 ~1.5 ~1.5 pink_wool replace #ui:wools
-fill ~ ~-4 ~ ~ ~ ~ pink_wool replace #ui:wools
+scoreboard players set $temp ui_temp 0
+execute if score @s ui_is matches 101..200 store result score $temp ui_temp run fill ~-0.5 ~-0.5 ~-0.5 ~0.5 ~0.5 ~0.5 pink_wool replace #ui:wools
+execute if score @s ui_is matches 201..300 store result score $temp ui_temp run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 pink_wool replace #ui:wools
+execute if score @s ui_is matches 301..400 store result score $temp ui_temp run fill ~-1.5 ~-1.5 ~-1.5 ~1.5 ~1.5 ~1.5 pink_wool replace #ui:wools
+scoreboard players operation $paint ui_temp = $temp ui_temp
+execute store result score $temp ui_temp run fill ~ ~-4 ~ ~ ~ ~ pink_wool replace #ui:wools
+scoreboard players operation $paint ui_temp += $temp ui_temp

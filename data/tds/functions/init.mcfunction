@@ -19,6 +19,8 @@ scoreboard objectives add tds_acid dummy {"text":"TetoDamageSystem_Acid","color"
 
 scoreboard objectives add tds_totem dummy {"text":"TetoDamageSystem_Totem","color":"gold","italic":true}
 
+scoreboard objectives add tds_recent_attacked_by dummy {"text":"TetoDamageSystem_Recent_Attacked_By","color":"gold","italic":true}
+
 scoreboard objectives add tds_damage_cooltime_amount dummy {"text":"TetoDamageSystem_Damage_Cooltime_Amount","color":"gold","italic":true}
 scoreboard objectives add tds_damage_cooltime_time dummy {"text":"TetoDamageSystem_Damage_Cooltime_Time","color":"gold","italic":true}
 

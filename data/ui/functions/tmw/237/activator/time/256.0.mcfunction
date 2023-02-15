@@ -18,6 +18,7 @@
 # パーティクルで描画、演出
     function ui:template/sphere_particle/6
     function ui:tmw/237/misc/particle_paint
+    execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     playsound entity.generic.explode player @a ~ ~ ~ 1 0.8 0
 
 # 無敵解除

@@ -31,15 +31,9 @@
         ### リスポーン直後に実行するコマンド群
             execute as @e[type=player,scores={ui_dc_r=1..}] run function ui:misc/respawned
 
-# チームカラーに合わせたチームにぶち込み
-    execute as @a if score @s ui_team matches 1 run team join blue @s
-    execute as @a if score @s ui_team matches 2 run team join red @s
-    execute as @a if score @s ui_team matches 3 run team join yellow @s
-    execute as @a if score @s ui_team matches 4 run team join green @s
-
 #
     scoreboard players add $world ui_tc 1
-    execute if score $world ui_tc matches 21.. run scoreboard players set $world ui_tc 1
+    execute if score $world ui_tc matches 21.. run function ui:1sec
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append
