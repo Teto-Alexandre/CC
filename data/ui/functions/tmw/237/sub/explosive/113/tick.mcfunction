@@ -15,9 +15,15 @@
     execute if score @s ui_uses matches 20 run playsound block.beacon.deactivate player @a ~ ~ ~ 2 2 0
     #execute if score @s ui_is matches 1.. run teleport @s ~ ~0.5 ~ ~ ~
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] run particle dust 0.5 1 1 3 ~ ~0.5 ~ 0 0 0 0 1 force
+    execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ light_blue_wool replace #ui:wools
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 2 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] run particle dust 1 0.5 1 3 ~ ~0.5 ~ 0 0 0 0 1 force
+    execute if score @s ui_is matches 1.. if score $team ui_temp matches 2 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ pink_wool replace #ui:wools
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 3 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] run particle dust 1 1 0.5 3 ~ ~0.5 ~ 0 0 0 0 1 force
+    execute if score @s ui_is matches 1.. if score $team ui_temp matches 3 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ yellow_wool replace #ui:wools
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 4 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] run particle dust 0.5 1 0.5 3 ~ ~0.5 ~ 0 0 0 0 1 force
+    execute if score @s ui_is matches 1.. if score $team ui_temp matches 4 at @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1] store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ lime_wool replace #ui:wools
+    execute if score @s ui_is matches 1.. if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
+    execute if score @s ui_is matches 1.. if entity @s[tag=tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches ..20 run data merge entity @e[tag=ui_temp_obj,tag=tmw_237_sub_113_1,limit=1] {NoAI:1b}
     execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches 10 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 1 1.8 0
     execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches 12 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 1 1.8 0

@@ -9,3 +9,8 @@ execute if score $mode ui_temp matches 1 if score $color ui_temp matches 3 run t
 execute if score $mode ui_temp matches 1 if score $color ui_temp matches 4 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"スタート時の色: 緑","color":"white"}]
 execute if score $mode ui_temp matches 1 if score $color ui_temp matches 5 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"スタート時の色: 茶色","color":"white"}]
 execute if score $mode ui_temp matches 1 run scoreboard players operation @e[tag=map_core,sort=nearest,limit=1] map_default_color = $color ui_temp
+
+execute if score $mode ui_temp matches 2 store success score $temp ui_temp run tag @e[tag=map_core,sort=nearest,limit=1] add 4teams
+execute if score $mode ui_temp matches 2 if score $temp ui_temp matches 0 run tag @e[tag=map_core,sort=nearest,limit=1] remove 4teams
+execute if score $mode ui_temp matches 2 if score $temp ui_temp matches 0 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"チーム数: 2","color":"white"}]
+execute if score $mode ui_temp matches 2 if score $temp ui_temp matches 1 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"チーム数: 4","color":"white"}]

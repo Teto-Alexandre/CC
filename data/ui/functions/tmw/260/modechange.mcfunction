@@ -13,5 +13,6 @@ execute if score $type ui_temp matches 2 if score $mode ui_temp matches 1 run te
 execute if score $type ui_temp matches 2 if score $mode ui_temp matches 2 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"モード:リスポーン・ギミック位置設定","color":"white"}]
 
 execute if score $type ui_temp matches 3 if score $mode ui_temp matches 1 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"モード:マップカラー切り替え","color":"white"}]
+execute if score $type ui_temp matches 3 if score $mode ui_temp matches 2 run tellraw @s [{"text":"System","color":"gray"},{"text":"> ","color":"green"},{"text":"モード:マップチームタイプ選択","color":"white"}]
 
 scoreboard players set $changed ui_temp 1

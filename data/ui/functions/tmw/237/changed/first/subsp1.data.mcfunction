@@ -25,7 +25,7 @@ execute if score $type ui_temp matches 301 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 399 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 402 run scoreboard players set $w.ink ui_temp 700
-execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_temp 350
+execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_temp 300
 execute if score $type ui_temp matches 404 run scoreboard players set $w.ink ui_temp 400
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ink ui_temp 850
 
