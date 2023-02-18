@@ -5,3 +5,4 @@
     #effect give @s resistance 1 3 true
     # サヴァイブのタグが消える
     scoreboard players reset @s ui_tmw237_survive
+    scoreboard players set $survive ui_temp 1

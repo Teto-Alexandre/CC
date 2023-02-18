@@ -13,7 +13,7 @@ execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if
 execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ pink_stained_glass run summon marker ~ ~1 ~ {Tags:["ui_temp_obj","master","map","map_respawn_red","map_unpower"]}
 execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ yellow_stained_glass as @e[tag=map_respawn_yellow] if score @s map_id = #select_map ui_temp run kill @s
 execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ yellow_stained_glass run summon marker ~ ~1 ~ {Tags:["ui_temp_obj","master","map","map_respawn_yellow","map_unpower"]}
-execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ lime_stained_glass as @e[tag=map_respawn_lime] if score @s map_id = #select_map ui_temp run kill @s
-execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ lime_stained_glass run summon marker ~ ~1 ~ {Tags:["ui_temp_obj","master","map","map_respawn_lime","map_unpower"]}
+execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ lime_stained_glass as @e[tag=map_respawn_green] if score @s map_id = #select_map ui_temp run kill @s
+execute if score $mode ui_temp matches 2 align xyz positioned ~0.5 ~-0.5 ~0.5 if block ~ ~ ~ lime_stained_glass run summon marker ~ ~1 ~ {Tags:["ui_temp_obj","master","map","map_respawn_green","map_unpower"]}
 execute if score $mode ui_temp matches 2 as @e[tag=ui_temp_obj] run scoreboard players operation @s map_id = #select_map ui_temp
 execute if score $mode ui_temp matches 2 run tag @e[tag=ui_temp_obj] remove ui_temp_obj

@@ -2,7 +2,7 @@ execute if block ~ ~ ~ light_blue_wool run scoreboard players add $blue wool_cou
 execute if block ~ ~ ~ pink_wool run scoreboard players add $red wool_count 1
 execute if block ~ ~ ~ yellow_wool run scoreboard players add $yellow wool_count 1
 execute if block ~ ~ ~ lime_wool run scoreboard players add $green wool_count 1
-execute if block ~ ~ ~ #ui:wools_include_black run scoreboard players add $wool wool_count 1
+execute if block ~ ~ ~ #ui:wools run scoreboard players add $wool wool_count 1
 execute if score $default_color ui_temp matches 0 if block ~ ~ ~ #ui:wools_include_black run setblock ~ ~ ~ white_wool
 execute if score $default_color ui_temp matches 1 if block ~ ~ ~ #ui:wools_include_black run setblock ~ ~ ~ light_gray_wool
 execute if score $default_color ui_temp matches 2 if block ~ ~ ~ #ui:wools_include_black run setblock ~ ~ ~ gray_wool
