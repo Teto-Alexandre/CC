@@ -1,5 +1,6 @@
 # インクタンクを最大にするタグ
-scoreboard players add $ink ui_temp 250
+execute store result score $ink.max ui_temp run data get storage ui:gun temp.InkMax
+scoreboard players add $ink ui_temp 300
 scoreboard players operation $ink ui_temp < $ink.max ui_temp
 scoreboard players set $changed ui_temp 1
 
