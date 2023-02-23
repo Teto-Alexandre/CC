@@ -24,10 +24,10 @@
     execute if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. run scoreboard players remove $multibullet ui_temp 1
 
 # チャージ補正
-    execute if score $burst_alt.id ui_temp matches 1..100 run function ui:tmw/237/attack/shot/burst4
-    execute if score $burst_alt.id ui_temp matches 101..200 run function ui:tmw/237/attack/shot/burst5
-    execute if score $burst_alt.id ui_temp matches 201..300 run function ui:tmw/237/attack/shot/burst8
-    execute if score $burst_alt.id ui_temp matches 301..400 run function ui:tmw/237/attack/shot/burst9
+    execute if score $burst_alt.id ui_temp matches 1..99 run function ui:tmw/237/attack/shot/burst4
+    execute if score $burst_alt.id ui_temp matches 101..199 run function ui:tmw/237/attack/shot/burst5
+    execute if score $burst_alt.id ui_temp matches 200..299 run function ui:tmw/237/attack/shot/burst8
+    execute if score $burst_alt.id ui_temp matches 301..399 run function ui:tmw/237/attack/shot/burst9
 
 # burst11限定
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run scoreboard players set $chargetime ui_temp 0

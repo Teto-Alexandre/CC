@@ -24,4 +24,5 @@ execute if score $ink.temp ui_temp matches 40..49 run function ui:tmw/237/title/
 execute if score $ink.temp ui_temp matches 30..39 run function ui:tmw/237/title/3
 execute if score $ink.temp ui_temp matches 20..29 run function ui:tmw/237/title/2
 execute if score $ink.temp ui_temp matches 10..19 run function ui:tmw/237/title/1
-execute if score $ink.temp ui_temp matches 0..9 run function ui:tmw/237/title/0
+execute if score $ink.temp ui_temp matches 1..9 run function ui:tmw/237/title/0
+execute if score $ink.temp ui_temp matches ..0 run function ui:tmw/237/title/-1
