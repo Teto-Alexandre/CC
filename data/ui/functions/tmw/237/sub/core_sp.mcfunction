@@ -7,6 +7,7 @@ execute if score $activator ui_temp matches 101..200 run function ui:tmw/237/act
 execute if score $activator ui_temp matches 201..300 run function ui:tmw/237/activator/here
 execute if score $activator ui_temp matches 301..400 at @s run function ui:tmw/237/activator/static
 execute if score $activator ui_temp matches 401..500 at @s run function ui:tmw/237/activator/weapon
+execute if score $activator ui_temp matches 1001.. at @s run function ui:tmw/237/activator/unique/master
 
 # スペシャルタイムをセット
 scoreboard players operation $sptime ui_temp = $sptime.max ui_temp

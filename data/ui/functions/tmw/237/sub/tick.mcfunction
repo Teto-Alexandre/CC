@@ -35,6 +35,8 @@
     execute if score $type ui_temp matches 351 run function ui:tmw/237/sub/explosive/351/tick
     execute if score $type ui_temp matches 399 run function ui:tmw/237/sub/explosive/399/tick
 
+    execute if score $type ui_temp matches 1011 run function ui:tmw/237/sub/explosive/1011/tick
+
 # 投擲物パーティクル
     execute unless score $type ui_temp matches 301 if score $team ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
     execute unless score $type ui_temp matches 301 if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force

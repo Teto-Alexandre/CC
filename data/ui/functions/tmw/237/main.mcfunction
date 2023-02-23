@@ -111,6 +111,7 @@ execute if score $ink ui_temp < $ink.sub ui_temp run effect give @s wither 1 0 t
 execute if score $ink ui_temp >= $ink.sub ui_temp run effect clear @s wither
 scoreboard players operation @s ui_paint < $spneed ui_temp
 execute if score $qf ui_temp matches 2 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/qf2
+execute if score $qf ui_temp matches 4 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/qf2
 execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/ready
 execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp/not
 

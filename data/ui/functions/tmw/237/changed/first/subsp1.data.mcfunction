@@ -29,6 +29,9 @@ execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 404 run scoreboard players set $w.ink ui_temp 400
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ink ui_temp 850
 
+execute if score $type ui_temp matches 1011 run scoreboard players set $w.ink ui_temp 600
+execute if score $type ui_temp matches 1012 run scoreboard players set $w.ink ui_temp 0
+
 # 効果時間
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.time ui_temp 0
 execute if score $type ui_temp matches 401..500 run scoreboard players set $w.time ui_temp 100
@@ -139,3 +142,6 @@ execute if score $type ui_temp matches 458 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 459 run data modify storage ui:temp temp.Name set value " - SP:ロケッティア"
 execute if score $type ui_temp matches 460 run data modify storage ui:temp temp.Name set value " - SP:ナイスダマ"
 execute if score $type ui_temp matches 461 run data modify storage ui:temp temp.Name set value " - SP:ウルトラハンコ"
+
+execute if score $type ui_temp matches 1011 run data modify storage ui:temp temp.Name set value " - P-SUB:リモートボム"
+execute if score $type ui_temp matches 1012 run data modify storage ui:temp temp.Name set value " - P-SUB:起爆"
