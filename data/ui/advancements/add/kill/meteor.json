@@ -1,0 +1,22 @@
+{
+  "parent": "ui:add/kill/niceshot",
+  "display": {
+    "icon": {
+      "item": "minecraft:anvil"
+    },
+    "title": "着地 & 狩り",
+    "description": "スーパーブースト直後にプレイヤーを倒す",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/paint/5000",
+  "display": {
+    "icon": {
+      "item": "minecraft:yellow_stained_glass"
+    },
+    "title": "Paint 10k blocks",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

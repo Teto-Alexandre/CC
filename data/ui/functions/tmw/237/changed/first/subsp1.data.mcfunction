@@ -29,7 +29,7 @@ execute if score $type ui_temp matches 403 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 404 run scoreboard players set $w.ink ui_temp 400
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ink ui_temp 850
 
-execute if score $type ui_temp matches 1011 run scoreboard players set $w.ink ui_temp 600
+execute if score $type ui_temp matches 1011 run scoreboard players set $w.ink ui_temp 550
 execute if score $type ui_temp matches 1012 run scoreboard players set $w.ink ui_temp 0
 
 # 効果時間

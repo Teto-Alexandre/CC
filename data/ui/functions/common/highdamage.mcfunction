@@ -15,6 +15,7 @@
 # @public
 
 # act
+execute if entity @s[advancements={ui:add/misc/drown=false}] run advancement grant @s only ui:add/misc/drown
 scoreboard players reset $Attacker tds_dmg
 tag @e[tag=tds_tempa] remove tds_tempa
 tag @s add tds_ui_highdamage_temp

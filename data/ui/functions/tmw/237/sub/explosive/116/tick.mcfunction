@@ -11,7 +11,7 @@
 
 # 常時実行
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
-    execute if score @s ui_uses matches 2 run scoreboard players set @s ui_is 400
+    execute if score @s ui_uses matches 2 run scoreboard players set @s ui_is 300
     execute if score @s ui_uses matches 2 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
     #execute if score @s ui_is matches 1.. run teleport @s ~ ~0.5 ~ ~ ~
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 run particle dust 0.5 1 1 2 ~ ~0.5 ~ 0.3 0.3 0.3 0 1 force
@@ -24,7 +24,7 @@
     execute if score @s ui_uses matches 2 run tag @s add ui_237_sub_stop
     execute store result score $time ui_temp run time query gametime
     scoreboard players operation $time ui_temp %= #20 ui_num
-    execute as @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 run scoreboard players remove @s ui_is 30
+    execute as @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 run scoreboard players remove @s ui_is 20
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_116_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:20000,ShowParticles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon armor_stand ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_116_2","ui_temp_obj","ui_temp_team"],Marker:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192002}}]}

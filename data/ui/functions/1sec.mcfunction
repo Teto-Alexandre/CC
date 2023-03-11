@@ -23,4 +23,7 @@
     execute as @a if score @s ui_team matches 4 run team join green @s
 
 #
+    effect give @a weakness 5 127 true
+
+#
 scoreboard players set $world ui_tc 1

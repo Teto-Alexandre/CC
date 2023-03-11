@@ -25,4 +25,7 @@ scoreboard players operation $cooltime ui_temp += $ct ui_temp
 scoreboard players set @s ui_paint 0
 
 #
+scoreboard players add @s ui_s_f 1
+
+#
 scoreboard players set $changed ui_temp 1

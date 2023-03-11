@@ -1,6 +1,6 @@
 #これは初回起動時に実行されるコマンドです
 
-tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
+tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
 
 ## 限定
     scoreboard objectives add map_id dummy
@@ -49,9 +49,6 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
     scoreboard objectives add ui_move_s minecraft.custom:minecraft.crouch_one_cm {"text":"UtilityItems_MoveSneak","color":"dark_blue"}
     scoreboard objectives add ui_move_d minecraft.custom:minecraft.sprint_one_cm {"text":"UtilityItems_MoveDash","color":"dark_blue"}
     scoreboard objectives add ui_lg minecraft.custom:minecraft.leave_game {"text":"UtilityItems_LeaveGame","color":"dark_blue"}
-    #
-    scoreboard objectives add ui_kills minecraft.custom:player_kills {"text":"UtilityItems_Kills","color":"dark_blue"}
-    scoreboard objectives add ui_deaths deathCount {"text":"UtilityItems_Deaths","color":"dark_blue"}
 
 ## プレイヤー区別用id
     scoreboard objectives add ui_id dummy {"text":"UtilityItems_ID","color":"dark_blue"}
@@ -102,10 +99,23 @@ tellraw @a ["",{"text":"ProjectUI","color":"white"},{"text":"> ","color":"green"
         scoreboard objectives add ui_rst dummy {"text":"UtilityItems_RespawnTime","color":"dark_blue"}
 
 ## ゲーム内記録レコード
+    scoreboard objectives add ui_s_kill minecraft.custom:player_kills
+    scoreboard objectives add ui_s_assist dummy
+    scoreboard objectives add ui_s_death deathCount
     scoreboard objectives add ui_s_paint dummy
+    scoreboard objectives add ui_s_q dummy
+    scoreboard objectives add ui_s_f dummy
+    scoreboard objectives add ui_s_kill_dist dummy
 
 ## レコード
+    scoreboard objectives add ui_r_game dummy
+    scoreboard objectives add ui_r_kill dummy
+    scoreboard objectives add ui_r_assist dummy
+    scoreboard objectives add ui_r_death dummy
     scoreboard objectives add ui_r_paint dummy
+    scoreboard objectives add ui_r_q dummy
+    scoreboard objectives add ui_r_f dummy
+    scoreboard objectives add ui_r_kill_dist dummy
 
 ## コモン
 

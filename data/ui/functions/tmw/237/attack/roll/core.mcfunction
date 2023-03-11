@@ -39,6 +39,9 @@
     scoreboard players operation $cooltime ui_temp += $ct ui_temp
     execute if score $burst ui_temp matches 1.. run scoreboard players remove $burst ui_temp 1
 
+#
+    tag @e[tag=ui_temp_team] remove ui_temp_team
+
 # 成功
     tag @s add ui_temp_success
 

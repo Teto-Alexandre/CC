@@ -1,27 +1,36 @@
-tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"color":"gold","text":"Project-UtilityItems"},{"color":"white","text":" が起動しました"}]
+tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"color":"gold","text":"ColorCrush"},{"color":"white","text":" が起動しました"}]
 tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"color":"white","translate":"Recommend to use resourcepack"}]
-tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"color":"white","text":"各アイテムのレシピは "},{"color":"gold","keybind":"key.advancements"},{"color":"white","text":" キー(進捗)で確認できます"}]
 tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"text":"  - Made by teto","color":"gold"}]
 
 title @s times 0 20 0
 
 advancement grant @s only ui:main/root
 
-advancement grant @s only ui:main/magic_sword/magic_sword
-advancement grant @s only ui:main/magic_sword/air_node
-advancement grant @s only ui:main/magic_sword/air_node2
+advancement grant @s only ui:main/game/node1
+advancement grant @s only ui:main/game/node2
 
-advancement grant @s only ui:main/charm/charm
-advancement grant @s only ui:main/charm/air_node
-advancement grant @s only ui:main/charm/air_node2
+advancement grant @s only ui:main/kill/node1
+advancement grant @s only ui:main/kill/node2
 
-advancement grant @s only ui:main/arrow/arrow
-advancement grant @s only ui:main/arrow/air_node
-advancement grant @s only ui:main/arrow/air_node2
+advancement grant @s only ui:main/paint/node1
+advancement grant @s only ui:main/paint/node2
 
-advancement grant @s only ui:main/industry/industry
-advancement grant @s only ui:main/industry/air_node
-advancement grant @s only ui:main/industry/air_node2
+advancement grant @s only ui:add/root
+
+advancement grant @s only ui:add/assist/node1
+advancement grant @s only ui:add/assist/node2
+
+advancement grant @s only ui:add/sub/node1
+advancement grant @s only ui:add/sub/node2
+
+advancement grant @s only ui:add/sp/node1
+advancement grant @s only ui:add/sp/node2
+
+advancement grant @s only ui:add/kill/node1
+advancement grant @s only ui:add/kill/node2
+
+advancement grant @s only ui:add/misc/node1
+advancement grant @s only ui:add/misc/node2
 
 scoreboard players set @s ui_st 0
 scoreboard players set @s ui_gct -1

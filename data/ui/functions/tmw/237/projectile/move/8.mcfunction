@@ -3,8 +3,8 @@
 #座標調整
     teleport @s ^ ^ ^8
 #当たり判定拡張
-    execute positioned ^ ^ ^16 positioned ~ ~-0.9 ~ as @e[distance=..3.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute positioned ^ ^ ^12 positioned ~ ~-0.9 ~ as @e[distance=..3.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute positioned ^ ^ ^16 positioned ~ ~-0.9 ~ as @e[predicate=ui:load_unhurtable,distance=..3.5,tag=!ui_temp_team,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute positioned ^ ^ ^12 positioned ~ ~-0.9 ~ as @e[predicate=ui:load_unhurtable,distance=..3.5,tag=!ui_temp_team,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
 #見た目
     scoreboard players operation $temp ui_temp = $world ui_tc
     scoreboard players operation $temp ui_temp %= #2 ui_num

@@ -9,7 +9,7 @@ execute if score $activator ui_temp matches 116 run data merge entity @e[tag=ui_
 execute if score $activator ui_temp matches 117..118 run data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set value 217141
 execute store result entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.color int 1 run scoreboard players get $team ui_temp
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_id = @s ui_id
-scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = @s ui_team
+scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = $team ui_temp
 scoreboard players set @e[tag=ui_temp_this,limit=1] ui_uses -1
 scoreboard players set @e[tag=ui_temp_this,limit=1] ui_is -1
 scoreboard players set @e[tag=ui_temp_this,limit=1] ui_is2 -1

@@ -7,7 +7,7 @@ function ui:common/rand
 scoreboard players operation $speed.add ui_temp = $rand ui_calc1
 scoreboard players set $range ui_temp 70
 scoreboard players set $rangetype ui_temp 3
-scoreboard players set $damage ui_temp 50
+scoreboard players set $damage ui_temp 40
 execute if score $team ui_temp matches 1 run data modify storage ui:gun temp.DisplayName set value '{"text":"インクタレット","color":"aqua"}'
 execute if score $team ui_temp matches 2 run data modify storage ui:gun temp.DisplayName set value '{"text":"インクタレット","color":"light_purple"}'
 execute if score $team ui_temp matches 3 run data modify storage ui:gun temp.DisplayName set value '{"text":"インクタレット","color":"yellow"}'

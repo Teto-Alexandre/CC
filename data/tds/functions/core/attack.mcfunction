@@ -91,6 +91,9 @@
 # Mobに適用
     #function tds:core/health_subtract
 
+#
+    scoreboard players operation $Damage_Log tds_dmg = $Damage tds_dmg
+
 # アメジスト耐性によるダメージ減算と耐性増加
     execute as @s if score $DamageType tds_dmg matches 7 run function tds:core/amethyst
 # 属性処理
@@ -113,7 +116,6 @@
 
     # Mob
         execute if entity @s[type=!player] if score $Health tds_dmg matches 1.. store result entity @s Health float 0.0001 run scoreboard players get $Health tds_dmg
-        execute if entity @s[type=wither,nbt=!{Invul:0}] if score $Health tds_dmg matches ..0 run advancement grant @a[distance=..50] only ui:main/gun/attack
         execute if entity @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches ..0 run kill @s
         execute if entity @s[type=!player] if score $Health tds_dmg matches ..0 run scoreboard players set $Lethal tds_dmg 1
         execute if entity @s[type=ender_dragon] if score $Health tds_dmg matches ..0 run data merge entity @s {DragonPhase:9}
@@ -121,7 +123,6 @@
     # プレイヤーじゃないなら見た目だけダメージ （オバフロ形式は直後にダメージを喰らうと100%バグるのが分かったので利用中止）
     # プレイヤーはエフェクトクラウドで一瞬耐性を付ける
         execute if entity @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches 1.. run function tds:core/damage
-        execute if entity @s[type=ender_dragon,nbt=!{DragonPhase:9}] unless data entity @s {Silent:1b} run playsound minecraft:entity.ender_dragon.hurt hostile @a ~ ~ ~ 5 1 0
         execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
 
     # プレイヤーかつヘルス0なら死亡メッセージ
@@ -147,6 +148,7 @@
 
 # リセット
     scoreboard players reset $Damage tds_dmg
+    scoreboard players reset $Damage_Log tds_dmg
     scoreboard players reset $DamageType tds_dmg
     scoreboard players reset $DeathMessage tds_dmg
     scoreboard players reset $Health tds_dmg

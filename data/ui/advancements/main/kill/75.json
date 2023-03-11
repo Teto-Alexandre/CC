@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/kill/50",
+  "display": {
+    "icon": {
+      "item": "minecraft:blue_stained_glass"
+    },
+    "title": "Kill 75 times",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

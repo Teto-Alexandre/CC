@@ -1,8 +1,15 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:raiders",
-    "#minecraft:skeletons",
+    "minecraft:evoker",
+    "minecraft:pillager",
+    "minecraft:ravager",
+    "minecraft:vindicator",
+    "minecraft:illusioner",
+    "minecraft:witch",
+    "minecraft:skeleton",
+    "minecraft:stray",
+    "minecraft:wither_skeleton",
     "minecraft:vex",
     "minecraft:creeper",
     "minecraft:guardian",

@@ -6,8 +6,12 @@
     scoreboard players reset $sub112 ui_temp
     execute if entity @e[tag=ui_c_acc] run scoreboard players set $sub112 ui_temp 1
 
-# 弾丸
-    execute as @e[tag=tmw_237] at @s run function ui:tmw/237/projectile/tick
+# ID コントロール上の未実行タグを更新、付与する
+    tag @e[tag=tmw_237_ss_1_unpower] remove tmw_237_ss_1_unpower
+    tag @e[tag=tmw_237] add tmw_237_ss_1_unpower
+
+# コントロールを実行
+    execute as @e[limit=1,tag=tmw_237_ss_1_unpower] run function ui:tmw/237/projectile/idc
 
 # SSロジック維持
     execute if entity @e[tag=tmw_237] run schedule function ui:tmw/237/ss/1 1t append

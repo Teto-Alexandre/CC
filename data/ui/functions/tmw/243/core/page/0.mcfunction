@@ -7,7 +7,7 @@
     execute if score $slot ui_temp matches 2 run scoreboard players set $qf ui_temp 1
     execute if score $slot ui_temp matches 3 run scoreboard players set $qf ui_temp 2
     execute if score $slot ui_temp matches 4 run scoreboard players set $qf ui_temp 3
-    execute if score $slot ui_temp matches 5 run scoreboard players set $qf ui_temp 4
+    #execute if score $slot ui_temp matches 5 run scoreboard players set $qf ui_temp 4
     execute if score $slot ui_temp matches 11 run scoreboard players set $page ui_temp 1
     execute if score $slot ui_temp matches 12 unless score $qf ui_temp matches 4 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -22,7 +22,8 @@
     item replace entity @s enderchest.2 with lime_stained_glass_pane{display:{Name:'{"text":"System: Sub and Special","color":"white","italic":false}',Lore:['{"text":"Q: Sub weapon","color":"gray","italic":false}','{"text":"F: Special weapon","color":"gray","italic":false}']},ui:{ismenu:1}}
     item replace entity @s enderchest.3 with yellow_stained_glass_pane{display:{Name:'{"text":"System: Sub and Sub","color":"white","italic":false}',Lore:['{"text":"Q: Sub Weapon 1","color":"gray","italic":false}','{"text":"F: Sub Weapon 2","color":"gray","italic":false}','{"text":"Auto: Ink regain","color":"gray","italic":false}']},ui:{ismenu:1}}
     item replace entity @s enderchest.4 with blue_stained_glass_pane{display:{Name:'{"text":"System: Special and Special","color":"white","italic":false}',Lore:['{"text":"Q: Special Weapon 1","color":"gray","italic":false}','{"text":"F: Special Weapon 2","color":"gray","italic":false}']},ui:{ismenu:1}}
-    item replace entity @s enderchest.5 with orange_stained_glass_pane{display:{Name:'{"text":"System: Pair Sub","color":"white","italic":false}',Lore:['{"text":"Q: Sub weapon","color":"gray","italic":false}','{"text":"F: Sub weapon","color":"gray","italic":false}','{"text":"Auto: Ink regain","color":"gray","italic":false}']},ui:{ismenu:1}}
+    #item replace entity @s enderchest.5 with orange_stained_glass_pane{display:{Name:'{"text":"System: Pair Sub","color":"white","italic":false}',Lore:['{"text":"Q: Sub weapon","color":"gray","italic":false}','{"text":"F: Sub weapon","color":"gray","italic":false}','{"text":"Auto: Ink regain","color":"gray","italic":false}']},ui:{ismenu:1}}
+    item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

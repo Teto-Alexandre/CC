@@ -19,4 +19,7 @@ execute store result score $cooltime ui_temp run time query gametime
 scoreboard players operation $cooltime ui_temp += $ct ui_temp
 
 #
+scoreboard players add @s ui_s_q 1
+
+#
 scoreboard players set $changed ui_temp 1

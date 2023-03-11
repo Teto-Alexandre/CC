@@ -1,0 +1,22 @@
+{
+  "parent": "ui:add/assist/1",
+  "display": {
+    "icon": {
+      "item": "minecraft:yellow_wool"
+    },
+    "title": "取られた！",
+    "description": "Assist 5 times",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

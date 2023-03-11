@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/kill/1",
+  "display": {
+    "icon": {
+      "item": "minecraft:orange_stained_glass"
+    },
+    "title": "Kill 5 times",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

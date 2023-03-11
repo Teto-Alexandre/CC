@@ -45,6 +45,8 @@
         execute if score @s ui_hpart matches 112 run function ui:tmw/237/projectile/killeffect/112
         # ガキンッ
         execute if score @s ui_hpart matches 113 run function ui:tmw/237/projectile/killeffect/113
+        # ハンコ
+        execute if score @s ui_hpart matches 114 run function ui:tmw/237/projectile/killeffect/114
     # スペシャル溜まらない爆発
         execute if score @s ui_hpart matches 203 run function ui:tmw/237/projectile/killeffect/3
         execute if score @s ui_hpart matches 204 run function ui:tmw/237/projectile/killeffect/4
