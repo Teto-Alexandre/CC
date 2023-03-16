@@ -22,8 +22,12 @@
     execute as @a if score @s ui_team matches 3 run team join yellow @s
     execute as @a if score @s ui_team matches 4 run team join green @s
 
-#
+# 殴り合い防止
     effect give @a weakness 5 127 true
+
+# タイムカウント
+    #execute store result bossbar minecraft:time value run scoreboard players remove $time ui_world 1
+    #function ui:game/end/0.scheduler
 
 #
 scoreboard players set $world ui_tc 1

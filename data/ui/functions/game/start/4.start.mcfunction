@@ -19,6 +19,11 @@ execute as @e[tag=map_respawn_green] if score @s map_id = $map ui_world position
 effect clear @a
 effect give @a night_vision 1000000 0 true
 effect give @a instant_health 10 10 true
+effect give @a resistance 10 127 false
+
+#
+scoreboard players set $time ui_world 3000
+execute store result bossbar minecraft:time max run scoreboard players get $time ui_world
 
 #
 scoreboard players set @a ui_paint 0
@@ -47,7 +52,7 @@ scoreboard objectives add ui_s_kill_dist dummy
 scoreboard players set @a ui_s_kill_dist 0
 
 #
-scoreboard objectives setdisplay sidebar ui_s_kill
+#scoreboard objectives setdisplay sidebar ui_s_kill
 #scoreboard objectives setdisplay sidebar ui_s_paint
 
 #
