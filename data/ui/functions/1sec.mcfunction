@@ -21,6 +21,7 @@
     execute as @a if score @s ui_team matches 2 run team join red @s
     execute as @a if score @s ui_team matches 3 run team join yellow @s
     execute as @a if score @s ui_team matches 4 run team join green @s
+    execute as @a[tag=spectate] run team join spectate @s
 
 # 殴り合い防止
     effect give @a weakness 5 127 true

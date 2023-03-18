@@ -32,7 +32,7 @@
 
 #
     execute store result score $temp ui_temp run data get entity @s ActiveEffects[{Id:11}].Amplifier
-    execute if score $time ui_world matches 1.. if score $temp ui_temp matches 4.. run particle dust 1 0.6 0 1.2 ~ ~0.9 ~ 0.5 0.5 0.5 0 3 force @a[distance=1..,tag=!tmw_237_noresparticle]
+    execute if score $time ui_world matches 1.. if score $temp ui_temp matches 4.. run particle dust 1 0.6 0 1.2 ~ ~0.9 ~ 0.5 0.5 0.5 0 5 force @a[distance=1..,tag=!tmw_237_noresparticle]
 
 # ストレージのモデルデータを読み込み
     data modify storage ui:gun temp.value set from storage ui:gun temp.Model

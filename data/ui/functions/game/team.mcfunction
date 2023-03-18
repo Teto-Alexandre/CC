@@ -1,29 +1,30 @@
 # 即席チーム
-    scoreboard players set @a[tag=!ui_noteam] ui_team 0
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 1
-    scoreboard players set @r[tag=!ui_noteam,scores={ui_team=0}] ui_team 2
+    scoreboard players set @a[tag=!spectate] ui_team 0
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 1
+    scoreboard players set @r[tag=!spectate,scores={ui_team=0}] ui_team 2
 
 # 放送
-    playsound block.note_block.hat player @a[tag=!ui_noteam] ~ ~ ~ 1 1 1
-    tellraw @a[tag=!ui_noteam,scores={ui_team=1}] ["",{"text":"system>> ","color":"white"},{"text":"あなたは","color":"gray"},{"text":" BLUE ","color":"aqua"},{"text":"チームです","color":"gray"}]
-    tellraw @a[tag=!ui_noteam,scores={ui_team=2}] ["",{"text":"system>> ","color":"white"},{"text":"あなたは","color":"gray"},{"text":" RED ","color":"light_purple"},{"text":"チームです","color":"gray"}]
+    playsound block.note_block.hat player @a[tag=!spectate] ~ ~ ~ 1 1 1
+    tellraw @a[tag=spectate] ["",{"text":"system>> ","color":"white"},{"text":"あなたは","color":"gray"},{"text":"観戦モードです","color":"gray"}]
+    tellraw @a[tag=!spectate,scores={ui_team=1}] ["",{"text":"system>> ","color":"white"},{"text":"あなたは","color":"gray"},{"text":" BLUE ","color":"aqua"},{"text":"チームです","color":"gray"}]
+    tellraw @a[tag=!spectate,scores={ui_team=2}] ["",{"text":"system>> ","color":"white"},{"text":"あなたは","color":"gray"},{"text":" RED ","color":"light_purple"},{"text":"チームです","color":"gray"}]

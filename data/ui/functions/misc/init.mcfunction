@@ -191,7 +191,6 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
     scoreboard players set $tmw.activation ui_world 1
     execute unless score $base ui_id matches -2147483648..2147483647 run scoreboard players set $base ui_id 17
     execute unless score $base ui_obj_id matches -2147483648..2147483647 run scoreboard players set $base ui_obj_id 1
-    execute unless score $base ui_i_id matches -2147483648..2147483647 run scoreboard players set $base ui_i_id 1
 
 ## ボスバー
     bossbar add ui:tmw237 {"text":"残り時間","color":"white","italic":false,"bold":true}
@@ -223,6 +222,12 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
     team modify green collisionRule always
     team modify green nametagVisibility hideForOtherTeams
     team modify green seeFriendlyInvisibles false
+    team add spectate
+    team modify spectate color gray
+    team modify spectate friendlyFire false
+    team modify spectate collisionRule always
+    team modify spectate nametagVisibility hideForOtherTeams
+    team modify spectate seeFriendlyInvisibles false
 
 ## その他
     forceload add 0 0

@@ -1,0 +1,1 @@
+execute if score $map ui_world matches 5 run function ui:game/map/5/start

@@ -24,6 +24,8 @@ execute if score $slot ui_temp matches 10 run function ui:tmw/243/core/stats
 execute if score $slot ui_temp matches 18 if entity @s[tag=!spectate] run function ui:game/start/toggle_ready
 execute if score $slot ui_temp matches 18 if entity @s[tag=spectate] run playsound block.dispenser.fail player @a ~ ~ ~ 1 0.8 0
 execute if score $slot ui_temp matches 19 run tag @s[tag=spectate] add ui_temp_this
+execute if score $slot ui_temp matches 19 if entity @s[tag=spectate] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が観戦を終了しました","color": "gray"}]
+execute if score $slot ui_temp matches 19 if entity @s[tag=!spectate] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が観戦を始めました","color": "gray"}]
 execute if score $slot ui_temp matches 19 run tag @s[tag=!spectate] add game.ready
 execute if score $slot ui_temp matches 19 run tag @s[tag=!spectate] add spectate
 execute if score $slot ui_temp matches 19 run tag @s[tag=ui_temp_this] remove game.ready
