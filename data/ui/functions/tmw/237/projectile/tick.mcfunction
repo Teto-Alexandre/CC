@@ -6,6 +6,7 @@
 
 #
 scoreboard players set $Lethal tds_dmg 0
+scoreboard players set $Cache ui_temp 0
 
 # キルログを宣言
 scoreboard players set $deathmessage ui_temp 0
@@ -34,3 +35,6 @@ tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
 execute at @s if score @s ui_br_temp >= @s ui_br run function ui:tmw/237/projectile/end
+
+#
+execute if score $Cache ui_temp matches 1 run scoreboard players reset @s

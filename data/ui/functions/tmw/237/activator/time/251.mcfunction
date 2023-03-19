@@ -1,4 +1,6 @@
 # ノヴァ
+execute if score $time ui_temp matches 5..20 as @a[distance=..7] unless score $team ui_temp = @s ui_team run scoreboard players operation @s tds_recent_attacked_by = $id ui_temp
+
 execute if score $time ui_temp matches 5 run execute if score $team ui_temp matches 1 store result score $paint ui_temp run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 light_blue_wool replace #ui:wools_include_black
 execute if score $time ui_temp matches 5 run execute if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 pink_wool replace #ui:wools_include_black
 execute if score $time ui_temp matches 5 run execute if score $team ui_temp matches 3 store result score $paint ui_temp run fill ~-7 ~-7 ~-7 ~7 ~7 ~7 yellow_wool replace #ui:wools_include_black

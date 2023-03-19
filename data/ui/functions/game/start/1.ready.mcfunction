@@ -3,12 +3,9 @@
 #declare storage ui:map
 
 # HC
-#scoreboard players set $mod ui_calc1 3
-#function ui:common/rand
-#scoreboard players add $rand ui_calc1 1
-#scoreboard players operation $map ui_world = $rand ui_calc1
-scoreboard players set $map ui_world 3
-function #ui:maps
+function ui:game/map/shuffle/
+execute store result score $map ui_world run data get storage ui:map map.ID
+function ui:game/map/core_tp
 
 #
 tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"5秒後に開始します・・・","color":"gold"}]
@@ -26,7 +23,7 @@ execute as @a[scores={ui_team=3},tag=!spectate] run function ui:tmw/237/nofunc/b
 execute as @a[scores={ui_team=4},tag=!spectate] run function ui:tmw/237/nofunc/bro_weapon
 
 #
-schedule function ui:game/start/2.tp 1t
+schedule function ui:game/start/2.tp 1s
 
 #
 scoreboard players set $Countdown ui_temp 3

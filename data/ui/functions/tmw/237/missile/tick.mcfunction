@@ -4,6 +4,9 @@
 #
 # @public
 
+#
+scoreboard players set $Cache ui_temp 0
+
 # キルログを宣言
 scoreboard players set $deathmessage ui_temp 0
 execute if entity @s[tag=ui_refd] run scoreboard players set $deathmessage ui_temp 2
@@ -44,3 +47,6 @@ execute as @s[scores={ui_br=..0}] run function ui:tmw/237/projectile/kill
 
 #一時タグ削除
 tag @s remove ui_temp_this
+
+#
+execute if score $Cache ui_temp matches 1 run scoreboard players reset @s

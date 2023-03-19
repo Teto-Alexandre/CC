@@ -3,8 +3,9 @@
 tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
 
 ## 限定
-    scoreboard objectives add map_id dummy
-    scoreboard objectives add map_default_color dummy
+    function ui:game/map/data
+    scoreboard objectives add game_state dummy
+    scoreboard players set $phase game_state 0
     scoreboard objectives add wool_count dummy
 
 ## 主な全ての計算に使用
@@ -242,4 +243,4 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 52
+    scoreboard players set $version ui_world 53

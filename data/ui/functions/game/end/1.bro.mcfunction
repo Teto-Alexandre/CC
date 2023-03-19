@@ -1,5 +1,8 @@
 # キル数と塗り数の表示
 
+# ロビーモード
+scoreboard players set $phase game_state 0
+
 #
 execute as @a run scoreboard players add @s ui_r_game 1
 execute as @a run scoreboard players operation @s ui_r_kill += @s ui_s_kill

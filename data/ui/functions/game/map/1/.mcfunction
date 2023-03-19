@@ -1,1 +1,0 @@
-execute if score $map ui_world matches 1 run function ui:game/map/1/start

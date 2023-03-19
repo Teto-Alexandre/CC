@@ -25,4 +25,5 @@
     execute as @a if score @s ui_id = $id ui_temp run playsound block.note_block.bell player @s ~ ~ ~ 0.8 1 0.8
 
 # パーティクルと本体を消去
+    scoreboard players set $Cache ui_temp 1
     kill @s

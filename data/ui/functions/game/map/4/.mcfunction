@@ -1,1 +1,0 @@
-execute if score $map ui_world matches 4 run function ui:game/map/4/start

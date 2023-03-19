@@ -11,4 +11,5 @@
     execute if score @s ui_is >= @s ui_is2 run tag @s add ui_237_sub_explode
 
 # 処理終了
+    execute if entity @s[tag=ui_237_sub_explode] run scoreboard players set $Cache ui_temp 1
     execute if entity @s[tag=ui_237_sub_explode] run kill @s

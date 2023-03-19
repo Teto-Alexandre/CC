@@ -21,4 +21,5 @@
     execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
 
 # パーティクルと本体を消去
+    scoreboard players set $Cache ui_temp 1
     kill @s

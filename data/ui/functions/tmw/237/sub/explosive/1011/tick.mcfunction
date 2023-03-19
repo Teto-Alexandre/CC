@@ -1,4 +1,4 @@
-# スプラッシュボム
+# リモートボム
 
 # 常時実行
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0

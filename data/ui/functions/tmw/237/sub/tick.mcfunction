@@ -1,3 +1,6 @@
+#
+    scoreboard players set $Cache ui_temp 0
+
 # データ共有
     scoreboard players operation $id ui_temp = @s ui_id
     execute store result score $type ui_temp run data get entity @s Item.tag.tmw.type
@@ -54,3 +57,6 @@
 
 # 水対策
     execute if block ~ ~-0.5 ~ #ui:liq run tag @s add ui_237_sub_explode
+
+#
+    execute if score $Cache ui_temp matches 1 run scoreboard players reset @s

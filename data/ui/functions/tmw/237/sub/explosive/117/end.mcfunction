@@ -17,4 +17,5 @@
     particle flash ~ ~ ~ 0 0 0 0 1 force
 
 # パーティクルと本体を消去
+    scoreboard players set $Cache ui_temp 1
     kill @s

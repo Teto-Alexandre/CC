@@ -55,5 +55,6 @@
 
 # 死ぬ(同じidの奴らまとめて)
     execute if score @s ui_uses matches 40.. run tag @s add ui_237_sub_explode
+    execute if entity @s[tag=ui_237_sub_explode] run scoreboard players set $Cache ui_temp 1
     execute if entity @s[tag=ui_237_sub_explode] run kill @e[tag=ui_temp_obj]
     tag @e[tag=ui_temp_obj] remove ui_temp_obj
