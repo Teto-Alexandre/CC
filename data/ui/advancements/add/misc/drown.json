@@ -1,5 +1,5 @@
 {
-  "parent": "ui:add/misc/boost",
+  "parent": "ui:add/misc/ender_chest",
   "display": {
     "icon": {
       "item": "minecraft:water_bucket"

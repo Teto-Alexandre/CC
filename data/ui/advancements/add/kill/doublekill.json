@@ -1,13 +1,13 @@
 {
-  "parent": "ui:add/kill/doublekill",
+  "parent": "ui:add/kill/sniper_duel",
   "display": {
     "icon": {
-      "item": "minecraft:black_stained_glass_pane"
+      "item": "minecraft:rabbit_hide"
     },
-    "title": "",
-    "description": "",
+    "title": "二兎を追う者",
+    "description": "連続でプレイヤーを倒す",
     "frame": "task",
-    "show_toast": false,
+    "show_toast": true,
     "announce_to_chat": false,
     "hidden": false
   },

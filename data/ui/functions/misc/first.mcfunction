@@ -16,3 +16,6 @@
 
 ##モーションスライムキル
     execute if score $motionslime ui_world matches 1 run function ui:misc/kill_slime
+
+##連キル
+    execute as @a if score @s ui_s_kill_time matches 1.. run function ui:misc/kill_time

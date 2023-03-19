@@ -107,6 +107,9 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
     scoreboard objectives add ui_s_q dummy
     scoreboard objectives add ui_s_f dummy
     scoreboard objectives add ui_s_kill_dist dummy
+    scoreboard objectives add ui_s_kill_streak dummy
+    # システム用
+    scoreboard objectives add ui_s_kill_time dummy
 
 ## レコード
     scoreboard objectives add ui_r_game dummy
@@ -117,6 +120,7 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
     scoreboard objectives add ui_r_q dummy
     scoreboard objectives add ui_r_f dummy
     scoreboard objectives add ui_r_kill_dist dummy
+    scoreboard objectives add ui_s_kill_streak dummy
 
 ## コモン
 

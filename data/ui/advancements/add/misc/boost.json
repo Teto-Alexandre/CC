@@ -1,11 +1,11 @@
 {
-  "parent": "ui:add/misc/qf_none",
+  "parent": "ui:add/misc/self_destruct",
   "display": {
     "icon": {
       "item": "minecraft:hopper"
     },
-    "title": "スーパー〇ャンプ！",
-    "description": "Shift+Fでブーストを使う",
+    "title": "スーパージャンプ",
+    "description": "ブーストを使う",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

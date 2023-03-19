@@ -31,6 +31,7 @@ execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 r
 execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove game.ready
 execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove spectate
 execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if score $slot ui_temp matches 3..6 if entity @s[advancements={ui:add/misc/ender_chest=false}] run advancement grant @s only ui:add/misc/ender_chest
 
 # パネル
 item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"ここに武器をセット","color": "gold","italic": false}'},ui:{ismenu:1}}
