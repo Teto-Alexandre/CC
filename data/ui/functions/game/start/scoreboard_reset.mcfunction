@@ -29,3 +29,4 @@
     scoreboard players set @a ui_s_q 0
     scoreboard players set @a ui_s_f 0
     scoreboard players set @a ui_s_kill_dist 0
+    scoreboard players set @a ui_s_kill_streak 0

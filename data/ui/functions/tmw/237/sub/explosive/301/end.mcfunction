@@ -7,11 +7,9 @@
     execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"トラップ","color":"green"}'
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 60
-    execute at @e[distance=3.5..5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    scoreboard players set $damage ui_temp 100
-    execute at @e[distance=2..3.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    scoreboard players set $damage ui_temp 160
-    execute at @e[distance=..2,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute at @e[distance=3..5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    scoreboard players set $damage ui_temp 150
+    execute at @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute as @e[distance=..5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},tag=!tds_nolog] run effect give @s glowing 4 0
 
 # パーティクルで描画、演出

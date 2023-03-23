@@ -9,11 +9,13 @@
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/meteor=false}] if score @s ui_tmw237_boost matches 70..130 run advancement grant @s only ui:add/kill/meteor
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/overkill=false}] if score $Damage_Log tds_dmg matches 300000.. run advancement grant @s only ui:add/kill/overkill
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/doublekill=false}] if score @s ui_s_kill_time matches 1.. run advancement grant @s only ui:add/kill/doublekill
-    execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/sniper_duel=false}] if score @s ui_s_kill_dist matches 400.. run advancement grant @s only ui:add/kill/sniper_duel
+    execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/sniper_duel=false}] if score @s ui_s_kill_dist matches 30.. run advancement grant @s only ui:add/kill/sniper_duel
     execute if entity @s[nbt={OnGround:0b}] as @a[tag=tds_tempa,nbt={OnGround:0b}] if entity @s[advancements={ui:add/kill/niceshot=false}] run advancement grant @s only ui:add/kill/niceshot
 
 ## キルカウント
     scoreboard players add @a[tag=tds_tempa] ui_s_kill 1
+    scoreboard players add @a[tag=tds_tempa] ui_s_kill_streak 1
+    scoreboard players operation @a[tag=tds_tempa] ui_r_kill_streak > @a[tag=tds_tempa] ui_s_kill_streak
     scoreboard players set @a[tag=tds_tempa] ui_s_kill_time 40
     execute unless score $DeathMessage tds_dmg matches 11 run scoreboard players add @a[tag=tds_tempb] ui_s_assist 1
     execute if score $DeathMessage tds_dmg matches 11 run scoreboard players add @a[tag=tds_tempb] ui_s_kill 1

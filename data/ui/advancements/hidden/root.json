@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:music_disc_11"
+    },
+    "title": "Hidden",
+    "description": "隠れ進捗",
+    "background": "minecraft:textures/block/black_wool.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "task1"
+    ]
+  ],
+  "rewards": {
+      "function": "ui:advancements/hidden_unlock_path"
+  }
+}

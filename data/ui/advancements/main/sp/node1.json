@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:black_stained_glass_pane"
+    },
+    "title": "Special_Weapon",
+    "description": "塗りを消費する特殊武装",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

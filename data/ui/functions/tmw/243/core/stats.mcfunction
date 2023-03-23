@@ -9,4 +9,5 @@ tellraw @s ["",{"text":" ・ アシスト"},{"text":": ","color": "gray"},{"scor
 tellraw @s ["",{"text":" ・ デス"},{"text":": ","color": "gray"},{"score":{"name": "@s","objective": "ui_r_death"},"color":"gold"},{"text":"回"}]
 tellraw @s ["",{"text":" ・ サブ使用回数"},{"text":": ","color": "gray"},{"score":{"name": "@s","objective": "ui_r_q"},"color":"gold"},{"text":"回"}]
 tellraw @s ["",{"text":" ・ スペ使用回数"},{"text":": ","color": "gray"},{"score":{"name": "@s","objective": "ui_r_f"},"color":"gold"},{"text":"回"}]
+tellraw @s ["",{"text":" ・ 最大キルストリーク"},{"text":": ","color": "gray"},{"score":{"name": "@s","objective": "ui_r_kill_streak"},"color":"gold"},{"text":"回"}]
 tellraw @s ["",{"text":" ・ 最遠キル距離"},{"text":": ","color": "gray"},{"score":{"name": "@s","objective": "ui_r_kill_dist"},"color":"gold"},{"text":"メートル"}]

@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/assist/node1",
+  "display": {
+    "icon": {
+      "item": "minecraft:red_stained_glass"
+    },
+    "title": "Assist 1 time",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

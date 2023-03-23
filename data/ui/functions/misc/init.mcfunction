@@ -93,6 +93,7 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
     scoreboard objectives add ui_tmw237_survive dummy {"text":"UtilityItems_Tmw237_Survive","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_boost dummy {"text":"UtilityItems_Tmw237_Boost","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_sprint_particle dummy {"text":"UtilityItems_Tmw237_Sprint_Particle","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_ink_regen dummy {"text":"UtilityItems_Tmw237_Ink_Regen","color":"dark_blue"}
     scoreboard objectives add ui_uses dummy {"text":"UtilityItems_UseS","color":"dark_blue"}
 
 ## 復活、ゲームモード関連
@@ -120,7 +121,7 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
     scoreboard objectives add ui_r_q dummy
     scoreboard objectives add ui_r_f dummy
     scoreboard objectives add ui_r_kill_dist dummy
-    scoreboard objectives add ui_s_kill_streak dummy
+    scoreboard objectives add ui_r_kill_streak dummy
 
 ## コモン
 

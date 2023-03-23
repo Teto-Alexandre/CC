@@ -3,7 +3,7 @@
     "icon": {
       "item": "minecraft:beacon"
     },
-    "title": "ColorCrash",
+    "title": "ColorCrash - Add",
     "description": "追加項目",
     "background": "minecraft:textures/block/light_gray_wool.png",
     "frame": "task",

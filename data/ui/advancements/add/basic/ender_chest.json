@@ -1,0 +1,22 @@
+{
+  "parent": "ui:add/basic/boost",
+  "display": {
+    "icon": {
+      "item": "minecraft:ender_chest"
+    },
+    "title": "セルフマネジメント",
+    "description": "エンダーチェストで設定を変更する",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

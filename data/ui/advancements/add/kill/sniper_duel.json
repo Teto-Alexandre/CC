@@ -5,7 +5,7 @@
       "item": "minecraft:bow"
     },
     "title": "鷹の目",
-    "description": "40m以上離れたプレイヤーを倒す",
+    "description": "30m以上離れたプレイヤーを倒す",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,

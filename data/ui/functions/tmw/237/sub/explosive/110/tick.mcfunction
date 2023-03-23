@@ -13,13 +13,16 @@
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
     execute if score @s ui_uses matches 20 run scoreboard players set @s ui_is 600
     execute if score @s ui_uses matches 20 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
-    scoreboard players operation $time ui_temp = $world ui_tc
+    execute store result score $time ui_temp run time query gametime
     scoreboard players operation $time ui_temp %= #3 ui_num
     execute if score $time ui_temp matches 0 if score @s ui_is matches 1.. if score $team ui_temp matches 1 run function ui:tmw/237/sub/explosive/110/1
     execute if score $time ui_temp matches 0 if score @s ui_is matches 1.. if score $team ui_temp matches 2 run function ui:tmw/237/sub/explosive/110/2
     execute if score $time ui_temp matches 0 if score @s ui_is matches 1.. if score $team ui_temp matches 3 run function ui:tmw/237/sub/explosive/110/3
     execute if score $time ui_temp matches 0 if score @s ui_is matches 1.. if score $team ui_temp matches 4 run function ui:tmw/237/sub/explosive/110/4
     execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches ..0 run tag @s add ui_237_sub_explode
+    execute if score $team ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"インスタントシールド","color":"aqua"}'
+    execute if score $team ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"インスタントシールド","color":"light_purple"}'
+    execute if score $team ui_temp matches 3 run data modify storage ui:temp Name set value '{"text":"インスタントシールド","color":"yellow"}'
     execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"インスタントシールド","color":"green"}'
     scoreboard players set $damage_type ui_temp 1
     scoreboard players set $damage ui_temp 30

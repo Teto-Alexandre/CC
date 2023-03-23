@@ -116,10 +116,10 @@ execute if score $sp ui_temp matches 0 if score @s ui_paint = $spneed ui_temp at
 execute if score $sp ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp/not
 
 # サブウェポン発動
-execute as @s[tag=tmw_drop_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sub/lim
+execute as @s[tag=tmw_drop_n] run function ui:tmw/237/sub/lim
 
 # スペシャルウェポン発動
-execute as @s[tag=tmw_oh_n] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
+execute as @s[tag=tmw_oh_n] run function ui:tmw/237/sp/lim
 #execute as @s[tag=tmw_oh_s,tag=tmw_237_noboost] if score $cooltime ui_temp matches 0 run function ui:tmw/237/sp/lim
 
 # ブースト発動

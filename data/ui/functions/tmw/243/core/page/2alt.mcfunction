@@ -19,11 +19,14 @@
     execute if score $slot ui_temp matches 12 run scoreboard players set $sp ui_temp 403
     execute if score $slot ui_temp matches 13 run scoreboard players set $sp ui_temp 404
     execute if score $slot ui_temp matches 14 run scoreboard players set $sp ui_temp 405
-    
+    execute if score $slot ui_temp matches 15 run scoreboard players set $sp ui_temp 203
     execute if score $slot ui_temp matches 20 run scoreboard players set $sp ui_temp 117
     execute if score $slot ui_temp matches 21 run scoreboard players set $sp ui_temp 118
+    execute if score $slot ui_temp matches 22 run scoreboard players set $sp ui_temp 119
+    execute if score $slot ui_temp matches 23 run scoreboard players set $sp ui_temp 120
+    execute if score $slot ui_temp matches 24 run scoreboard players set $sp ui_temp 204
 
-    execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
+    execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 1
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
 
@@ -37,9 +40,12 @@
     execute if score $slot ui_temp matches 12 run data modify storage ui:gun temp.tmw.gun.SPName set value "ラインマーカー"
     execute if score $slot ui_temp matches 13 run data modify storage ui:gun temp.tmw.gun.SPName set value "ブーメラン"
     execute if score $slot ui_temp matches 14 run data modify storage ui:gun temp.tmw.gun.SPName set value "ペネトレイター"
-    
+    execute if score $slot ui_temp matches 15 run data modify storage ui:gun temp.tmw.gun.SPName set value "スライド"
     execute if score $slot ui_temp matches 20 run data modify storage ui:gun temp.tmw.gun.SPName set value "チョコレートボムB"
     execute if score $slot ui_temp matches 21 run data modify storage ui:gun temp.tmw.gun.SPName set value "チョコレートボムW"
+    execute if score $slot ui_temp matches 22 run data modify storage ui:gun temp.tmw.gun.SPName set value "キューバンライト"
+    execute if score $slot ui_temp matches 23 run data modify storage ui:gun temp.tmw.gun.SPName set value "クイックヒール"
+    execute if score $slot ui_temp matches 24 run data modify storage ui:gun temp.tmw.gun.SPName set value "サーキュレーター"
 
 # 逆変換
     execute if score $changed ui_temp matches 1 run function ui:tmw/243/core/changed

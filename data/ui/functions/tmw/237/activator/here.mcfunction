@@ -5,9 +5,26 @@
 
 # ハイジャンプ
     execute if score $activator ui_temp matches 202 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
-    execute if score $activator ui_temp matches 202 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.2 0
+    execute if score $activator ui_temp matches 202 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.5 0
     execute if score $activator ui_temp matches 202 run tp @s @s
     execute if score $activator ui_temp matches 202 run effect give @s levitation 1 29 false
+
+# スライド
+    execute if score $activator ui_temp matches 203 run playsound entity.player.attack.sweep player @a ~ ~ ~ 1 1.5 0
+    execute if score $activator ui_temp matches 203 run playsound entity.wither.shoot player @a ~ ~ ~ 1 2 0
+    execute if score $activator ui_temp matches 203 run particle angry_villager ~ ~ ~ 0.5 0.5 0.5 0 10 force
+    execute if score $activator ui_temp matches 203 run particle sweep_attack ~ ~0.2 ~ 0.3 0 0.3 0 5 force
+    execute if score $activator ui_temp matches 203 run particle cloud ~ ~0.2 ~ 0 0 0 0.1 10 force
+
+# サーキュレーター
+    execute if score $activator ui_temp matches 204 run playsound entity.zombie_villager.converted player @a ~ ~ ~ 1 2 0
+    execute if score $activator ui_temp matches 204 run playsound block.respawn_anchor.charge player @a ~ ~ ~ 0.8 1.5 0
+    execute if score $activator ui_temp matches 204 run particle firework ~ ~ ~ 0.5 0.5 0.5 0 10 force
+    execute if score $activator ui_temp matches 204 run scoreboard players operation $temp ui_temp = $ink ui_temp
+    execute if score $activator ui_temp matches 204 run scoreboard players operation $temp ui_temp /= #2 ui_num
+    execute if score $activator ui_temp matches 204 run scoreboard players operation $ink ui_temp -= $temp ui_temp
+    execute if score $activator ui_temp matches 204 run scoreboard players operation @s ui_tmw237_ink_regen += $temp ui_temp
+    execute if score $activator ui_temp matches 204 run scoreboard players operation @s ui_tmw237_ink_regen < #1000 ui_num
 
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0
@@ -38,7 +55,7 @@
 # チャクチ
     execute if score $activator ui_temp matches 256 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 256 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
-    execute if score $activator ui_temp matches 256 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 0.8 0
+    execute if score $activator ui_temp matches 256 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 0.6 0
     execute if score $activator ui_temp matches 256 run tp @s @s
     execute if score $activator ui_temp matches 256 run effect give @s levitation 1 29 false
 

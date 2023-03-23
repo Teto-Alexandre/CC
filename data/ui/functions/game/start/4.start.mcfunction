@@ -1,7 +1,9 @@
 # 専用ワールド用の簡易実行関数
 
-#
-tag @a remove tmw_237_sp_survive
+# 変数リセット
+scoreboard players reset @s ui_tmw237_boost
+scoreboard players reset @s ui_tmw237_survive
+scoreboard players reset @s ui_tmw237_ink_regen
 
 #
 bossbar set minecraft:time players @a
@@ -50,9 +52,10 @@ scoreboard players set @a ui_paint 0
 function ui:game/start/scoreboard_reset
 
 #
-#scoreboard objectives setdisplay sidebar ui_s_kill
+scoreboard objectives setdisplay list ui_s_kill
 #scoreboard objectives setdisplay sidebar ui_s_paint
 
 #
 tag @a add tmw_237_readtag
 tag @a add tmw_237_tag_inkfill
+tag @s add tmw_237_tag_spdec

@@ -19,3 +19,8 @@ execute if score $blue wool_count matches 1.. run tellraw @a ["",{"text":"青チ
 execute if score $red wool_count matches 1.. run tellraw @a ["",{"text":"赤チーム: "},{"score":{"name":"$red","objective":"wool_count"},"color":"light_purple"},{"text":"P (","color":"light_purple"},{"score":{"name":"$red_p","objective":"wool_count"},"color":"light_purple"},{"text":"%)","color":"light_purple"}]
 execute if score $yellow wool_count matches 1.. run tellraw @a ["",{"text":"黄チーム: "},{"score":{"name":"$yellow","objective":"wool_count"},"color":"yellow"},{"text":"P (","color":"yellow"},{"score":{"name":"$yellow_p","objective":"wool_count"},"color":"yellow"},{"text":"%)","color":"yellow"}]
 execute if score $green wool_count matches 1.. run tellraw @a ["",{"text":"緑チーム: "},{"score":{"name":"$green","objective":"wool_count"},"color":"green"},{"text":"P (","color":"green"},{"score":{"name":"$green_p","objective":"wool_count"},"color":"green"},{"text":"%)","color":"green"}]
+
+execute if score $blue_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
+execute if score $red_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
+execute if score $yellow_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
+execute if score $green_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small

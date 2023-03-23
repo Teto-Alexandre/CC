@@ -3,6 +3,9 @@
 # ハイジャンプ
     execute if score $activator ui_temp matches 202 run function ui:tmw/237/activator/time/202
 
+# スライド
+    execute if score $activator ui_temp matches 203 run function ui:tmw/237/activator/time/203
+
 # ノヴァ
     execute if score $activator ui_temp matches 251 run function ui:tmw/237/activator/time/251
 

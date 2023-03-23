@@ -1,0 +1,22 @@
+{
+  "parent": "ui:add/basic/node1",
+  "display": {
+    "icon": {
+      "item": "minecraft:paper"
+    },
+    "title": "あれ、付け忘れた？",
+    "description": "サブスペを設定せずに出撃する",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

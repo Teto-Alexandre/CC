@@ -12,4 +12,4 @@ tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"5秒後にテレポ
 schedule function ui:game/start/1.ready 5s
 
 #
-tag @a[tag=!spectate] remove game.ready
+tag @a[tag=!auto_ready,tag=!spectate] remove game.ready

@@ -1,0 +1,25 @@
+{
+  "parent": "ui:hidden/misc/beyond_the_sky",
+  "display": {
+    "icon": {
+      "item": "minecraft:nether_wart"
+    },
+    "title": "そこには何もありませんよ",
+    "description": "敵の色のガラスに乗る",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ],
+  "rewards": {
+      "function": "ui:advancements/hidden_root"
+  }
+}

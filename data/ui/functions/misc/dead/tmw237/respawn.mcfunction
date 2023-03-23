@@ -47,7 +47,7 @@
     execute if score @s ui_rst matches 0 if score $temp2 ui_temp matches 0 run gamemode adventure @s
     execute if score @s ui_rst matches 0 if score $temp2 ui_temp matches 1 run gamemode creative @s
     execute if score @s ui_rst matches 0 if score $temp2 ui_temp matches 2 run gamemode adventure @s
-    execute if score @s ui_rst matches 0 run effect give @s resistance 10 127 false
+    execute if score @s ui_rst matches 0 run effect give @s resistance 5 127 false
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_tag_inkfill
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_tag_spdec
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_readtag
@@ -58,3 +58,4 @@
 
 # ss管理: 復活待ち人数が減る
     execute if score @s ui_rst matches 0 run scoreboard players remove $tmw237 ui_rst 1
+    execute if score @s ui_rst matches 0 run scoreboard players reset @s ui_rst

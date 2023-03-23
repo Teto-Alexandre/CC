@@ -26,6 +26,10 @@
 # 殴り合い防止
     effect give @a weakness 5 127 true
 
+# 進捗
+    execute as @a if entity @s[advancements={ui:hidden/misc/beyond_the_sky=false}] at @s run function ui:advancements/beyond_the_sky
+    execute as @a if entity @s[advancements={ui:hidden/misc/enemy_base=false}] at @s run function ui:advancements/enemy_base
+
 # タイムカウント
     #execute store result bossbar minecraft:time value run scoreboard players remove $time ui_world 1
     #function ui:game/end/0.scheduler

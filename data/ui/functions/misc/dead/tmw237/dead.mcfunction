@@ -11,8 +11,10 @@ scoreboard players set @s ui_rst 100
 scoreboard players add $tmw237 ui_rst 1
 tag @s add tmw_237_respawning
 
-# スーパーブーストリセット
+# 変数リセット
 scoreboard players reset @s ui_tmw237_boost
+scoreboard players reset @s ui_tmw237_survive
+scoreboard players reset @s ui_tmw237_ink_regen
 
 # サブ消滅
 scoreboard players set $success ui_temp 0

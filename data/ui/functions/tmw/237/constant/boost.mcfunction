@@ -7,7 +7,7 @@
     execute if score $boost ui_temp matches 281 run scoreboard players reset @s ui_tmw237_boost
 
 #
-    execute if score $boost ui_temp matches 0 if entity @s[advancements={ui:add/misc/boost=false}] run advancement grant @s only ui:add/misc/boost
+    execute if score $boost ui_temp matches 0 if entity @s[advancements={ui:add/basic/boost=false}] run advancement grant @s only ui:add/basic/boost
     execute if score $boost ui_temp matches 0 run execute store result score $cooltime ui_temp run time query gametime
     execute if score $boost ui_temp matches 0 run scoreboard players add $cooltime ui_temp 70
     execute if score $boost ui_temp matches 0 run scoreboard players set $changed ui_temp 1

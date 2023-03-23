@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/assist/3",
+  "display": {
+    "icon": {
+      "item": "minecraft:yellow_stained_glass"
+    },
+    "title": "Assist 5 times",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

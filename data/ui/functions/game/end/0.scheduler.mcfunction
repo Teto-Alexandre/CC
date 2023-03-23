@@ -1,7 +1,7 @@
 #
 
 # 全員リスポーンして無敵
-scoreboard players set @a ui_rst 1
+execute as @a[tag=tmw_237_respawning] run function ui:misc/dead/tmw237/func_respawn
 effect give @a resistance 1 127 true
 
 #

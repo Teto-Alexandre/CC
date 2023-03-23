@@ -11,8 +11,8 @@
 
 # 常時実行
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
-    execute if score @s ui_uses matches 2 run scoreboard players set @s ui_is 300
-    execute if score @s ui_uses matches 2 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
+    execute if score @s ui_uses matches 20 run scoreboard players set @s ui_is 300
+    execute if score @s ui_uses matches 20 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
     #execute if score @s ui_is matches 1.. run teleport @s ~ ~0.5 ~ ~ ~
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 run particle dust 0.5 1 1 2 ~ ~0.5 ~ 0.3 0.3 0.3 0 1 force
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 2 run particle dust 1 0.5 1 2 ~ ~0.5 ~ 0.3 0.3 0.3 0 1 force
@@ -21,7 +21,7 @@
     execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches ..0 run tag @s add ui_237_sub_explode
 
 # 処理終了
-    execute if score @s ui_uses matches 2 run tag @s add ui_237_sub_stop
+    execute if score @s ui_uses matches 20 run tag @s add ui_237_sub_stop
     execute store result score $time ui_temp run time query gametime
     scoreboard players operation $time ui_temp %= #20 ui_num
     execute as @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 run scoreboard players remove @s ui_is 20

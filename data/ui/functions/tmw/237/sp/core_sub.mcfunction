@@ -46,5 +46,11 @@ scoreboard players set @s ui_paint 0
 #
 scoreboard players add @s ui_s_f 1
 
+# サブウェポンだったら進捗解除
+execute if entity @s[advancements={ui:hidden/misc/fatal_weapon=false}] run function ui:tmw/237/sp/advancement_fatal
+
+#
+scoreboard players set $success ui_temp 1
+
 #
 scoreboard players set $changed ui_temp 1

@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/sp/10",
+  "display": {
+    "icon": {
+      "item": "minecraft:lime_stained_glass"
+    },
+    "title": "Use 25 times",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "ui:main/kill_streak/5",
+  "display": {
+    "icon": {
+      "item": "minecraft:green_stained_glass"
+    },
+    "title": "Streak of 6",
+    "description": "",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ]
+}

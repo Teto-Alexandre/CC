@@ -2,7 +2,10 @@
 
 #declare storage ui:map
 
-# HC
+execute as @a run function ui:template/inventory/push
+execute as @a run function ui:template/inventory/pull_first
+
+#
 function ui:game/map/shuffle/
 execute store result score $map ui_world run data get storage ui:map map.ID
 function ui:game/map/core_tp
@@ -11,7 +14,7 @@ function ui:game/map/core_tp
 tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"5秒後に開始します・・・","color":"gold"}]
 playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1 0.5 1
 effect give @a resistance 10 127 true
-execute as @a if score @s ui_rst matches 1.. run scoreboard players set @s ui_rst 1
+execute as @a[tag=tmw_237_respawning] run scoreboard players set @s ui_rst 1
 gamemode spectator @a
 
 # tp
