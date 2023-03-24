@@ -4,7 +4,7 @@
     #
     item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-    item replace entity @s enderchest.2 with apple{CustomModelData:121116,display:{Name:'{"text":"[リモートボム]","color":"gray","italic":false}',Lore:['{"text":"時限爆弾を投げる","color":"aqua","italic":false}','{"text":"Fキーで即座に起爆できる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
+    item replace entity @s enderchest.2 with apple{CustomModelData:121116,display:{Name:'{"text":"[リモートボム]","color":"white","italic":false}',Lore:['{"text":"時限爆弾を投げる","color":"aqua","italic":false}','{"text":"Fキーで即座に起爆できる","color":"aqua","italic":false}']},ui:{ismenu:1},HideFlags:2}
     item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
