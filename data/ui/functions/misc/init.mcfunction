@@ -2,6 +2,8 @@
 
 tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
 
+scoreboard players set $time.max ui_world 3000
+
 ## 限定
     function ui:game/map/data
     scoreboard objectives add game_state dummy

@@ -4,9 +4,9 @@
     data modify storage ui:temp Name set value '{"text":"チョコレートボム・ホワイト","color":"white"}'
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 60
-    execute at @e[distance=4..6,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    scoreboard players set $damage ui_temp 560
-    execute at @e[distance=..4,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute at @e[distance=3..6,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    scoreboard players set $damage ui_temp 360
+    execute at @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出
     function ui:template/sphere_particle/5

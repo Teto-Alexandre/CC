@@ -42,7 +42,7 @@ effect give @a instant_health 10 10 true
 effect give @a resistance 10 127 false
 
 #
-scoreboard players set $time ui_world 3000
+scoreboard players operation $time ui_world = $time.max ui_world
 execute store result bossbar minecraft:time max run scoreboard players get $time ui_world
 
 #

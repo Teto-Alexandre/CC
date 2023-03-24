@@ -5,8 +5,6 @@
     effect clear @s invisibility
     effect clear @s regeneration
     effect give @s slowness 1 1 true
-    #一回消して様子見
-    #effect give @s levitation 1 128 true
     execute store result score $health ui_temp run data get entity @s Health -1.5
     scoreboard players set $Attacker tds_dmg 0
     data merge storage tds: {temp:{Damage:2.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
