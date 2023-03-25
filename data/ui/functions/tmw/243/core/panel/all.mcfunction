@@ -21,6 +21,7 @@ execute if score $slot ui_temp matches 7 run tag @s[tag=ui_temp_this] remove tmw
 execute if score $slot ui_temp matches 7 run tag @s[tag=ui_temp_this] remove ui_temp_this
 execute if score $slot ui_temp matches 9 run function ui:tmw/243/core/tell
 execute if score $slot ui_temp matches 10 run function ui:tmw/243/core/stats
+execute if score $slot ui_temp matches 11 run tag @s add setting_game
 execute if score $slot ui_temp matches 18 if score $phase game_state matches 0 if entity @s[tag=!spectate] run function ui:game/start/toggle_ready
 execute if score $slot ui_temp matches 18 if score $phase game_state matches 0 if entity @s[tag=spectate] run playsound block.dispenser.fail player @a ~ ~ ~ 1 0.8 0
 
@@ -43,8 +44,10 @@ execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 r
 execute if score $slot ui_temp matches 4..7 if entity @s[advancements={ui:add/basic/ender_chest=false}] run advancement grant @s only ui:add/basic/ender_chest
 
 # パネル
-item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"ここに武器をセット","color": "gold","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"左に武器をセット","color": "gold","italic": false}'},ui:{ismenu:1}}
+
+item replace entity @s enderchest.2 with red_stained_glass_pane{display:{Name:'{"text":"武器拡張機能 (未実装)","italic": false,"color": "red"}'},ui:{ismenu:1}}
+
 item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 execute if entity @s[tag=tmw_237_notitle] run item replace entity @s enderchest.4 with red_stained_glass_pane{display:{Name:'{"text":"HUD: 非表示","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=!tmw_237_notitle] run item replace entity @s enderchest.4 with lime_stained_glass_pane{display:{Name:'{"text":"HUD: 表示","italic": false}'},ui:{ismenu:1}}
@@ -57,7 +60,9 @@ execute if entity @s[tag=!tmw_237_noresparticle] run item replace entity @s ende
 item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.9 with paper{display:{Name:'{"text":"操作説明","color": "gold","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.10 with book{display:{Name:'{"text":"戦績確認","color": "gold","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
+item replace entity @s enderchest.11 with nether_star{display:{Name:'{"text":"ゲーム設定","italic": false,"color": "aqua"}'},ui:{ismenu:1}}
+
 item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

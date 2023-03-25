@@ -1,0 +1,26 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "italic": false,
+        "color": "gray",
+        "text": "制限時間: "
+      },
+      {
+        "italic": false,
+        "color": "yellow",
+        "score": {
+          "name": "$time.display",
+          "objective": "ui_world"
+        }
+      },
+      {
+        "italic": false,
+        "color": "gray",
+        "text": " sec"
+      }
+    ]
+  }
+]
