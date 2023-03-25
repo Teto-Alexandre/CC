@@ -6,16 +6,10 @@
 #
 # @public
 
-#エンダーアロー
-execute as @s[tag=ui_luck17] run gamerule sendCommandFeedback false
-gamemode survival @s[tag=ui_luck17,tag=ui_luck17_0]
-gamemode creative @s[tag=ui_luck17,tag=ui_luck17_1]
-gamemode adventure @s[tag=ui_luck17,tag=ui_luck17_2]
-execute as @s[tag=ui_luck17] run gamerule sendCommandFeedback true
-tag @s[tag=ui_luck17,tag=ui_luck17_0] remove ui_luck17_0
-tag @s[tag=ui_luck17,tag=ui_luck17_1] remove ui_luck17_1
-tag @s[tag=ui_luck17,tag=ui_luck17_2] remove ui_luck17_2
-tag @s[tag=ui_luck17] remove ui_luck17
+# リジョインホルダー
+execute if score $phase game_state matches 1 run gamemode spectator @s
+execute if score $phase game_state matches 0 run gamemode adventure @s
+
 
 scoreboard players set @s ui_lg 0
 
