@@ -9,7 +9,7 @@
 # リジョインホルダー
 execute if score $phase game_state matches 1 run gamemode spectator @s
 execute if score $phase game_state matches 0 run gamemode adventure @s
-
+execute if score $phase game_state matches 0 run teleport @s -2 30.5 6
 
 scoreboard players set @s ui_lg 0
 
