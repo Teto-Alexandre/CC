@@ -1,5 +1,5 @@
 {
-  "parent": "ui:main/kill_streak/10",
+  "parent": "ui:main/kill_streak/15",
   "display": {
     "icon": {
       "item": "minecraft:black_stained_glass_pane"

@@ -1,5 +1,5 @@
 {
-  "parent": "ui:main/assist/50",
+  "parent": "ui:main/assist/100",
   "display": {
     "icon": {
       "item": "minecraft:black_stained_glass_pane"

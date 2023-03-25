@@ -1,5 +1,5 @@
 {
-  "parent": "ui:main/sub/2500",
+  "parent": "ui:main/sub/5000",
   "display": {
     "icon": {
       "item": "minecraft:black_stained_glass_pane"

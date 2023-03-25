@@ -1,5 +1,5 @@
 {
-  "parent": "ui:main/kill/100",
+  "parent": "ui:main/kill/250",
   "display": {
     "icon": {
       "item": "minecraft:black_stained_glass_pane"

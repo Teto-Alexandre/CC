@@ -1,14 +1,14 @@
 {
-  "parent": "ui:main/game/game100",
+  "parent": "ui:main/sub/2500",
   "display": {
     "icon": {
-      "item": "minecraft:black_stained_glass_pane"
+      "item": "minecraft:magenta_stained_glass"
     },
-    "title": "",
+    "title": "Use 5000 times",
     "description": "",
     "frame": "task",
-    "show_toast": false,
-    "announce_to_chat": false,
+    "show_toast": true,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
