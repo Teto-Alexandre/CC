@@ -15,7 +15,7 @@
     ##     : 457:トリトル, 458:ウルショ, 459:ロケッティア, 460:ナイスダマ, 461:ハンコ
 
 # ライナー
-give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"エルドライナー",SubType:-1,SPType:-1,BaseType:5,BurstType:8,Burst:201,BurstMax:40,ChargeKeep:24,KeepLevel:20,MainInkUse:200,now:{Speed:-0.1,Model:110811}},main:{ShotType:1,ShotCT:8,BurstCT:1,Spread:50,AirSpread:50,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:10,RangeType:3,Range:40,FlyParticle:4,EndParticle:2,Damage:60,MultiShot:3,ShotFootStep:3,Sound:5}},display:{Lore:['[{"text":"チャージして一度に大量の弾を放つ","color":"gray","italic":false}]']}}
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"エルドライナー",SubType:-1,SPType:-1,BaseType:5,BurstType:8,Burst:201,BurstMax:40,ChargeKeep:24,KeepLevel:20,MainInkUse:150,now:{Speed:-0.1,Model:110811}},main:{ShotType:1,ShotCT:8,BurstCT:1,Spread:50,AirSpread:50,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:10,RangeType:3,Range:40,FlyParticle:4,EndParticle:2,Damage:60,MultiShot:3,ShotFootStep:3,Sound:5}},display:{Lore:['[{"text":"チャージして一度に大量の弾を放つ","color":"gray","italic":false}]']}}
 give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"テストライナー",SubType:-1,SPType:-1,BaseType:5,BurstType:8,Burst:201,BurstMax:40,ChargeKeep:24,KeepLevel:20,MainInkUse:200,now:{Speed:-0.2,Model:110811}},main:{ShotType:1,ShotCT:8,BurstCT:1,Spread:50,AirSpread:50,SpreadType:1,AirSpreadType:1,Speed:10,SpeedPlus:10,RangeType:3,Range:40,FlyParticle:4,EndParticle:2,Damage:60,MultiShot:50,ShotFootStep:3,Sound:5}},display:{Lore:['[{"text":"チャージして一度に大量の弾を放つ","color":"gray","italic":false}]']}}
 
 # ピアサー
