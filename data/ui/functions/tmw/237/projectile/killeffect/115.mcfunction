@@ -2,7 +2,7 @@
     data modify storage ui:temp Name set value '{"text":"ジェットパック","color":"gold"}'
     function ui:template/sphere_particle/2.5
     scoreboard players set $damage_type ui_temp 3
-    scoreboard players set $damage ui_temp 130
+    scoreboard players set $damage ui_temp 100
     execute at @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     function ui:tmw/237/misc/particle_paint
     kill @e[tag=ui_temp_particle]
