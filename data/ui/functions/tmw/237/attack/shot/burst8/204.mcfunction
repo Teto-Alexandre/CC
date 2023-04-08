@@ -1,6 +1,6 @@
 # エルドサイクル
-    execute if score $burst_alt ui_temp matches 6.. run scoreboard players add $damage ui_temp 20
-    execute if score $burst_alt ui_temp matches 11.. run scoreboard players add $damage ui_temp 20
+    execute if score $burst_alt ui_temp matches 6.. run scoreboard players add $damage ui_temp 30
+    execute if score $burst_alt ui_temp matches 11.. run scoreboard players add $damage ui_temp 30
     execute if score $burst_alt ui_temp matches 6.. run scoreboard players add $ink.add ui_temp 40
     execute if score $burst_alt ui_temp matches 11.. run scoreboard players add $ink.add ui_temp 40
     execute if score $burst_alt ui_temp matches 6.. run scoreboard players add $range ui_temp 16

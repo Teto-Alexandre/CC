@@ -29,7 +29,7 @@
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 251 run particle explosion_emitter ~ ~ ~ 5 5 5 0 20 force
-    execute if score $activator ui_temp matches 251 run effect give @s instant_health 1 10 true
+    execute if score $activator ui_temp matches 251 run effect give @s instant_health 1 8 true
     execute if score $activator ui_temp matches 251 run effect give @s resistance 1 126 true
 
 # スーパースター

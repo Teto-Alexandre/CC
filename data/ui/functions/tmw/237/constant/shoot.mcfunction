@@ -36,5 +36,8 @@
 
 # ストレージのモデルデータを読み込み
     data modify storage ui:gun temp.value set from storage ui:gun temp.Model
+    execute if score $subtype ui_temp matches 461 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110912
     execute if score $sptype ui_temp matches 461 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110912
+    execute if score $subtype ui_temp matches 401 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110913
+    execute if score $sptype ui_temp matches 401 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110913
     item modify entity @s weapon.mainhand ui:gun/value/model

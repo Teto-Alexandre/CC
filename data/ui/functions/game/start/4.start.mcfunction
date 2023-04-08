@@ -39,7 +39,7 @@ kill @e[tag=temp_respawn]
 effect clear @a
 effect give @a night_vision 1000000 0 true
 effect give @a instant_health 10 10 true
-effect give @a resistance 10 127 false
+#effect give @a resistance 10 127 false
 
 #
 scoreboard players operation $time ui_world = $time.max ui_world
