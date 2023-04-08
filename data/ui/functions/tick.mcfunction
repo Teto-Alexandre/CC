@@ -30,6 +30,10 @@
             execute as @a[scores={ui_dc=1..}] run function ui:misc/dead
         ### リスポーン直後に実行するコマンド群
             execute as @e[type=player,scores={ui_dc_r=1..}] run function ui:misc/respawned
+    
+    ##
+        scoreboard players set @a ui_tmw237_ready 0
+        scoreboard players set @a[tag=game.ready] ui_tmw237_ready 1
 
 #
     scoreboard players add $world ui_tc 1

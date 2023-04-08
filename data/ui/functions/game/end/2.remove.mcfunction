@@ -9,3 +9,6 @@ scoreboard objectives remove ui_s_q
 scoreboard objectives remove ui_s_f
 scoreboard objectives remove ui_s_kill_dist
 scoreboard objectives remove ui_s_kill_streak
+
+#
+scoreboard objectives setdisplay list ui_tmw237_ready

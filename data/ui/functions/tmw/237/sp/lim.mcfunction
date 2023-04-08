@@ -7,8 +7,8 @@ scoreboard players set $success ui_temp 0
 scoreboard players set $quick_use ui_temp 0
 
 #
-execute if score $subtype ui_temp matches 202 run scoreboard players set $quick_use ui_temp 1
-execute if score $subtype ui_temp matches 203 run scoreboard players set $quick_use ui_temp 1
+execute if score $sptype ui_temp matches 202 run scoreboard players set $quick_use ui_temp 1
+execute if score $sptype ui_temp matches 203 run scoreboard players set $quick_use ui_temp 1
 
 # クイック - スペシャルウェポン発動
 execute if score $quick_use ui_temp matches 1 if score $success ui_temp matches 0 if score $qf ui_temp matches 1 if score @s ui_paint < $spneed ui_temp run function ui:tmw/237/sp/fail

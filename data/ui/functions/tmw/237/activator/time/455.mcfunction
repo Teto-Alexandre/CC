@@ -1,6 +1,6 @@
 # ジェットパック
 scoreboard players set $temp ui_temp 0
-execute if block ~ ~-1 ~ #ui:nocol if block ~ ~-2 ~ #ui:nocol if block ~ ~-3 ~ #ui:nocol if block ~ ~-4 ~ #ui:nocol if block ~ ~-5 ~ #ui:nocol if block ~ ~-6 ~ #ui:nocol if block ~ ~-7 ~ #ui:nocol if block ~ ~-8 ~ #ui:nocol if block ~ ~-9 ~ #ui:nocol if block ~ ~-10 ~ #ui:nocol if block ~ ~-11 ~ #ui:nocol run scoreboard players set $temp ui_temp 1
+execute if block ~ ~-1 ~ #ui:nocol if block ~ ~-2 ~ #ui:nocol if block ~ ~-3 ~ #ui:nocol if block ~ ~-4 ~ #ui:nocol if block ~ ~-5 ~ #ui:nocol if block ~ ~-6 ~ #ui:nocol if block ~ ~-7 ~ #ui:nocol if block ~ ~-8 ~ #ui:nocol if block ~ ~-9 ~ #ui:nocol run scoreboard players set $temp ui_temp 1
 execute if score $temp ui_temp matches 0.. run effect give @s resistance 1 1 true
 execute if score $temp ui_temp matches 0 run effect give @s levitation 1 9 true
 execute if score $temp ui_temp matches 1 run effect clear @s levitation
