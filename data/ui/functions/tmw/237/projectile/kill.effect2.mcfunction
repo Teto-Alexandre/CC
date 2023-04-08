@@ -16,11 +16,12 @@
         execute if score @s ui_hpart matches 1 run function ui:tmw/237/projectile/killeffect/1
         execute if score @s ui_hpart matches 2 run function ui:tmw/237/projectile/killeffect/2
         execute if score @s ui_hpart matches 3 run function ui:tmw/237/projectile/killeffect/3
+        execute if score @s ui_hpart matches -31 run function ui:tmw/237/projectile/killeffect/3.1
         execute if score @s ui_hpart matches 4 run function ui:tmw/237/projectile/killeffect/4
         execute if score @s ui_hpart matches 5 run function ui:tmw/237/projectile/killeffect/5
         execute if score @s ui_hpart matches 6 run function ui:tmw/237/projectile/killeffect/6
-        execute if score @s ui_hpart matches -61 run function ui:tmw/237/projectile/killeffect/6.2
-        execute if score @s ui_hpart matches -62 run function ui:tmw/237/projectile/killeffect/6.3
+        execute if score @s ui_hpart matches -61 run function ui:tmw/237/projectile/killeffect/6.1
+        execute if score @s ui_hpart matches -62 run function ui:tmw/237/projectile/killeffect/6.2
         execute if score @s ui_hpart matches 7 run function ui:tmw/237/projectile/killeffect/7
         execute if score @s ui_hpart matches 8 run function ui:tmw/237/projectile/killeffect/8
         execute if score @s ui_hpart matches 9 run function ui:tmw/237/projectile/killeffect/9
