@@ -50,5 +50,11 @@
     item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
     item replace entity @s enderchest.26 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
+# 発光表示
+    execute if score $qf ui_temp matches 1 run item modify entity @s enderchest.2 ui:gun/add_glow
+    execute if score $qf ui_temp matches 2 run item modify entity @s enderchest.3 ui:gun/add_glow
+    execute if score $qf ui_temp matches 3 run item modify entity @s enderchest.4 ui:gun/add_glow
+    execute if score $qf ui_temp matches 4 run item modify entity @s enderchest.5 ui:gun/add_glow
+
 # 変更した
     scoreboard players set $success ui_temp 1

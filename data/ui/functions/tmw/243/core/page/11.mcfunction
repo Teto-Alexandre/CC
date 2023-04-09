@@ -53,5 +53,22 @@
 # メニュー表示
     function ui:tmw/243/core/panel/11
 
+# 発光表示
+    execute if score $sp ui_temp matches 151 run item modify entity @s enderchest.2 ui:gun/add_glow
+    execute if score $sp ui_temp matches 152 run item modify entity @s enderchest.3 ui:gun/add_glow
+    execute if score $sp ui_temp matches 251 run item modify entity @s enderchest.4 ui:gun/add_glow
+    execute if score $sp ui_temp matches 252 run item modify entity @s enderchest.5 ui:gun/add_glow
+    execute if score $sp ui_temp matches 253 run item modify entity @s enderchest.6 ui:gun/add_glow
+    execute if score $sp ui_temp matches 254 run item modify entity @s enderchest.11 ui:gun/add_glow
+    execute if score $sp ui_temp matches 255 run item modify entity @s enderchest.12 ui:gun/add_glow
+    execute if score $sp ui_temp matches 256 run item modify entity @s enderchest.13 ui:gun/add_glow
+    execute if score $sp ui_temp matches 257 run item modify entity @s enderchest.14 ui:gun/add_glow
+    execute if score $sp ui_temp matches 258 run item modify entity @s enderchest.15 ui:gun/add_glow
+    execute if score $sp ui_temp matches 351 run item modify entity @s enderchest.20 ui:gun/add_glow
+    execute if score $sp ui_temp matches 451 run item modify entity @s enderchest.21 ui:gun/add_glow
+    execute if score $sp ui_temp matches 452 run item modify entity @s enderchest.22 ui:gun/add_glow
+    execute if score $sp ui_temp matches 453 run item modify entity @s enderchest.23 ui:gun/add_glow
+    execute if score $sp ui_temp matches 454 run item modify entity @s enderchest.24 ui:gun/add_glow
+
 # 変更した
     scoreboard players set $success ui_temp 1

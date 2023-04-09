@@ -26,5 +26,8 @@
 # メニュー表示
     function ui:tmw/243/core/panel/21
 
+# 発光表示
+    execute if score $sub ui_temp matches 1011 run item modify entity @s enderchest.2 ui:gun/add_glow
+
 # 変更した
     scoreboard players set $success ui_temp 1
