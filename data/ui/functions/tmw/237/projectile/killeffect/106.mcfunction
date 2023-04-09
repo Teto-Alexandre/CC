@@ -27,7 +27,7 @@ execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=neares
     #加速度係数 - 加速度の倍加係数 多いほどよく追尾する 推奨値は20
     scoreboard players set @e[tag=tag] ui_bm_temp 20
     #寿命 - 爆発までのtick数
-    scoreboard players set @e[tag=tag] ui_br 30
+    scoreboard players set @e[tag=tag] ui_br 36
     #ターゲットを選択
     execute as @e[tag=tag] run scoreboard players operation @s ui_gpc = @e[tag=ui_temp_target2,limit=1] ui_obj_id
     scoreboard players operation @e[tag=tag] ui_id = $id ui_temp

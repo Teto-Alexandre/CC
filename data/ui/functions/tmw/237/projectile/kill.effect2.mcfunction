@@ -67,6 +67,9 @@
         #execute if score @s ui_hpart matches 301..400 run scoreboard players operation $temp ui_temp = @s ui_hpart
         #execute if score @s ui_hpart matches 301..400 store result storage ui:common input.Var int 1 run scoreboard players remove $temp ui_temp 300
         #execute if score @s ui_hpart matches 301..400 run function ui:common/particle
+    #
+        # マルミサ
+        execute if score @s ui_hpart matches 401 run function ui:tmw/237/projectile/killeffect/401
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
