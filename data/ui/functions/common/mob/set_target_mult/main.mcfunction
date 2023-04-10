@@ -10,7 +10,6 @@ tag @s add ui_temp_target
 
 #
 execute as @e[tag=ui_common_mob_crowd] run tp @s @s
-#execute as @e[tag=ui_common_mob_crowd] run effect give @s glowing
 tag @e[tag=ui_common_mob_crowd] add ui_common_mob_temp_antikb
 execute as @e[tag=ui_common_mob_crowd] run attribute @s minecraft:generic.knockback_resistance modifier add 0-0-0-0-1 "NoKB_temp" 1 add
 execute as @e[tag=ui_common_mob_crowd] run attribute @s minecraft:generic.follow_range modifier add 0-0-0-0-2 "NoFollow_temp" -1024 add

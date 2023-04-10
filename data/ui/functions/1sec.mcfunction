@@ -22,6 +22,9 @@
     execute as @a if score @s ui_team matches 3 run team join yellow @s
     execute as @a if score @s ui_team matches 4 run team join green @s
     execute if score $module ui_world matches 1 as @a if score @s module matches 5 run team join rainbow @s
+    execute if score $module ui_world matches 1 as @a if score @s module matches 14 run scoreboard players set @s ui_tmw237_sprint_particle 25
+    tag @a[tag=module19] remove module19
+    execute if score $module ui_world matches 1 as @a if score @s module matches 19 run tag @s add module19
     execute as @a[tag=spectate] run team join spectate @s
 
 # 殴り合い防止
@@ -31,6 +34,7 @@
 # 進捗
     execute as @a[gamemode=!spectator] if entity @s[advancements={ui:hidden/misc/beyond_the_sky=false}] at @s run function ui:advancements/beyond_the_sky
     execute as @a[gamemode=!spectator] if entity @s[advancements={ui:hidden/misc/enemy_base=false}] at @s run function ui:advancements/enemy_base
+    execute as @a[scores={advancements=81..}] run advancement grant @s only ui:complete/root
 
 # タイムカウント
     #execute store result bossbar minecraft:time value run scoreboard players remove $time ui_world 1

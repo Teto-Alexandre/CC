@@ -5,7 +5,8 @@
     execute if score $team ui_temp matches 4 run function ui:tmw/237/projectile/move/106/4
 
 #
-    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog] glowing 5 0 true
+    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog,tag=!module19] glowing 5 0 false
+    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog,tag=module19] glowing 2 0 false
 
 #
     execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]

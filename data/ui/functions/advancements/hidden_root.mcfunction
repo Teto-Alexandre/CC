@@ -5,4 +5,5 @@ execute if entity @s[tag=!module_unlocked] run tellraw @s [{"text":"Notice","col
 execute if entity @s[tag=!module_unlocked] run playsound entity.player.levelup player @s ~ ~ ~ 0.8 0.5 0.8
 tag @s add module_unlocked
 
+scoreboard players add @s advancements 1
 scoreboard players add $module unlock 1

@@ -13,7 +13,6 @@ scoreboard players operation @s ui_common_mob_target_obj = $obj_id ui_temp
 
 #
 tp @s @s
-#effect give @s glowing
 tag @s add ui_common_mob_temp_antikb
 attribute @s minecraft:generic.knockback_resistance modifier add 0-0-0-0-1 "NoKB_temp" 1 add
 attribute @s minecraft:generic.follow_range modifier add 0-0-0-0-2 "NoFollow_temp" -1024 add

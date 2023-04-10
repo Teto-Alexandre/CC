@@ -4,6 +4,7 @@ execute if entity @s[tag=tmw_237_king] run scoreboard players set $amp ui_temp -
 
 # 死亡したならリスポーンタイムが5秒になる -tmw_237_sub_mult-
 scoreboard players operation @s ui_rst = $respawntime ui_world
+execute if score $module ui_world matches 1 if score @s module matches 15 run scoreboard players operation @s ui_rst /= #2 ui_num
     #誰も死んでなかったら乱数をリロール
     scoreboard players set $mod ui_calc1 23
     function ui:common/rand

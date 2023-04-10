@@ -252,7 +252,8 @@ execute positioned ^-0.345 ^-1.370 ^6.857 facing entity @s feet positioned as @s
 execute positioned ^-0.175 ^-0.699 ^6.963 facing entity @s feet positioned as @s run particle end_rod ~ ~ ~ ^ ^ ^10000 0.00007 0 force @a
     particle end_rod ~ ~ ~ 0 0 0 0.3 30 force @a
     playsound block.beacon.power_select player @a ~ ~ ~ 1.5 1.2 0
-    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog] unless score @s ui_team = $temp ui_temp run effect give @s glowing 5 0 false
+    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog,tag=!module19] unless score @s ui_team = $temp ui_temp run effect give @s glowing 5 0 false
+    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog,tag=module19] unless score @s ui_team = $temp ui_temp run effect give @s glowing 2 0 false
     execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog] unless score @s ui_team = $temp ui_temp run effect give @s slowness 5 0 false
     execute as @a[distance=..8] unless score @s ui_team = $temp ui_temp run scoreboard players operation @s tds_recent_attacked_by = $id ui_temp
     scoreboard players set $Cache ui_temp 1

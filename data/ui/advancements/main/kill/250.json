@@ -18,5 +18,8 @@
   },
   "requirements": [
     ["task1"]
-  ]
+  ],
+  "rewards": {
+      "function": "ui:advancements/achieve/main"
+  }
 }

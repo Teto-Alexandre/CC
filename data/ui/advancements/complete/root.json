@@ -8,7 +8,7 @@
     "background": "minecraft:textures/block/gold_block.png",
     "frame": "goal",
     "show_toast": true,
-    "announce_to_chat": false,
+    "announce_to_chat": true,
     "hidden": false
   },
   "criteria": {
@@ -20,5 +20,8 @@
     [
       "task1"
     ]
-  ]
+  ],
+  "rewards": {
+      "function": "ui:advancements/achieve/the_end"
+  }
 }

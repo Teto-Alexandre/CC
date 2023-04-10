@@ -26,8 +26,8 @@ execute if entity @s[tag=!record_unlocked] if score $slot ui_temp matches 10 run
 execute if entity @s[tag=record_unlocked] run item replace entity @s enderchest.10 with book{display:{Name:'{"text":"戦績確認","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=record_unlocked] if score $slot ui_temp matches 10 run function ui:tmw/243/core/stats
 
-execute if entity @s[tag=!party_unlocked] run item replace entity @s enderchest.11 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
-execute if entity @s[tag=!party_unlocked] if score $slot ui_temp matches 11 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
+execute if entity @s[tag=!setting_unlocked] run item replace entity @s enderchest.11 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=!setting_unlocked] if score $slot ui_temp matches 11 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
 execute if entity @s[tag=setting_unlocked] run item replace entity @s enderchest.11 with nether_star{display:{Name:'{"text":"ゲーム設定","italic": false,"color": "aqua"}'},ui:{ismenu:1}}
 execute if entity @s[tag=setting_unlocked] if score $slot ui_temp matches 11 run tag @s add setting_game
 execute if entity @s[tag=setting_unlocked] if score $slot ui_temp matches 11 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がゲーム設定を開きました","color": "gray"}]

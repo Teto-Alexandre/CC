@@ -46,7 +46,7 @@
 
 #
     execute as @a[tag=immune_water] at @s if block ~ ~ ~ water run effect give @s levitation 1 9 true
-    tag @s[tag=immune_water] remove immune_water
+    tag @a[tag=immune_water] remove immune_water
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append

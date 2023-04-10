@@ -7,6 +7,10 @@ scoreboard players reset @a ui_tmw237_ink_regen
 
 tag @a[tag=fatal_weapon] remove fatal_weapon
 execute if score $module ui_world matches 1 as @a if score @s module matches 2 run tag @s add fatal_weapon
+execute as @a run attribute @s generic.movement_speed modifier remove 2a93cf3d-b14d-4538-87cc-5fd0119eac2c
+execute if score $module ui_world matches 1 as @a if score @s module matches 17 run attribute @s generic.movement_speed modifier add 2a93cf3d-b14d-4538-87cc-5fd0119eac2c "module17" 0.1 multiply
+execute as @a run attribute @s generic.max_health modifier remove 2a93cf3d-b14d-4538-87cc-5fd0119eac2d
+execute if score $module ui_world matches 1 as @a if score @s module matches 18 run attribute @s generic.max_health modifier add 2a93cf3d-b14d-4538-87cc-5fd0119eac2d "module18" 0.2 multiply
 
 #
 bossbar set minecraft:time players @a
