@@ -15,3 +15,7 @@
     execute if score $qf ui_temp matches 3 run scoreboard players set @s ui_paint 0
     scoreboard players remove $sptime ui_temp 1
     scoreboard players set $changed ui_temp 1
+
+#
+    scoreboard players operation $activator ui_temp %= #100 ui_num
+    execute if score $activator ui_temp matches 51.. run tag @s add advancement_using_sp

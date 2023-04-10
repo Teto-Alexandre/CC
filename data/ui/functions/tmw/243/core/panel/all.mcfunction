@@ -20,31 +20,53 @@ execute if score $slot ui_temp matches 7 run tag @s[tag=!tmw_237_noresparticle] 
 execute if score $slot ui_temp matches 7 run tag @s[tag=ui_temp_this] remove tmw_237_noresparticle
 execute if score $slot ui_temp matches 7 run tag @s[tag=ui_temp_this] remove ui_temp_this
 execute if score $slot ui_temp matches 9 run function ui:tmw/243/core/tell
-execute if score $slot ui_temp matches 10 run function ui:tmw/243/core/stats
-execute if score $slot ui_temp matches 11 run tag @s add setting_game
+
+execute if entity @s[tag=!record_unlocked] run item replace entity @s enderchest.10 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=!record_unlocked] if score $slot ui_temp matches 10 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
+execute if entity @s[tag=record_unlocked] run item replace entity @s enderchest.10 with book{display:{Name:'{"text":"戦績確認","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=record_unlocked] if score $slot ui_temp matches 10 run function ui:tmw/243/core/stats
+
+execute if entity @s[tag=!party_unlocked] run item replace entity @s enderchest.11 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=!party_unlocked] if score $slot ui_temp matches 11 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
+execute if entity @s[tag=setting_unlocked] run item replace entity @s enderchest.11 with nether_star{display:{Name:'{"text":"ゲーム設定","italic": false,"color": "aqua"}'},ui:{ismenu:1}}
+execute if entity @s[tag=setting_unlocked] if score $slot ui_temp matches 11 run tag @s add setting_game
+execute if entity @s[tag=setting_unlocked] if score $slot ui_temp matches 11 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がゲーム設定を開きました","color": "gray"}]
+
 execute if score $slot ui_temp matches 18 if score $phase game_state matches 0 if entity @s[tag=!spectate] run function ui:game/start/toggle_ready
 execute if score $slot ui_temp matches 18 if score $phase game_state matches 0 if entity @s[tag=spectate] run playsound block.dispenser.fail player @a ~ ~ ~ 1 0.8 0
 
-execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=auto_ready] add ui_temp_this
-execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 if entity @s[tag=auto_ready] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が準備完了をマニュアルにしました","color": "gray"}]
-execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 if entity @s[tag=!auto_ready] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が準備完了をオートにしました","color": "gray"}]
-execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=!auto_ready] add auto_ready
-execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove auto_ready
-execute if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if entity @s[tag=!auto_ready_unlocked] run item replace entity @s enderchest.19 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=!auto_ready_unlocked] if score $slot ui_temp matches 19 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
+execute if entity @s[tag=auto_ready_unlocked] if entity @s[tag=!auto_ready] run item replace entity @s enderchest.19 with ender_pearl{display:{Name:'{"text":"ゲームごとに準備完了をリセットする","italic": false,"color": "gray"}'},ui:{ismenu:1},HideFlags:2}
+execute if entity @s[tag=auto_ready_unlocked] if entity @s[tag=auto_ready] run item replace entity @s enderchest.19 with ender_eye{display:{Name:'{"text":"準備完了状態を引き継ぐ","italic": false,"color": "white"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
+execute if entity @s[tag=auto_ready_unlocked] if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=auto_ready] add ui_temp_this
+execute if entity @s[tag=auto_ready_unlocked] if score $slot ui_temp matches 19 if score $phase game_state matches 0 if entity @s[tag=auto_ready] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が準備完了をマニュアルにしました","color": "gray"}]
+execute if entity @s[tag=auto_ready_unlocked] if score $slot ui_temp matches 19 if score $phase game_state matches 0 if entity @s[tag=!auto_ready] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が準備完了をオートにしました","color": "gray"}]
+execute if entity @s[tag=auto_ready_unlocked] if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=!auto_ready] add auto_ready
+execute if entity @s[tag=auto_ready_unlocked] if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove auto_ready
+execute if entity @s[tag=auto_ready_unlocked] if score $slot ui_temp matches 19 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove ui_temp_this
 
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=spectate] add ui_temp_this
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 if entity @s[tag=spectate] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が観戦を終了しました","color": "gray"}]
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 if entity @s[tag=!spectate] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が観戦を始めました","color": "gray"}]
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=!spectate] add game.ready
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=!spectate] add spectate
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove game.ready
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove spectate
-execute if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if entity @s[tag=!spectator_unlocked] run item replace entity @s enderchest.20 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=!spectator_unlocked] if score $slot ui_temp matches 20 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
+execute if entity @s[tag=spectator_unlocked] if entity @s[tag=!spectate] run item replace entity @s enderchest.20 with emerald{display:{Name:'{"text":"状態: 参戦","italic": false,"color": "white"}'},ui:{ismenu:1},HideFlags:2}
+execute if entity @s[tag=spectator_unlocked] if entity @s[tag=spectate] run item replace entity @s enderchest.20 with light_gray_dye{display:{Name:'{"text":"状態: 観戦","italic": false,"color": "gray"}'},ui:{ismenu:1}}
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=spectate] add ui_temp_this
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 if entity @s[tag=spectate] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が観戦を終了しました","color": "gray"}]
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 if entity @s[tag=!spectate] run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が観戦を始めました","color": "gray"}]
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=!spectate] add game.ready
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=!spectate] add spectate
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove game.ready
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove spectate
+execute if entity @s[tag=spectator_unlocked] if score $slot ui_temp matches 20 if score $phase game_state matches 0 run tag @s[tag=ui_temp_this] remove ui_temp_this
 
 execute if score $slot ui_temp matches 4..7 if entity @s[advancements={ui:add/basic/ender_chest=false}] run advancement grant @s only ui:add/basic/ender_chest
 
 # パネル
-item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"左に武器をセット","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute unless score $module ui_world matches 1 run item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120009,display:{Name:'{"text":"左に武器をセット","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $module ui_world matches 1 if entity @s[tag=module_unlocked] run item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120010,display:{Name:'{"text":"左に武器をセット","color": "gold","italic": false}',Lore:['{"text":"ここをクリックしてモジュール設定","color": "gray","italic": false}']},ui:{ismenu:1}}
+execute if score $module ui_world matches 1 unless entity @s[tag=module_unlocked] run item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120010,display:{Name:'{"text":"左に武器をセット","color": "gold","italic": false}',Lore:['{"text":"モジュール設定は未開放","color": "red","italic": false}']},ui:{ismenu:1}}
+execute if score $module ui_world matches 1 if entity @s[tag=module_unlocked] if score $slot ui_temp matches 1 run tag @s add setting_module
+execute if score $module ui_world matches 1 unless entity @s[tag=module_unlocked] if score $slot ui_temp matches 1 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
 
 item replace entity @s enderchest.2 with red_stained_glass_pane{display:{Name:'{"text":"武器拡張機能 (未実装)","italic": false,"color": "red"}'},ui:{ismenu:1}}
 
@@ -59,9 +81,6 @@ execute if entity @s[tag=tmw_237_noresparticle] run item replace entity @s ender
 execute if entity @s[tag=!tmw_237_noresparticle] run item replace entity @s enderchest.7 with lime_stained_glass_pane{display:{Name:'{"text":"無敵時間パーティクル表示: 有効","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.9 with paper{display:{Name:'{"text":"操作説明","color": "gold","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.10 with book{display:{Name:'{"text":"戦績確認","color": "gold","italic": false}'},ui:{ismenu:1}}
-
-item replace entity @s enderchest.11 with nether_star{display:{Name:'{"text":"ゲーム設定","italic": false,"color": "aqua"}'},ui:{ismenu:1}}
 
 item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -73,10 +92,6 @@ execute unless entity @s[tag=game.ready] run item replace entity @s enderchest.1
 execute if entity @s[tag=game.ready] run item replace entity @s enderchest.18 with lime_dye{display:{Name:'{"text":"クリックで準備完了解除","italic": false,"color": "green"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
 execute if score $phase game_state matches 1.. run item replace entity @s enderchest.18 with orange_dye{display:{Name:'{"text":"開始中・・・","italic": false,"color": "gold"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
 execute if entity @s[tag=spectate] run item replace entity @s enderchest.18 with barrier{display:{Name:'{"text":"※観戦モード※","italic": false,"color": "white"}'},ui:{ismenu:1},HideFlags:1}
-execute if entity @s[tag=!auto_ready] run item replace entity @s enderchest.19 with ender_pearl{display:{Name:'{"text":"ゲームごとに準備完了をリセットする","italic": false,"color": "gray"}'},ui:{ismenu:1},HideFlags:2}
-execute if entity @s[tag=auto_ready] run item replace entity @s enderchest.19 with ender_eye{display:{Name:'{"text":"準備完了状態を引き継ぐ","italic": false,"color": "white"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
-execute if entity @s[tag=!spectate] run item replace entity @s enderchest.20 with emerald{display:{Name:'{"text":"状態: 参戦","italic": false,"color": "white"}'},ui:{ismenu:1},HideFlags:2}
-execute if entity @s[tag=spectate] run item replace entity @s enderchest.20 with light_gray_dye{display:{Name:'{"text":"状態: 観戦","italic": false,"color": "gray"}'},ui:{ismenu:1}}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

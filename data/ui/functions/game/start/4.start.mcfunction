@@ -1,9 +1,12 @@
 # 専用ワールド用の簡易実行関数
 
 # 変数リセット
-scoreboard players reset @s ui_tmw237_boost
-scoreboard players reset @s ui_tmw237_survive
-scoreboard players reset @s ui_tmw237_ink_regen
+scoreboard players reset @a ui_tmw237_boost
+scoreboard players reset @a ui_tmw237_survive
+scoreboard players reset @a ui_tmw237_ink_regen
+
+tag @a[tag=fatal_weapon] remove fatal_weapon
+execute if score $module ui_world matches 1 as @a if score @s module matches 2 run tag @s add fatal_weapon
 
 #
 bossbar set minecraft:time players @a
@@ -28,16 +31,21 @@ execute as @e[tag=temp_respawn_blue] positioned as @s as @a[scores={ui_team=1},t
 execute as @e[tag=temp_respawn_red] positioned as @s as @a[scores={ui_team=2},tag=!spectate] run teleport @s ~ ~ ~
 execute as @e[tag=temp_respawn_yellow] positioned as @s as @a[scores={ui_team=3},tag=!spectate] run teleport @s ~ ~ ~
 execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},tag=!spectate] run teleport @s ~ ~ ~
-execute as @e[tag=temp_respawn_blue] positioned as @s as @a[scores={ui_team=1},tag=!spectate] run spawnpoint @s ~ ~ ~
-execute as @e[tag=temp_respawn_red] positioned as @s as @a[scores={ui_team=2},tag=!spectate] run spawnpoint @s ~ ~ ~
-execute as @e[tag=temp_respawn_yellow] positioned as @s as @a[scores={ui_team=3},tag=!spectate] run spawnpoint @s ~ ~ ~
-execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},tag=!spectate] run spawnpoint @s ~ ~ ~
+
+    ##
+    execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=1}] at @e[tag=temp_respawn,tag=!temp_respawn_blue,sort=random,limit=1] run teleport @s ~ ~ ~
+    execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=2}] at @e[tag=temp_respawn,tag=!temp_respawn_red,sort=random,limit=1] run teleport @s ~ ~ ~
+    execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=3}] at @e[tag=temp_respawn,tag=!temp_respawn_yellow,sort=random,limit=1] run teleport @s ~ ~ ~
+    execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=4}] at @e[tag=temp_respawn,tag=!temp_respawn_green,sort=random,limit=1] run teleport @s ~ ~ ~
+
+execute as @a[tag=!spectate] at @s run spawnpoint @s ~ ~ ~
 
 #
 kill @e[tag=temp_respawn]
 
 effect clear @a
 effect give @a night_vision 1000000 0 true
+execute if score $module ui_world matches 1 as @a if score @s module matches 7 run effect clear @s night_vision
 effect give @a instant_health 10 10 true
 #effect give @a resistance 10 127 false
 
@@ -58,4 +66,4 @@ scoreboard objectives setdisplay list ui_s_kill
 #
 tag @a add tmw_237_readtag
 tag @a add tmw_237_tag_inkfill
-tag @s add tmw_237_tag_spdec
+tag @a add tmw_237_tag_spdec

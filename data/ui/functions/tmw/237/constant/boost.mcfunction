@@ -5,6 +5,11 @@
     execute if score $boost ui_temp matches 281 run playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 2 0
     execute if score $boost ui_temp matches 281 run tellraw @s [{"text":"[","color":"gray"},{"text":"スーパーブースト","color":"yellow"},{"text":"]","color":"gray"},{"text":"のチャージが完了しました！","color":"white"}]
     execute if score $boost ui_temp matches 281 run scoreboard players reset @s ui_tmw237_boost
+    
+    # モジュール適応時
+    execute if score $module ui_world matches 1 if score @s module matches 1 if score $boost ui_temp matches 181 run playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 2 0
+    execute if score $module ui_world matches 1 if score @s module matches 1 if score $boost ui_temp matches 181 run tellraw @s [{"text":"[","color":"gray"},{"text":"スーパーブースト","color":"yellow"},{"text":"]","color":"gray"},{"text":"のチャージが完了しました！","color":"white"}]
+    execute if score $module ui_world matches 1 if score @s module matches 1 if score $boost ui_temp matches 181 run scoreboard players reset @s ui_tmw237_boost
 
 #
     execute if score $boost ui_temp matches 0 if entity @s[advancements={ui:add/basic/boost=false}] run advancement grant @s only ui:add/basic/boost
@@ -140,6 +145,10 @@
     execute if score $boost ui_temp matches 40 at @s rotated ~ 0 run summon slime ^ ^ ^-0.2 {NoAI:1b,Silent:1b,Invulnerable:1b,Tags:["ui_motionslime","ui_unhurtable"]}
     execute if score $boost ui_temp matches 40 at @s rotated ~ 0 run summon slime ^ ^ ^-0.2 {NoAI:1b,Silent:1b,Invulnerable:1b,Tags:["ui_motionslime","ui_unhurtable"]}
     execute if score $boost ui_temp matches 40 at @s rotated ~ 0 run summon slime ^ ^ ^-0.2 {NoAI:1b,Silent:1b,Invulnerable:1b,Tags:["ui_motionslime","ui_unhurtable"]}
+
+    # モジュール適応時
+    execute if score $module ui_world matches 1 if score @s module matches 1 if score $boost ui_temp matches 40 at @s rotated ~ 0 run function ui:tmw/237/constant/boost2
+
     execute if score $boost ui_temp matches 39..41 at @s run tp @s @s
     execute if score $boost ui_temp matches 41 run effect give @s levitation 1 49 true
     execute if score $boost ui_temp matches 43 run effect clear @s levitation

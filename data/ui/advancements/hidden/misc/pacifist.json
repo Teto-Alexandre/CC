@@ -1,0 +1,30 @@
+{
+  "parent": "ui:hidden/misc/white_out",
+  "display": {
+    "icon": {
+      "item": "minecraft:wheat"
+    },
+    "title": "へいわしゅぎしゃ",
+    "description": "非武装で敵を倒す",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:player"
+        } 
+      }
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ],
+  "rewards": {
+      "function": "ui:advancements/achieve/pacifist"
+  }
+}

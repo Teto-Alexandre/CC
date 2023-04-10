@@ -1,0 +1,29 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+    	[
+        {
+          "italic": false,
+          "color": "gray",
+          "text": "現在の設定: "
+        },
+        {
+          "italic": false,
+          "color": "yellow",
+          "score": {
+            "name": "$time.display",
+            "objective": "ui_world"
+          }
+        },
+        {
+          "italic": false,
+          "color": "gray",
+          "text": " sec"
+        }
+  		]
+    ],
+    "replace": true
+  }
+]

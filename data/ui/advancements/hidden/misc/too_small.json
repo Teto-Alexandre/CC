@@ -20,6 +20,6 @@
     ["task1"]
   ],
   "rewards": {
-      "function": "ui:advancements/hidden_root"
+      "function": "ui:advancements/achieve/too_small"
   }
 }

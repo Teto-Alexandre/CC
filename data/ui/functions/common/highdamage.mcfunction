@@ -15,10 +15,9 @@
 # @public
 
 # act
-execute if entity @s[advancements={ui:add/basic/drown=false}] run advancement grant @s only ui:add/basic/drown
 scoreboard players reset $Attacker tds_dmg
 tag @e[tag=tds_tempa] remove tds_tempa
 tag @s add tds_ui_highdamage_temp
 data merge storage tds: {temp:{Damage:1024.00,DamageType:1,DeathMessage:11,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
 execute at @s run function tds:attack
-advancement grant @s[tag=tds_ui_highdamage_temp] only ui:main/other/resist_death
+advancement grant @s[tag=tds_ui_highdamage_temp] only ui:hidden/misc/go_swimming

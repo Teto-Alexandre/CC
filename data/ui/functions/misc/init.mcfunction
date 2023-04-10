@@ -3,12 +3,27 @@
 tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
 
 scoreboard players set $time.max ui_world 3000
+scoreboard players set $respawntime ui_world 100
 
 ## 限定
     function ui:game/map/data
     scoreboard objectives add game_state dummy
+    scoreboard objectives add party_mode dummy
+    scoreboard objectives add unlock dummy
+    scoreboard objectives add module dummy
     scoreboard players set $phase game_state 0
     scoreboard objectives add wool_count dummy
+
+scoreboard players set $ke2 party_mode 0
+scoreboard players set $dmg party_mode 0
+scoreboard players set $def party_mode 0
+
+tag @a remove record_unlocked
+tag @a remove spectator_unlocked
+tag @a remove auto_ready_unlocked
+tag @a remove setting_unlocked
+tag @a remove module_unlocked
+tag @a remove party_unlocked
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -237,6 +252,11 @@ scoreboard players set $time.max ui_world 3000
     team modify spectate collisionRule always
     team modify spectate nametagVisibility hideForOtherTeams
     team modify spectate seeFriendlyInvisibles false
+    team add rainbow
+    team modify rainbow friendlyFire false
+    team modify rainbow collisionRule always
+    team modify rainbow nametagVisibility always
+    team modify rainbow seeFriendlyInvisibles false
 
 ## その他
     forceload add 0 0

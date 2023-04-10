@@ -1,0 +1,25 @@
+{
+  "parent": "ui:hidden/misc/optimizer",
+  "display": {
+    "icon": {
+      "item": "minecraft:white_dye"
+    },
+    "title": "ホワイトアウト",
+    "description": "マップが塗られていない状態で終わる",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ],
+  "rewards": {
+      "function": "ui:advancements/achieve/white_out"
+  }
+}

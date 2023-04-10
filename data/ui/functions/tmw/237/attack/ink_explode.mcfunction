@@ -11,7 +11,7 @@
 
 # パーティクルで描画、演出
     function ui:template/sphere_particle/4.5
-    function ui:tmw/237/misc/particle_paint
+    function ui:tmw/237/misc/death_particle_paint
     playsound entity.generic.explode player @a ~ ~ ~ 1 0.8 0
 
 # 塗りポイント加算

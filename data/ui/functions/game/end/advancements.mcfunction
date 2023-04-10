@@ -1,6 +1,9 @@
 # 進捗
 
 #
+execute if entity @s[tag=tmw_237_notitle,tag=tmw_237_nolaser,tag=tmw_237_noboost,tag=tmw_237_noresparticle] run advancement grant @s only ui:hidden/misc/optimizer
+
+#
 execute if score @s ui_r_game matches 1.. run advancement grant @s only ui:main/game/game1
 execute if score @s ui_r_game matches 5.. run advancement grant @s only ui:main/game/game5
 execute if score @s ui_r_game matches 10.. run advancement grant @s only ui:main/game/game10
@@ -63,3 +66,10 @@ execute if score @s ui_r_kill_streak matches 6.. run advancement grant @s only u
 execute if score @s ui_r_kill_streak matches 8.. run advancement grant @s only ui:main/kill_streak/8
 execute if score @s ui_r_kill_streak matches 10.. run advancement grant @s only ui:main/kill_streak/10
 execute if score @s ui_r_kill_streak matches 15.. run advancement grant @s only ui:main/kill_streak/15
+
+#
+execute if entity @a[scores={ui_r_game=1..}] unless entity @s[tag=spectator_unlocked] run function ui:unlock/spectator
+execute if entity @a[scores={ui_r_game=2..}] unless entity @s[tag=auto_ready_unlocked] run function ui:unlock/auto_ready
+execute if entity @a[scores={ui_r_game=3..}] unless entity @s[tag=setting_unlocked] run function ui:unlock/setting
+execute if entity @a[scores={ui_r_game=6..}] unless entity @s[tag=record_unlocked] run function ui:unlock/record
+execute if entity @a[scores={ui_r_game=8..}] run advancement grant @s only ui:hidden/misc/party_time

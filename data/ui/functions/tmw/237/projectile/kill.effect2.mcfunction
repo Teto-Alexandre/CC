@@ -11,25 +11,28 @@
 # 塗り値を初期化
     scoreboard players set $paint ui_temp 0
 
+# ※パーティーモード※
+    execute if score $ke2 party_mode matches 1.. run function ui:party/ke2
+
 # ヒットパーティクル
     # サイズ別通常爆発
         execute if score @s ui_hpart matches 1 run function ui:tmw/237/projectile/killeffect/1
         execute if score @s ui_hpart matches 2 run function ui:tmw/237/projectile/killeffect/2
         execute if score @s ui_hpart matches 3 run function ui:tmw/237/projectile/killeffect/3
-        execute if score @s ui_hpart matches -31 run function ui:tmw/237/projectile/killeffect/3.1
+        execute if score @s ui_hpart matches -60..-31 run function ui:tmw/237/projectile/killeffect/3.1
         execute if score @s ui_hpart matches 4 run function ui:tmw/237/projectile/killeffect/4
         execute if score @s ui_hpart matches 5 run function ui:tmw/237/projectile/killeffect/5
         execute if score @s ui_hpart matches 6 run function ui:tmw/237/projectile/killeffect/6
         execute if score @s ui_hpart matches -61 run function ui:tmw/237/projectile/killeffect/6.1
-        execute if score @s ui_hpart matches -62 run function ui:tmw/237/projectile/killeffect/6.2
+        execute if score @s ui_hpart matches ..-62 run function ui:tmw/237/projectile/killeffect/6.2
         execute if score @s ui_hpart matches 7 run function ui:tmw/237/projectile/killeffect/7
         execute if score @s ui_hpart matches 8 run function ui:tmw/237/projectile/killeffect/8
         execute if score @s ui_hpart matches 9 run function ui:tmw/237/projectile/killeffect/9
-        execute if score @s ui_hpart matches 10 run function ui:tmw/237/projectile/killeffect/10
+        execute if score @s ui_hpart matches 10..19 run function ui:tmw/237/projectile/killeffect/10
         execute if score @s ui_hpart matches 20 run function ui:tmw/237/projectile/killeffect/20
     # 個別
         # アメフラシ
-        execute if score @s ui_hpart matches 101 run function ui:tmw/237/projectile/killeffect/101
+        execute if score @s ui_hpart matches 21..101 run function ui:tmw/237/projectile/killeffect/101
         # マルチミサイル
         execute if score @s ui_hpart matches 102 run function ui:tmw/237/projectile/killeffect/102
         # ヘルハウンド
@@ -51,7 +54,7 @@
         # ハンコ
         execute if score @s ui_hpart matches 114 run function ui:tmw/237/projectile/killeffect/114
         # ジェットパック
-        execute if score @s ui_hpart matches 115 run function ui:tmw/237/projectile/killeffect/115
+        execute if score @s ui_hpart matches 115..202 run function ui:tmw/237/projectile/killeffect/115
     # スペシャル溜まらない爆発
         execute if score @s ui_hpart matches 203 run function ui:tmw/237/projectile/killeffect/3
         execute if score @s ui_hpart matches 204 run function ui:tmw/237/projectile/killeffect/4
@@ -60,7 +63,7 @@
         execute if score @s ui_hpart matches 207 run function ui:tmw/237/projectile/killeffect/7
         execute if score @s ui_hpart matches 208 run function ui:tmw/237/projectile/killeffect/8
         execute if score @s ui_hpart matches 209 run function ui:tmw/237/projectile/killeffect/9
-        execute if score @s ui_hpart matches 210 run function ui:tmw/237/projectile/killeffect/10
+        execute if score @s ui_hpart matches 210..219 run function ui:tmw/237/projectile/killeffect/10
         execute if score @s ui_hpart matches 220 run function ui:tmw/237/projectile/killeffect/20
     # スペシャル溜まらない爆発
         #execute if score @s ui_hpart matches 301..400 run data merge storage ui:common {input:{Mode:"create",Var:1}}
@@ -69,7 +72,7 @@
         #execute if score @s ui_hpart matches 301..400 run function ui:common/particle
     #
         # マルミサ
-        execute if score @s ui_hpart matches 401 run function ui:tmw/237/projectile/killeffect/401
+        execute if score @s ui_hpart matches 221..401 run function ui:tmw/237/projectile/killeffect/401
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint

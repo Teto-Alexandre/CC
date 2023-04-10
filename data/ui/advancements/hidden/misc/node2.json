@@ -1,5 +1,5 @@
 {
-  "parent": "ui:hidden/misc/too_small",
+  "parent": "ui:hidden/misc/peaceful",
   "display": {
     "icon": {
       "item": "minecraft:black_stained_glass_pane"

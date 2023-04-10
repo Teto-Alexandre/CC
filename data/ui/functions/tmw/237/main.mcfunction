@@ -14,6 +14,9 @@ scoreboard players set $burst_alt.id ui_temp 0
 # チャージ変数をリセット
 scoreboard players set $ishold ui_temp 0
 
+#
+tag @s[tag=advancement_using_sp] remove advancement_using_sp
+
 # 必要データ収集
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
 data modify storage ui:gun temp.DisplayName set from entity @s SelectedItem.tag.display.Name

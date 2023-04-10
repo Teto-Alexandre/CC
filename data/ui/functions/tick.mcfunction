@@ -34,10 +34,19 @@
     ##
         scoreboard players set @a ui_tmw237_ready 0
         scoreboard players set @a[tag=game.ready] ui_tmw237_ready 1
+        scoreboard players set @a[tag=game.ready,tag=auto_ready] ui_tmw237_ready 2
+    
+# モジュール適応時
+    execute if score $module ui_world matches 1 if entity @a[scores={module=5}] run function ui:module/rainbow
+    execute if score $module ui_world matches 1 as @a if score @s module matches 10 run tag @s add immune_water
 
 #
     scoreboard players add $world ui_tc 1
     execute if score $world ui_tc matches 21.. run function ui:1sec
+
+#
+    execute as @a[tag=immune_water] at @s if block ~ ~ ~ water run effect give @s levitation 1 9 true
+    tag @s[tag=immune_water] remove immune_water
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append

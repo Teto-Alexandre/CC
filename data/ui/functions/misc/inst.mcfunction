@@ -31,6 +31,8 @@ advancement grant @s only ui:add/root
 
 advancement grant @s only ui:add/kill/node1
 advancement grant @s only ui:add/kill/node2
+advancement grant @s only ui:add/kill/node3
+advancement grant @s only ui:add/kill/node4
 
 advancement grant @s only ui:add/basic/node1
 advancement grant @s only ui:add/basic/node2

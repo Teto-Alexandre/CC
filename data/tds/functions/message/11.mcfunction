@@ -5,5 +5,7 @@ execute if entity @a[tag=tds_tempb] run tellraw @a ["",{"selector":"@s"},{"text"
 execute unless entity @a[tag=tds_tempb] run tellraw @a ["",{"selector":"@s"},{"text":"は足を踏み外して水没した","color":"white"}]
 tag @s remove tds_ui_highdamage_temp
 
+execute if entity @s[advancements={ui:add/basic/drown=false}] run advancement grant @s only ui:add/basic/drown
+
 #死
 function tds:death

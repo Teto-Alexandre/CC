@@ -4,6 +4,7 @@
 
 execute as @a run function ui:template/inventory/push
 execute as @a run function ui:template/inventory/pull_first
+clear @a cobblestone
 
 #
 function ui:game/map/shuffle/

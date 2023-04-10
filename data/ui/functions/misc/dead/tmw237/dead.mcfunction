@@ -3,7 +3,7 @@ execute store result score $amp ui_temp run data get entity @s SelectedItem.tag.
 execute if entity @s[tag=tmw_237_king] run scoreboard players set $amp ui_temp -1
 
 # 死亡したならリスポーンタイムが5秒になる -tmw_237_sub_mult-
-scoreboard players set @s ui_rst 100
+scoreboard players operation @s ui_rst = $respawntime ui_world
     #誰も死んでなかったら乱数をリロール
     scoreboard players set $mod ui_calc1 23
     function ui:common/rand

@@ -1,0 +1,25 @@
+{
+  "parent": "ui:hidden/misc/go_swimming",
+  "display": {
+    "icon": {
+      "item": "minecraft:comparator"
+    },
+    "title": "オプティマイザー",
+    "description": "全個人設定を無効化して戦う",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "task1": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["task1"]
+  ],
+  "rewards": {
+      "function": "ui:advancements/achieve/optimizer"
+  }
+}
