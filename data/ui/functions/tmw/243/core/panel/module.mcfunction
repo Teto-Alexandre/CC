@@ -8,13 +8,13 @@ execute if score $slot ui_temp matches 26 run tag @s remove setting_module
 
 item replace entity @s enderchest.0 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-execute if entity @s[advancements={ui:hidden/misc/beyond_the_sky=false}] run item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/fatal_weapon=false}] run item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/enemy_base=false}] run item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/too_small=false}] run item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/party_time=false}] run item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/pacifist=false}] run item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/optimizer=false}] run item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/beyond_the_sky=false}] run item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"外の世界、気にならない？","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/fatal_weapon=false}] run item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"最高に無駄なスペシャルウェポン","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/enemy_base=false}] run item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"敵の居ぬ間に","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/too_small=false}] run item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"みんなで協力して塗ろう","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/party_time=false}] run item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"レッツパーティ","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/pacifist=false}] run item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"もちろん抵抗するで","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/optimizer=false}] run item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"全ての情報をシャットアウト","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
 
 execute if entity @s[advancements={ui:hidden/misc/beyond_the_sky=true}] run item replace entity @s enderchest.1 with feather{display:{Name:'{"text":"飛んで行けるなら","color": "aqua","bold": true,"italic": false}',Lore:['{"text":"ブーストのリチャージが速くなり","color": "gray","italic": false}','{"text":"ブースト時の移動力も向上する","color": "gray","italic": false}']},ui:{ismenu:1}}
 execute if entity @s[advancements={ui:hidden/misc/fatal_weapon=true}] run item replace entity @s enderchest.2 with tripwire_hook{display:{Name:'{"text":"最強トリック","color": "gold","bold": true,"italic": false}',Lore:['{"text":"一度だけインク消費量を無視して","color": "gray","italic": false}','{"text":"サブウェポンを使用できる","color": "gray","italic": false}']},ui:{ismenu:1}}
@@ -43,13 +43,13 @@ execute if score @s module matches 7 run item modify entity @s enderchest.7 ui:g
 item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.9 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-execute if entity @s[advancements={ui:hidden/misc/peaceful=false}] run item replace entity @s enderchest.10 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/white_out=false}] run item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:hidden/misc/go_swimming=false}] run item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv40] run item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv45] run item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv80] run item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv55] run item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/peaceful=false}] run item replace entity @s enderchest.10 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"ダメージは０じゃ","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/white_out=false}] run item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"何してたの？","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:hidden/misc/go_swimming=false}] run item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"水に入っても大丈夫","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv40] run item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv45] run item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv80] run item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv55] run item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
 
 execute if entity @s[advancements={ui:hidden/misc/peaceful=true}] run item replace entity @s enderchest.10 with tnt{display:{Name:'{"text":"裏切りはナシ","color": "red","bold": true,"italic": false}',Lore:['{"text":"死亡時爆発が自チームの色になる","color": "gray","italic": false}']},ui:{ismenu:1}}
 execute if entity @s[advancements={ui:hidden/misc/white_out=true}] run item replace entity @s enderchest.11 with white_wool{display:{Name:'{"text":"BLEACH","color": "white","bold": true,"italic": false}',Lore:['{"text":"死亡時爆発が白色になる","color": "gray","italic": false}']},ui:{ismenu:1}}
@@ -77,13 +77,13 @@ execute if score @s module matches 14 run item modify entity @s enderchest.16 ui
 
 item replace entity @s enderchest.17 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-execute if entity @s[tag=!adv65] run item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv70] run item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv60] run item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv35] run item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv50] run item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[tag=!adv75] run item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if entity @s[advancements={ui:complete/root=false}] run item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv65] run item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv70] run item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv60] run item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv35] run item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv50] run item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!adv75] run item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+execute if entity @s[advancements={ui:complete/root=false}] run item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120011,display:{Name:'{"text":"進捗進行で開放","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
 
 execute if entity @s[tag=adv65] run item replace entity @s enderchest.19 with echo_shard{display:{Name:'{"text":"深淵の呼び声","color": "#0066cc","bold": true,"italic": false}',Lore:['{"text":"リスポーン時間が半分になる","color": "gray","italic": false}']},ui:{ismenu:1}}
 execute if entity @s[tag=adv70] run item replace entity @s enderchest.20 with carrot_on_a_stick{CustomModelData:180029,display:{Name:'{"text":"エコバッグ","color": "#999900","bold": true,"italic": false}',Lore:['{"text":"インク最大値が10%増える","color": "gray","italic": false}']},ui:{ismenu:1}}
