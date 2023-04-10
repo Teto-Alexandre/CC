@@ -7,6 +7,7 @@ scoreboard players set $respawntime ui_world 100
 
 ## 限定
     function ui:game/map/data
+    data merge storage ui:map {mode:"2team"}
     scoreboard objectives add game_state dummy
     scoreboard objectives add party_mode dummy
     scoreboard objectives add unlock dummy

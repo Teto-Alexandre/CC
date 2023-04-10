@@ -67,9 +67,30 @@ execute if score @s ui_r_kill_streak matches 8.. run advancement grant @s only u
 execute if score @s ui_r_kill_streak matches 10.. run advancement grant @s only ui:main/kill_streak/10
 execute if score @s ui_r_kill_streak matches 15.. run advancement grant @s only ui:main/kill_streak/15
 
+execute if score @s advancements matches 35.. if entity @s[tag=!adv35] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"冷たくなった心臓","color": "aqua","bold": false},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 40.. if entity @s[tag=!adv40] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"アップビート","color": "red","bold": false},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 45.. if entity @s[tag=!adv45] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"グリッターエッセンス","color": "gold","bold": false},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 50.. if entity @s[tag=!adv50] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"アンチマーカーシステム","color": "dark_purple","bold": true},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 55.. if entity @s[tag=!adv55] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"足袋","color": "dark_aqua","bold": true},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 60.. if entity @s[tag=!adv60] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"スリッパ","color": "#66cc00","bold": true},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 65.. if entity @s[tag=!adv65] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"深淵の呼び声","color": "#0066cc","bold": true},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 70.. if entity @s[tag=!adv70] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"エコバッグ","color": "#999900","bold": true},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 75.. if entity @s[tag=!adv75] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"13スコープ","color": "#9966ff","bold": false},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 80.. if entity @s[tag=!adv80] run tellraw @s [{"text":"Module","color": "gray"},{"text":"> ","color": "gold"},{"text":"[","color": "white"},{"text":"半死のトーテム","color": "yellow","bold": false},{"text":"]","color": "white"},{"text":"を獲得しました","color": "gray"}]
+execute if score @s advancements matches 35.. if entity @s[tag=!adv35] run tag @s add adv35
+execute if score @s advancements matches 40.. if entity @s[tag=!adv40] run tag @s add adv40
+execute if score @s advancements matches 45.. if entity @s[tag=!adv45] run tag @s add adv45
+execute if score @s advancements matches 50.. if entity @s[tag=!adv50] run tag @s add adv50
+execute if score @s advancements matches 55.. if entity @s[tag=!adv55] run tag @s add adv55
+execute if score @s advancements matches 60.. if entity @s[tag=!adv60] run tag @s add adv60
+execute if score @s advancements matches 65.. if entity @s[tag=!adv65] run tag @s add adv65
+execute if score @s advancements matches 70.. if entity @s[tag=!adv70] run tag @s add adv70
+execute if score @s advancements matches 75.. if entity @s[tag=!adv75] run tag @s add adv75
+execute if score @s advancements matches 80.. if entity @s[tag=!adv80] run tag @s add adv80
+
 #
 execute if entity @a[scores={ui_r_game=1..}] unless entity @s[tag=spectator_unlocked] run function ui:unlock/spectator
 execute if entity @a[scores={ui_r_game=2..}] unless entity @s[tag=auto_ready_unlocked] run function ui:unlock/auto_ready
 execute if entity @a[scores={ui_r_game=3..}] unless entity @s[tag=setting_unlocked] run function ui:unlock/setting
-execute if entity @a[scores={ui_r_game=6..}] unless entity @s[tag=record_unlocked] run function ui:unlock/record
-execute if entity @a[scores={ui_r_game=8..}] run advancement grant @s only ui:hidden/misc/party_time
+execute if entity @a[scores={ui_r_game=4..}] unless entity @s[tag=record_unlocked] run function ui:unlock/record
+execute if entity @a[scores={ui_r_game=6..}] run advancement grant @s only ui:hidden/misc/party_time
