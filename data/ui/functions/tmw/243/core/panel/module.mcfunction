@@ -97,10 +97,10 @@ execute if entity @s[tag=adv65] if score $slot ui_temp matches 19 run scoreboard
 execute if entity @s[tag=adv70] if score $slot ui_temp matches 20 run scoreboard players set @s module 16
 execute if entity @s[tag=adv60] if score $slot ui_temp matches 21 run scoreboard players set @s module 17
 execute if entity @s[tag=adv60] if score $slot ui_temp matches 21 run attribute @s generic.movement_speed modifier add 2a93cf3d-b14d-4538-87cc-5fd0119eac2c "module17" 0.1 multiply
-execute if entity @s[tag=adv60] unless score $slot ui_temp matches -1 unless score $slot ui_temp matches 21 run attribute @s generic.movement_speed modifier remove 2a93cf3d-b14d-4538-87cc-5fd0119eac2c
+execute if entity @s[tag=adv60] unless score $slot ui_temp matches -1 unless score $slot ui_temp matches 26 unless score $slot ui_temp matches 21 run attribute @s generic.movement_speed modifier remove 2a93cf3d-b14d-4538-87cc-5fd0119eac2c
 execute if entity @s[tag=adv35] if score $slot ui_temp matches 22 run scoreboard players set @s module 18
 execute if entity @s[tag=adv35] if score $slot ui_temp matches 22 run attribute @s generic.max_health modifier add 2a93cf3d-b14d-4538-87cc-5fd0119eac2d "module18" 0.2 multiply
-execute if entity @s[tag=adv35] unless score $slot ui_temp matches -1 unless score $slot ui_temp matches 22 run attribute @s generic.max_health modifier remove 2a93cf3d-b14d-4538-87cc-5fd0119eac2d
+execute if entity @s[tag=adv35] unless score $slot ui_temp matches -1 unless score $slot ui_temp matches 26 unless score $slot ui_temp matches 22 run attribute @s generic.max_health modifier remove 2a93cf3d-b14d-4538-87cc-5fd0119eac2d
 execute if entity @s[tag=adv50] if score $slot ui_temp matches 23 run scoreboard players set @s module 19
 execute if entity @s[tag=adv75] if score $slot ui_temp matches 24 run scoreboard players set @s module 20
 execute if entity @s[advancements={ui:complete/root=true}] if score $slot ui_temp matches 25 run scoreboard players set @s module 21

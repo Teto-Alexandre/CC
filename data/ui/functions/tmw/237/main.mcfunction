@@ -104,6 +104,8 @@ execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp < $ink.main ui_temp at @s[gamemode=!spectator] run function ui:tmw/237/fail
     #たまありバースト+クールタイム完遂
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score $ink ui_temp >= $ink.main ui_temp at @s[gamemode=!spectator] run function ui:tmw/237/attack/master
+        # ファイナル型だけ修正
+        execute if score $basetype ui_temp matches 3 unless score $bursttype ui_temp matches 7..8 store result score $changed ui_temp run scoreboard players set $ishold ui_temp 1
     #バースト+クールタイム完遂、発射できなかったなら
     execute if score $burst ui_temp matches 1.. if score $cooltime ui_temp matches 0 at @s[tag=!ui_temp_success] run function ui:tmw/237/fail
 
