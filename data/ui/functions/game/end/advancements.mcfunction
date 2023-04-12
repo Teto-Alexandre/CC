@@ -1,7 +1,7 @@
 # 進捗
 
 #
-execute if entity @s[tag=tmw_237_notitle,tag=tmw_237_nolaser,tag=tmw_237_noboost,tag=tmw_237_noresparticle] run advancement grant @s only ui:hidden/misc/optimizer
+execute if entity @s[tag=tmw_237_notitle,tag=tmw_237_nolaser,tag=tmw_237_noboost,tag=tmw_237_noresparticle,tag=tmw_237_nokilllog,tag=tmw_237_nochargelog,tag=tmw_237_nosplog,tag=tmw_237_nomisclog] run advancement grant @s only ui:hidden/misc/optimizer
 
 #
 execute if score @s ui_r_game matches 1.. run advancement grant @s only ui:main/game/game1

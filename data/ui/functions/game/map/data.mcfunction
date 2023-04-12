@@ -24,7 +24,7 @@ data modify storage ui:map maps append value {ID:21,upper:[-672.5d,42.5d,49.5d],
 data modify storage ui:map maps append value {ID:22,upper:[329.5d,46.5d,-152.5d],downer:[271.5d,36.5d,-246.5d],blue:[309.5d,43.5d,-242.5d],yellow:[291.5d,43.5d,-156.5d],color:2}
 data modify storage ui:map maps append value {ID:23,upper:[428.5d,48.5d,-148.5d],downer:[372.5d,34.5d,-250.5d],blue:[400.5d,39.5d,-248.5d],yellow:[400.5d,39.5d,-150.5d],color:2}
 data modify storage ui:map maps append value {ID:24,upper:[734.5d,42.5d,-149.5d],downer:[666.5d,31.5d,-249.5d],blue:[731.5d,39.5d,-242.5d],yellow:[669.5d,39.5d,-156.5d],color:5}
-data modify storage ui:map maps append value {ID:25,upper:[826.5d,40.5d,-151.5d],downer:[774.5d,31.5d,-247.5d],blue:[794.5d,38.5d,-245.5d],yellow:[806.5d,38.5d,-153.5d],color:3}
+data modify storage ui:map maps append value {ID:25,upper:[826.5d,40.5d,-151.5d],downer:[774.5d,31.5d,-247.5d],blue:[794.5d,38.5d,-245.5d],yellow:[806.5d,38.5d,-153.5d],color:2}
 data modify storage ui:map maps append value {ID:26,upper:[933.5d,40.5d,-152.5d],downer:[867.5d,33.5d,-246.5d],blue:[894.5d,40.5d,-244.5d],yellow:[906.5d,40.5d,-154.5d],color:1}
 data modify storage ui:map maps append value {ID:27,upper:[829.5d,45.5d,51.5d],downer:[771.5d,33.5d,-50.5d],blue:[793.5d,39.5d,-48.5d],yellow:[807.5d,39.5d,49.5d],color:2}
 data modify storage ui:map maps append value {ID:28,upper:[637.5d,42.5d,57.5d],downer:[563.5d,35.5d,-56.5d],blue:[565.5d,39.5d,-54.5d],red:[635.5d,39.5d,-54.5d],green:[565.5d,39.5d,55.5d],yellow:[635.5d,39.5d,55.5d],color:0,4team:true}

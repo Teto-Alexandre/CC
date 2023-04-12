@@ -20,6 +20,22 @@ execute if score $slot ui_temp matches 7 run tag @s[tag=!tmw_237_noresparticle] 
 execute if score $slot ui_temp matches 7 run tag @s[tag=ui_temp_this] remove tmw_237_noresparticle
 execute if score $slot ui_temp matches 7 run tag @s[tag=ui_temp_this] remove ui_temp_this
 execute if score $slot ui_temp matches 9 run function ui:tmw/243/core/tell
+execute if score $slot ui_temp matches 13 run tag @s[tag=tmw_237_nokilllog] add ui_temp_this
+execute if score $slot ui_temp matches 13 run tag @s[tag=!tmw_237_nokilllog] add tmw_237_nokilllog
+execute if score $slot ui_temp matches 13 run tag @s[tag=ui_temp_this] remove tmw_237_nokilllog
+execute if score $slot ui_temp matches 13 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if score $slot ui_temp matches 14 run tag @s[tag=tmw_237_nochargelog] add ui_temp_this
+execute if score $slot ui_temp matches 14 run tag @s[tag=!tmw_237_nochargelog] add tmw_237_nochargelog
+execute if score $slot ui_temp matches 14 run tag @s[tag=ui_temp_this] remove tmw_237_nochargelog
+execute if score $slot ui_temp matches 14 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if score $slot ui_temp matches 15 run tag @s[tag=tmw_237_nosplog] add ui_temp_this
+execute if score $slot ui_temp matches 15 run tag @s[tag=!tmw_237_nosplog] add tmw_237_nosplog
+execute if score $slot ui_temp matches 15 run tag @s[tag=ui_temp_this] remove tmw_237_nosplog
+execute if score $slot ui_temp matches 15 run tag @s[tag=ui_temp_this] remove ui_temp_this
+execute if score $slot ui_temp matches 16 run tag @s[tag=tmw_237_nomisclog] add ui_temp_this
+execute if score $slot ui_temp matches 16 run tag @s[tag=!tmw_237_nomisclog] add tmw_237_nomisclog
+execute if score $slot ui_temp matches 16 run tag @s[tag=ui_temp_this] remove tmw_237_nomisclog
+execute if score $slot ui_temp matches 16 run tag @s[tag=ui_temp_this] remove ui_temp_this
 
 execute if entity @s[tag=!record_unlocked] run item replace entity @s enderchest.10 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
 execute if entity @s[tag=!record_unlocked] if score $slot ui_temp matches 10 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
@@ -83,10 +99,14 @@ item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData
 item replace entity @s enderchest.9 with paper{display:{Name:'{"text":"操作説明","color": "gold","italic": false}'},ui:{ismenu:1}}
 
 item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_nokilllog] run item replace entity @s enderchest.13 with red_stained_glass_pane{display:{Name:'{"text":"キルログ: 非表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!tmw_237_nokilllog] run item replace entity @s enderchest.13 with lime_stained_glass_pane{display:{Name:'{"text":"キルログ: 表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_nochargelog] run item replace entity @s enderchest.14 with red_stained_glass_pane{display:{Name:'{"text":"スペシャルチャージ完了ログ: 非表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!tmw_237_nochargelog] run item replace entity @s enderchest.14 with lime_stained_glass_pane{display:{Name:'{"text":"スペシャルチャージ完了ログ: 表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_nosplog] run item replace entity @s enderchest.15 with red_stained_glass_pane{display:{Name:'{"text":"スペシャル発動ログ: 非表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!tmw_237_nosplog] run item replace entity @s enderchest.15 with lime_stained_glass_pane{display:{Name:'{"text":"スペシャル発動ログ: 表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_nomisclog] run item replace entity @s enderchest.16 with red_stained_glass_pane{display:{Name:'{"text":"その他ログ: 非表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!tmw_237_nomisclog] run item replace entity @s enderchest.16 with lime_stained_glass_pane{display:{Name:'{"text":"その他ログ: 表示","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.17 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 execute unless entity @s[tag=game.ready] run item replace entity @s enderchest.18 with red_dye{display:{Name:'{"text":"クリックで準備完了する","italic": false,"color": "red"}'},ui:{ismenu:1}}
 execute if entity @s[tag=game.ready] run item replace entity @s enderchest.18 with lime_dye{display:{Name:'{"text":"クリックで準備完了解除","italic": false,"color": "green"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}

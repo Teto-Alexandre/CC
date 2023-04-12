@@ -1,7 +1,7 @@
 #初回
 
-tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
-tellraw @a ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 6 ","color":"aqua"},{"text":"です","color":"gray"}]
+tellraw @a[tag=!tmw_237_nokilllog] ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"データの読み込みが完了しました","color":"gray"}]
+tellraw @a[tag=!tmw_237_nokilllog] ["",{"text":"TDS","color":"white"},{"text":"> ","color":"green"},{"text":"現在のバージョンは","color":"gray"},{"text":" 6 ","color":"aqua"},{"text":"です","color":"gray"}]
 
 # hpの桁数をint型で表現する
 scoreboard objectives add tds_hpp dummy {"text":"TetoDamageSystem_HealthPointPlace","color":"gold","italic":true}

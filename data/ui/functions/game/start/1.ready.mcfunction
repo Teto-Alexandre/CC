@@ -9,6 +9,7 @@ clear @a cobblestone
 #
 function ui:game/map/shuffle/
 execute store result score $map ui_world run data get storage ui:map map.ID
+execute store result score $default_color ui_temp run data get storage ui:map map.color
 function ui:game/map/core_tp
 
 #

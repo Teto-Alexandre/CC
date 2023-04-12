@@ -11,7 +11,7 @@ scoreboard players set $activator ui_temp 258
  function ui:tmw/237/activator/here
 
 # 何発動したの？
-tellraw @a [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"リゲイン","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
+tellraw @a[tag=!tmw_237_nosplog] [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"リゲイン","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 
 # スペシャルタイムをセット
 scoreboard players set $sptime ui_temp 0
