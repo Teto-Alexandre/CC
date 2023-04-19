@@ -3,7 +3,8 @@
 #declare storage ui:map
 
 execute as @a run function ui:template/inventory/push
-execute as @a run function ui:template/inventory/pull_first
+execute unless score $secondary ui_world matches 1 as @a run function ui:template/inventory/pull_first
+execute if score $secondary ui_world matches 1 as @a run function ui:template/inventory/pull_second
 clear @a cobblestone
 
 #

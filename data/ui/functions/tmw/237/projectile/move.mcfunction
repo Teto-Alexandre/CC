@@ -18,6 +18,7 @@
     execute if block ~ ~ ~ #ui:liq run tag @s add tmw_237_proj_del
 
 # 見た目
+    execute if score @s ui_bpart matches -2 run function ui:tmw/237/projectile/move/-2
     execute if score @s ui_bpart matches 1 run function ui:tmw/237/projectile/move/1
     execute if score @s ui_bpart matches 2 run function ui:tmw/237/projectile/move/2
     execute if score @s ui_bpart matches 3 run function ui:tmw/237/projectile/move/3
@@ -41,6 +42,8 @@
     execute if score @s ui_bpart matches 15 run function ui:tmw/237/projectile/move/15
     #リッター弱
     execute if score @s ui_bpart matches 16 run function ui:tmw/237/projectile/move/16
+    #ミアレアンカー
+    execute if score @s ui_bpart matches 17 run function ui:tmw/237/projectile/move/17
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
     execute if score @s ui_bpart matches 101 run function ui:tmw/237/projectile/move/101
     execute if score @s ui_bpart matches 102 run function ui:tmw/237/projectile/move/102

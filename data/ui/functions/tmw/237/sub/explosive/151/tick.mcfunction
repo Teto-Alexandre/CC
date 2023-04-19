@@ -63,6 +63,7 @@
     scoreboard players operation $temp2 ui_temp %= #3 ui_num
 
 # 当たり判定
+    #tellraw @a [{"text":"トルネードの仲間: "},{"selector":"@e[tag=ui_temp_team]"}]
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 10..19 at @e[distance=..2,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/151/hit
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 20..29 at @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/151/hit
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 30..39 at @e[distance=..4,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/sub/explosive/151/hit

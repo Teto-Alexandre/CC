@@ -1,10 +1,10 @@
 {
-  "parent": "ui:main/game/game50",
+  "parent": "ui:main/game/game10",
   "display": {
     "icon": {
-      "item": "minecraft:magenta_stained_glass"
+      "item": "minecraft:lime_stained_glass"
     },
-    "title": "Play 100 games",
+    "title": "Play 15 games",
     "description": "",
     "frame": "task",
     "show_toast": true,

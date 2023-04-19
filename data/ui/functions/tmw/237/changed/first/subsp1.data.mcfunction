@@ -93,7 +93,7 @@ execute if score $type ui_temp matches 457 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 458 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 459 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 460 run scoreboard players set $w.ct ui_temp 20
-execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 10
+execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 20
 
 # スペシャルポイント必要量
 execute if score $type ui_temp matches 101.. run scoreboard players set $w.need ui_temp 300

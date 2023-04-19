@@ -26,3 +26,6 @@ execute if score $yellow_p wool_count matches 100.. run advancement grant @a onl
 execute if score $green_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
 
 execute if score $blue wool_count matches 0 if score $red wool_count matches 0 if score $yellow wool_count matches 0 if score $green wool_count matches 0 run advancement grant @a only ui:hidden/misc/white_out
+
+# デフォルトの色を戻す
+scoreboard players set $default_color ui_temp 2

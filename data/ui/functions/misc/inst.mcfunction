@@ -2,6 +2,8 @@ tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"col
 tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"color":"white","translate":"Recommend to use resourcepack"}]
 tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"text":"  - Made by teto","color":"gold"}]
 
+function ui:misc/reset_gears
+
 title @s times 0 20 0
 
 advancement grant @s only ui:main/root
@@ -40,6 +42,58 @@ advancement grant @s only ui:add/basic/node2
 scoreboard players set @s ui_st 0
 scoreboard players set @s ui_gct -1
 scoreboard players set @s ui_bc -1
+
+scoreboard players set @s health_old -2147483648
+scoreboard players set @s health 0
+scoreboard players set @s shoot_speed 0
+scoreboard players set @s move_speed 500
+scoreboard players set @s armor_old -2147483648
+scoreboard players set @s armor 0
+scoreboard players set @s blast_protection 0
+scoreboard players set @s norma_damage 100
+scoreboard players set @s sub_damage 100
+scoreboard players set @s vsobj_damage 100
+scoreboard players set @s blast_damage 100
+scoreboard players set @s respawn_acc 100
+scoreboard players set @s death_sp 60
+scoreboard players set @s sp_need_acc 100
+scoreboard players set @s ink_regen 100
+scoreboard players set @s main_eff_acc 100
+scoreboard players set @s sub_eff_acc 100
+scoreboard players set @s charge_acc 0
+scoreboard players set @s charge_acc_current 0
+
+## -------------------
+tag @s add gear_unlocked
+## -------------------
+
+tag @s add speedtype_shoot
+tag @s remove speedtype_move
+
+tag @s remove record_unlocked
+tag @s remove spectator_unlocked
+tag @s remove auto_ready_unlocked
+tag @s remove setting_unlocked
+tag @s remove module_unlocked
+tag @s remove party_unlocked
+
+tag @s remove tmw_237_notitle
+tag @s remove tmw_237_nolaser
+tag @s remove tmw_237_noboost
+tag @s remove tmw_237_noresparticle
+tag @s remove tmw_237_nokilllog
+tag @s remove tmw_237_nochargelog
+tag @s remove tmw_237_nosplog
+tag @s remove tmw_237_nomisclog
+
+tag @s remove setting_gear
+tag @s remove setting_game
+tag @s remove auto_ready
+tag @s remove game.ready
+tag @s remove setting_module
+tag @s remove setting_party
+
+item replace entity @s enderchest.0 with air
 
 #scoreboard players set @a ui_r_game 0
 #scoreboard players set @a ui_r_kill 0

@@ -84,7 +84,10 @@ execute if score $module ui_world matches 1 unless entity @s[tag=module_unlocked
 execute if score $module ui_world matches 1 if entity @s[tag=module_unlocked] if score $slot ui_temp matches 1 run tag @s add setting_module
 execute if score $module ui_world matches 1 unless entity @s[tag=module_unlocked] if score $slot ui_temp matches 1 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
 
-item replace entity @s enderchest.2 with red_stained_glass_pane{display:{Name:'{"text":"武器拡張機能 (未実装)","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=gear_unlocked] run item replace entity @s enderchest.2 with iron_ingot{CustomModelData:211003,display:{Name:'{"text":"ギア設定","color": "gold","italic": false}',Lore:['{"text":"能力をカスタマイズ","color": "gray","italic": false}']},ui:{ismenu:1}}
+execute unless entity @s[tag=gear_unlocked] run item replace entity @s enderchest.2 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=gear_unlocked] if score $slot ui_temp matches 2 run tag @s add setting_gear
+execute unless entity @s[tag=gear_unlocked] if score $slot ui_temp matches 2 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
 
 item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 execute if entity @s[tag=tmw_237_notitle] run item replace entity @s enderchest.4 with red_stained_glass_pane{display:{Name:'{"text":"HUD: 非表示","italic": false}'},ui:{ismenu:1}}

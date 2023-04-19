@@ -2,7 +2,6 @@
 
 # 引数データをコピー
     execute if entity @s[gamemode=creative] run scoreboard players set $Damage tds_dmg 0
-    execute unless data storage tds: temp.DamageType run data modify storage tds: temp.DamageType set value 0
     execute unless data storage tds: temp.DeathMessage run data modify storage tds: temp.DeathMessage set value 0
     execute unless data storage tds: temp.EPF run data modify storage tds: temp.EPF set value -1
     execute store result score $DisableParticle tds_dmg run data get storage tds: temp.DisableParticle
@@ -18,7 +17,6 @@
     execute unless score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run data get entity @s Health 10000
     execute if score @s tds_hps matches -2147483648.. store result score $Health tds_dmg run scoreboard players operation @s tds_hps *= $100 tds_dmg
     execute unless data storage tds: {temp:{BypassArmor:-1}} run function tds:core/armor/manager
-    execute store result score $DamageType tds_dmg run data get storage tds: temp.DamageType
     execute store result score $DeathMessage tds_dmg run data get storage tds: temp.DeathMessage
     execute store result score $EPF tds_dmg run data get storage tds: temp.EPF
     execute if entity @s[type=!player] unless score $EPF tds_dmg matches 0.. run function tds:core/epf/entity
@@ -32,20 +30,8 @@
 # 与えるダメージの計算
     #function tds:core/calc
         #防具による軽減
-    scoreboard players operation $CalcA tds_dmg = $defensePoints tds_dmg
-    scoreboard players operation $CalcA tds_dmg /= $5 tds_dmg
-    scoreboard players operation $CalcB.3 tds_dmg = $toughness tds_dmg
-    scoreboard players operation $CalcB.3 tds_dmg *= $25 tds_dmg
-    scoreboard players operation $CalcB.3 tds_dmg += $20000 tds_dmg
-    scoreboard players operation $CalcB.2 tds_dmg = $Damage tds_dmg
-    scoreboard players operation $CalcB.2 tds_dmg *= $10000 tds_dmg
-    scoreboard players operation $CalcB.2 tds_dmg /= $CalcB.3 tds_dmg
-    scoreboard players operation $CalcB tds_dmg = $defensePoints tds_dmg
-    scoreboard players operation $CalcB tds_dmg -= $CalcB.2 tds_dmg
-    scoreboard players operation $CalcC tds_dmg = $CalcA tds_dmg
-    scoreboard players operation $CalcC tds_dmg > $CalcB tds_dmg
-    scoreboard players operation $CalcC tds_dmg < $2000 tds_dmg
-    scoreboard players operation $CalcC tds_dmg *= $4 tds_dmg
+    scoreboard players operation $CalcC tds_dmg = $defensePoints tds_dmg
+    scoreboard players operation $CalcC tds_dmg < $9000 tds_dmg
     scoreboard players operation $CalcD tds_dmg = $10000 tds_dmg
     scoreboard players operation $CalcD tds_dmg -= $CalcC tds_dmg
     scoreboard players operation $CalcD tds_dmg /= $10 tds_dmg

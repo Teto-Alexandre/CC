@@ -113,7 +113,7 @@ execute if score @s module matches 19 run item modify entity @s enderchest.23 ui
 execute if score @s module matches 20 run item modify entity @s enderchest.24 ui:gun/add_glow
 execute if score @s module matches 21 run item modify entity @s enderchest.25 ui:gun/add_glow
 
-item replace entity @s enderchest.18 with gray_stained_glass_pane{display:{Name:'{"text":"選択解除","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.18 with white_stained_glass_pane{display:{Name:'{"text":"選択解除","color": "gray","bold": true,"italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 18 run scoreboard players reset @s module
 
 item replace entity @s enderchest.26 with black_stained_glass_pane{display:{Name:'{"text":"モジュール設定を終える","italic": false}'},ui:{ismenu:1}}

@@ -7,11 +7,11 @@ execute if entity @s[tag=tmw_237_notitle,tag=tmw_237_nolaser,tag=tmw_237_noboost
 execute if score @s ui_r_game matches 1.. run advancement grant @s only ui:main/game/game1
 execute if score @s ui_r_game matches 5.. run advancement grant @s only ui:main/game/game5
 execute if score @s ui_r_game matches 10.. run advancement grant @s only ui:main/game/game10
+execute if score @s ui_r_game matches 15.. run advancement grant @s only ui:main/game/game15
 execute if score @s ui_r_game matches 20.. run advancement grant @s only ui:main/game/game20
 execute if score @s ui_r_game matches 30.. run advancement grant @s only ui:main/game/game30
 execute if score @s ui_r_game matches 40.. run advancement grant @s only ui:main/game/game40
 execute if score @s ui_r_game matches 50.. run advancement grant @s only ui:main/game/game50
-execute if score @s ui_r_game matches 100.. run advancement grant @s only ui:main/game/game100
 
 execute if score @s ui_r_kill matches 1.. run advancement grant @s only ui:main/kill/1
 execute if score @s ui_r_kill matches 5.. run advancement grant @s only ui:main/kill/5

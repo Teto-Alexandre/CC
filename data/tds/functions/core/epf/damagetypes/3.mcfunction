@@ -29,3 +29,9 @@
 # 足
     execute store result score $Temp tds_dmg run data get storage tds:temp armor_feet.Enchantments[{id:"minecraft:blast_protection"}].lvl 2
     scoreboard players operation $EPF tds_dmg += $Temp tds_dmg
+
+## 内部爆発耐性
+
+# スコア
+    scoreboard players operation $Temp tds_dmg = @s blast_protection
+    scoreboard players operation $EPF tds_dmg += $Temp tds_dmg

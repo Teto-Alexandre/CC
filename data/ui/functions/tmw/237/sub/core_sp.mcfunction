@@ -13,9 +13,14 @@ execute if score $activator ui_temp matches 1001.. at @s run function ui:tmw/237
 scoreboard players operation $sptime ui_temp = $sptime.max ui_temp
 
 # インク減少
+scoreboard players operation $ink.sp ui_temp *= #100 ui_num
+scoreboard players operation $ink.sp ui_temp /= @s sub_eff_acc
 scoreboard players operation $ink ui_temp -= $ink.sp ui_temp
+scoreboard players operation $cooltime_old ui_temp = $cooltime ui_temp
 execute store result score $cooltime ui_temp run time query gametime
 scoreboard players operation $cooltime ui_temp += $ct ui_temp
+scoreboard players operation $cooltime ui_temp > $cooltime_old ui_temp
+scoreboard players reset $cooltime_old ui_temp
 
 #
 scoreboard players add @s ui_s_q 1

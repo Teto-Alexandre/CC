@@ -3,6 +3,7 @@
     scoreboard players operation $id ui_temp = @s ui_id
     scoreboard players operation $team ui_temp = @s ui_team
     execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+    execute if entity @s[tag=subdamage] run scoreboard players set $subdamage ui_temp 1
 
 # ヒット音
     #execute if score @s ui_hpart matches 0 run playsound minecraft:entity.player.attack.strong neutral @a ~ ~ ~ 1 1
@@ -84,3 +85,6 @@
 # 一時タグ削除
     tag @s remove ui_temp_this
     tag @e[tag=ui_temp_team] remove ui_temp_team
+
+#
+    scoreboard players reset $subdamage ui_temp

@@ -2,7 +2,7 @@
   "parent": "ui:main/game/game30",
   "display": {
     "icon": {
-      "item": "minecraft:blue_stained_glass"
+      "item": "minecraft:purple_stained_glass"
     },
     "title": "Play 40 games",
     "description": "",

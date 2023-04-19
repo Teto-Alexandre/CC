@@ -1,6 +1,6 @@
 # スペシャルポイントが減少する
-scoreboard players operation @s ui_paint *= #6 ui_num
-scoreboard players operation @s ui_paint /= #10 ui_num
+scoreboard players operation @s ui_paint *= @s death_sp
+scoreboard players operation @s ui_paint /= #100 ui_num
 
 # またはゲージリセット
 scoreboard players set $subtime ui_temp 0

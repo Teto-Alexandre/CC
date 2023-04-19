@@ -23,6 +23,10 @@ execute as @e[tag=temp_respawn_yellow] positioned as @s as @a[scores={ui_team=3}
 execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},tag=!spectate] run teleport @s ~ ~ ~
 
 #
+execute as @a run function ui:tmw/243/core/gear_reader/active
+function ui:game/pl_comp/
+
+#
 kill @e[tag=temp_respawn]
 
 #

@@ -1,3 +1,9 @@
+#
+    scoreboard players operation $ink.s ui_temp *= @s ink_regen
+    scoreboard players operation $ink.s ui_temp /= #100 ui_num
+    scoreboard players operation $ink.m ui_temp *= @s ink_regen
+    scoreboard players operation $ink.m ui_temp /= #100 ui_num
+
 # $ink = $ink.max になるまで.lp
     execute if score $cooltime ui_temp matches 0 if entity @s[nbt={ActiveEffects:[{Id:15}]}] run scoreboard players operation $ink.s ui_temp /= #3 ui_num
     execute if score $cooltime ui_temp matches 0 if entity @s[nbt={ActiveEffects:[{Id:15}]}] run scoreboard players operation $ink.m ui_temp /= #3 ui_num

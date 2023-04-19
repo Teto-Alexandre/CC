@@ -4,6 +4,9 @@
 # データ共有
     scoreboard players operation $id ui_temp = @s ui_id
     execute store result score $type ui_temp run data get entity @s Item.tag.tmw.type
+    scoreboard players operation $temp ui_temp = $type ui_temp
+    scoreboard players operation $temp ui_temp %= #100 ui_num
+    execute if score $temp ui_temp matches ..50 run scoreboard players set $subdamage ui_temp 1
 
 # それぞれの起爆
     execute if score $type ui_temp matches 101 run function ui:tmw/237/sub/explosive/101/tick
@@ -62,3 +65,6 @@
 
 #
     execute if score $Cache ui_temp matches 1 run scoreboard players reset @s
+
+#
+    scoreboard players reset $subdamage ui_temp

@@ -1,0 +1,30 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:gear"
+    },
+    "ops": [
+      {
+        "source": "temp.Gears[0].item.CustomModelData",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:gear"
+    },
+    "ops": [
+      {
+        "source": "temp.Gears[0].item.display",
+        "target": "display",
+        "op": "replace"
+      }
+    ]
+  }
+]

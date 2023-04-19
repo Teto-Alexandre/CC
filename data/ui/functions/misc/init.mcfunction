@@ -20,12 +20,25 @@ scoreboard players set $ke2 party_mode 0
 scoreboard players set $dmg party_mode 0
 scoreboard players set $def party_mode 0
 
-tag @a remove record_unlocked
-tag @a remove spectator_unlocked
-tag @a remove auto_ready_unlocked
-tag @a remove setting_unlocked
-tag @a remove module_unlocked
-tag @a remove party_unlocked
+    scoreboard objectives add health dummy
+    scoreboard objectives add health_old dummy
+    scoreboard objectives add shoot_speed dummy
+    scoreboard objectives add move_speed dummy
+    scoreboard objectives add armor dummy
+    scoreboard objectives add armor_old dummy
+    scoreboard objectives add blast_protection dummy
+    scoreboard objectives add norma_damage dummy
+    scoreboard objectives add sub_damage dummy
+    scoreboard objectives add vsobj_damage dummy
+    scoreboard objectives add blast_damage dummy
+    scoreboard objectives add respawn_acc dummy
+    scoreboard objectives add death_sp dummy
+    scoreboard objectives add sp_need_acc dummy
+    scoreboard objectives add ink_regen dummy
+    scoreboard objectives add main_eff_acc dummy
+    scoreboard objectives add sub_eff_acc dummy
+    scoreboard objectives add charge_acc dummy
+    scoreboard objectives add charge_acc_current dummy
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -37,6 +50,8 @@ tag @a remove party_unlocked
     #独立は義務です 個々が干渉しないように割り当てるテキトーな数字
     scoreboard objectives add ui_is dummy {"text":"UtilityItems_IndependentScore","color":"dark_blue"}
     scoreboard objectives add ui_is2 dummy {"text":"UtilityItems_IndependentScore2","color":"dark_blue"}
+    #
+    scoreboard players set $default_color ui_temp 2
 
 ## 特殊武装のスキル発動関連
     scoreboard objectives add ui_tmw_id dummy {"text":"UtilityItems_TetoMysticWeapon_ID","color":"dark_blue"}
@@ -248,6 +263,12 @@ tag @a remove party_unlocked
     team modify green collisionRule always
     team modify green nametagVisibility hideForOtherTeams
     team modify green seeFriendlyInvisibles false
+    team add chaos
+    team modify chaos color red
+    team modify chaos friendlyFire false
+    team modify chaos collisionRule always
+    team modify chaos nametagVisibility hideForOtherTeams
+    team modify chaos seeFriendlyInvisibles false
     team add spectate
     team modify spectate color gray
     team modify spectate friendlyFire false

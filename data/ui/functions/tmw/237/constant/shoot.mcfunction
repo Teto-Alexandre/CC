@@ -24,6 +24,9 @@
     scoreboard players set @s[tag=ui_temp_move] ui_gct 19
     scoreboard players set @s[scores={ui_st=1..,ui_gct=0..18}] ui_gct 19
 
+#
+    #execute as @s[tag=speedtype_move] run function ui:template/stats/shoot_speed
+
 # チームカラーに合わせた防具を装備
     execute if score $team ui_temp matches 1 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:8247039}}}]}] run function ui:tmw/237/constant/armor/eq1
     execute if score $team ui_temp matches 2 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:16752832}}}]}] run function ui:tmw/237/constant/armor/eq2
@@ -41,3 +44,8 @@
     execute if score $subtype ui_temp matches 401 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110913
     execute if score $sptype ui_temp matches 401 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110913
     item modify entity @s weapon.mainhand ui:gun/value/model
+
+# オフハンド装備
+    #item replace entity @s weapon.offhand with air
+    #execute if data storage ui:gun temp{value:110886} run item replace entity @s weapon.offhand with carrot_on_a_stick
+    #item modify entity @s weapon.offhand ui:gun/value/model

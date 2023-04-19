@@ -1,1 +1,2 @@
-execute rotated ~-90 ~ if score $width ui_temp matches 2.. positioned ^ ^ ^0.4 run function ui:tmw/237/attack/roll/moveleft
+execute if score $width ui_temp matches 2.. rotated ~-90 ~ positioned ^ ^ ^0.4 run function ui:tmw/237/attack/roll/moveleft
+execute if score $width ui_temp matches 1 run function ui:tmw/237/attack/roll/hitbox

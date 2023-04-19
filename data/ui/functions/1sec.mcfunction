@@ -21,6 +21,7 @@
     execute as @a if score @s ui_team matches 2 run team join red @s
     execute as @a if score @s ui_team matches 3 run team join yellow @s
     execute as @a if score @s ui_team matches 4 run team join green @s
+    execute as @a if score @s ui_team matches 101 run team join chaos @s
     execute if score $module ui_world matches 1 as @a if score @s module matches 5 run team join rainbow @s
     execute if score $module ui_world matches 1 as @a if score @s module matches 5 run effect give @s glowing 2 0 true
     execute if score $module ui_world matches 1 as @a if score @s module matches 14 run scoreboard players set @s ui_tmw237_sprint_particle 25

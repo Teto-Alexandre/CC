@@ -1,8 +1,8 @@
 {
-  "parent": "ui:main/game/game10",
+  "parent": "ui:main/game/game15",
   "display": {
     "icon": {
-      "item": "minecraft:lime_stained_glass"
+      "item": "minecraft:green_stained_glass"
     },
     "title": "Play 20 games",
     "description": "",

@@ -6,7 +6,7 @@
 
 # 特殊効果
     effect clear @s slowness
-    effect give @s speed 1 25 true
+    #effect give @s speed 1 25 true
     effect give @s jump_boost 1 3 true
     effect give @s invisibility 1 0 true
     execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run effect give @s regeneration 3 3 true
@@ -15,6 +15,9 @@
     execute if score $burst ui_temp matches 1.. run scoreboard players operation $cooltime ui_temp += $ct ui_temp
     execute if score $burst ui_temp matches 1.. run scoreboard players set $burst ui_temp 0
     scoreboard players set @s ui_use2 0
+
+#
+    execute as @s[tag=speedtype_shoot] run function ui:template/stats/move_speed
 
 # チームカラーに合わせた防具を削除
     item replace entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] armor.head with air
@@ -52,3 +55,4 @@
 
 # タグを返す
     tag @s add ui_temp_move
+    tag @s add ui_temp_move_nexttick

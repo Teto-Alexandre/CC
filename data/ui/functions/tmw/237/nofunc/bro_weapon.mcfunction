@@ -11,6 +11,12 @@ tellraw @a ["",{"selector":"@s"},{"text":" : ","color":"gray"},{"storage":"tds:"
 execute if data storage tds: temp{SubWeaponName:"ERROR"} if data storage tds: temp{SPWeaponName:"ERROR"} if entity @s[advancements={ui:add/basic/qf_none=false}] run advancement grant @s only ui:add/basic/qf_none
 
 #
+execute if score $secondary ui_world matches 1 run data modify storage tds: temp.WeaponName set from entity @s Inventory[{Slot:1b}].tag.tmw.gun.Name
+execute if score $secondary ui_world matches 1 run data modify storage tds: temp.SubWeaponName set from entity @s Inventory[{Slot:1b}].tag.tmw.gun.SubName
+execute if score $secondary ui_world matches 1 run data modify storage tds: temp.SPWeaponName set from entity @s Inventory[{Slot:1b}].tag.tmw.gun.SPName
+execute if score $secondary ui_world matches 1 run tellraw @a ["",{"text":" - [Sec]","color":"white"},{"text":" : ","color":"gray"},{"storage":"tds:","nbt":"temp.WeaponName","interpret":false},{"text":", ","color":"white"},{"storage":"tds:","nbt":"temp.SubWeaponName","interpret":false},{"text":", ","color":"white"},{"storage":"tds:","nbt":"temp.SPWeaponName","interpret":false}]
+
+#
 data remove storage tds: temp.WeaponName
 data remove storage tds: temp.SubWeaponName
 data remove storage tds: temp.SPWeaponName

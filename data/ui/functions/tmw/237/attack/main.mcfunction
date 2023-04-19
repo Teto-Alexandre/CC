@@ -11,8 +11,10 @@
     execute if score $shottype ui_temp matches 2 run function ui:tmw/237/attack/roll/core
 
 # インク減少
+    scoreboard players operation $ink.main ui_temp += $ink.add ui_temp
+    scoreboard players operation $ink.main ui_temp *= #100 ui_num
+    scoreboard players operation $ink.main ui_temp /= @s main_eff_acc
     scoreboard players operation $ink ui_temp -= $ink.main ui_temp
-    scoreboard players operation $ink ui_temp -= $ink.add ui_temp
 
 # 変更した
     execute if score $burst ui_temp matches ..0 unless score $bursttype ui_temp matches 7..8 unless score $bursttype ui_temp matches 10..11 unless score $bursttype ui_temp matches 13 unless score $bursttype ui_temp matches 15 run scoreboard players set $ishold ui_temp 1

@@ -1,6 +1,6 @@
 # アルトサイクル
     execute if score $burst_alt ui_temp matches 11.. run scoreboard players add $damage ui_temp 40
-    execute if score $burst_alt ui_temp matches 21.. run scoreboard players add $damage ui_temp 140
+    execute if score $burst_alt ui_temp matches 21.. run scoreboard players add $damage ui_temp 240
     execute if score $burst_alt ui_temp matches 11.. run scoreboard players add $ink.add ui_temp 80
     execute if score $burst_alt ui_temp matches 21.. run scoreboard players add $ink.add ui_temp 80
     execute if score $burst_alt ui_temp matches 11.. run scoreboard players add $range ui_temp 10

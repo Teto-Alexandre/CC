@@ -47,6 +47,9 @@
 #
     execute as @a[tag=immune_water] at @s if block ~ ~ ~ water run effect give @s levitation 1 9 true
     tag @a[tag=immune_water] remove immune_water
+    execute as @a[tag=speedtype_move,tag=!ui_temp_move_nexttick] run function ui:template/stats/shoot_speed
+    execute as @a unless score @s health = @s health_old run function ui:template/stats/health
+    execute as @a unless score @s armor = @s armor_old run function ui:template/stats/armor
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append

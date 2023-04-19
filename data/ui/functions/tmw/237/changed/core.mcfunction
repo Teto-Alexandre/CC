@@ -26,3 +26,4 @@ execute if score $team ui_temp matches 1 run item modify entity @s weapon.mainha
 execute if score $team ui_temp matches 2 run item modify entity @s weapon.mainhand ui:gun/value/now_pink
 execute if score $team ui_temp matches 3 run item modify entity @s weapon.mainhand ui:gun/value/now_yellow
 execute if score $team ui_temp matches 4 run item modify entity @s weapon.mainhand ui:gun/value/now_lime
+execute if score $team ui_temp matches 101 run item modify entity @s weapon.mainhand ui:gun/value/now_chaos

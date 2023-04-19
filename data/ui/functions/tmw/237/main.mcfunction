@@ -30,6 +30,8 @@ execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
 execute store result score $ink.max ui_temp run data get storage ui:gun temp.InkMax
 execute if score $module ui_world matches 1 as @a if score @s module matches 16 run function ui:module/eco_bag
 execute store result score $spneed ui_temp run data get storage ui:gun temp.SPNeed
+scoreboard players operation $spneed ui_temp *= #100 ui_num
+scoreboard players operation $spneed ui_temp /= @s sp_need_acc
 execute store result score $ink.m ui_temp run data get storage ui:gun temp.MoveInkRegen
 execute store result score $ink.s ui_temp run data get storage ui:gun temp.ShootInkRegen
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
