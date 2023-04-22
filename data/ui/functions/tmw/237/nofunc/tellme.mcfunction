@@ -39,7 +39,7 @@
     execute if score $temp ui_temp matches 351 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"メガホンレーザー : 壁を貫通する攻撃を行う","color":"white"}]
     execute if score $temp ui_temp matches 451 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"スーパーショット : 縦に長いショットを発射する","color":"white"}]
     execute if score $temp ui_temp matches 452 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"マルチミサイル : 大量のミサイルを発射する","color":"white"}]
-    execute if score $temp ui_temp matches 453 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"トライアングル : 3方向にショットを発射する","color":"white"}]
+    execute if score $temp ui_temp matches 453 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"セプタングル : 3方向にショットを発射する","color":"white"}]
     execute if score $temp ui_temp matches 454 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ハイドロポンプ : 一直線にショットを発射する","color":"white"}]
     execute if score $temp ui_temp matches 455 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ジェットパック : 空を飛び爆発するショットを発射する","color":"white"}]
 

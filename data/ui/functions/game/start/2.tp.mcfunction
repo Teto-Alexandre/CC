@@ -25,6 +25,7 @@ execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},
 #
 execute as @a run function ui:tmw/243/core/gear_reader/active
 function ui:game/pl_comp/
+execute as @a[tag=king] run scoreboard players add @s health 80
 
 #
 kill @e[tag=temp_respawn]

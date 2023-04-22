@@ -1,10 +1,7 @@
 # チャクチ
 
 # ダメージを与える
-    execute if score $team ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"スーパーチャクチ","color":"aqua"}'
-    execute if score $team ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"スーパーチャクチ","color":"light_purple"}'
-    execute if score $team ui_temp matches 3 run data modify storage ui:temp Name set value '{"text":"スーパーチャクチ","color":"yellow"}'
-    execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"スーパーチャクチ","color":"green"}'
+    data modify storage ui:temp Name set value '{"text":"スーパーチャクチ","color":"gold"}'
     function ui:tmw/237/misc/temp_team
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 60

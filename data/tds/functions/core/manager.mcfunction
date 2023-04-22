@@ -7,6 +7,8 @@ execute store result score $DamageType tds_dmg run data get storage tds: temp.Da
 
 execute if score $Attacker tds_dmg matches -2147483648..2147483647 run function tds:core/attacker/
 
+execute if entity @s[nbt={ActiveEffects:[{Id:12}]}] run function tds:core/attacker/light_up
+
 execute if score $dmg party_mode matches 1.. run function ui:party/dmg
 execute if score $def party_mode matches 1.. run function ui:party/def
 

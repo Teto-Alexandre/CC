@@ -20,13 +20,15 @@ effect give @a resistance 10 127 true
 execute as @a[tag=tmw_237_respawning] run scoreboard players set @s ui_rst 1
 gamemode spectator @a
 
-# tp
-
 # 武器放送
 execute as @a[scores={ui_team=1},tag=!spectate] run function ui:tmw/237/nofunc/bro_weapon
 execute as @a[scores={ui_team=2},tag=!spectate] run function ui:tmw/237/nofunc/bro_weapon
 execute as @a[scores={ui_team=3},tag=!spectate] run function ui:tmw/237/nofunc/bro_weapon
 execute as @a[scores={ui_team=4},tag=!spectate] run function ui:tmw/237/nofunc/bro_weapon
+
+# ガチキング
+tag @a remove king
+execute if score $gamemode ui_world matches 1 run function ui:game/start/king
 
 #
 schedule function ui:game/start/2.tp 1s

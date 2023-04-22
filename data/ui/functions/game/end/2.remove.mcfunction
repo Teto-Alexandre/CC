@@ -12,3 +12,6 @@ scoreboard objectives remove ui_s_kill_streak
 
 #
 scoreboard objectives setdisplay list ui_tmw237_ready
+
+#
+tag @a remove king

@@ -19,7 +19,7 @@ item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData
 item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"爆発ダメージ軽減 +8%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"総合ダメージ増加 +2%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"サブダメージ増加 +3%","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"対物ダメージ増加 +50%","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"対物ダメージ増加 +15%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.10 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"チャージ加速 +7%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"爆発ダメージ増加 +4%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"リスポーン加速 +10%","italic": false}'},ui:{ismenu:1}}
@@ -34,7 +34,7 @@ execute if score $slot ui_temp matches 4 run data modify storage ui:gear temp.Ge
 execute if score $slot ui_temp matches 5 run data modify storage ui:gear temp.Gears append value {id:4,item:{CustomModelData:122000,display:{Name:'{"text":"爆発ダメージ軽減 +8%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 6 run data modify storage ui:gear temp.Gears append value {id:5,item:{CustomModelData:122000,display:{Name:'{"text":"総合ダメージ増加 +2%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 7 run data modify storage ui:gear temp.Gears append value {id:6,item:{CustomModelData:122000,display:{Name:'{"text":"サブダメージ増加 +3%","italic": false}'},ui:{ismenu:1}}}
-execute if score $slot ui_temp matches 8 run data modify storage ui:gear temp.Gears append value {id:7,item:{CustomModelData:122000,display:{Name:'{"text":"対物ダメージ増加 +50%","italic": false}'},ui:{ismenu:1}}}
+execute if score $slot ui_temp matches 8 run data modify storage ui:gear temp.Gears append value {id:7,item:{CustomModelData:122000,display:{Name:'{"text":"対物ダメージ増加 +15%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 10 run data modify storage ui:gear temp.Gears append value {id:15,item:{CustomModelData:122000,display:{Name:'{"text":"チャージ加速 +7%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 11 run data modify storage ui:gear temp.Gears append value {id:8,item:{CustomModelData:122000,display:{Name:'{"text":"爆発ダメージ増加 +4%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 12 run data modify storage ui:gear temp.Gears append value {id:9,item:{CustomModelData:122000,display:{Name:'{"text":"リスポーン加速 +10%","italic": false}'},ui:{ismenu:1}}}

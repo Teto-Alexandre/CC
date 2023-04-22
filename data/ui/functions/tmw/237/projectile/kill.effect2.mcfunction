@@ -74,6 +74,15 @@
     #
         # マルミサ
         execute if score @s ui_hpart matches 221..401 run function ui:tmw/237/projectile/killeffect/401
+        # バウンシー
+        execute if score @s ui_hpart matches 402..404 run function ui:tmw/237/projectile/killeffect/404
+        execute if score @s ui_hpart matches 404 run function ui:tmw/237/projectile/killeffect/404
+        execute if score @s ui_hpart matches 405 run function ui:tmw/237/projectile/killeffect/405
+        execute if score @s ui_hpart matches 406 run function ui:tmw/237/projectile/killeffect/406
+        execute if score @s ui_hpart matches 407 run function ui:tmw/237/projectile/killeffect/407
+        execute if score @s ui_hpart matches 408 run function ui:tmw/237/projectile/killeffect/408
+        execute if score @s ui_hpart matches 409 run function ui:tmw/237/projectile/killeffect/409
+        execute if score @s ui_hpart matches 410 run function ui:tmw/237/projectile/killeffect/410
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint

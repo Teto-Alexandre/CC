@@ -12,7 +12,7 @@ execute if score $temp ui_temp matches 3 run scoreboard players add @s move_spee
 execute if score $temp ui_temp matches 4 run scoreboard players add @s blast_protection 2
 execute if score $temp ui_temp matches 5 run scoreboard players add @s norma_damage 2
 execute if score $temp ui_temp matches 6 run scoreboard players add @s sub_damage 3
-execute if score $temp ui_temp matches 7 run scoreboard players add @s vsobj_damage 50
+execute if score $temp ui_temp matches 7 run scoreboard players add @s vsobj_damage 15
 execute if score $temp ui_temp matches 8 run scoreboard players add @s blast_damage 4
 execute if score $temp ui_temp matches 9 run scoreboard players add @s respawn_acc 10
 execute if score $temp ui_temp matches 10 run scoreboard players add @s death_sp 5

@@ -18,6 +18,9 @@
 # ミサイル
     execute if score $activator ui_temp matches 452 run function ui:tmw/237/activator/time/452
 
+# セプタングル
+    execute if score $activator ui_temp matches 453 run effect give @s resistance 1 0 true
+
 # ハイドロポンプ
     execute if score $activator ui_temp matches 454 run function ui:tmw/237/activator/time/454
 
@@ -32,3 +35,6 @@
 
 # ナイスダマ
     execute if score $activator ui_temp matches 460 run function ui:tmw/237/activator/time/460
+
+# トライスプレッダー
+    execute if score $activator ui_temp matches 462 run effect give @s resistance 1 0 true

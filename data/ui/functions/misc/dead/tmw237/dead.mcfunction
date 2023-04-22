@@ -21,13 +21,16 @@ scoreboard players reset @s ui_tmw237_survive
 scoreboard players reset @s ui_tmw237_ink_regen
 
 # サブ消滅
-scoreboard players set $success ui_temp 0
-scoreboard players operation $id ui_temp = @s ui_id
-execute as @e[tag=tmw_237_sub_mult] if score @s ui_id = $id ui_temp store success score $success ui_temp run kill @s
-execute if score $success ui_temp matches 1.. run tellraw @s ["",{"text":"system","color":"white"},{"text":"> ","color":"green"},{"text":"設置した装置が消滅しました","color":"gray"}]
+#scoreboard players set $success ui_temp 0
+#scoreboard players operation $id ui_temp = @s ui_id
+#execute as @e[tag=tmw_237_sub_mult] if score @s ui_id = $id ui_temp store success score $success ui_temp run kill @s
+#execute if score $success ui_temp matches 1.. run tellraw @s ["",{"text":"system","color":"white"},{"text":"> ","color":"green"},{"text":"設置した装置が消滅しました","color":"gray"}]
 
 # amp分岐
-execute unless score $amp ui_temp matches 0 run function ui:misc/dead/tmw237/amp/master
+#execute unless score $amp ui_temp matches 0 run function ui:misc/dead/tmw237/amp/master
+
+# キング
+execute if entity @s[tag=king] run function ui:misc/dead/tmw237/amp/-1
 
 # ss
 schedule function ui:misc/dead/tmw237/ss 1t append

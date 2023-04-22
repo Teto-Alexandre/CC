@@ -43,7 +43,7 @@
     execute if score $slot ui_temp matches 20 run data modify storage ui:gun temp.tmw.gun.SubName set value "メガホンレーザー"
     execute if score $slot ui_temp matches 21 run data modify storage ui:gun temp.tmw.gun.SubName set value "スーパーショット"
     execute if score $slot ui_temp matches 22 run data modify storage ui:gun temp.tmw.gun.SubName set value "マルチミサイル"
-    execute if score $slot ui_temp matches 23 run data modify storage ui:gun temp.tmw.gun.SubName set value "トライアングル"
+    execute if score $slot ui_temp matches 23 run data modify storage ui:gun temp.tmw.gun.SubName set value "セプタングル"
     execute if score $slot ui_temp matches 24 run data modify storage ui:gun temp.tmw.gun.SubName set value "ハイドロポンプ"
 
 # 逆変換
