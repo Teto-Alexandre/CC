@@ -43,6 +43,16 @@
     execute if score $sptype ui_temp matches 461 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110912
     execute if score $subtype ui_temp matches 401 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110913
     execute if score $sptype ui_temp matches 401 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110913
+    execute if score $subtype ui_temp matches 451 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110914
+    execute if score $sptype ui_temp matches 451 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110914
+    execute if score $subtype ui_temp matches 452 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110916
+    execute if score $sptype ui_temp matches 452 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110916
+    execute if score $subtype ui_temp matches 454 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110918
+    execute if score $sptype ui_temp matches 454 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110918
+    execute if score $subtype ui_temp matches 458 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110915
+    execute if score $sptype ui_temp matches 458 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110915
+    execute if score $subtype ui_temp matches 459 if score $subtime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110917
+    execute if score $sptype ui_temp matches 459 if score $sptime ui_temp matches 1.. run data modify storage ui:gun temp.value set value 110917
     item modify entity @s weapon.mainhand ui:gun/value/model
 
 # オフハンド装備

@@ -44,6 +44,9 @@ scoreboard players set $def party_mode 0
     
     scoreboard objectives add energy_buff dummy
 
+    scoreboard objectives add last_slot dummy
+    scoreboard objectives add last_slot_old dummy
+
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
     scoreboard objectives add ui_calc2 dummy {"text":"UtilityItems_Calculation2","color":"dark_blue"}
