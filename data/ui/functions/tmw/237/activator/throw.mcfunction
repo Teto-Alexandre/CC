@@ -8,6 +8,7 @@ execute if score $activator ui_temp matches 108 run data modify entity @e[tag=ui
 execute if score $activator ui_temp matches 116 run data merge entity @e[tag=ui_temp_this,limit=1] {Item:{id:"minecraft:gray_stained_glass_pane",tag:{CustomModelData:120001}}}
 execute if score $activator ui_temp matches 117..118 run data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set value 217141
 execute if score $activator ui_temp matches 154 run data merge entity @e[tag=ui_temp_this,limit=1] {Item:{id:"minecraft:gray_stained_glass_pane",tag:{CustomModelData:120001}}}
+execute if score $activator ui_temp matches 155 run data merge entity @e[tag=ui_temp_this,limit=1] {Item:{id:"minecraft:gray_stained_glass_pane",tag:{CustomModelData:120001}}}
 execute store result entity @e[tag=ui_temp_this,limit=1] Item.tag.tmw.color int 1 run scoreboard players get $team ui_temp
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_id = @s ui_id
 scoreboard players operation @e[tag=ui_temp_this,limit=1] ui_team = $team ui_temp

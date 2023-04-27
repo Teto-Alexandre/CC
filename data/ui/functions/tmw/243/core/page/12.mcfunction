@@ -19,6 +19,7 @@
     execute if score $slot ui_temp matches 12 run scoreboard players set $sp ui_temp 461
     execute if score $slot ui_temp matches 13 run scoreboard players set $sp ui_temp 154
     execute if score $slot ui_temp matches 14 run scoreboard players set $sp ui_temp 462
+    execute if score $slot ui_temp matches 15 run scoreboard players set $sp ui_temp 155
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -33,6 +34,7 @@
     execute if score $slot ui_temp matches 12 run data modify storage ui:gun temp.tmw.gun.SPName set value "ウルトラハンコ"
     execute if score $slot ui_temp matches 13 run data modify storage ui:gun temp.tmw.gun.SPName set value "ガトリングタレット"
     execute if score $slot ui_temp matches 14 run data modify storage ui:gun temp.tmw.gun.SPName set value "トライスプレッダー"
+    execute if score $slot ui_temp matches 15 run data modify storage ui:gun temp.tmw.gun.SPName set value "エナジースタンド"
 
 # 逆変換
     execute if score $changed ui_temp matches 1 run function ui:tmw/243/core/changed
@@ -51,6 +53,7 @@
     execute if score $sp ui_temp matches 461 run item modify entity @s enderchest.12 ui:gun/add_glow
     execute if score $sp ui_temp matches 154 run item modify entity @s enderchest.13 ui:gun/add_glow
     execute if score $sp ui_temp matches 462 run item modify entity @s enderchest.14 ui:gun/add_glow
+    execute if score $sp ui_temp matches 155 run item modify entity @s enderchest.15 ui:gun/add_glow
 
 # 変更した
     scoreboard players set $success ui_temp 1

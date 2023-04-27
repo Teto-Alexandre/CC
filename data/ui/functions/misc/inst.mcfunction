@@ -50,7 +50,7 @@ scoreboard players set @s move_speed 500
 scoreboard players set @s armor_old -2147483648
 scoreboard players set @s armor 0
 scoreboard players set @s blast_protection 0
-scoreboard players set @s norma_damage 100
+scoreboard players set @s norma_damage 1000
 scoreboard players set @s sub_damage 100
 scoreboard players set @s vsobj_damage 100
 scoreboard players set @s blast_damage 100
@@ -62,6 +62,10 @@ scoreboard players set @s main_eff_acc 100
 scoreboard players set @s sub_eff_acc 100
 scoreboard players set @s charge_acc 0
 scoreboard players set @s charge_acc_current 0
+
+scoreboard players set @s pl_comp_buff 0
+
+scoreboard players set @s energy_buff 0
 
 ## -------------------
 tag @s add gear_unlocked
@@ -93,7 +97,21 @@ tag @s remove game.ready
 tag @s remove setting_module
 tag @s remove setting_party
 
+tag @s remove adv35
+tag @s remove adv40
+tag @s remove adv45
+tag @s remove adv50
+tag @s remove adv55
+tag @s remove adv60
+tag @s remove adv65
+tag @s remove adv70
+tag @s remove adv75
+tag @s remove adv80
+
 item replace entity @s enderchest.0 with air
+
+teleport @a -2 30.5 6
+spawnpoint @a -2 30 6
 
 #scoreboard players set @a ui_r_game 0
 #scoreboard players set @a ui_r_kill 0

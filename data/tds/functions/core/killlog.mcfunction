@@ -19,6 +19,9 @@
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/revenge=false}] if score @s tds_recent_attacked_by = $victim_id ui_id run advancement grant @s only ui:add/kill/revenge
     scoreboard players reset $victim_id ui_id
 
+##
+    execute if score $gamemode ui_world matches 2 run function tds:core/gamemode/2.tag
+
 ## キルカウント
     scoreboard players add @a[tag=tds_tempa] ui_s_kill 1
     scoreboard players add @a[tag=tds_tempa] ui_s_kill_streak 1

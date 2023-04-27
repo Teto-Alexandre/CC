@@ -9,6 +9,8 @@ data modify storage ui:common input.Item.tag set from storage ui:inventory temp[
 data modify storage ui:common input.Item.tag.tmw.gun.now.SubTime set value 0
 data modify storage ui:common input.Item.tag.tmw.gun.now.SPTime set value 0
 
+execute if entity @s[tag=tmw_237_random] run function ui:template/inventory/random/1
+
 function ui:common/item
 
 data remove storage ui:inventory temp[0]

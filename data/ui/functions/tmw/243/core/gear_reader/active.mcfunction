@@ -8,13 +8,16 @@ data modify storage ui:gear temp.Reader set from storage oh_my_dat: _[-4][-4][-4
 # カウント
 execute store result score $count ui_temp run data get storage ui:gear temp.Reader
 
+# エナスタバフリセット
+function ui:template/stats/energy/remove
+
 # 初期値
 scoreboard players set @s health 0
 scoreboard players set @s shoot_speed 0
 scoreboard players set @s move_speed 500
 scoreboard players set @s armor 0
 scoreboard players set @s blast_protection 0
-scoreboard players set @s norma_damage 100
+scoreboard players set @s norma_damage 1000
 scoreboard players set @s vsobj_damage 100
 scoreboard players set @s blast_damage 100
 scoreboard players set @s respawn_acc 100
@@ -23,6 +26,8 @@ scoreboard players set @s sp_need_acc 100
 scoreboard players set @s ink_regen 100
 scoreboard players set @s main_eff_acc 100
 scoreboard players set @s sub_eff_acc 100
+
+scoreboard players set @s pl_comp_buff 0
 
 # 切削
 execute if score $count ui_temp matches 1.. run function ui:tmw/243/core/gear_reader/1.burn

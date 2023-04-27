@@ -50,6 +50,7 @@
     execute as @a[tag=speedtype_move,tag=!ui_temp_move_nexttick] run function ui:template/stats/shoot_speed
     execute as @a unless score @s health = @s health_old run function ui:template/stats/health
     execute as @a unless score @s armor = @s armor_old run function ui:template/stats/armor
+    execute as @a if score @s energy_buff matches 1.. at @s run function ui:template/stats/energy/
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append

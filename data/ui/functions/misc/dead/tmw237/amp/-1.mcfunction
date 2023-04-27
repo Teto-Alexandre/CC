@@ -30,4 +30,4 @@
 
 #
     tag @s remove king
-    scoreboard players remove @s health 50
+    scoreboard players remove @s health 800

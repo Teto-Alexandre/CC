@@ -6,7 +6,7 @@ execute as @a if score @s ui_id = $Attacker tds_dmg run tag @s add tds_attacker_
 
 # ダメージに倍率を乗せる
 scoreboard players operation $Damage tds_dmg *= @a[tag=tds_attacker_temp] norma_damage
-scoreboard players operation $Damage tds_dmg /= #100 ui_num
+scoreboard players operation $Damage tds_dmg /= #1000 ui_num
 
 #
 execute if score $subdamage ui_temp matches 1 run function tds:core/attacker/sub

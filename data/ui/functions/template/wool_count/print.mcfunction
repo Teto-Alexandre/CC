@@ -29,3 +29,5 @@ execute if score $blue wool_count matches 0 if score $red wool_count matches 0 i
 
 # デフォルトの色を戻す
 scoreboard players set $default_color ui_temp 2
+
+function ui:game/end/11.after_count

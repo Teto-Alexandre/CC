@@ -54,18 +54,22 @@ item modify entity @s enderchest.19 ui:setting_sec
 
 execute unless score $gamemode ui_world matches 1.. run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ナワバリバトル","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $gamemode ui_world matches 1 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチキング","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 2 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチ増え鬼","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 2 run scoreboard players add $gamemode ui_world 1
 item replace entity @s enderchest.11 with crafting_table{display:{Name:'{"text":"ゲームモード","color": "gold","italic": false}',Lore:['{"text":"※クリックして初期化","color": "gray","italic": false}']},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 11 run scoreboard players set $gamemode ui_world 0
 execute unless score $gamemode ui_world matches 1.. run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ナワバリバトル","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $gamemode ui_world matches 1 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチキング","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 2 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチ増え鬼","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 20 run scoreboard players remove $gamemode ui_world 1
-execute if score $gamemode ui_world matches 2.. run scoreboard players set $gamemode ui_world 0
-execute if score $gamemode ui_world matches ..-1 run scoreboard players set $gamemode ui_world 1
+execute if score $gamemode ui_world matches 3.. run scoreboard players set $gamemode ui_world 0
+execute if score $gamemode ui_world matches ..-1 run scoreboard players set $gamemode ui_world 2
 execute if score $slot ui_temp matches 2 unless score $gamemode ui_world matches 1.. run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがナワバリバトルになりました","color": "gray"}]
 execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチキングになりました","color": "gray"}]
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 2 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチ増え鬼になりました","color": "gray"}]
 execute if score $slot ui_temp matches 20 unless score $gamemode ui_world matches 1.. run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがナワバリバトルになりました","color": "gray"}]
 execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチキングになりました","color": "gray"}]
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 2 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチ増え鬼になりました","color": "gray"}]
 
 item replace entity @s enderchest.3 with lime_stained_glass_pane{display:{Name:'{"text":"30秒延長","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 3 run scoreboard players add $time.max ui_world 600

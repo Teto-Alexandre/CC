@@ -5,6 +5,7 @@
 #execute as @e[tag=map_respawn_green] if score @s map_id = $map ui_world positioned as @s as @a[scores={ui_team=4},tag=!spectate] run teleport @s ~ ~ ~
 
 #
+kill @e[tag=temp_respawn]
 execute if data storage ui:map map.blue run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_blue"]}
 execute if data storage ui:map map.red run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_red"]}
 execute if data storage ui:map map.yellow run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_yellow"]}
@@ -25,7 +26,11 @@ execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},
 #
 execute as @a run function ui:tmw/243/core/gear_reader/active
 function ui:game/pl_comp/
-execute as @a[tag=king] run scoreboard players add @s health 80
+execute as @a[tag=king] run scoreboard players add @s health 800
+
+#
+tag @a add speedtype_shoot
+tag @a remove speedtype_move
 
 #
 kill @e[tag=temp_respawn]

@@ -19,6 +19,7 @@ gamemode adventure @a[tag=!spectate]
 playsound minecraft:entity.wither.spawn player @a ~ ~ ~ 1 1 1
 
 #
+kill @e[tag=temp_respawn]
 execute if data storage ui:map map.blue run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_blue"]}
 execute if data storage ui:map map.red run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_red"]}
 execute if data storage ui:map map.yellow run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_yellow"]}
@@ -43,9 +44,6 @@ execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},
     execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=4}] at @e[tag=temp_respawn,tag=!temp_respawn_green,sort=random,limit=1] run teleport @s ~ ~ ~
 
 execute as @a[tag=!spectate] at @s run spawnpoint @s ~ ~ ~
-
-#
-kill @e[tag=temp_respawn]
 
 effect clear @a
 effect give @a night_vision 1000000 0 true

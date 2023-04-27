@@ -63,6 +63,7 @@ execute if score $subtype ui_temp matches 458 run data modify storage ui:temp te
 execute if score $subtype ui_temp matches 459 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:15,SubBurstMax:-1}
 execute if score $subtype ui_temp matches 460 run data modify storage ui:temp temp.gun merge value {SubBurstType:4,SubBurst:51,SubBurstMax:60}
 execute if score $subtype ui_temp matches 461 run data modify storage ui:temp temp.gun merge value {SubBurstType:2,SubBurst:2,SubBurstMax:-1}
+execute if score $subtype ui_temp matches 462 run data modify storage ui:temp temp.gun merge value {SPBurstType:2,SPBurst:4,SPBurstMax:-1}
 
 execute if score $subtype ui_temp matches 401 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:1,SubBurstMax:-1}
 execute if score $subtype ui_temp matches 402 run data modify storage ui:temp temp.gun merge value {SubBurstType:1,SubBurst:1,SubBurstMax:-1}
@@ -82,6 +83,7 @@ execute if score $sptype ui_temp matches 458 run data modify storage ui:temp tem
 execute if score $sptype ui_temp matches 459 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:15,SPBurstMax:-1}
 execute if score $sptype ui_temp matches 460 run data modify storage ui:temp temp.gun merge value {SPBurstType:4,SPBurst:51,SPBurstMax:60}
 execute if score $sptype ui_temp matches 461 run data modify storage ui:temp temp.gun merge value {SPBurstType:2,SPBurst:2,SPBurstMax:-1}
+execute if score $sptype ui_temp matches 462 run data modify storage ui:temp temp.gun merge value {SPBurstType:2,SPBurst:4,SPBurstMax:-1}
 
 execute if score $sptype ui_temp matches 401 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}
 execute if score $sptype ui_temp matches 402 run data modify storage ui:temp temp.gun merge value {SPBurstType:1,SPBurst:1,SPBurstMax:-1}

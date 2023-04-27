@@ -37,6 +37,11 @@ execute if score $slot ui_temp matches 16 run tag @s[tag=!tmw_237_nomisclog] add
 execute if score $slot ui_temp matches 16 run tag @s[tag=ui_temp_this] remove tmw_237_nomisclog
 execute if score $slot ui_temp matches 16 run tag @s[tag=ui_temp_this] remove ui_temp_this
 
+execute if score $slot ui_temp matches 22 run tag @s[tag=tmw_237_random] add ui_temp_this
+execute if score $slot ui_temp matches 22 run tag @s[tag=!tmw_237_random] add tmw_237_random
+execute if score $slot ui_temp matches 22 run tag @s[tag=ui_temp_this] remove tmw_237_random
+execute if score $slot ui_temp matches 22 run tag @s[tag=ui_temp_this] remove ui_temp_this
+
 execute if entity @s[tag=!record_unlocked] run item replace entity @s enderchest.10 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
 execute if entity @s[tag=!record_unlocked] if score $slot ui_temp matches 10 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
 execute if entity @s[tag=record_unlocked] run item replace entity @s enderchest.10 with book{display:{Name:'{"text":"戦績確認","color": "gold","italic": false}'},ui:{ismenu:1}}
@@ -116,7 +121,8 @@ execute if entity @s[tag=game.ready] run item replace entity @s enderchest.18 wi
 execute if score $phase game_state matches 1.. run item replace entity @s enderchest.18 with orange_dye{display:{Name:'{"text":"開始中・・・","italic": false,"color": "gold"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
 execute if entity @s[tag=spectate] run item replace entity @s enderchest.18 with barrier{display:{Name:'{"text":"※観戦モード※","italic": false,"color": "white"}'},ui:{ismenu:1},HideFlags:1}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] run item replace entity @s enderchest.22 with lime_stained_glass_pane{display:{Name:'{"text":"ランダム装備: ON","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!tmw_237_random] run item replace entity @s enderchest.22 with red_stained_glass_pane{display:{Name:'{"text":"ランダム装備: OFF","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

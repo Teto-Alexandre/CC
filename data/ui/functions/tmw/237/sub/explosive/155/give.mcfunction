@@ -1,0 +1,1 @@
+scoreboard players set @s energy_buff 300

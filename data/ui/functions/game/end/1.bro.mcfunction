@@ -1,5 +1,8 @@
 # キル数と塗り数の表示
 
+# リス地削除
+kill @e[tag=temp_respawn]
+
 # ロビーモード
 scoreboard players set $phase game_state 0
 

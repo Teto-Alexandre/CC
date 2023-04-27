@@ -13,7 +13,7 @@ scoreboard players set @s shoot_speed 0
 scoreboard players set @s move_speed 500
 scoreboard players set @s armor 0
 scoreboard players set @s blast_protection 0
-scoreboard players set @s norma_damage 100
+scoreboard players set @s norma_damage 1000
 scoreboard players set @s sub_damage 100
 scoreboard players set @s vsobj_damage 100
 scoreboard players set @s blast_damage 100
@@ -24,6 +24,8 @@ scoreboard players set @s ink_regen 100
 scoreboard players set @s main_eff_acc 100
 scoreboard players set @s sub_eff_acc 100
 scoreboard players set @s charge_acc 0
+
+scoreboard players set @s pl_comp_buff 0
 
 # 切削
 execute if score $count ui_temp matches 1.. run function ui:tmw/243/core/gear_reader/1.burn
