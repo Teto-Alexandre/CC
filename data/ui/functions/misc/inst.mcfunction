@@ -3,6 +3,7 @@ tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"col
 tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"text":"  - Made by teto","color":"gold"}]
 
 function ui:misc/reset_gears
+function ui:misc/reset_preset
 
 title @s times 0 20 0
 
