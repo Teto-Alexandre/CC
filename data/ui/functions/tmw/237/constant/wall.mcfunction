@@ -13,7 +13,7 @@
     effect give @s[x_rotation=11..39] levitation 1 251 true
     effect give @s[x_rotation=40..90] levitation 1 247 true
     effect give @s invisibility 1 0 true
-    execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run effect give @s regeneration 3 3 true
+    execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run function ui:tmw/237/constant/regen/
     scoreboard players set $burst ui_temp 0
     scoreboard players set @s ui_use2 0
 

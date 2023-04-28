@@ -10,7 +10,7 @@
     effect give @s levitation 1 0 true
     #execute if block ~ ~1.5 ~ air run effect give @s levitation 1 0 true
     effect give @s invisibility 1 0 true
-    execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run effect give @s regeneration 3 3 true
+    execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run function ui:tmw/237/constant/regen/
     scoreboard players set $burst ui_temp 0
     scoreboard players set @s ui_use2 0
 

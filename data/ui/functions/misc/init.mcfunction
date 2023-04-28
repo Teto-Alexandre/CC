@@ -22,6 +22,8 @@ scoreboard players set $def party_mode 0
 
     scoreboard objectives add health dummy
     scoreboard objectives add health_old dummy
+    scoreboard objectives add health_regen dummy
+    scoreboard objectives add health_regen_temp dummy
     scoreboard objectives add shoot_speed dummy
     scoreboard objectives add move_speed dummy
     scoreboard objectives add armor dummy

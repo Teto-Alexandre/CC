@@ -1,4 +1,5 @@
 scoreboard players remove @s health 6
+scoreboard players remove @s health_regen 12
 scoreboard players remove @s norma_damage 4
 scoreboard players remove @s ink_regen 1
 scoreboard players remove @s main_eff_acc 1

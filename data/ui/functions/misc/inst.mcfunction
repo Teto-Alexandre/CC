@@ -45,6 +45,8 @@ scoreboard players set @s ui_bc -1
 
 scoreboard players set @s health_old -2147483648
 scoreboard players set @s health 0
+scoreboard players set @s health_regen 0
+scoreboard players set @s health_regen_temp 0
 scoreboard players set @s shoot_speed 0
 scoreboard players set @s move_speed 500
 scoreboard players set @s armor_old -2147483648

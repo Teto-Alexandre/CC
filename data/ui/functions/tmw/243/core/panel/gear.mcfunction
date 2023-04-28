@@ -11,9 +11,9 @@ data modify storage ui:gear temp.Gears set from storage oh_my_dat: _[-4][-4][-4]
 execute if score $slot ui_temp matches 26 run tag @s remove setting_gear
 
 item replace entity @s enderchest.0 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:122005,display:{Name:'{"text":"HPアップ +1","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:122005,display:{Name:'{"text":"HPアップ +1","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:122016,display:{Name:'{"text":"HP回復効率 +10%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:122011,display:{Name:'{"text":"射撃形態移動速度 +3%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:122008,display:{Name:'{"text":"移動形態移動速度 +6%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:122002,display:{Name:'{"text":"爆発ダメージ軽減 +8%","italic": false}'},ui:{ismenu:1}}
@@ -28,7 +28,8 @@ item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:122006,display:{Name:'{"text":"インク回復効率 +5%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:122007,display:{Name:'{"text":"メインインク効率 +5%","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.17 with gray_stained_glass_pane{CustomModelData:122014,display:{Name:'{"text":"サブインク効率 +5%","italic": false}'},ui:{ismenu:1}}
-execute if score $slot ui_temp matches 2 run data modify storage ui:gear temp.Gears append value {id:1,item:{CustomModelData:122005,display:{Name:'{"text":"HPアップ +1","italic": false}'},ui:{ismenu:1}}}
+execute if score $slot ui_temp matches 1 run data modify storage ui:gear temp.Gears append value {id:1,item:{CustomModelData:122005,display:{Name:'{"text":"HPアップ +1","italic": false}'},ui:{ismenu:1}}}
+execute if score $slot ui_temp matches 2 run data modify storage ui:gear temp.Gears append value {id:16,item:{CustomModelData:122016,display:{Name:'{"text":"HP回復効率 +10%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 3 run data modify storage ui:gear temp.Gears append value {id:2,item:{CustomModelData:122011,display:{Name:'{"text":"射撃形態移動速度 +3%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 4 run data modify storage ui:gear temp.Gears append value {id:3,item:{CustomModelData:122008,display:{Name:'{"text":"移動形態移動速度 +6%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 5 run data modify storage ui:gear temp.Gears append value {id:4,item:{CustomModelData:122002,display:{Name:'{"text":"爆発ダメージ軽減 +8%","italic": false}'},ui:{ismenu:1}}}
@@ -43,7 +44,7 @@ execute if score $slot ui_temp matches 14 run data modify storage ui:gear temp.G
 execute if score $slot ui_temp matches 15 run data modify storage ui:gear temp.Gears append value {id:12,item:{CustomModelData:122006,display:{Name:'{"text":"インク回復効率 +5%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 16 run data modify storage ui:gear temp.Gears append value {id:13,item:{CustomModelData:122007,display:{Name:'{"text":"メインインク効率 +5%","italic": false}'},ui:{ismenu:1}}}
 execute if score $slot ui_temp matches 17 run data modify storage ui:gear temp.Gears append value {id:14,item:{CustomModelData:122014,display:{Name:'{"text":"サブインク効率 +5%","italic": false}'},ui:{ismenu:1}}}
-execute if score $slot ui_temp matches 2..8 run data remove storage ui:gear temp.Gears[0]
+execute if score $slot ui_temp matches 1..8 run data remove storage ui:gear temp.Gears[0]
 execute if score $slot ui_temp matches 10..17 run data remove storage ui:gear temp.Gears[0]
 
 item replace entity @s enderchest.18 with gray_stained_glass_pane{CustomModelData:122000,display:{Name:'{"text":"空のギア","italic": false}'},ui:{ismenu:1}}

@@ -21,6 +21,7 @@ execute if score $temp ui_temp matches 12 run scoreboard players add @s ink_rege
 execute if score $temp ui_temp matches 13 run scoreboard players add @s main_eff_acc 5
 execute if score $temp ui_temp matches 14 run scoreboard players add @s sub_eff_acc 5
 execute if score $temp ui_temp matches 15 run scoreboard players add @s charge_acc 7
+execute if score $temp ui_temp matches 16 run scoreboard players add @s health_regen 25
 
 # 取得した場所を削除し再起
 data remove storage ui:gear temp.Reader[0]
