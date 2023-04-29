@@ -121,8 +121,10 @@ execute if entity @s[tag=game.ready] run item replace entity @s enderchest.18 wi
 execute if score $phase game_state matches 1.. run item replace entity @s enderchest.18 with orange_dye{display:{Name:'{"text":"開始中・・・","italic": false,"color": "gold"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
 execute if entity @s[tag=spectate] run item replace entity @s enderchest.18 with barrier{display:{Name:'{"text":"※観戦モード※","italic": false,"color": "white"}'},ui:{ismenu:1},HideFlags:1}
 
-execute run item replace entity @s enderchest.21 with writable_book{display:{Name:'{"text":"統合プリセット","color": "gold","italic": false}',Lore:['{"text":"装備、ギア、モジュールを保存","color": "gray","italic": false}']},ui:{ismenu:1}}
-execute if score $slot ui_temp matches 21 run tag @s add setting_preset
+execute if entity @s[tag=preset_unlocked] run item replace entity @s enderchest.21 with writable_book{display:{Name:'{"text":"統合プリセット","color": "gold","italic": false}',Lore:['{"text":"装備、ギア、モジュールを保存","color": "gray","italic": false}']},ui:{ismenu:1}}
+execute unless entity @s[tag=preset_unlocked] run item replace entity @s enderchest.21 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
+execute if entity @s[tag=preset_unlocked] if score $slot ui_temp matches 21 run tag @s add setting_preset
+execute unless entity @s[tag=preset_unlocked] if score $slot ui_temp matches 21 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]
 
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 execute if entity @s[tag=tmw_237_random] run item replace entity @s enderchest.23 with lime_stained_glass_pane{display:{Name:'{"text":"ランダム装備: ON","italic": false}'},ui:{ismenu:1}}

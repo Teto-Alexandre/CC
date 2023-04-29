@@ -110,6 +110,7 @@ tag @s add adv75
 tag @s add adv80
 
 #
+execute if entity @a[scores={ui_r_game=1..}] unless entity @s[tag=preset_unlocked] run function ui:unlock/preset
 execute if entity @a[scores={ui_r_game=1..}] unless entity @s[tag=spectator_unlocked] run function ui:unlock/spectator
 execute if entity @a[scores={ui_r_game=1..}] unless entity @s[tag=auto_ready_unlocked] run function ui:unlock/auto_ready
 execute if entity @a[scores={ui_r_game=1..}] unless entity @s[tag=setting_unlocked] run function ui:unlock/setting

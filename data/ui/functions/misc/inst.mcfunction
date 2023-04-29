@@ -83,6 +83,7 @@ tag @s remove auto_ready_unlocked
 tag @s remove setting_unlocked
 tag @s remove module_unlocked
 tag @s remove party_unlocked
+tag @s remove preset_unlocked
 
 tag @s remove tmw_237_notitle
 tag @s remove tmw_237_nolaser
