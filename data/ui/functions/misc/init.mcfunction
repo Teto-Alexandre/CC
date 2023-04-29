@@ -49,6 +49,9 @@ scoreboard players set $def party_mode 0
     scoreboard objectives add last_slot dummy
     scoreboard objectives add last_slot_old dummy
 
+    scoreboard objectives add random_qf dummy
+    scoreboard objectives add random_main dummy
+
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
     scoreboard objectives add ui_calc2 dummy {"text":"UtilityItems_Calculation2","color":"dark_blue"}
@@ -297,7 +300,7 @@ scoreboard players set $def party_mode 0
     setblock 0 0 0 minecraft:dropper{Items:[{Slot:0b,id:"minecraft:stone",Count:1b},{Slot:1b,id:"minecraft:stone",Count:1b},{Slot:2b,id:"minecraft:stone",Count:1b},{Slot:3b,id:"minecraft:stone",Count:1b},{Slot:4b,id:"minecraft:stone",Count:1b},{Slot:5b,id:"minecraft:stone",Count:1b},{Slot:6b,id:"minecraft:stone",Count:1b},{Slot:7b,id:"minecraft:stone",Count:1b},{Slot:8b,id:"minecraft:stone",Count:1b}]} replace
     setblock 0 1 0 minecraft:oak_sign replace
 
-    gamerule maxCommandChainLength 500000
+    gamerule maxCommandChainLength 1000000
 
 #=====================================================================================
 #

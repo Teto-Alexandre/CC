@@ -120,6 +120,7 @@ execute as @s[tag=tmw_drop_s] run function ui:tmw/237/emergency/core
 # その他状態ディスプレイ
 execute if score $ink ui_temp < $ink.sub ui_temp run effect give @s wither 1 0 true
 execute if score $ink ui_temp >= $ink.sub ui_temp run effect clear @s wither
+execute if score $qf ui_temp matches 3 run effect clear @s wither
 scoreboard players operation @s ui_paint < $spneed ui_temp
 execute if score $qf ui_temp matches 2 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/qf2
 execute if score $qf ui_temp matches 4 if score @s ui_paint = $spneed ui_temp at @s run function ui:tmw/237/sp/qf2

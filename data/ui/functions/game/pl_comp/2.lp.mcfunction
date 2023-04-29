@@ -4,6 +4,7 @@ scoreboard players add @s norma_damage 4
 scoreboard players add @s ink_regen 1
 scoreboard players add @s main_eff_acc 1
 scoreboard players add @s sub_eff_acc 1
+scoreboard players add @s charge_acc 1
 
 scoreboard players add @s pl_comp_buff 1
 

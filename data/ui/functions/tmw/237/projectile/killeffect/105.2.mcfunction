@@ -5,7 +5,7 @@ scoreboard players set @s ui_hpart 208
 scoreboard players set @s ui_bm 30
 scoreboard players set @s ui_br 60
 scoreboard players set @s ui_gpc 3
-scoreboard players set @s ui_dmg 200
+scoreboard players set @s ui_dmg 150
 scoreboard players set @s ui_bdt 1
 scoreboard players operation @s ui_id = $id ui_temp
 scoreboard players operation @s ui_team = $team ui_temp

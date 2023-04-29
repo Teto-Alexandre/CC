@@ -70,6 +70,9 @@ scoreboard players set @s pl_comp_buff 0
 
 scoreboard players set @s energy_buff 0
 
+scoreboard players set @s random_qf 0
+scoreboard players set @s random_main 0
+
 ## -------------------
 tag @s add gear_unlocked
 ## -------------------
@@ -114,8 +117,8 @@ tag @s remove adv80
 
 item replace entity @s enderchest.0 with air
 
-teleport @a -2 30.5 6
-spawnpoint @a -2 30 6
+teleport @s -2 30.5 6
+spawnpoint @s -2 30 6
 
 #scoreboard players set @a ui_r_game 0
 #scoreboard players set @a ui_r_kill 0

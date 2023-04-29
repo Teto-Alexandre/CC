@@ -1,12 +1,9 @@
 # ナイスダマ
 
 # ダメージを与える
-    execute if score $team ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"ナイスダマ","color":"aqua"}'
-    execute if score $team ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"ナイスダマ","color":"light_purple"}'
-    execute if score $team ui_temp matches 3 run data modify storage ui:temp Name set value '{"text":"ナイスダマ","color":"yellow"}'
-    execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"ナイスダマ","color":"green"}'
+    execute if score $team ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"ナイスダマ","color":"gold"}'
     scoreboard players set $damage_type ui_temp 3
-    scoreboard players set $damage ui_temp 30
+    scoreboard players set $damage ui_temp 35
     execute if score @s ui_is matches 1..2 run execute at @e[distance=..2.0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 3..4 run execute at @e[distance=..2.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 5..6 run execute at @e[distance=..3.0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker

@@ -12,7 +12,7 @@ item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData
 item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
 
 
 
@@ -67,6 +67,13 @@ scoreboard players operation $time.display ui_world *= #10 ui_num
 item modify entity @s enderchest.3 ui:setting_percentage
 item modify entity @s enderchest.21 ui:setting_percentage
 execute if score $slot ui_temp matches 3 if score $def party_mode matches 10 if entity @s[advancements={ui:hidden/misc/peaceful=false}] run advancement grant @s only ui:hidden/misc/peaceful
+
+execute if score $slot ui_temp matches 8 run scoreboard players add $sp_fusion party_mode 1
+execute if score $slot ui_temp matches 8 if score $sp_fusion party_mode matches 2.. run scoreboard players set $sp_fusion party_mode 0
+execute if score $sp_fusion party_mode matches 1 run item replace entity @s enderchest.8 with lime_stained_glass_pane{display:{Name:'{"text":"ランダムメイン・スペシャル融合バグ: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $sp_fusion party_mode matches 1 run item replace entity @s enderchest.8 with red_stained_glass_pane{display:{Name:'{"text":"ランダムメイン・スペシャル融合バグ: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 8 unless score $sp_fusion party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がランダムメイン・スペシャル融合バグを無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 8 if score $sp_fusion party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がランダムメイン・スペシャル融合バグを有効化しました","color": "gray"}]
 
 execute if score $slot ui_temp matches 17 unless score $secondary ui_world matches 1 run scoreboard players set $secondary ui_world 3
 execute if score $slot ui_temp matches 17 if score $secondary ui_world matches 1 run scoreboard players set $secondary ui_world 0
