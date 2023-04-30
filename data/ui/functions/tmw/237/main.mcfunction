@@ -73,7 +73,7 @@ execute if score $amp ui_temp matches 1.. run function ui:tmw/237/amp/manager
 #tag @s[tag=tmw_oh_s] add tmw_oh_n
 
 # 持ち替えたら
-execute unless score @s last_slot_old = @s last_slot run function ui:tmw/237/constant/charge_cancel2
+execute unless score $swap_save party_mode matches 1.. unless score @s last_slot_old = @s last_slot run function ui:tmw/237/constant/another_hold_cancel
 
 # バースト数
 # 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4

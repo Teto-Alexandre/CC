@@ -161,5 +161,7 @@ execute if score $type ui_temp matches 460 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 461 run data modify storage ui:temp temp.Name set value " - SP:ウルトラハンコ"
 execute if score $type ui_temp matches 462 run data modify storage ui:temp temp.Name set value " - SP:トライスプレッダー"
 
+execute if score $type ui_temp matches 491 run data modify storage ui:temp temp.Name set value " - SP:ジェスター・レリック"
+
 execute if score $type ui_temp matches 1011 run data modify storage ui:temp temp.Name set value " - P-SUB:リモートボム"
 execute if score $type ui_temp matches 1012 run data modify storage ui:temp temp.Name set value " - P-SUB:起爆"

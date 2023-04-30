@@ -29,7 +29,8 @@ scoreboard players set @s health_regen 0
 scoreboard players set @s pl_comp_buff 0
 
 # 切削
-execute if score $count ui_temp matches 1.. run function ui:tmw/243/core/gear_reader/1.burn
+execute if score $gear_off party_mode matches 1 run tellraw @s [{"text":"> ","color": "gray"},{"text":"ギア読み込みは無効化されています","color": "gray"}]
+execute unless score $gear_off party_mode matches 1 if score $count ui_temp matches 1.. run function ui:tmw/243/core/gear_reader/1.burn
 
 # 最後に
 data remove storage ui:gear temp.Reader

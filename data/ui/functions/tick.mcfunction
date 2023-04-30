@@ -11,6 +11,11 @@
     ## 所持アイテムid確認+装填確認
         execute as @a store result score @s ui_tmw_id run data get entity @s SelectedItem.tag.tmw.id
 
+#
+    execute as @a run scoreboard players operation @s last_slot_old = @s last_slot
+    execute as @a store result score @s last_slot run data get entity @s SelectedItemSlot
+    scoreboard players add @a last_slot 1
+
 # メインアクションはすべてここに置く
 
     ## 誰か一人でも持ってる人がいないなら起動すらしない
@@ -39,11 +44,6 @@
 # モジュール適応時
     execute if score $module ui_world matches 1 if entity @a[scores={module=5}] run function ui:module/rainbow
     execute if score $module ui_world matches 1 as @a if score @s module matches 10 run tag @s add immune_water
-
-#
-    execute as @a run scoreboard players operation @s last_slot_old = @s last_slot
-    execute as @a store result score @s last_slot run data get entity @s SelectedItemSlot
-    scoreboard players add @a last_slot 1
 
 #
     scoreboard players add $world ui_tc 1

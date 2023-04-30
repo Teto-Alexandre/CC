@@ -6,7 +6,7 @@
 # 特殊効果
     effect clear @s slowness
     effect clear @s levitation
-    effect give @s speed 1 25 true
+    #effect give @s speed 1 25 true
     effect give @s levitation 1 0 true
     #execute if block ~ ~1.5 ~ air run effect give @s levitation 1 0 true
     effect give @s invisibility 1 0 true

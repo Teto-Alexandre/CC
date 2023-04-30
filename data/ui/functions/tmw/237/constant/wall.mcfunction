@@ -6,12 +6,12 @@
 # 特殊効果
     effect clear @s slowness
     effect clear @s levitation
-    effect give @s speed 1 25 true
+    #effect give @s speed 1 25 true
     effect give @s[x_rotation=-90..-40] levitation 1 7 true
     effect give @s[x_rotation=-39..-11] levitation 1 3 true
-    effect give @s[x_rotation=-10..10] levitation 1 255 true
-    effect give @s[x_rotation=11..39] levitation 1 251 true
-    effect give @s[x_rotation=40..90] levitation 1 247 true
+    execute if score $wall_levitation party_mode matches 1 run effect give @s[x_rotation=-10..10] levitation 1 255 true
+    execute if score $wall_levitation party_mode matches 1 run effect give @s[x_rotation=11..39] levitation 1 251 true
+    execute if score $wall_levitation party_mode matches 1 run effect give @s[x_rotation=40..90] levitation 1 247 true
     effect give @s invisibility 1 0 true
     execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run function ui:tmw/237/constant/regen/
     scoreboard players set $burst ui_temp 0

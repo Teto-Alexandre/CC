@@ -10,8 +10,7 @@ item replace entity @s enderchest.0 with gray_stained_glass_pane{CustomModelData
 
 item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
 
 
 
@@ -19,8 +18,7 @@ item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData
 
 item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
 
 item replace entity @s enderchest.18 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
@@ -68,12 +66,47 @@ item modify entity @s enderchest.3 ui:setting_percentage
 item modify entity @s enderchest.21 ui:setting_percentage
 execute if score $slot ui_temp matches 3 if score $def party_mode matches 10 if entity @s[advancements={ui:hidden/misc/peaceful=false}] run advancement grant @s only ui:hidden/misc/peaceful
 
+execute if score $slot ui_temp matches 5 run scoreboard players add $gear_off party_mode 1
+execute if score $slot ui_temp matches 5 if score $gear_off party_mode matches 2.. run scoreboard players set $gear_off party_mode 0
+execute if score $gear_off party_mode matches 1 run item replace entity @s enderchest.5 with lime_stained_glass_pane{display:{Name:'{"text":"ギア読み込み無効化: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $gear_off party_mode matches 1 run item replace entity @s enderchest.5 with red_stained_glass_pane{display:{Name:'{"text":"ギア読み込み無効化: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 5 unless score $gear_off party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がギア読み込み無効化を無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 5 if score $gear_off party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がギア読み込み無効化を有効化しました","color": "gray"}]
+
+execute if score $slot ui_temp matches 6 run scoreboard players add $sub_quick_cancel party_mode 1
+execute if score $slot ui_temp matches 6 if score $sub_quick_cancel party_mode matches 2.. run scoreboard players set $sub_quick_cancel party_mode 0
+execute if score $sub_quick_cancel party_mode matches 1 run item replace entity @s enderchest.6 with lime_stained_glass_pane{display:{Name:'{"text":"サブウェポン・クイックキャンセルバグ: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $sub_quick_cancel party_mode matches 1 run item replace entity @s enderchest.6 with red_stained_glass_pane{display:{Name:'{"text":"サブウェポン・クイックキャンセルバグ: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 6 unless score $sub_quick_cancel party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がサブウェポン・クイックキャンセルバグを無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 6 if score $sub_quick_cancel party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がサブウェポン・クイックキャンセルバグを有効化しました","color": "gray"}]
+
+execute if score $slot ui_temp matches 7 run scoreboard players add $swap_save party_mode 1
+execute if score $slot ui_temp matches 7 if score $swap_save party_mode matches 2.. run scoreboard players set $swap_save party_mode 0
+execute if score $swap_save party_mode matches 1 run item replace entity @s enderchest.7 with lime_stained_glass_pane{display:{Name:'{"text":"持ち替えデータ保存バグ: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $swap_save party_mode matches 1 run item replace entity @s enderchest.7 with red_stained_glass_pane{display:{Name:'{"text":"持ち替えデータ保存バグ: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 7 unless score $swap_save party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が持ち替えデータ保存バグを無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 7 if score $swap_save party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が持ち替えデータ保存バグを有効化しました","color": "gray"}]
+
 execute if score $slot ui_temp matches 8 run scoreboard players add $sp_fusion party_mode 1
 execute if score $slot ui_temp matches 8 if score $sp_fusion party_mode matches 2.. run scoreboard players set $sp_fusion party_mode 0
 execute if score $sp_fusion party_mode matches 1 run item replace entity @s enderchest.8 with lime_stained_glass_pane{display:{Name:'{"text":"ランダムメイン・スペシャル融合バグ: ON","italic": false}'},ui:{ismenu:1}}
 execute unless score $sp_fusion party_mode matches 1 run item replace entity @s enderchest.8 with red_stained_glass_pane{display:{Name:'{"text":"ランダムメイン・スペシャル融合バグ: OFF","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 8 unless score $sp_fusion party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がランダムメイン・スペシャル融合バグを無効化しました","color": "gray"}]
 execute if score $slot ui_temp matches 8 if score $sp_fusion party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がランダムメイン・スペシャル融合バグを有効化しました","color": "gray"}]
+
+execute if score $slot ui_temp matches 15 run scoreboard players add $sub_quick party_mode 1
+execute if score $slot ui_temp matches 15 if score $sub_quick party_mode matches 2.. run scoreboard players set $sub_quick party_mode 0
+execute if score $sub_quick party_mode matches 1 run item replace entity @s enderchest.15 with lime_stained_glass_pane{display:{Name:'{"text":"全サブスペのクイック化: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $sub_quick party_mode matches 1 run item replace entity @s enderchest.15 with red_stained_glass_pane{display:{Name:'{"text":"全サブスペのクイック化: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 15 unless score $sub_quick party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が全サブスペのクイック化を無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 15 if score $sub_quick party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が全サブスペのクイック化を有効化しました","color": "gray"}]
+
+execute if score $slot ui_temp matches 16 run scoreboard players add $wall_levitation party_mode 1
+execute if score $slot ui_temp matches 16 if score $wall_levitation party_mode matches 2.. run scoreboard players set $wall_levitation party_mode 0
+execute if score $wall_levitation party_mode matches 1 run item replace entity @s enderchest.16 with lime_stained_glass_pane{display:{Name:'{"text":"降下モード・壁上りぶっ飛びバグ: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $wall_levitation party_mode matches 1 run item replace entity @s enderchest.16 with red_stained_glass_pane{display:{Name:'{"text":"降下モード・壁上りぶっ飛びバグ: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 16 unless score $wall_levitation party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が降下モード・壁上りぶっ飛びバグを無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 16 if score $wall_levitation party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が降下モード・壁上りぶっ飛びバグを有効化しました","color": "gray"}]
 
 execute if score $slot ui_temp matches 17 unless score $secondary ui_world matches 1 run scoreboard players set $secondary ui_world 3
 execute if score $slot ui_temp matches 17 if score $secondary ui_world matches 1 run scoreboard players set $secondary ui_world 0

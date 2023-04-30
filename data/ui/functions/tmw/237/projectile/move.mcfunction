@@ -47,6 +47,7 @@
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
     execute if score @s ui_bpart matches 101 run function ui:tmw/237/projectile/move/101
     execute if score @s ui_bpart matches 102 run function ui:tmw/237/projectile/move/102
+    execute if score @s ui_bpart matches 103 run function ui:tmw/237/projectile/move/103
     execute if score @s ui_bpart matches 104 run function ui:tmw/237/projectile/move/104
     execute if score @s ui_bpart matches 105 run function ui:tmw/237/projectile/move/105
     execute if score @s ui_bpart matches 106 run function ui:tmw/237/projectile/move/106

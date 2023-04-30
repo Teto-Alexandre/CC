@@ -9,6 +9,7 @@ execute if score $deathmessage ui_temp matches 1 as @e[tag=ui_temp_unpower] run 
 execute if score $basetype ui_temp matches -2..-1 run tag @e[tag=ui_temp_unpower] add ui_refd
 execute if score $basetype ui_temp matches -2..-1 run tag @e[tag=ui_temp_unpower] add tmw_237_noref
 #サブダメージ
-execute if score $basetype ui_temp matches -2 run tag @e[tag=ui_temp_unpower] add subdamage
+execute if score $basetype ui_temp matches -2 if score $subtype ui_temp matches 401..450 run tag @e[tag=ui_temp_unpower] add subdamage
+execute if score $basetype ui_temp matches -1 if score $sptype ui_temp matches 401..450 run tag @e[tag=ui_temp_unpower] add subdamage
 
 execute as @e[tag=ui_temp_unpower] run function ui:tmw/237/attack/shot/temp_unpower

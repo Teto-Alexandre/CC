@@ -55,7 +55,13 @@
         # ハンコ
         execute if score @s ui_hpart matches 114 run function ui:tmw/237/projectile/killeffect/114
         # ジェットパック
-        execute if score @s ui_hpart matches 115..202 run function ui:tmw/237/projectile/killeffect/115
+        execute if score @s ui_hpart matches 115 run function ui:tmw/237/projectile/killeffect/115
+        # 古いワード
+        execute if score @s ui_hpart matches 116 run function ui:tmw/237/projectile/killeffect/116
+        # 古いローラー
+        execute if score @s ui_hpart matches 117 run function ui:tmw/237/projectile/killeffect/117
+        # 古いジェスター
+        execute if score @s ui_hpart matches 118..202 run function ui:tmw/237/projectile/killeffect/118
     # スペシャル溜まらない爆発
         execute if score @s ui_hpart matches 203 run function ui:tmw/237/projectile/killeffect/3
         execute if score @s ui_hpart matches 204 run function ui:tmw/237/projectile/killeffect/4

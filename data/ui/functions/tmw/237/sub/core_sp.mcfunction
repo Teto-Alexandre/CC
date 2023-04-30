@@ -19,7 +19,7 @@ scoreboard players operation $ink ui_temp -= $ink.sp ui_temp
 scoreboard players operation $cooltime_old ui_temp = $cooltime ui_temp
 execute store result score $cooltime ui_temp run time query gametime
 scoreboard players operation $cooltime ui_temp += $ct ui_temp
-scoreboard players operation $cooltime ui_temp > $cooltime_old ui_temp
+execute unless score $sub_quick_cancel party_mode matches 1.. run scoreboard players operation $cooltime ui_temp > $cooltime_old ui_temp
 scoreboard players reset $cooltime_old ui_temp
 
 #
