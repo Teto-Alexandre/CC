@@ -1,7 +1,7 @@
 # 必要データ収集
-    execute unless score $maxburst ui_temp matches 101.. run scoreboard players operation $number ui_temp = $maxburst ui_temp
-    execute unless score $maxburst ui_temp matches 101.. run scoreboard players operation $number ui_temp -= $burst ui_temp
-    execute unless score $maxburst ui_temp matches 101.. run scoreboard players add $number ui_temp 1
+    execute unless score $burst_alt.id ui_temp matches 1.. run scoreboard players operation $number ui_temp = $maxburst ui_temp
+    execute unless score $burst_alt.id ui_temp matches 1.. run scoreboard players operation $number ui_temp -= $burst ui_temp
+    execute unless score $burst_alt.id ui_temp matches 1.. run scoreboard players add $number ui_temp 1
     execute unless score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp2.ShotCT
     execute if score $burst ui_temp matches 1 store result score $ct ui_temp run data get storage ui:gun temp2.BurstCT
     execute store result score $range ui_temp run data get storage ui:gun temp2.Range
