@@ -4,6 +4,7 @@ scoreboard players operation @s ui_bpart = $particle.fly ui_temp
 scoreboard players operation @s ui_hpart = $particle.end ui_temp
 scoreboard players operation @s ui_bm = $speed ui_temp
 scoreboard players operation @s ui_bm += $speed.add ui_temp
+scoreboard players operation @s ui_bn = $number ui_temp
 scoreboard players operation @s ui_br = $range ui_temp
 scoreboard players operation @s ui_gpc = $rangetype ui_temp
 scoreboard players operation @s ui_dmg = $damage ui_temp
