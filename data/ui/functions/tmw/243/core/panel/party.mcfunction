@@ -27,7 +27,7 @@ item replace entity @s enderchest.18 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
 
 item replace entity @s enderchest.1 with lime_stained_glass_pane{display:{Name:'{"text":"+1","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 1 run scoreboard players add $ke2 party_mode 1
@@ -115,6 +115,16 @@ execute unless score $secondary ui_world matches 1 run item replace entity @s en
 execute if score $secondary ui_world matches 1 run item replace entity @s enderchest.17 with lime_stained_glass_pane{display:{Name:'{"text":"セカンダリウェポン: ON","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 17 unless score $secondary ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がセカンダリウェポンを無効化しました","color": "gray"}]
 execute if score $slot ui_temp matches 17 if score $secondary ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がセカンダリウェポンを有効化しました","color": "gray"}]
+
+execute if score $slot ui_temp matches 25 run scoreboard players add $limited_weapon party_mode 1
+execute if score $slot ui_temp matches 25 if score $limited_weapon party_mode matches 4.. run scoreboard players set $limited_weapon party_mode 0
+execute if score $limited_weapon party_mode matches 3 run item replace entity @s enderchest.25 with lime_stained_glass_pane{display:{Name:'{"text":"制限武器使用許可: LEVEL III","italic": false}'},ui:{ismenu:1}}
+execute if score $limited_weapon party_mode matches 2 run item replace entity @s enderchest.25 with yellow_stained_glass_pane{display:{Name:'{"text":"制限武器使用許可: LEVEL II","italic": false}'},ui:{ismenu:1}}
+execute if score $limited_weapon party_mode matches 1 run item replace entity @s enderchest.25 with orange_stained_glass_pane{display:{Name:'{"text":"制限武器使用許可: LEVEL I","italic": false}'},ui:{ismenu:1}}
+execute unless score $limited_weapon party_mode matches 1.. run item replace entity @s enderchest.25 with red_stained_glass_pane{display:{Name:'{"text":"制限武器使用許可: Null","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 25 unless score $limited_weapon party_mode matches 1.. run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が制限武器使用許可を無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 25 if score $limited_weapon party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が制限武器使用許可を有効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 25 if score $limited_weapon party_mode matches 2..3 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が制限武器使用許可を拡大しました","color": "gray"}]
 
 item replace entity @s enderchest.26 with cave_spider_spawn_egg{display:{Name:'{"text":"カオスチームになる","bold": true,"color": "red","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 26 run scoreboard players set @s ui_team 101
