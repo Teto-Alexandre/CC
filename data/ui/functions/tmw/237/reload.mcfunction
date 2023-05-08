@@ -7,8 +7,11 @@
 # $ink = $ink.max になるまで.lp
     execute if score $cooltime ui_temp matches 0 if entity @s[nbt={ActiveEffects:[{Id:15}]}] run scoreboard players operation $ink.s ui_temp /= #3 ui_num
     execute if score $cooltime ui_temp matches 0 if entity @s[nbt={ActiveEffects:[{Id:15}]}] run scoreboard players operation $ink.m ui_temp /= #3 ui_num
-    execute if score $ishold ui_temp matches ..1 if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.s ui_temp
-    execute if score $ishold ui_temp matches ..1 if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 if entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.m ui_temp
+    execute if score $ishold ui_temp matches ..1 if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 if score $multibullet ui_temp matches 0 unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.s ui_temp
+    execute if score $ishold ui_temp matches ..1 if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 if score $multibullet ui_temp matches 0 if entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.m ui_temp
+    execute if score $multibullet ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink.r ui_temp = $ink.s ui_temp
+    execute if score $multibullet ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink.r ui_temp /= #2 ui_num
+    execute if score $multibullet ui_temp matches 1.. if score $cooltime ui_temp matches 0 if score @s ui_use2 matches 0 unless entity @s[tag=ui_temp_move] run scoreboard players operation $ink ui_temp += $ink.r ui_temp
     execute if score $sptype ui_temp matches 254 if score $sptime ui_temp matches 1.. run function ui:tmw/237/misc/inc
     execute if score $subtype ui_temp matches 254 if score $subtime ui_temp matches 1.. run function ui:tmw/237/misc/inc
 

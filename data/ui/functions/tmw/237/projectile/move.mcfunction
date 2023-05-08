@@ -59,7 +59,7 @@
     execute if score @s ui_bpart matches 113 run function ui:tmw/237/projectile/move/113
     execute unless score @s ui_bpart matches 104 unless score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
     execute if score @s ui_bpart matches 104 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
-    execute if score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
+    execute if score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint.total ui_temp
 
 # 移動値が無くなるまで繰り返す
     execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col] if score @s ui_br_temp < @s ui_br at @s run function ui:tmw/237/projectile/move

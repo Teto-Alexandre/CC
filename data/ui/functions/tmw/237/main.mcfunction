@@ -48,6 +48,7 @@ execute store result score $lasttime ui_temp run data get storage ui:gun temp.no
 
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
+execute store result score $maxburst ui_temp run data get storage ui:gun temp.Burst
 function ui:tmw/237/basetype/basetype
 
 # 固有
