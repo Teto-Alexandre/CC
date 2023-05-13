@@ -2,14 +2,21 @@
     tag @s add ui_temp_this
 
 # 初期衝撃波
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^ positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^1 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^2 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^3 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^4 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^5 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^6 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] positioned ^ ^ ^3.5 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 0.. positioned ^ ^ ^ positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 2.. positioned ^ ^ ^2 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 4.. positioned ^ ^ ^4 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 5.. positioned ^ ^ ^5 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 7.. positioned ^ ^ ^7 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 8.. positioned ^ ^ ^8 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 9.. positioned ^ ^ ^9 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
     execute if entity @s[tag=!tmw_237_proj_first] run tag @s add tmw_237_proj_first
     
 #
