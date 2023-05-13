@@ -19,6 +19,7 @@ scoreboard players set $respawntime ui_world 100
 scoreboard players set $ke2 party_mode 0
 scoreboard players set $dmg party_mode 0
 scoreboard players set $def party_mode 0
+scoreboard players set $limited_weapon party_mode 0
 
     scoreboard objectives add health dummy
     scoreboard objectives add health_old dummy
@@ -42,6 +43,7 @@ scoreboard players set $def party_mode 0
     scoreboard objectives add charge_acc dummy
     scoreboard objectives add charge_acc_current dummy
 
+    scoreboard objectives add wep_speed dummy
     scoreboard objectives add pl_comp_buff dummy
     
     scoreboard objectives add energy_buff dummy
@@ -221,6 +223,7 @@ scoreboard players set $def party_mode 0
     scoreboard players set #250 ui_num 250
     scoreboard players set #300 ui_num 300
     scoreboard players set #325 ui_num 325
+    scoreboard players set #333 ui_num 333
     scoreboard players set #360 ui_num 360
     scoreboard players set #392 ui_num 392
     scoreboard players set #490 ui_num 490

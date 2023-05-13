@@ -1,7 +1,7 @@
 ## 6ギア相当のバフ
 scoreboard players add @s health 60
 scoreboard players add @s shoot_speed 18
-scoreboard players add @s move_speed 78
+scoreboard players add @s move_speed 36
 scoreboard players add @s norma_damage 120
 scoreboard players add @s respawn_acc 60
 scoreboard players add @s ink_regen 30

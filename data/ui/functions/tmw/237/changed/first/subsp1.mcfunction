@@ -4,6 +4,7 @@
 scoreboard players set $w.ink ui_temp 10000
 scoreboard players set $w.time ui_temp 0
 scoreboard players set $w.ct ui_temp 3
+scoreboard players set $w.speed ui_temp -1
 scoreboard players set $w.need ui_temp 300
 data modify storage ui:temp temp.Name set value " - NULL:"
 

@@ -46,6 +46,12 @@ execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
 
+execute unless score $subtime ui_temp matches 1.. unless score $sptime ui_temp matches 1.. store result score $speed ui_temp run data get storage ui:gun temp.now.Speed 100
+execute if score $subtime ui_temp matches 1.. store result score $speed ui_temp run data get storage ui:gun temp.SubSpeed 100
+execute if score $sptime ui_temp matches 1.. store result score $speed ui_temp run data get storage ui:gun temp.SPSpeed 100
+execute if score $speed ui_temp matches -100 store result score $speed ui_temp run data get storage ui:gun temp.now.Speed 100
+scoreboard players operation @s wep_speed += $speed ui_temp
+
 # $basetype よりバーストタイプ、インク消費を取得
 execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
 execute store result score $maxburst ui_temp run data get storage ui:gun temp.Burst

@@ -1,4 +1,6 @@
 scoreboard players operation $template ui_temp = @s shoot_speed
+scoreboard players operation $template ui_temp += @s wep_speed
+scoreboard players remove $template ui_temp 200
 
 attribute @s generic.movement_speed modifier remove 0-0-1-0-1
 attribute @s generic.movement_speed modifier remove 0-0-1-0-2
@@ -64,4 +66,5 @@ execute if score $template ui_temp matches ..-1 run scoreboard players add $temp
 #say shoot
 
 tag @s remove speedtype_move
+tag @s remove speedtype_weapon
 tag @s add speedtype_shoot

@@ -9,8 +9,8 @@ execute store result score $count ui_temp run data get storage ui:gear temp.Read
 
 # 初期値
 scoreboard players set @s health 0
-scoreboard players set @s shoot_speed 0
-scoreboard players set @s move_speed 500
+scoreboard players set @s shoot_speed 100
+scoreboard players set @s move_speed 100
 scoreboard players set @s armor 0
 scoreboard players set @s blast_protection 0
 scoreboard players set @s norma_damage 1000

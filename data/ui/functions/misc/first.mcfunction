@@ -22,3 +22,6 @@
 
 ## 加速リセット
     tag @a[tag=ui_temp_move_nexttick] remove ui_temp_move_nexttick
+
+## 武器移動速度係数リセット
+    scoreboard players set @a wep_speed 100
