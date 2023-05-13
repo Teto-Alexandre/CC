@@ -8,7 +8,7 @@ execute store result score $temp ui_temp run data get storage ui:gear temp.Reade
 #
 execute if score $temp ui_temp matches 1 run scoreboard players add @s health 10
 execute if score $temp ui_temp matches 2 run scoreboard players add @s shoot_speed 3
-execute if score $temp ui_temp matches 3 run scoreboard players add @s move_speed 35
+execute if score $temp ui_temp matches 3 run scoreboard players add @s move_speed 6
 execute if score $temp ui_temp matches 4 run scoreboard players add @s blast_protection 2
 execute if score $temp ui_temp matches 5 run scoreboard players add @s norma_damage 20
 execute if score $temp ui_temp matches 6 run scoreboard players add @s sub_damage 3

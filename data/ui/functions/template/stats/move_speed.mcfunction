@@ -1,4 +1,11 @@
 scoreboard players operation $template ui_temp = @s move_speed
+scoreboard players operation $template ui_temp += @s wep_speed
+scoreboard players remove $template ui_temp 100
+scoreboard players operation $template ui_temp *= #333 ui_num
+scoreboard players operation $template ui_temp /= #100 ui_num
+scoreboard players remove $template ui_temp 100
+scoreboard players operation $template ui_temp *= #3 ui_num
+scoreboard players operation $template ui_temp /= #2 ui_num
 
 attribute @s generic.movement_speed modifier remove 0-0-1-0-1
 attribute @s generic.movement_speed modifier remove 0-0-1-0-2

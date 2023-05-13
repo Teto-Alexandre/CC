@@ -1,6 +1,6 @@
 scoreboard players remove @s health 60
 scoreboard players remove @s shoot_speed 18
-scoreboard players remove @s move_speed 78
+scoreboard players remove @s move_speed 36
 scoreboard players remove @s norma_damage 120
 scoreboard players remove @s respawn_acc 60
 scoreboard players remove @s ink_regen 30

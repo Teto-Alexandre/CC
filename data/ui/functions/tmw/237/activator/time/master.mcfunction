@@ -1,5 +1,7 @@
 # ウェポン時間経過
 
+tag @s add speedtype_weapon
+
 # ハイジャンプ
     execute if score $activator ui_temp matches 202 run function ui:tmw/237/activator/time/202
 

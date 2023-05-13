@@ -25,12 +25,14 @@ function ui:tmw/237/changed/first/subsp1
 scoreboard players operation $ink.sub ui_temp = $w.ink ui_temp
 scoreboard players operation $subtime ui_temp = $w.time ui_temp
 scoreboard players operation $subct ui_temp = $w.ct ui_temp
+scoreboard players operation $subspeed ui_temp = $w.speed ui_temp
 
 scoreboard players operation $type ui_temp = $sptype ui_temp
 function ui:tmw/237/changed/first/subsp1
 scoreboard players operation $ink.sp ui_temp = $w.ink ui_temp
 scoreboard players operation $sptime ui_temp = $w.time ui_temp
 scoreboard players operation $spct ui_temp = $w.ct ui_temp
+scoreboard players operation $spspeed ui_temp = $w.speed ui_temp
 scoreboard players operation $spneed ui_temp = $w.need ui_temp
 
 # 書き込み開始
@@ -40,6 +42,8 @@ execute store result storage ui:gun temp.SubTime int 1 run scoreboard players ge
 execute store result storage ui:gun temp.SPTime int 1 run scoreboard players get $sptime ui_temp
 execute store result storage ui:gun temp.SubCT int 1 run scoreboard players get $subct ui_temp
 execute store result storage ui:gun temp.SPCT int 1 run scoreboard players get $spct ui_temp
+execute store result storage ui:gun temp.SubSpeed int 1 run scoreboard players get $subspeed ui_temp
+execute store result storage ui:gun temp.SPSpeed int 1 run scoreboard players get $spspeed ui_temp
 execute store result storage ui:gun temp.SPNeed int 1 run scoreboard players get $spneed ui_temp
 execute store result storage ui:gun temp.InkMax int 1 run scoreboard players get $ink.max ui_temp
 execute store result storage ui:gun temp.MoveInkRegen int 1 run scoreboard players get $ink.m ui_temp
@@ -158,7 +162,8 @@ item modify entity @s weapon.mainhand ui:gun/value/all
 scoreboard players set $changed ui_temp 1
 
 # 速度追加
-execute unless score $speed ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/speed_cc
+#execute unless score $speed ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/speed_cc
+function ui:tmw/237/changed/first/speed_lore
 
 # 初期状態に戻す
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun

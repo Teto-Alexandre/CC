@@ -99,6 +99,9 @@ execute if score $type ui_temp matches 460 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 462 run scoreboard players set $w.ct ui_temp 10
 
+# 発動中移動速度 初期:-1
+execute if score $type ui_temp matches 401.. run scoreboard players set $w.speed ui_temp 0
+
 # スペシャルポイント必要量
 execute if score $type ui_temp matches 101.. run scoreboard players set $w.need ui_temp 300
 

@@ -7,6 +7,7 @@ execute store result storage ui:gun temp.tmw.gun.now.QFType int 1 run scoreboard
 execute store success score $temp ui_temp run data remove storage ui:gun temp.tmw.gun.now.First
 execute if score $temp ui_temp matches 1 run data remove storage ui:gun temp.display.Lore[-1]
 execute if score $temp ui_temp matches 1 run data remove storage ui:gun temp.display.Lore[-1]
+execute if score $temp ui_temp matches 1 run data remove storage ui:gun temp.display.Lore[-1]
 #tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
 item modify entity @s enderchest.0 ui:gun/value/now_tmw
 item modify entity @s enderchest.0 ui:gun/value/now_display

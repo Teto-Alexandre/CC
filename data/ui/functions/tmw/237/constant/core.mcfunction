@@ -1,4 +1,5 @@
 execute if score $module ui_world matches 1 if score @s module matches 4 run tag @s add floor_proof2
+execute if entity @s[tag=speedtype_weapon] unless score $subtime ui_temp matches 1.. unless score $sptime ui_temp matches 1.. run function ui:template/stats/shoot_speed
 
 # スペ以外の時に実行される常駐効果の管理
     execute if entity @s[tag=floor_proof] at @s run function ui:tmw/237/constant/superstar
