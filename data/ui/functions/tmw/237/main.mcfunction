@@ -13,6 +13,7 @@ scoreboard players set $burst_alt.id ui_temp 0
 
 # チャージ変数をリセット
 scoreboard players set $ishold ui_temp 0
+scoreboard players reset $multibullet ui_temp
 
 #
 tag @s[tag=advancement_using_sp] remove advancement_using_sp
