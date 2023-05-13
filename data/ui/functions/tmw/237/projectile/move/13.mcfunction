@@ -33,10 +33,10 @@
     execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.5 #ui:nocol store result entity @s Rotation.[0] float 1 store success score $success ui_temp run scoreboard players operation $rotation_x ui_temp -= #180 ui_num
     tag @s[tag=tmw237_reflected] remove tmw237_reflected
     execute if score $success ui_temp matches 1 run tag @s add tmw237_reflected
-    execute if score $success ui_temp matches 1 if score $team ui_temp matches 1 store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 light_blue_wool replace #ui:wools
-    execute if score $success ui_temp matches 1 if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 pink_wool replace #ui:wools
-    execute if score $success ui_temp matches 1 if score $team ui_temp matches 3 store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 yellow_wool replace #ui:wools
-    execute if score $success ui_temp matches 1 if score $team ui_temp matches 4 store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 lime_wool replace #ui:wools
+    execute if score $success ui_temp matches 1 if score $team ui_temp matches 1 at @s store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 light_blue_wool replace #ui:wools
+    execute if score $success ui_temp matches 1 if score $team ui_temp matches 2 at @s store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 pink_wool replace #ui:wools
+    execute if score $success ui_temp matches 1 if score $team ui_temp matches 3 at @s store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 yellow_wool replace #ui:wools
+    execute if score $success ui_temp matches 1 if score $team ui_temp matches 4 at @s store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 lime_wool replace #ui:wools
     scoreboard players operation $paint.total ui_temp += $paint ui_temp
 # 消す
     execute if entity @s[tag=tmw_237_proj_del] run function ui:tmw/237/projectile/kill

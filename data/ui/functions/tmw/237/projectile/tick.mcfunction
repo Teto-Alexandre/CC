@@ -28,6 +28,9 @@ scoreboard players operation $id ui_temp = @s ui_id
 #重力補正
 execute if score $rangetype ui_temp matches 2..3 at @s run function ui:tmw/237/projectile/gravity
 
+#パーティーモード - リフレクター反射制限解除
+execute if score $ref_limit party_mode matches 1 run tag @s remove ui_refd
+
 #tick毎ループ
 execute at @s[scores={ui_temp=10..}] run function ui:tmw/237/projectile/move
 scoreboard players operation @s ui_bm_temp = @s ui_temp

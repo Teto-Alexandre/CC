@@ -17,7 +17,7 @@ item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData
 
 
 item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
 
 
 item replace entity @s enderchest.18 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -26,7 +26,7 @@ item replace entity @s enderchest.18 with gray_stained_glass_pane{CustomModelDat
 
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+
 
 
 item replace entity @s enderchest.1 with lime_stained_glass_pane{display:{Name:'{"text":"+1","color": "gold","italic": false}'},ui:{ismenu:1}}
@@ -94,6 +94,13 @@ execute unless score $sp_fusion party_mode matches 1 run item replace entity @s 
 execute if score $slot ui_temp matches 8 unless score $sp_fusion party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がランダムメイン・スペシャル融合バグを無効化しました","color": "gray"}]
 execute if score $slot ui_temp matches 8 if score $sp_fusion party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がランダムメイン・スペシャル融合バグを有効化しました","color": "gray"}]
 
+execute if score $slot ui_temp matches 14 run scoreboard players add $ref_limit party_mode 1
+execute if score $slot ui_temp matches 14 if score $ref_limit party_mode matches 2.. run scoreboard players set $ref_limit party_mode 0
+execute if score $ref_limit party_mode matches 1 run item replace entity @s enderchest.14 with lime_stained_glass_pane{display:{Name:'{"text":"リフレクター反射制限の解除: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $ref_limit party_mode matches 1 run item replace entity @s enderchest.14 with red_stained_glass_pane{display:{Name:'{"text":"リフレクター反射制限の解除: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 14 unless score $ref_limit party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がリフレクター反射制限の解除を無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 14 if score $ref_limit party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がリフレクター反射制限の解除を有効化しました","color": "gray"}]
+
 execute if score $slot ui_temp matches 15 run scoreboard players add $sub_quick party_mode 1
 execute if score $slot ui_temp matches 15 if score $sub_quick party_mode matches 2.. run scoreboard players set $sub_quick party_mode 0
 execute if score $sub_quick party_mode matches 1 run item replace entity @s enderchest.15 with lime_stained_glass_pane{display:{Name:'{"text":"全サブスペのクイック化: ON","italic": false}'},ui:{ismenu:1}}
@@ -115,6 +122,13 @@ execute unless score $secondary ui_world matches 1 run item replace entity @s en
 execute if score $secondary ui_world matches 1 run item replace entity @s enderchest.17 with lime_stained_glass_pane{display:{Name:'{"text":"セカンダリウェポン: ON","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 17 unless score $secondary ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がセカンダリウェポンを無効化しました","color": "gray"}]
 execute if score $slot ui_temp matches 17 if score $secondary ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"がセカンダリウェポンを有効化しました","color": "gray"}]
+
+execute if score $slot ui_temp matches 24 run scoreboard players add $fusion_plus party_mode 1
+execute if score $slot ui_temp matches 24 if score $fusion_plus party_mode matches 2.. run scoreboard players set $fusion_plus party_mode 0
+execute if score $fusion_plus party_mode matches 1 run item replace entity @s enderchest.24 with lime_stained_glass_pane{display:{Name:'{"text":"超サブスペ融合: ON","italic": false}'},ui:{ismenu:1}}
+execute unless score $fusion_plus party_mode matches 1 run item replace entity @s enderchest.24 with red_stained_glass_pane{display:{Name:'{"text":"超サブスペ融合: OFF","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 24 unless score $fusion_plus party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が超サブスペ融合を無効化しました","color": "gray"}]
+execute if score $slot ui_temp matches 24 if score $fusion_plus party_mode matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"selector":"@s"},{"text":"が超サブスペ融合を有効化しました","color": "gray"}]
 
 execute if score $slot ui_temp matches 25 run scoreboard players add $limited_weapon party_mode 1
 execute if score $slot ui_temp matches 25 if score $limited_weapon party_mode matches 4.. run scoreboard players set $limited_weapon party_mode 0

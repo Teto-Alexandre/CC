@@ -45,6 +45,9 @@
     execute if score $module ui_world matches 1 if entity @a[scores={module=5}] run function ui:module/rainbow
     execute if score $module ui_world matches 1 as @a if score @s module matches 10 run tag @s add immune_water
 
+# パーティーモード - リフレクター反射制限解除
+    execute if score $ref_limit party_mode matches 1 run tag @s remove ui_refd
+
 #
     scoreboard players add $world ui_tc 1
     execute if score $world ui_tc matches 21.. run function ui:1sec

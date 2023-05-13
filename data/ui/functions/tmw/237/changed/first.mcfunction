@@ -158,7 +158,7 @@ item modify entity @s weapon.mainhand ui:gun/value/all
 scoreboard players set $changed ui_temp 1
 
 # 速度追加
-item modify entity @s weapon.mainhand ui:gun/value/speed_cc
+execute unless score $speed ui_temp matches 0 run item modify entity @s weapon.mainhand ui:gun/value/speed_cc
 
 # 初期状態に戻す
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
