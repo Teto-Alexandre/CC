@@ -15,6 +15,21 @@
     execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
     execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 11.. positioned ^ ^ ^11 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
     execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 12.. positioned ^ ^ ^12 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 0.. positioned ^ ^ ^ run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 2.. positioned ^ ^ ^2 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 4.. positioned ^ ^ ^4 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 5.. positioned ^ ^ ^5 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 7.. positioned ^ ^ ^7 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 8.. positioned ^ ^ ^8 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 9.. positioned ^ ^ ^9 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 11.. positioned ^ ^ ^11 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 12.. positioned ^ ^ ^12 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+
     execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
     execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
     execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
