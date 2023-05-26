@@ -136,15 +136,17 @@ execute if score $slot ui_temp matches 24 if score @s random_main matches 4.. ru
 execute if entity @s[tag=tmw_237_random] unless score @s random_main matches 1.. run item replace entity @s enderchest.24 with lime_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: 全て出現","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=tmw_237_random] if score @s random_main matches 1 run item replace entity @s enderchest.24 with red_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: エルドのみ","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=tmw_237_random] if score @s random_main matches 2 run item replace entity @s enderchest.24 with orange_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: 通常モデルのみ","italic": false}'},ui:{ismenu:1}}
-execute if entity @s[tag=tmw_237_random] if score @s random_main matches 3 run item replace entity @s enderchest.24 with yellow_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: スペシャル融合バグ","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] unless score $fusion_plus party_mode matches 1 if score @s random_main matches 3 run item replace entity @s enderchest.24 with yellow_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: スペシャル融合バグ","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] if score $fusion_plus party_mode matches 1 if score @s random_main matches 3 run item replace entity @s enderchest.24 with purple_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: 超スペシャル融合バグ","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=!tmw_237_random] run item replace entity @s enderchest.24 with gray_stained_glass_pane{display:{Name:'{"text":"ランダムメイン: Null","color": "gray","italic": false}'},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 25 run scoreboard players add @s random_qf 1
 execute if score $slot ui_temp matches 25 if score @s random_qf matches 4.. run scoreboard players set @s random_qf 0
-execute if entity @s[tag=tmw_237_random] unless score @s random_qf matches 1.. run item replace entity @s enderchest.25 with lime_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: 全て出現","italic": false}'},ui:{ismenu:1}}
-execute if entity @s[tag=tmw_237_random] if score @s random_qf matches 1 run item replace entity @s enderchest.25 with red_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: サブスペのみ","italic": false}'},ui:{ismenu:1}}
-execute if entity @s[tag=tmw_237_random] if score @s random_qf matches 2 run item replace entity @s enderchest.25 with orange_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: ダブサブのみ","italic": false}'},ui:{ismenu:1}}
-execute if entity @s[tag=tmw_237_random] if score @s random_qf matches 3 run item replace entity @s enderchest.25 with yellow_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: ダブスペのみ","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] unless score @s random_main matches 3 unless score @s random_qf matches 1.. run item replace entity @s enderchest.25 with lime_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: 全て出現","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] unless score @s random_main matches 3 if score @s random_qf matches 1 run item replace entity @s enderchest.25 with red_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: サブスペのみ","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] unless score @s random_main matches 3 if score @s random_qf matches 2 run item replace entity @s enderchest.25 with orange_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: ダブサブのみ","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] unless score @s random_main matches 3 if score @s random_qf matches 3 run item replace entity @s enderchest.25 with yellow_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: ダブスペのみ","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_random] if score @s random_main matches 3 run item replace entity @s enderchest.25 with gray_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: 融合バグ適用中","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=!tmw_237_random] run item replace entity @s enderchest.25 with gray_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: Null","color": "gray","italic": false}'},ui:{ismenu:1}}
 
 item replace entity @s enderchest.26 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}

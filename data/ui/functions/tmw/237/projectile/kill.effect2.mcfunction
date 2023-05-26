@@ -90,6 +90,8 @@
         execute if score @s ui_hpart matches 408 run function ui:tmw/237/projectile/killeffect/408
         execute if score @s ui_hpart matches 409 run function ui:tmw/237/projectile/killeffect/409
         execute if score @s ui_hpart matches 410 run function ui:tmw/237/projectile/killeffect/410
+        # ガチホコもどき
+        execute if score @s ui_hpart matches 411 run function ui:tmw/237/projectile/killeffect/411
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint

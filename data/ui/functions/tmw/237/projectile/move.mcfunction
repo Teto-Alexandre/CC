@@ -6,6 +6,7 @@
     teleport @s ^ ^ ^0.5
     execute if score $sub102 ui_temp matches 1 as @s[tag=!ui_refd] at @s run function ui:tmw/214/ref_common
     execute if score $sub112 ui_temp matches 1 run function ui:tmw/237/projectile/acc
+    execute if score $sub352 ui_temp matches 1 run function ui:tmw/237/projectile/hitbox
 
 # ダメージ
     execute unless entity @s[tag=tmw_237_proj_del] positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s run function ui:tmw/237/projectile/hit

@@ -58,6 +58,21 @@ execute if score $type ui_temp matches -10020 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10021 run function ui:common/particle/ss/downer/10021/core
 # 回転魔法陣
 execute if score $type ui_temp matches -10022 run function ui:common/particle/ss/downer/10022/core
+# グレートバリア
+execute if score $type ui_temp matches -10023 run function ui:common/particle/ss/downer/10023/animate
+# 半径８の球
+execute if score $type ui_temp matches -10024 run function ui:common/particle/ss/downer/10024/core
+
+# サイズ別円形展開
+execute if score $type ui_temp matches -10102 run function ui:common/particle/ss/downer/10102/animate
+execute if score $type ui_temp matches -10103 run function ui:common/particle/ss/downer/10103/animate
+execute if score $type ui_temp matches -10104 run function ui:common/particle/ss/downer/10104/animate
+execute if score $type ui_temp matches -10105 run function ui:common/particle/ss/downer/10105/animate
+execute if score $type ui_temp matches -10106 run function ui:common/particle/ss/downer/10106/animate
+execute if score $type ui_temp matches -10107 run function ui:common/particle/ss/downer/10107/animate
+execute if score $type ui_temp matches -10108 run function ui:common/particle/ss/downer/10108/animate
+execute if score $type ui_temp matches -10109 run function ui:common/particle/ss/downer/10109/animate
+execute if score $type ui_temp matches -10110 run function ui:common/particle/ss/downer/10110/animate
 
 # 横切り
 execute if score $type ui_temp matches -11001 run function ui:common/particle/ss/downer/11001/core

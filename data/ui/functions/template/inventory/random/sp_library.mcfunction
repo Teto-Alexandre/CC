@@ -1,4 +1,4 @@
-scoreboard players set $mod ui_calc1 24
+scoreboard players set $mod ui_calc1 25
 function ui:common/rand
 
 execute if score $qf ui_temp matches 3 if score $rand ui_calc1 matches 4 run function ui:common/rand
@@ -28,6 +28,7 @@ execute if score $rand ui_calc1 matches 20 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SPType set value 154
 execute if score $rand ui_calc1 matches 22 run data modify storage ui:common input.Item.tag.tmw.gun.SPType set value 462
 execute if score $rand ui_calc1 matches 23 run data modify storage ui:common input.Item.tag.tmw.gun.SPType set value 155
+execute if score $rand ui_calc1 matches 24 run data modify storage ui:common input.Item.tag.tmw.gun.SPType set value 352
 
 execute if score $rand ui_calc1 matches 0 run data modify storage ui:common input.Item.tag.tmw.gun.SPName set value "トルネード"
 execute if score $rand ui_calc1 matches 1 run data modify storage ui:common input.Item.tag.tmw.gun.SPName set value "アメフラシ"
@@ -53,3 +54,4 @@ execute if score $rand ui_calc1 matches 20 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SPName set value "ガトリングタレット"
 execute if score $rand ui_calc1 matches 22 run data modify storage ui:common input.Item.tag.tmw.gun.SPName set value "トライスプレッダー"
 execute if score $rand ui_calc1 matches 23 run data modify storage ui:common input.Item.tag.tmw.gun.SPName set value "エナジースタンド"
+execute if score $rand ui_calc1 matches 24 run data modify storage ui:common input.Item.tag.tmw.gun.SPName set value "グレートバリア"

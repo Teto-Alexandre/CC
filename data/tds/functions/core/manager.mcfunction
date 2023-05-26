@@ -1,4 +1,5 @@
 #
+scoreboard players operation $victim_team tds_dmg = @s ui_team
 
 #
 execute store result score $Damage tds_dmg run data get storage tds: temp.Damage 100
@@ -8,6 +9,7 @@ execute store result score $DamageType tds_dmg run data get storage tds: temp.Da
 execute if score $Attacker tds_dmg matches -2147483648..2147483647 run function tds:core/attacker/
 
 execute if entity @s[nbt={ActiveEffects:[{Id:12}]}] run function tds:core/attacker/light_up
+execute if entity @s[tag=!ui_c_hitbox] as @e[tag=ui_c_hitbox,distance=..5] if score @s ui_team = $victim_team tds_dmg run function tds:core/attacker/great_barrier
 
 execute if score $dmg party_mode matches 1.. run function ui:party/dmg
 execute if score $def party_mode matches 1.. run function ui:party/def

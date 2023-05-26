@@ -28,3 +28,6 @@ execute if score $qf ui_temp matches 5 run function ui:template/inventory/random
 
 execute if score @s random_main matches 3 run function ui:template/inventory/random/bug_sp_library
 execute if score @s random_main matches 3 run function ui:template/inventory/random/bug_dub_sp_library
+
+execute if score $fusion_plus party_mode matches 1 if score @s random_main matches 3 run function ui:template/inventory/random/sp_library
+execute if score $fusion_plus party_mode matches 1 if score @s random_main matches 3 run function ui:template/inventory/random/dub_sp_library

@@ -20,6 +20,7 @@
     execute if score $slot ui_temp matches 13 run scoreboard players set $sp ui_temp 154
     execute if score $slot ui_temp matches 14 run scoreboard players set $sp ui_temp 462
     execute if score $slot ui_temp matches 15 run scoreboard players set $sp ui_temp 155
+    execute if score $slot ui_temp matches 20 run scoreboard players set $sp ui_temp 352
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -35,6 +36,7 @@
     execute if score $slot ui_temp matches 13 run data modify storage ui:gun temp.tmw.gun.SPName set value "ガトリングタレット"
     execute if score $slot ui_temp matches 14 run data modify storage ui:gun temp.tmw.gun.SPName set value "トライスプレッダー"
     execute if score $slot ui_temp matches 15 run data modify storage ui:gun temp.tmw.gun.SPName set value "エナジースタンド"
+    execute if score $slot ui_temp matches 20 run data modify storage ui:gun temp.tmw.gun.SPName set value "グレートバリア"
 
 # 逆変換
     execute if score $changed ui_temp matches 1 run function ui:tmw/243/core/changed

@@ -38,23 +38,24 @@
 
     execute if score $type ui_temp matches 301 run function ui:tmw/237/sub/explosive/301/tick
     execute if score $type ui_temp matches 351 run function ui:tmw/237/sub/explosive/351/tick
+    execute if score $type ui_temp matches 352 run function ui:tmw/237/sub/explosive/352/tick
     execute if score $type ui_temp matches 399 run function ui:tmw/237/sub/explosive/399/tick
 
     execute if score $type ui_temp matches 1011 run function ui:tmw/237/sub/explosive/1011/tick
 
 # 投擲物パーティクル
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute if score $team ui_temp matches 1 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ light_blue_wool replace #ui:wools
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 2 run particle dust 1 0.5 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 2 run particle block pink_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ pink_wool replace #ui:wools
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 3 run particle dust 1 1 0.5 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 3 run particle block yellow_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute if score $team ui_temp matches 3 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ yellow_wool replace #ui:wools
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 4 run particle dust 0.5 1 0.5 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute unless score $type ui_temp matches 301 if score $team ui_temp matches 4 run particle block lime_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
-    execute if score $team ui_temp matches 4 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ lime_wool replace #ui:wools
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 1 run particle dust 0.5 1 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 1 run particle block light_blue_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 352 if score $team ui_temp matches 1 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ light_blue_wool replace #ui:wools
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 2 run particle dust 1 0.5 1 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 2 run particle block pink_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 352 if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ pink_wool replace #ui:wools
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 3 run particle dust 1 1 0.5 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 3 run particle block yellow_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 352 if score $team ui_temp matches 3 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ yellow_wool replace #ui:wools
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 4 run particle dust 0.5 1 0.5 1 ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 301 unless score $type ui_temp matches 352 if score $team ui_temp matches 4 run particle block lime_concrete ~ ~0.3 ~ 0.2 0.2 0.2 0 1 force
+    execute unless score $type ui_temp matches 352 if score $team ui_temp matches 4 store result score $paint ui_temp run fill ~ ~ ~ ~ ~-3 ~ lime_wool replace #ui:wools
     execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
     execute if entity @s[tag=tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     #scoreboard players operation $temp ui_temp = @s ui_uses
