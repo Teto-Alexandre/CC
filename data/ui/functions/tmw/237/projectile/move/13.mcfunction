@@ -21,10 +21,12 @@
     scoreboard players add @s ui_is 5
 # 壁接触時
     execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]
+    execute store result score $rotation_y ui_temp run data get entity @s Rotation.[1]
     scoreboard players set $success ui_temp 0
     execute at @s[tag=!tmw237_reflected] unless block ~ ~0.5 ~ #ui:nocol store result entity @s Rotation.[1] float 1 store success score $success ui_temp run data get entity @s Rotation.[1]
     execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol run teleport @s ~ ~ ~ ~ ~1
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol store result entity @s Rotation.[1] float -0.9 store success score $success ui_temp run data get entity @s Rotation.[1]
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol if score $rotation_y ui_temp matches 41.. run data modify entity @s Rotation.[1] set value 40.0f
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol unless score $rotation_y ui_temp matches 41.. store result entity @s Rotation.[1] float -1 store success score $success ui_temp run data get entity @s Rotation.[1]
     execute at @s[tag=!tmw237_reflected] unless block ~0.5 ~ ~ #ui:nocol store result entity @s Rotation.[0] float -1 store success score $success ui_temp run scoreboard players get $rotation_x ui_temp
     execute at @s[tag=!tmw237_reflected] unless block ~-0.5 ~ ~ #ui:nocol store result entity @s Rotation.[0] float -1 store success score $success ui_temp run scoreboard players get $rotation_x ui_temp
     execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.5 #ui:nocol store result score $rotation_x ui_temp run data get entity @s Rotation.[0] -1

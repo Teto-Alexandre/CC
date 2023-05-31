@@ -7,12 +7,12 @@
     ##     : 301:トラップ
     ##     : 401:ブロードソード, 402:ヘルハウンド, 403:ラインマーカー, 404:ブーメラン, 405:ペネトレーター
 
-    ## スペ: 151:トルネード, 152:アメフラシ
+    ## スペ: 151:トルネード, 152:アメフラシ, 154:ガトタレ, 155:エナスタ
     ##     : 251:ノヴァ, 252:スーパースター, 253:サブ減, 254:インク, 255:レーダー, 256:チャクチ
     ##     : 257:サヴァ, 258:リゲイン
     ##     : 351:メガホン
-    ##     : 451:スパショ, 452:ミサイル, 453:トライ, 454:ハイドロ, 455:ジェッパ, 456:バウンシー
-    ##     : 457:トリトル, 458:ウルショ, 459:ロケッティア, 460:ナイスダマ, 461:ハンコ
+    ##     : 451:スパショ, 452:ミサイル, 453:セプタ, 454:ハイドロ, 455:ジェッパ, 456:バウンシー
+    ##     : 457:トリトル, 458:ウルショ, 459:ロケッティア, 460:ナイスダマ, 461:ハンコ, 462:トライ
 
 # チューブ
 give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"エルドチューブ",SubType:-1,SPType:-1,BaseType:2,BurstType:1,BurstMax:-1,Burst:3,MainInkUse:16,now:{Speed:0.2,Model:110801}},main:{ShotType:1,ShotCT:1,BurstCT:5,Spread:150,AirSpread:450,SpreadType:1,AirSpreadType:1,Speed:28,SpeedPlus:4,RangeType:3,Range:25,FlyParticle:4,EndParticle:3,Damage:50,MultiShot:1,ShotFootStep:1,Sound:1}},display:{Lore:['[{"text":"少し塗りの広い三発の弾を撃ちこむ","color":"gray","italic":false}]']}}
