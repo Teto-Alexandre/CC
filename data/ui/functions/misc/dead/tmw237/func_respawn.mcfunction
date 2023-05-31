@@ -15,7 +15,9 @@
     scoreboard players remove @s ui_rst 1
 
 # TP座標固定
-    execute as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
+    execute unless score $life ui_world matches 0.. as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
+    execute if score $life ui_world matches 0.. unless score $phase game_state matches 1.. as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
+    execute if score $life ui_world matches 0.. if score $phase game_state matches 1.. unless score @s life matches ..-1 as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
 
 # サブタイ
     execute if score @s ui_rst matches 0 run title @s title {"text":""}

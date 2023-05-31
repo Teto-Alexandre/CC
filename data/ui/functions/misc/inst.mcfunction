@@ -44,6 +44,8 @@ scoreboard players set @s ui_st 0
 scoreboard players set @s ui_gct -1
 scoreboard players set @s ui_bc -1
 
+scoreboard players set @s module_page 1
+
 scoreboard players set @s health_old -2147483648
 scoreboard players set @s health 0
 scoreboard players set @s health_regen 0

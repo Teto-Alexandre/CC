@@ -18,7 +18,10 @@
     execute if score @s ui_is matches 1 run playsound block.portal.travel ambient @a ~ ~ ~ 3 2 0
     execute if score @s ui_is matches 40.. run tag @s add ui_237_sub_stop2
     execute if score @s ui_is matches 1..40 positioned ~ ~1 ~ run function ui:tmw/237/sub/explosive/351/tick.line
-    execute if score @s ui_is2 matches 1.. run playsound entity.ghast.hurt ambient @a ^ ^ ^5 0.5 0.8 0
+    execute if score @s ui_is2 matches 1.. run playsound entity.dolphin.death ambient @a ^ ^ ^5 1 0.8 0
+    execute if score @s ui_is2 matches 1.. run playsound entity.dolphin.death ambient @a ^ ^ ^20 1 0.8 0
+    execute if score @s ui_is2 matches 1.. run playsound entity.dolphin.death ambient @a ^ ^ ^35 1 0.8 0
+    execute if score @s ui_is2 matches 1.. run playsound entity.dolphin.death ambient @a ^ ^ ^50 1 0.8 0
     execute if score @s ui_is2 matches 1.. if score $team ui_temp matches 1 run particle dust 0.5 1 1 2 ~ ~1 ~ 0.7 0.7 0.7 0 4 force
     execute if score @s ui_is2 matches 1.. if score $team ui_temp matches 2 run particle dust 1 0.5 1 2 ~ ~1 ~ 0.7 0.7 0.7 0 4 force
     execute if score @s ui_is2 matches 1.. if score $team ui_temp matches 3 run particle dust 1 1 0.5 2 ~ ~1 ~ 0.7 0.7 0.7 0 4 force

@@ -14,6 +14,7 @@
     execute at @e[tag=ui_temp_particle] run particle block white_concrete ~ ~ ~ 0 0 0 0 1 force
     execute at @e[tag=ui_temp_particle] run fill ~ ~ ~ ~ ~ ~ white_wool replace #ui:wools_include_black
     playsound entity.generic.explode player @a ~ ~ ~ 1 0.5 0
+    kill @e[tag=ui_temp_particle]
     particle flash ~ ~ ~ 0 0 0 0 1 force
 
 # パーティクルと本体を消去

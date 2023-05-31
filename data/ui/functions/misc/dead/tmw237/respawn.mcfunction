@@ -15,7 +15,9 @@
     scoreboard players remove @s ui_rst 1
 
 # TP座標固定
-    execute as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
+    execute unless score $life ui_world matches 0.. as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
+    execute if score $life ui_world matches 0.. unless score $phase game_state matches 1.. as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
+    execute if score $life ui_world matches 0.. if score $phase game_state matches 1.. unless score @s life matches ..-1 as @e[tag=ui_respawn_tmw237] positioned as @s rotated as @e[tag=ui_temp_this] if score @s ui_id = $id ui_temp run teleport @e[tag=ui_temp_this] ~ ~ ~ ~ ~
 
 # メインタイトル
     execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 0..1 run title @s title {"text":"Puddled in color","color":"aqua","bold":true,"italic":false}
@@ -50,6 +52,8 @@
     execute if score @s ui_rst matches 241..260 run title @s subtitle [{"text":"Revive - ","color":"gray"},{"text":"13","color":"red"},{"text":" -","color":"gray"}]
     execute if score @s ui_rst matches 261..280 run title @s subtitle [{"text":"Revive - ","color":"gray"},{"text":"14","color":"red"},{"text":" -","color":"gray"}]
     execute if score @s ui_rst matches 281..300 run title @s subtitle [{"text":"Revive - ","color":"gray"},{"text":"15","color":"red"},{"text":" -","color":"gray"}]
+    execute if score @s ui_rst matches 0.. if score $life ui_world matches 0.. if score $phase game_state matches 1.. if score @s life matches ..-1 run title @s title {"text":""}
+    execute if score @s ui_rst matches 0.. if score $life ui_world matches 0.. if score $phase game_state matches 1.. if score @s life matches ..-1 run title @s subtitle {"text":"残基がなくなりました  観戦中です"}
 
 # マーカー消し
     execute if score @s ui_rst matches 0 as @e[tag=ui_respawn_tmw237] if score @s ui_id = $id ui_temp run scoreboard players operation $temp2 ui_temp = @s ui_is

@@ -15,6 +15,12 @@ scoreboard players operation @s ui_rst > #2 ui_num
 scoreboard players add $tmw237 ui_rst 1
 tag @s add tmw_237_respawning
 
+# 残基確認
+execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. if score @s life matches ..0 run scoreboard players set @s ui_rst 2147483647
+execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. if score @s life matches ..0 run say @sの残基がなくなりました
+execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. if score @s life matches 0.. run scoreboard players remove @s life 1
+execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. if score @s life matches 0.. run tellraw @a ["",{"selector":"@s"},{"text":"の残基は"},{"score":{"name": "@s","objective": "life"},"color": "gold"},{"text":"です"}]
+
 # 変数リセット
 scoreboard players reset @s ui_tmw237_boost
 scoreboard players reset @s ui_tmw237_survive

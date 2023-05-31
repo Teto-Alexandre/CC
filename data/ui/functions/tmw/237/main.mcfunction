@@ -144,7 +144,7 @@ execute as @s[tag=tmw_oh_n] run function ui:tmw/237/sp/lim
 
 # ブースト発動
 execute as @s[tag=tmw_oh_s,tag=!tmw_237_noboost] unless score @s ui_tmw237_boost matches -2147483648..2147483647 if score $cooltime ui_temp matches 0 run scoreboard players set @s ui_tmw237_boost 1
-execute if score @s ui_tmw237_boost matches 1.. run function ui:tmw/237/constant/boost
+execute if score @s ui_tmw237_boost matches 1.. run function ui:tmw/237/constant/boost/path
 
 # サブスペ時限式
 execute if score $subtime ui_temp matches 1.. at @s run function ui:tmw/237/activator/time/sub

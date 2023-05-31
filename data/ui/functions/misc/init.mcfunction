@@ -4,6 +4,7 @@ tellraw @a ["",{"text":"ColorCrash","color":"white"},{"text":"> ","color":"green
 
 scoreboard players set $time.max ui_world 3000
 scoreboard players set $respawntime ui_world 100
+scoreboard players set $life ui_world -1
 
 ## 限定
     function ui:game/map/data
@@ -15,6 +16,7 @@ scoreboard players set $respawntime ui_world 100
     scoreboard objectives add advancements dummy
     scoreboard players set $phase game_state 0
     scoreboard objectives add wool_count dummy
+    scoreboard objectives add module_page dummy
 
 scoreboard players set $ke2 party_mode 0
 scoreboard players set $dmg party_mode 0
@@ -53,6 +55,8 @@ scoreboard players set $limited_weapon party_mode 0
 
     scoreboard objectives add random_qf dummy
     scoreboard objectives add random_main dummy
+    
+    scoreboard objectives add life dummy
 
 ## 主な全ての計算に使用
     scoreboard objectives add ui_calc1 dummy {"text":"UtilityItems_Calculation1","color":"dark_blue"}
@@ -219,6 +223,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #98 ui_num 98
     scoreboard players set #99 ui_num 99
     scoreboard players set #100 ui_num 100
+    scoreboard players set #150 ui_num 150
     scoreboard players set #180 ui_num 180
     scoreboard players set #200 ui_num 200
     scoreboard players set #250 ui_num 250
@@ -306,6 +311,7 @@ scoreboard players set $limited_weapon party_mode 0
     setblock 0 1 0 minecraft:oak_sign replace
 
     gamerule maxCommandChainLength 1000000
+    gamerule mobGriefing false
 
 #=====================================================================================
 #

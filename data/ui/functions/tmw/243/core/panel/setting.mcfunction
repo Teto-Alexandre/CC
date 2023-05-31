@@ -10,7 +10,6 @@ item replace entity @s enderchest.0 with gray_stained_glass_pane{CustomModelData
 
 item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -19,7 +18,6 @@ item replace entity @s enderchest.9 with gray_stained_glass_pane{CustomModelData
 
 item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -36,7 +34,6 @@ execute unless entity @s[tag=module_unlocked] if score $slot ui_temp matches 18 
 
 item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -82,9 +79,22 @@ scoreboard players operation $time.display ui_world /= #20 ui_num
 item modify entity @s enderchest.3 ui:setting_sec
 item modify entity @s enderchest.21 ui:setting_sec
 
+item replace entity @s enderchest.4 with lime_stained_glass_pane{display:{Name:'{"text":"追加","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 4 run scoreboard players add $life ui_world 1
+item replace entity @s enderchest.13 with cobblestone{display:{Name:'{"text":"残基","color": "gold","italic": false}',Lore:['{"text":"※クリックして初期化","color": "gray","italic": false}']},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 13 run scoreboard players set $life ui_world -1
+item replace entity @s enderchest.22 with lime_stained_glass_pane{display:{Name:'{"text":"削除","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 22 if score $life ui_world matches 0.. run scoreboard players remove $life ui_world 1
+scoreboard players operation $time.display ui_world = $life ui_world
+item modify entity @s enderchest.4 ui:setting_none
+item modify entity @s enderchest.22 ui:setting_none
+execute unless score $life ui_world matches 0.. run item replace entity @s enderchest.4 with lime_stained_glass_pane{display:{Name:'{"text":"追加","color": "gold","italic": false}',Lore:['[{"italic":false,"color":"gray","text":"現在の設定: "},{"italic": false,"color": "yellow","text":"無制限復活"}]']},ui:{ismenu:1}}
+execute unless score $life ui_world matches 0.. run item replace entity @s enderchest.22 with red_stained_glass_pane{display:{Name:'{"text":"削除","color": "gold","italic": false}',Lore:['[{"italic":false,"color":"gray","text":"現在の設定: "},{"italic": false,"color": "yellow","text":"無制限復活"}]']},ui:{ismenu:1}}
+
 item replace entity @s enderchest.8 with orange_stained_glass_pane{display:{Name:'{"text":"ゲーム設定をリセット","color": "red","italic": false}',Lore:['{"text":"※クリックして初期化","color": "gray","italic": false}']},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 8 run scoreboard players set $respawntime ui_world 100
 execute if score $slot ui_temp matches 8 run scoreboard players set $time.max ui_world 3600
+execute if score $slot ui_temp matches 8 run scoreboard players set $life ui_world -1
 
 execute if entity @s[tag=!party_unlocked] run item replace entity @s enderchest.17 with red_stained_glass_pane{display:{Name:'{"text":"未開放","italic": false,"color": "red"}'},ui:{ismenu:1}}
 execute if entity @s[tag=!party_unlocked] if score $slot ui_temp matches 17 run tellraw @s [{"text":"> ","color": "gray"},{"text":"この項目は未開放です","color": "red"}]

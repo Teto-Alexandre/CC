@@ -25,3 +25,15 @@
 
 ## 武器移動速度係数リセット
     scoreboard players set @a wep_speed 100
+
+## ゲーム終了
+    execute if score $time ui_world matches 0 run setblock -17 30 12 minecraft:redstone_block
+    execute if entity @e[tag=ui_17_blue] run setblock -17 30 12 minecraft:redstone_block
+    execute if entity @e[tag=ui_17_yellow] run setblock -17 30 12 minecraft:redstone_block
+    execute if entity @e[tag=ui_17_red] run setblock -17 30 12 minecraft:redstone_block
+    execute if entity @e[tag=ui_17_green] run setblock -17 30 12 minecraft:redstone_block
+    execute if score $time ui_world matches 0 run scoreboard players set @a life 0
+    execute if entity @e[tag=ui_17_blue] run scoreboard players set @a life 0
+    execute if entity @e[tag=ui_17_yellow] run scoreboard players set @a life 0
+    execute if entity @e[tag=ui_17_red] run scoreboard players set @a life 0
+    execute if entity @e[tag=ui_17_green] run scoreboard players set @a life 0

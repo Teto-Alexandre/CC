@@ -1,5 +1,5 @@
 #見た目2
-    data merge storage ui:common {input:{Mode:"create",Var:-10110,Var2:1}}
+    data merge storage ui:common {input:{Mode:"create",Var:-10110,Var2:0}}
     #data merge storage ui:common {input:{Mode:"create",Var:-10102,Var2:2}}
     function ui:common/particle
     playsound entity.generic.explode player @a ~ ~ ~ 2 0.8 0
