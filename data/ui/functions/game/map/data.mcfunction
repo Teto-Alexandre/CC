@@ -32,3 +32,4 @@ data modify storage ui:map maps append value {ID:29,upper:[432.5d,39.5d,54.5d],d
 data modify storage ui:map maps append value {ID:30,upper:[199.5d,42.5d,49.5d],downer:[131.5d,29.5d,-52.5d],blue:[175.5d,43.5d,-50.5d],yellow:[175.5d,43.5d,47.5d],color:2}
 data modify storage ui:map maps append value {ID:31,upper:[636.5d,46.5d,249.5d],downer:[564.5d,34.5d,151.5d],blue:[632.5d,40.5d,153.5d],yellow:[568.5d,40.5d,247.5d],color:5}
 data modify storage ui:map maps append value {ID:32,upper:[534.5d,44.5d,244.5d],downer:[466.5d,32.5d,156.5d],blue:[529.5d,41.5d,166.5d],yellow:[471.5d,41.5d,234.5d],color:2}
+data modify storage ui:map maps append value {ID:33,upper:[-65.5d,38.5d,56.5d],downer:[-133.5d,31.5d,-55.5d],blue:[-99.5d,39.5d,-53.5d],red:[-99.5d,39.5d,54.5d],color:2,Asiba:true}

@@ -14,6 +14,7 @@
     scoreboard players operation $ink.main ui_temp += $ink.add ui_temp
     scoreboard players operation $ink.main ui_temp *= #100 ui_num
     scoreboard players operation $ink.main ui_temp /= @s main_eff_acc
+    scoreboard players operation $ink.main ui_temp > #1 ui_num
     scoreboard players operation $ink ui_temp -= $ink.main ui_temp
 
 # 変更した

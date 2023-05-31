@@ -2,6 +2,7 @@
 execute if entity @s[tag=tmw_237_tag_ink250] run function ui:tmw/237/tag/ink250
 execute if entity @s[tag=tmw_237_tag_inkfill] run function ui:tmw/237/tag/inkfill
 execute if entity @s[tag=tmw_237_tag_spdec] run function ui:tmw/237/tag/spdec
+execute if entity @s[tag=tmw_237_tag_spmax] run function ui:tmw/237/tag/spmax
 
 # タグ消し
 tag @s remove tmw_237_readtag

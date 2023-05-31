@@ -1,6 +1,7 @@
 #DHPの旧verで見ている人にはエラー構文に見えるが1.17の正常な構文
 
 #特定アイテム検知で消去
+item replace entity @s[nbt={Inventory:[{Slot:-106b,tag:{ui:{ismenu:1}}}]}] weapon.offhand with minecraft:air
 item replace entity @s[nbt={Inventory:[{Slot:0b,tag:{ui:{ismenu:1}}}]}] container.0 with minecraft:air
 item replace entity @s[nbt={Inventory:[{Slot:1b,tag:{ui:{ismenu:1}}}]}] container.1 with minecraft:air
 item replace entity @s[nbt={Inventory:[{Slot:2b,tag:{ui:{ismenu:1}}}]}] container.2 with minecraft:air

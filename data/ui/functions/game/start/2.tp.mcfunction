@@ -27,6 +27,7 @@ execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},
 execute as @a run function ui:tmw/243/core/gear_reader/active
 function ui:game/pl_comp/
 execute as @a[tag=king] run scoreboard players add @s health 800
+execute if score $module ui_world matches 1 as @a if score @s module matches 30 run scoreboard players add @s ink_regen 100
 
 #
 tag @a add speedtype_shoot

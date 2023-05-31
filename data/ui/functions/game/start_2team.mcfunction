@@ -2,6 +2,7 @@
 execute as @e[tag=map_core,tag=!4teams,sort=random,limit=1] store result score $map ui_world run scoreboard players get @s map_id
 
 # 準備フェーズ
+scoreboard players set @a life 0
 scoreboard players set $phase game_state 1
 
 #

@@ -69,3 +69,4 @@ scoreboard objectives setdisplay list ui_s_kill
 tag @a add tmw_237_readtag
 tag @a add tmw_237_tag_inkfill
 tag @a add tmw_237_tag_spdec
+execute if score $module ui_world matches 1 as @a if score @s module matches 22 run tag @s add tmw_237_tag_spmax

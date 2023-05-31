@@ -7,11 +7,21 @@ execute unless score $secondary ui_world matches 1 as @a run function ui:templat
 execute if score $secondary ui_world matches 1 as @a run function ui:template/inventory/pull_second
 clear @a cobblestone
 
+# 残基があるなら
+execute if score $life ui_world matches 0.. run scoreboard players operation @a life = $life ui_world
+
 #
 function ui:game/map/shuffle/
 execute store result score $map ui_world run data get storage ui:map map.ID
 execute store result score $default_color ui_temp run data get storage ui:map map.color
 function ui:game/map/core_tp
+
+# -117 31 -1   -19 31 -28
+execute if data storage ui:map {mode:"Asiba"} run summon bat -117 32 0 {Silent:1b,NoAI:1b,Tags:["ui_egg","ui_17"]}
+execute if data storage ui:map {mode:"Asiba"} run fill -117 31 -1 -19 31 -28 light_blue_concrete replace white_concrete
+execute if data storage ui:map {mode:"Asiba"} run fill -117 31 -1 -19 31 -28 light_blue_concrete replace pink_concrete
+execute if data storage ui:map {mode:"Asiba"} run fill -117 31 1 -19 31 28 pink_concrete replace white_concrete
+execute if data storage ui:map {mode:"Asiba"} run fill -117 31 1 -19 31 28 pink_concrete replace light_blue_concrete
 
 #
 tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"5秒後に開始します・・・","color":"gold"}]
