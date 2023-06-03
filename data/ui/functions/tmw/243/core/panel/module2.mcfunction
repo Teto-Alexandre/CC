@@ -43,8 +43,8 @@ item replace entity @s enderchest.15 with gray_stained_glass_pane{display:{Name:
 item replace entity @s enderchest.16 with gray_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
 item replace entity @s enderchest.10 with black_concrete{display:{Name:'{"text":"ライトニングコア","color": "yellow","bold": false,"italic": false}',Lore:['{"text":"緊急自爆時にダメージを伴う爆発を起こす","color": "gray","italic": false}']},ui:{ismenu:1}}
-item replace entity @s enderchest.11 with black_concrete{display:{Name:'{"text":"外付けインクドライブ","color": "dark_purple","bold": true,"italic": false}',Lore:['{"text":"インク回復効率が100%上昇するが","color": "gray","italic": false}','{"text":"移動形態になる能力を失う","color": "gray","italic": false}']},ui:{ismenu:1}}
-item replace entity @s enderchest.12 with black_concrete{display:{Name:'{"text":"ジェットパック","color": "dark_red","bold": true,"italic": false}',Lore:['{"text":"スーパーブーストが浮遊機能に変化する","color": "gray","italic": false}']},ui:{ismenu:1}}
+item replace entity @s enderchest.11 with black_concrete{display:{Name:'{"text":"外付けインクドライブ","color": "dark_purple","bold": true,"italic": false}',Lore:['{"text":"インク回復効率が200%上昇するが","color": "gray","italic": false}','{"text":"移動形態になる能力を失う","color": "gray","italic": false}']},ui:{ismenu:1}}
+item replace entity @s enderchest.12 with black_concrete{display:{Name:'{"text":"ホバーブーツ","color": "dark_red","bold": true,"italic": false}',Lore:['{"text":"スーパーブーストが浮遊機能に変化する","color": "gray","italic": false}']},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 10 run scoreboard players set @s module 29
 execute if score $slot ui_temp matches 11 run scoreboard players set @s module 30

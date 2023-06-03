@@ -68,3 +68,11 @@
     execute if score $activator ui_temp matches 257 at @a[tag=ui_temp_team] run playsound entity.evoker.cast_spell player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 257 at @a[tag=ui_temp_team] run particle totem_of_undying ~ ~1 ~ 0.4 0.6 0.4 0.2 10 force
     execute if score $activator ui_temp matches 257 run tag @e[tag=ui_temp_team] remove ui_temp_team
+
+# スーパースター
+    execute if score $activator ui_temp matches 259 run playsound item.goat_horn.sound.2 player @a ~ ~ ~ 2 1 0
+    execute if score $activator ui_temp matches 259 run particle firework ~ ~ ~ 5 5 5 0.02 20 force
+    execute if score $activator ui_temp matches 259 run particle lava ~ ~ ~ 5 5 5 0.02 20 force
+    execute if score $activator ui_temp matches 259 run effect give @s instant_health 1 1 false
+    execute if score $activator ui_temp matches 259 run effect give @s resistance 8 2 false
+    execute if score $activator ui_temp matches 259 run effect give @s luck 8 0 true

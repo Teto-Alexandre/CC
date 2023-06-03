@@ -11,6 +11,7 @@ execute if score $boost ui_temp matches 0 run scoreboard players set $changed ui
 
 execute if score $boost ui_temp matches 5 run effect give @s levitation 1 6 true
 execute if score $boost ui_temp matches 6.. run effect give @s levitation 1 0 true
+execute at @s if block ~ ~-1 ~ #ui:nocol_water if block ~ ~-2 ~ #ui:nocol_water if block ~ ~-3 ~ #ui:nocol_water if block ~ ~-4 ~ #ui:nocol_water if block ~ ~-5 ~ #ui:nocol_water if block ~ ~-6 ~ #ui:nocol_water if block ~ ~-7 ~ #ui:nocol_water if block ~ ~-8 ~ #ui:nocol_water run effect clear @s levitation
 
 execute if score $boost ui_temp matches 0 at @s run playsound minecraft:entity.warden.sonic_charge player @a ~ ~ ~ 1 1
 execute if score $boost ui_temp matches 0 at @s run playsound block.iron_door.close player @a ~ ~ ~ 1.5 0.5

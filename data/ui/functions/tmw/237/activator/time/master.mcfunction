@@ -17,6 +17,9 @@ tag @s add speedtype_weapon
 # チャクチ
     execute if score $activator ui_temp matches 256 run function ui:tmw/237/activator/time/256
 
+# アウェイクパワー
+    execute if score $activator ui_temp matches 259 run function ui:tmw/237/activator/time/259
+
 # ミサイル
     execute if score $activator ui_temp matches 452 run function ui:tmw/237/activator/time/452
 
