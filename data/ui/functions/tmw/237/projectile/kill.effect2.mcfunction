@@ -63,7 +63,9 @@
         # 古いローラー
         execute if score @s ui_hpart matches 117 run function ui:tmw/237/projectile/killeffect/117
         # 古いジェスター
-        execute if score @s ui_hpart matches 118..202 run function ui:tmw/237/projectile/killeffect/118
+        execute if score @s ui_hpart matches 118 run function ui:tmw/237/projectile/killeffect/118
+        # リフレクトレーザー (最後)
+        execute if score @s ui_hpart matches 119..202 run function ui:tmw/237/projectile/killeffect/119
     # スペシャル溜まらない爆発
         execute if score @s ui_hpart matches 203 run function ui:tmw/237/projectile/killeffect/3
         execute if score @s ui_hpart matches 204 run function ui:tmw/237/projectile/killeffect/4

@@ -11,6 +11,11 @@
 # ダメージ
     execute unless entity @s[tag=tmw_237_proj_del] positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s run function ui:tmw/237/projectile/hit
 
+# 貫通リセット
+    execute if entity @s[tag=Pierce,tag=tmw_237_pierce_attacked,tag=!tmw_237_pierce_unattacked] run tag @e[tag=tmw_237_pierce_hit] remove tmw_237_pierce_hit
+    execute if entity @s[tag=Pierce,tag=tmw_237_pierce_attacked,tag=!tmw_237_pierce_unattacked] run tag @s remove tmw_237_pierce_attacked
+    tag @s remove tmw_237_pierce_unattacked
+
 # 塗り値を初期化
     scoreboard players set $paint ui_temp 0
 
@@ -53,6 +58,7 @@
     execute if score @s ui_bpart matches 105 run function ui:tmw/237/projectile/move/105
     execute if score @s ui_bpart matches 106 run function ui:tmw/237/projectile/move/106
     execute if score @s ui_bpart matches 107 run function ui:tmw/237/projectile/move/107
+    execute if score @s ui_bpart matches 109 run function ui:tmw/237/projectile/move/109
     #ペネ
     execute if score @s ui_bpart matches 108 run function ui:tmw/237/projectile/move/108/manager
     execute if score @s ui_bpart matches 112 run function ui:tmw/237/projectile/move/112

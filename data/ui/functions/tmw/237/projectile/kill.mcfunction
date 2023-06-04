@@ -1,4 +1,5 @@
 #魔法の弾を削除
+execute if entity @s[tag=Pierce] run tag @e[tag=tmw_237_pierce_hit] remove tmw_237_pierce_hit
 tag @s add ui_proj_common_nocol
 summon marker ~ ~ ~ {Tags:["tmw237_killeffect","ui_temp"]}
 teleport @e[tag=ui_temp] ~ ~ ~ ~ ~
