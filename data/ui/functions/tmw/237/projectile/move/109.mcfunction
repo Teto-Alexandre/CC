@@ -26,10 +26,7 @@
     #execute if score $success ui_temp matches 1 run tellraw @a [{"score":{"name":"$rotation_x","objective":"ui_temp"}},{"text":","},{"score":{"name":"$rotation_y","objective":"ui_temp"}}]
     tag @s[tag=tmw237_reflected] remove tmw237_reflected
     execute if score $success ui_temp matches 1 run tag @s add tmw237_reflected
-    execute if entity @s[tag=tmw237_reflected] run scoreboard players add @s ui_is 1
-    execute if entity @s[tag=tmw237_reflected] run scoreboard players set @s ui_br_temp 0
-    execute if entity @s[tag=tmw237_reflected] if score @s ui_is matches ..4 run function ui:tmw/237/projectile/killeffect/3
-    execute if entity @s[tag=tmw237_reflected] if score @s ui_is matches 5.. run tag @s add tmw_237_proj_del
+    execute if entity @s[tag=tmw237_reflected] run function ui:tmw/237/projectile/move/109/reflect
 
 # 消す
     execute if entity @s[tag=tmw_237_proj_del] run function ui:tmw/237/projectile/kill

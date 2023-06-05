@@ -19,10 +19,7 @@
     execute if entity @s[tag=Pierce] as @e[tag=!ui_temp_team,predicate=ui:load_unhurtable,sort=nearest,limit=1] if entity @s[tag=!tmw_237_pierce_hit] run tag @s add tmw_237_pierce_hit
     execute if entity @e[tag=tmw_237_pierce_temp] run tag @s add tmw_237_pierce_attacked
     execute if entity @e[tag=tmw_237_pierce_temp] run tag @s add tmw_237_pierce_unattacked
-    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 run scoreboard players add @s ui_is 1
-    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 run function ui:tmw/237/projectile/killeffect/3
-    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 run scoreboard players set @s ui_br_temp 0
-    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 if score @s ui_is matches 5.. run tag @s add tmw_237_proj_del
+    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 run function ui:tmw/237/projectile/move/109/reflect.2
     execute as @e[tag=tmw_237_pierce_temp] run tag @s remove tmw_237_pierce_temp
 
 # 消失
