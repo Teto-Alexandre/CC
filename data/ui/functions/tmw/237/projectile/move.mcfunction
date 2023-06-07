@@ -12,9 +12,10 @@
     execute unless entity @s[tag=tmw_237_proj_del] positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s run function ui:tmw/237/projectile/hit
 
 # 貫通リセット
-    execute if entity @s[tag=Pierce,tag=tmw_237_pierce_attacked,tag=!tmw_237_pierce_unattacked] run tag @e[tag=tmw_237_pierce_hit] remove tmw_237_pierce_hit
     execute if entity @s[tag=Pierce,tag=tmw_237_pierce_attacked,tag=!tmw_237_pierce_unattacked] run tag @s remove tmw_237_pierce_attacked
-    tag @s remove tmw_237_pierce_unattacked
+    execute if entity @e[tag=tmw_237_pierce_hit,tag=!tmw_237_pierce_unhit] run tag @e[tag=tmw_237_pierce_hit,tag=!tmw_237_pierce_unhit] remove tmw_237_pierce_hit
+    tag @s[tag=tmw_237_pierce_unattacked] remove tmw_237_pierce_unattacked
+    tag @e[tag=tmw_237_pierce_unhit] remove tmw_237_pierce_unhit
 
 # 塗り値を初期化
     scoreboard players set $paint ui_temp 0
@@ -67,6 +68,9 @@
     execute unless score @s ui_bpart matches 104 unless score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
     execute if score @s ui_bpart matches 104 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     execute if score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint.total ui_temp
+
+# タグ除去
+    tag @e[tag=tmw_237_hit_at_this_move] remove tmw_237_hit_at_this_move
 
 # 移動値が無くなるまで繰り返す
     execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col] if score @s ui_br_temp < @s ui_br at @s run function ui:tmw/237/projectile/move
