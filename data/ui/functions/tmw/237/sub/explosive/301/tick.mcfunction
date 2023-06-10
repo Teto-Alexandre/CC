@@ -8,10 +8,10 @@
     execute if score @s ui_is2 matches 1 run playsound block.tripwire.click_on player @a ~ ~-2 ~ 1 0.8 0
     execute if score @s ui_is2 matches 1 run playsound block.wooden_trapdoor.close player @a ~ ~-2 ~ 1 1.2 0
     execute if score @s ui_is2 matches 20.. run tag @s add ui_237_sub_explode
-    execute if score @s ui_is matches 20.. if score $team ui_temp matches 1 unless block ~ ~-3 ~ light_blue_wool run tag @s add ui_237_sub_explode
-    execute if score @s ui_is matches 20.. if score $team ui_temp matches 2 unless block ~ ~-3 ~ pink_wool run tag @s add ui_237_sub_explode
-    execute if score @s ui_is matches 20.. if score $team ui_temp matches 3 unless block ~ ~-3 ~ yellow_wool run tag @s add ui_237_sub_explode
-    execute if score @s ui_is matches 20.. if score $team ui_temp matches 4 unless block ~ ~-3 ~ lime_wool run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. if score $team ui_temp matches 1 unless block ~ ~-3 ~ light_blue_wool unless block ~ ~-3 ~ light_blue_concrete unless block ~ ~-3 ~ light_blue_stained_glass run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. if score $team ui_temp matches 2 unless block ~ ~-3 ~ pink_wool unless block ~ ~-3 ~ pink_concrete unless block ~ ~-3 ~ pink_stained_glass run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. if score $team ui_temp matches 3 unless block ~ ~-3 ~ yellow_wool unless block ~ ~-3 ~ yellow_concrete unless block ~ ~-3 ~ yellow_stained_glass run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. if score $team ui_temp matches 4 unless block ~ ~-3 ~ lime_wool unless block ~ ~-3 ~ lime_concrete unless block ~ ~-3 ~ lime_stained_glass run tag @s add ui_237_sub_explode
     #設置数上限デストロイ
     scoreboard players set $count ui_temp 0
     execute as @e[tag=tmw_237_sub] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1

@@ -2,7 +2,7 @@
 scoreboard players add @s ui_is 1
 scoreboard players operation $entity.time ui_temp = @s ui_is
 scoreboard players operation $entity.time ui_temp %= #500 ui_num
-execute positioned ~ ~30 ~ if entity @a[distance=..29] run scoreboard players add @s ui_is2 1
+execute positioned ~ ~30 ~ if entity @a[tag=!ui_temp_team,predicate=ui:load_unhurtable,distance=..29] run scoreboard players add @s ui_is2 1
 
 # コア移動
 execute unless score $entity.time ui_temp matches 201..240 facing entity @e[tag=!ui_temp_team,predicate=ui:load_unhurtable,sort=nearest,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
@@ -52,8 +52,8 @@ execute if score $entity.time ui_temp matches 0 run function ui:entity/1.test_sa
 
 #
 scoreboard players operation $entity.time ui_temp %= #10 ui_num
-execute if score $entity.time ui_temp matches 0 run data merge storage ui:common {input:{Mode:"create",Var:-10110,Var2:3,Rand:{X:150,Y:10,Z:150}}}
-execute if score $entity.time ui_temp matches 0 run function ui:common/particle
+#execute if score $entity.time ui_temp matches 0 run data merge storage ui:common {input:{Mode:"create",Var:-10110,Var2:3,Rand:{X:150,Y:10,Z:150}}}
+#execute if score $entity.time ui_temp matches 0 run function ui:common/particle
 
 execute if score $entity.time ui_temp matches 5 if score @s ui_is2 matches 80.. at @s run function ui:entity/1.test_sampler/missile_fire
 
