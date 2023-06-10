@@ -2,38 +2,23 @@
     tag @s add ui_temp_this
 
 # 初期衝撃波
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 0.. positioned ^ ^ ^ positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 2.. positioned ^ ^ ^2 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 4.. positioned ^ ^ ^4 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 5.. positioned ^ ^ ^5 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 7.. positioned ^ ^ ^7 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 8.. positioned ^ ^ ^8 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 9.. positioned ^ ^ ^9 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 11.. positioned ^ ^ ^11 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 12.. positioned ^ ^ ^12 positioned ~-0.5 ~-0.5 ~-0.5 as @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_temp_attacked_free] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit_free
+    summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tds.attack","ui","ui_proj","tmw_237","ui_temp_unpower"],ArmorItems:[{id:"minecraft:stone",Count:1b,tag:{display:{Name:'{"text":"null"}'}}},{},{},{}]}
 
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 0.. positioned ^ ^ ^ run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 2.. positioned ^ ^ ^2 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 4.. positioned ^ ^ ^4 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 5.. positioned ^ ^ ^5 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 7.. positioned ^ ^ ^7 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 8.. positioned ^ ^ ^8 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 9.. positioned ^ ^ ^9 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 11.. positioned ^ ^ ^11 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 12.. positioned ^ ^ ^12 run particle end_rod ~ ~ ~ 0.2 0.2 0.2 0.05 1 force
+    #リフレク不可
+        tag @e[tag=ui_temp_unpower] add ui_refd
+        tag @e[tag=ui_temp_unpower] add tmw_237_noref
+    
+    # 弾にデータを込める
+        execute as @e[tag=ui_temp_unpower] run function ui:tmw/237/projectile/move/12.1
+        scoreboard players operation @e[tag=ui_temp_unpower] ui_id = @s ui_id
+        scoreboard players operation @e[tag=ui_temp_unpower] ui_team = @s ui_team
+        scoreboard players operation @e[tag=ui_temp_unpower] ui_is = @s ui_is
+        scoreboard players operation @e[tag=ui_temp_unpower] ui_br = @s ui_fhl
+        scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = @s ui_fhd
+        data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems.[0].tag.display.Name set from entity @s ArmorItems.[0].tag.display.Name
+        tag @e[tag=ui_temp_unpower] remove ui_temp_unpower
+        scoreboard players add $temp ui_temp 10
 
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 1.. positioned ^ ^ ^1 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 3.. positioned ^ ^ ^3 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 6.. positioned ^ ^ ^6 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
-    execute if entity @s[tag=!tmw_237_proj_first] if score @s ui_fhl matches 10.. positioned ^ ^ ^10 run particle enchanted_hit ~ ~ ~ 0.3 0.3 0.3 1 10 force
     execute if entity @s[tag=!tmw_237_proj_first] run tag @s add tmw_237_proj_first
     
 #
