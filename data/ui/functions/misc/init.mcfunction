@@ -122,6 +122,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_bc dummy {"text":"UtilityItems_BurstCount","color":"dark_blue"}
     scoreboard objectives add ui_bn dummy {"text":"UtilityItems_BalletNumber","color":"dark_blue"}
     scoreboard objectives add ui_fhl dummy {"text":"UtilityItems_FreeHitLength","color":"dark_blue"}
+    scoreboard objectives add ui_fhd dummy {"text":"UtilityItems_FreeHitDamage","color":"dark_blue"}
     #視野効果用
     scoreboard objectives add ui_bc2 dummy {"text":"UtilityItems_BurstCount2","color":"dark_blue"}
     scoreboard objectives add ui_autohit dummy {"text":"UtilityItems_AutoHit","color":"dark_blue"}
