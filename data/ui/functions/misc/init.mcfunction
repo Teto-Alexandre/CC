@@ -256,7 +256,10 @@ scoreboard players set $limited_weapon party_mode 0
     execute unless score $base ui_obj_id matches -2147483648..2147483647 run scoreboard players set $base ui_obj_id 1
 
 ## ボスバー
-    bossbar add ui:tmw237 {"text":"残り時間","color":"white","italic":false,"bold":true}
+    bossbar add ui:entity1 {"text":"TF-Vanguard","color":"yellow","italic":false,"bold":true}
+    bossbar set ui:entity1 color yellow
+    bossbar set ui:entity1 max 50000
+    bossbar add ui:tmw237 {"text":"ゲームタイマー","color":"white","italic":false,"bold":true}
     bossbar set ui:tmw237 color white
     bossbar set ui:tmw237 max 3000
 

@@ -16,6 +16,8 @@ execute if score $is ui_temp matches 10.. run kill @s
 
 # 爆風
     execute if score $is ui_temp matches 2 run data modify storage ui:temp Name set value '{"text":"ミアレブレイバー・Ｒ","color":"gold"}'
+    execute if score $is ui_temp matches 2 if score $is2 ui_temp matches 3 run data modify storage ui:temp Name set value '{"text":"スプレッドボム","color":"gold"}'
     execute if score $is ui_temp matches 2 run scoreboard players set $damage_type ui_temp 3
     execute if score $is ui_temp matches 2 run scoreboard players set $damage ui_temp 10
+    execute if score $is ui_temp matches 2 if score $is2 ui_temp matches 3 run scoreboard players set $damage ui_temp 30
     execute if score $is ui_temp matches 2 run execute at @e[distance=..5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker

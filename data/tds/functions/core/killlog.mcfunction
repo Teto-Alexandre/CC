@@ -30,6 +30,9 @@
     execute unless score $DeathMessage tds_dmg matches 11 run scoreboard players add @a[tag=tds_tempb] ui_s_assist 1
     execute if score $DeathMessage tds_dmg matches 11 run scoreboard players add @a[tag=tds_tempb] ui_s_kill 1
 
+## 名前
+    execute if score $Attacker tds_dmg matches ..-1 run function tds:core/enemy/id
+
 ## キルログ
     execute if score $DeathMessage tds_dmg matches 1 run function tds:message/1
     execute if score $DeathMessage tds_dmg matches 2 run function tds:message/2

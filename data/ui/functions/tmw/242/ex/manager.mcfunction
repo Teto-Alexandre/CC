@@ -1,6 +1,7 @@
 # ミサイル爆発個別
 
 # 個別
+    execute as @s[scores={ui_gt=1}] run function ui:tmw/242/ex/1_
     execute as @s[scores={ui_gt=11}] run function ui:tmw/242/ex/11_
 
 # キル

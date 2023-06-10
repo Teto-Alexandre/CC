@@ -52,6 +52,9 @@
     execute if score $activator ui_temp matches 255 as @a[tag=module19] unless score $team ui_temp = @s ui_team run effect give @s glowing 5 0 false
     execute if score $activator ui_temp matches 255 as @a[tag=!module19] unless score $team ui_temp = @s ui_team run effect give @s fire_resistance 10 0 false
     execute if score $activator ui_temp matches 255 as @a[tag=module19] unless score $team ui_temp = @s ui_team run effect give @s fire_resistance 5 0 false
+    execute if score $activator ui_temp matches 255 as @e[tag=entity.hitbox] unless score $team ui_temp = @s ui_team run effect give @s fire_resistance 10 0 false
+    execute if score $activator ui_temp matches 255 as @e[tag=entity.hitbox] unless score $team ui_temp = @s ui_team at @s run particle firework ~ ~ ~ 1 1 1 0.05 50 force
+    execute if score $activator ui_temp matches 255 as @e[tag=entity.hitbox] unless score $team ui_temp = @s ui_team at @s run particle end_rod ~ ~ ~ 2 2 2 0.01 50 force
     execute if score $activator ui_temp matches 255 as @a unless score $team ui_temp = @s ui_team run scoreboard players operation @s tds_recent_attacked_by = $id ui_temp
     execute if score $activator ui_temp matches 255 run playsound block.beacon.deactivate player @a ~ ~ ~ 3 1.4 0
 

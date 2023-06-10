@@ -43,6 +43,12 @@ execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},
     execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=3}] at @e[tag=temp_respawn,tag=!temp_respawn_yellow,sort=random,limit=1] run teleport @s ~ ~ ~
     execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=4}] at @e[tag=temp_respawn,tag=!temp_respawn_green,sort=random,limit=1] run teleport @s ~ ~ ~
 
+# レイドボス
+execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 run data merge storage ui:common {input:{Mode:"summon",Var:1}}
+execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 positioned -188 30 -175 run function ui:common/entity/
+execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 run spreadplayers -188 -175 1 25 under 40 false @a[scores={ui_team=1}]
+execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 as @a[scores={ui_team=1}] positioned -188 30 -175 facing entity @s eyes rotated ~180 ~ positioned as @s run teleport @s ~ ~ ~ ~ ~
+
 execute as @a[tag=!spectate] at @s run spawnpoint @s ~ ~ ~
 
 effect clear @a

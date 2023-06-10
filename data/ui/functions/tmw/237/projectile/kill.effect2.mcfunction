@@ -63,7 +63,11 @@
         # 古いローラー
         execute if score @s ui_hpart matches 117 run function ui:tmw/237/projectile/killeffect/117
         # 古いジェスター
-        execute if score @s ui_hpart matches 118..202 run function ui:tmw/237/projectile/killeffect/118
+        execute if score @s ui_hpart matches 118 run function ui:tmw/237/projectile/killeffect/118
+        # ラピッドショット
+        execute if score @s ui_hpart matches 119 run function ui:tmw/237/projectile/killeffect/119
+        # リングパルサー
+        execute if score @s ui_hpart matches 120..202 run function ui:tmw/237/projectile/killeffect/120
     # スペシャル溜まらない爆発
         execute if score @s ui_hpart matches 203 run function ui:tmw/237/projectile/killeffect/3
         execute if score @s ui_hpart matches 204 run function ui:tmw/237/projectile/killeffect/4
@@ -93,6 +97,8 @@
         execute if score @s ui_hpart matches 410 run function ui:tmw/237/projectile/killeffect/410
         # ガチホコもどき
         execute if score @s ui_hpart matches 411 run function ui:tmw/237/projectile/killeffect/411
+        # ヴァンガード - デッドリーチャージ
+        execute if score @s ui_hpart matches 412 run function ui:tmw/237/projectile/killeffect/412/
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint

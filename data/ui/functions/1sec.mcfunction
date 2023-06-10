@@ -1,15 +1,5 @@
 # 一秒にやること
 
-#
-    #item replace entity @a hotbar.1 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.2 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.3 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.4 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.5 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-    #item replace entity @a hotbar.8 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text": ""}'}}
-
 # オフハンドに持つんじゃない
     execute as @a if entity @s[scores={ui_tmw_id2=1..}] at @s run function ui:tmw/237/anti.offhand/text
 
@@ -50,6 +40,9 @@ execute if score $phase game_state matches 1.. if score $life ui_world matches 0
 execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. unless entity @a[scores={ui_team=2,life=0..},tag=!spectate] unless entity @a[scores={ui_team=1,life=0..},tag=!spectate] unless entity @a[scores={ui_team=4,life=0..},tag=!spectate] run tellraw @a {"text":"黄チームが勝利しました","color":"yellow","bold":true}
 execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. unless entity @a[scores={ui_team=2,life=0..},tag=!spectate] unless entity @a[scores={ui_team=3,life=0..},tag=!spectate] unless entity @a[scores={ui_team=1,life=0..},tag=!spectate] run summon firework_rocket ~ ~ ~ {Tags:["ui_17_green"],Life:0,LifeTime:18,Motion:[0.0,0.1,0.0],FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:1,Trail:1b,Colors:[I;65535,16777215],FadeColors:[I;16777215]}]}}}}
 execute if score $phase game_state matches 1.. if score $life ui_world matches 0.. unless entity @a[scores={ui_team=2,life=0..},tag=!spectate] unless entity @a[scores={ui_team=3,life=0..},tag=!spectate] unless entity @a[scores={ui_team=1,life=0..},tag=!spectate] run tellraw @a {"text":"緑チームが勝利しました","color":"green","bold":true}
+
+# ボスバー
+execute unless entity @e[tag=entity.core,scores={ui_gpc=1}] run bossbar set ui:entity1 players -
 
 #
 scoreboard players set $world ui_tc 1

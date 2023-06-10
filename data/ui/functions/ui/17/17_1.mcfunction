@@ -13,20 +13,20 @@
 # 上のプレイヤーカウント
     scoreboard players set $temp ui_temp 0
     execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,dx=2,dy=1,dz=2,scores={ui_team=1}] run scoreboard players add $temp ui_temp 1
-    execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,dx=2,dy=1,dz=2,scores={ui_team=2}] run scoreboard players remove $temp ui_temp 1
+    execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,dx=2,dy=1,dz=2,scores={ui_team=3}] run scoreboard players remove $temp ui_temp 1
     execute if score $temp ui_temp matches 1 as @e[tag=ui_17_3_they] run data merge entity @s {Color:3}
     execute if score $temp ui_temp matches 0 as @e[tag=ui_17_3_they] run data merge entity @s {Color:0}
-    execute if score $temp ui_temp matches -1 as @e[tag=ui_17_3_they] run data merge entity @s {Color:6}
+    execute if score $temp ui_temp matches -1 as @e[tag=ui_17_3_they] run data merge entity @s {Color:4}
 
 # レーン敷設
     execute if entity @e[tag=ui_17_4_they,tag=!ui_17_4_mid,distance=..0.1] run function ui:ui/17/17_1_root.del
     execute unless entity @e[tag=ui_17_4_they] run function ui:ui/17/17_1_root
     execute if score $temp ui_temp matches 1 facing entity @e[tag=ui_17_4_they,tag=ui_17_4_aqua] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
-    execute if score $temp ui_temp matches -1 facing entity @e[tag=ui_17_4_they,tag=ui_17_4_pink] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
+    execute if score $temp ui_temp matches -1 facing entity @e[tag=ui_17_4_they,tag=ui_17_4_yellow] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
     execute if score $temp ui_temp matches 1 facing entity @e[tag=ui_17_4_they,tag=ui_17_4_aqua] feet run teleport @s ^ ^ ^0.1
-    execute if score $temp ui_temp matches -1 facing entity @e[tag=ui_17_4_they,tag=ui_17_4_pink] feet run teleport @s ^ ^ ^0.1
+    execute if score $temp ui_temp matches -1 facing entity @e[tag=ui_17_4_they,tag=ui_17_4_yellow] feet run teleport @s ^ ^ ^0.1
     execute if score $temp ui_temp matches 1 unless entity @e[tag=ui_17_4_they,tag=ui_17_4_aqua] run function ui:ui/17/17_4_aqua
-    execute if score $temp ui_temp matches -1 unless entity @e[tag=ui_17_4_they,tag=ui_17_4_pink] run function ui:ui/17/17_4_pink
+    execute if score $temp ui_temp matches -1 unless entity @e[tag=ui_17_4_they,tag=ui_17_4_yellow] run function ui:ui/17/17_4_yellow
 
 ## 上のプレイヤー移動
 #    execute if block ~ ~-1 ~ light_blue_concrete positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] at @s run teleport @s ~0.1 ~ ~
