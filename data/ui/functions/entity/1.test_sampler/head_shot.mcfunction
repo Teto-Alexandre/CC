@@ -1,6 +1,6 @@
 # スプリンクラー発射
 scoreboard players set $particle.fly ui_temp 6
-scoreboard players set $particle.end ui_temp 119
+scoreboard players set $particle.end ui_temp 120
 scoreboard players set $speed ui_temp 30
 scoreboard players set $mod ui_calc1 25
 function ui:common/rand
