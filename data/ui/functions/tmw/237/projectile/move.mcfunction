@@ -41,7 +41,6 @@
     execute if score @s ui_bpart matches 11 run function ui:tmw/237/projectile/move/11
     #ストライク縦
     execute if score @s ui_bpart matches 12 run function ui:tmw/237/projectile/move/12
-    execute if score @s ui_bpart matches -12 run function ui:tmw/237/projectile/move/12.2
     #バウンド小弾
     execute if score @s ui_bpart matches 13 run function ui:tmw/237/projectile/move/13
     #洗濯機
@@ -52,6 +51,8 @@
     execute if score @s ui_bpart matches 16 run function ui:tmw/237/projectile/move/16
     #ミアレアンカー
     execute if score @s ui_bpart matches 17 run function ui:tmw/237/projectile/move/17
+    # ストライク近接
+    execute if score @s ui_bpart matches 18 run function ui:tmw/237/projectile/move/12.2
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
     execute if score @s ui_bpart matches 101 run function ui:tmw/237/projectile/move/101
     execute if score @s ui_bpart matches 102 run function ui:tmw/237/projectile/move/102
