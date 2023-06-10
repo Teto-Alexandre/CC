@@ -1,4 +1,5 @@
 # 必要データ収集
+    scoreboard players reset $pierce ui_temp
     execute unless score $burst_alt.id ui_temp matches 1.. run scoreboard players operation $number ui_temp = $maxburst ui_temp
     execute unless score $burst_alt.id ui_temp matches 1.. run scoreboard players operation $number ui_temp -= $burst ui_temp
     execute unless score $burst_alt.id ui_temp matches 1.. run scoreboard players add $number ui_temp 1
@@ -15,6 +16,7 @@
     execute if entity @s[nbt={OnGround:1b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.SpreadType
     execute if entity @s[nbt={OnGround:0b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.AirSpreadType
     scoreboard players set $speed.add ui_temp 0
+    execute if data storage ui:gun temp2{Pierce:1b} run scoreboard players set $pierce ui_temp 1
 
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run function ui:tmw/237/attack/shot/core_data.burst11
     # 弾

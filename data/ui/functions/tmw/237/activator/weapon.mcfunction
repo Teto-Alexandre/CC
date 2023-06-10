@@ -22,3 +22,8 @@
 # ナイスダマ
     execute if score $activator ui_temp matches 460 run playsound block.beacon.activate player @a ~ ~ ~ 1.2 1.5 0
     execute if score $activator ui_temp matches 460 run playsound block.bell.resonate player @a ~ ~ ~ 1.2 1.5 0
+
+# リフレクトレーザー
+    execute if score $activator ui_temp matches 463 run playsound block.beacon.activate player @a ~ ~ ~ 1.2 1.5 0
+    execute if score $activator ui_temp matches 463 run playsound block.piston.contract player @a ~ ~ ~ 1.5 0.6 0
+    execute if score $activator ui_temp matches 463 run playsound block.iron_door.open player @a ~ ~ ~ 2 1.2 0
