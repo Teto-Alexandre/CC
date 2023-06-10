@@ -1,4 +1,3 @@
-teleport @s ^ ^ ^1 ~ ~
 scoreboard players set @s ui_bpart 18
 scoreboard players set @s ui_hpart -1
 scoreboard players set @s ui_bm 900
