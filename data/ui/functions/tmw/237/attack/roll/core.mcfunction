@@ -50,5 +50,8 @@
 # 成功
     tag @s add ui_temp_success
 
+# 競合タグ削除
+    tag @e[tag=ui_temp_attacked] remove ui_temp_attacked
+
 # 変更した
     scoreboard players set $changed ui_temp 1
