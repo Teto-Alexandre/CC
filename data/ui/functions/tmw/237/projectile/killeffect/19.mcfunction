@@ -1,1 +1,0 @@
-playsound entity.zombie.attack_iron_door player @a ~ ~ ~ 0.7 2 0

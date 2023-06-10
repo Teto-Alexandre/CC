@@ -37,6 +37,9 @@
     tag @s remove tmw_237_pierce_hit_hitbox
     tag @e[tag=tmw_237_pierce_temp] remove tmw_237_pierce_temp
 
+# ストライク近接
+    execute if score @s ui_bpart matches 18 run playsound entity.zombie.attack_iron_door player @a ~ ~ ~ 0.7 2 0
+
 # 消失
     execute unless entity @s[tag=Pierce] run tag @s add tmw_237_proj_del
 
