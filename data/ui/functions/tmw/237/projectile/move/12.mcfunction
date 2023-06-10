@@ -2,22 +2,22 @@
     tag @s add ui_temp_this
 
 # 初期衝撃波
-    execute if entity @s[tag=!tmw_237_proj_first] run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tds.attack","ui","ui_proj","tmw_237","ui_temp_unpower"],ArmorItems:[{id:"minecraft:stone",Count:1b,tag:{display:{Name:'{"text":"null"}'}}},{},{},{}]}
+    execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tds.attack","ui","ui_proj","tmw_237","ui_temp_unpower"],ArmorItems:[{id:"minecraft:stone",Count:1b,tag:{display:{Name:'{"text":"null"}'}}},{},{},{}]}
 
     #リフレク不可
-        execute if entity @s[tag=!tmw_237_proj_first] run tag @e[tag=ui_temp_unpower] add ui_refd
-        execute if entity @s[tag=!tmw_237_proj_first] run tag @e[tag=ui_temp_unpower] add tmw_237_noref
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run tag @e[tag=ui_temp_unpower] add ui_refd
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run tag @e[tag=ui_temp_unpower] add tmw_237_noref
     
     # 弾にデータを込める
-        execute if entity @s[tag=!tmw_237_proj_first] as @e[tag=ui_temp_unpower] run function ui:tmw/237/projectile/move/12.1
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_id = @s ui_id
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_team = @s ui_team
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_is = @s ui_is
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_br = @s ui_fhl
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = @s ui_fhd
-        execute if entity @s[tag=!tmw_237_proj_first] run data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems.[0].tag.display.Name set from entity @s ArmorItems.[0].tag.display.Name
-        execute if entity @s[tag=!tmw_237_proj_first] run tag @e[tag=ui_temp_unpower] remove ui_temp_unpower
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players add $temp ui_temp 10
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] as @e[tag=ui_temp_unpower] run function ui:tmw/237/projectile/move/12.1
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run scoreboard players operation @e[tag=ui_temp_unpower] ui_id = @s ui_id
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run scoreboard players operation @e[tag=ui_temp_unpower] ui_team = @s ui_team
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run scoreboard players operation @e[tag=ui_temp_unpower] ui_is = @s ui_is
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run scoreboard players operation @e[tag=ui_temp_unpower] ui_br = @s ui_fhl
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = @s ui_fhd
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems.[0].tag.display.Name set from entity @s ArmorItems.[0].tag.display.Name
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run tag @e[tag=ui_temp_unpower] remove ui_temp_unpower
+        execute if entity @s[tag=!tmw_237_proj_first,tag=!tmw_237_proj_del] run scoreboard players add $temp ui_temp 10
 
     execute if entity @s[tag=!tmw_237_proj_first] run tag @s add tmw_237_proj_first
     
