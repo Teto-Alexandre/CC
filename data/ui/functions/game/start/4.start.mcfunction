@@ -3,6 +3,8 @@
 # 変数リセット
 scoreboard players reset @a ui_tmw237_boost
 scoreboard players reset @a ui_tmw237_survive
+scoreboard players reset @a ui_tmw237_drain
+scoreboard players reset @a ui_tmw237_drained_damage
 scoreboard players reset @a ui_tmw237_ink_regen
 
 tag @a[tag=fatal_weapon] remove fatal_weapon

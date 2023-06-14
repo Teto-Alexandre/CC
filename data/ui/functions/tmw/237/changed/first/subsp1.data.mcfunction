@@ -35,6 +35,8 @@ execute if score $type ui_temp matches 405 run scoreboard players set $w.ink ui_
 
 execute if score $type ui_temp matches 1011 run scoreboard players set $w.ink ui_temp 550
 execute if score $type ui_temp matches 1012 run scoreboard players set $w.ink ui_temp 0
+execute if score $type ui_temp matches 1013 run scoreboard players set $w.ink ui_temp 300
+execute if score $type ui_temp matches 1014 run scoreboard players set $w.ink ui_temp 0
 
 # 効果時間
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.time ui_temp 0
@@ -70,6 +72,9 @@ execute if score $type ui_temp matches 461 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 462 run scoreboard players set $w.time ui_temp 200
 execute if score $type ui_temp matches 463 run scoreboard players set $w.time ui_temp 150
 
+execute if score $type ui_temp matches 1013 run scoreboard players set $w.time ui_temp 10
+execute if score $type ui_temp matches 1014 run scoreboard players set $w.time ui_temp 200
+
 # クールタイム
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.ct ui_temp 3
 execute if score $type ui_temp matches 401..500 run scoreboard players set $w.ct ui_temp 0
@@ -103,6 +108,9 @@ execute if score $type ui_temp matches 460 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 462 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 463 run scoreboard players set $w.ct ui_temp 10
+
+execute if score $type ui_temp matches 1013 run scoreboard players set $w.ct ui_temp 10
+execute if score $type ui_temp matches 1014 run scoreboard players set $w.ct ui_temp 0
 
 # 発動中移動速度 初期:-1
 execute if score $type ui_temp matches 401.. run scoreboard players set $w.speed ui_temp 0
@@ -176,3 +184,5 @@ execute if score $type ui_temp matches 491 run data modify storage ui:temp temp.
 
 execute if score $type ui_temp matches 1011 run data modify storage ui:temp temp.Name set value " - P-SUB:リモートボム"
 execute if score $type ui_temp matches 1012 run data modify storage ui:temp temp.Name set value " - P-SUB:起爆"
+execute if score $type ui_temp matches 1013 run data modify storage ui:temp temp.Name set value " - P-SUB:カウンター"
+execute if score $type ui_temp matches 1014 run data modify storage ui:temp temp.Name set value " - P-SUB:カウンター"

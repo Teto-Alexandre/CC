@@ -150,6 +150,8 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_tmw237_sprint_particle dummy {"text":"UtilityItems_Tmw237_Sprint_Particle","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_ink_regen dummy {"text":"UtilityItems_Tmw237_Ink_Regen","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_ready dummy {"text":"UtilityItems_Tmw237_Ready","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_drain dummy {"text":"UtilityItems_Tmw237_Drain","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_drained_damage dummy {"text":"UtilityItems_Tmw237_Drained_Damage","color":"dark_blue"}
     scoreboard objectives add ui_uses dummy {"text":"UtilityItems_UseS","color":"dark_blue"}
 
 ## 復活、ゲームモード関連
