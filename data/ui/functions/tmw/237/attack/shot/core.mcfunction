@@ -11,17 +11,25 @@
     execute store result score $multishot ui_temp run data get storage ui:gun temp2.MultiShot
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
     execute store result score $speed.plus ui_temp run data get storage ui:gun temp2.SpeedPlus
+    execute store result score $pierce ui_temp run data get storage ui:gun temp2.Pierce
     execute if entity @s[nbt={OnGround:1b}] store result score $spread ui_temp run data get storage ui:gun temp2.Spread
     execute if entity @s[nbt={OnGround:0b}] store result score $spread ui_temp run data get storage ui:gun temp2.AirSpread
     execute if entity @s[nbt={OnGround:1b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.SpreadType
     execute if entity @s[nbt={OnGround:0b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.AirSpreadType
     scoreboard players set $speed.add ui_temp 0
-    execute if data storage ui:gun temp2{Pierce:1b} run scoreboard players set $pierce ui_temp 1
 
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run function ui:tmw/237/attack/shot/core_data.burst11
     # 弾
     execute store result score $particle.fly ui_temp run data get storage ui:gun temp2.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:gun temp2.EndParticle
+
+# FlyParticle114限定
+    execute if score $particle.fly ui_temp matches 114 run scoreboard players operation $damage ui_temp = @s ui_tmw237_drained_damage
+    execute if score $particle.fly ui_temp matches 114 if score @s ui_tmw237_drained_damage matches 50..99 run scoreboard players set $multishot ui_temp 3
+    execute if score $particle.fly ui_temp matches 114 if score @s ui_tmw237_drained_damage matches 100..149 run scoreboard players set $multishot ui_temp 5
+    execute if score $particle.fly ui_temp matches 114 if score @s ui_tmw237_drained_damage matches 150..199 run scoreboard players set $multishot ui_temp 7
+    execute if score $particle.fly ui_temp matches 114 if score @s ui_tmw237_drained_damage matches 200.. run scoreboard players set $multishot ui_temp 9
+    execute if score $particle.fly ui_temp matches 114 run scoreboard players set @s ui_tmw237_drained_damage 0
 
 # burst12限定
     execute if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. run scoreboard players operation $burst_alt ui_temp = $burst.max ui_temp

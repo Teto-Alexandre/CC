@@ -24,6 +24,8 @@ execute if score $phase game_state matches 1.. if score $life ui_world matches 0
 # 変数リセット
 scoreboard players reset @s ui_tmw237_boost
 scoreboard players reset @s ui_tmw237_survive
+scoreboard players reset @s ui_tmw237_drain
+scoreboard players reset @s ui_tmw237_drained_damage
 scoreboard players reset @s ui_tmw237_ink_regen
 
 # サブ消滅
