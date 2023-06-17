@@ -11,3 +11,9 @@ execute unless score $difficulty ui_world matches 1.. if score $damage_calc ui_t
 execute if score $difficulty ui_world matches 1 if score $damage_calc ui_temp matches 200.. if entity @s[tag=!entity.modifier.12] run function ui:entity/1.test_sampler/armor_broken
 execute if score $difficulty ui_world matches 2 if score $damage_calc ui_temp matches 250.. if entity @s[tag=!entity.modifier.12] run function ui:entity/1.test_sampler/armor_broken
 execute if score $difficulty ui_world matches 3 if score $damage_calc ui_temp matches 300.. if entity @s[tag=!entity.modifier.12] run function ui:entity/1.test_sampler/armor_broken
+
+scoreboard players operation $entity.time_temp ui_temp = @s ui_is
+scoreboard players operation $entity.time_temp ui_temp %= #500 ui_num
+scoreboard players remove $entity.time_temp ui_temp 139
+
+execute if score $difficulty ui_world matches 2.. if score $damage_calc ui_temp matches 250.. if score $entity.time_temp ui_temp matches 103.. run scoreboard players operation @s ui_is -= $entity.time_temp ui_temp

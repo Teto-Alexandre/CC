@@ -2,7 +2,7 @@
 
 # ダメージを与える
     scoreboard players operation $Attacker tds_dmg = $id ui_temp
-    data modify storage ui:temp Name set value ""
+    #data modify storage ui:temp Name set value ""
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 60
     execute at @e[distance=2.5..5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.undeath

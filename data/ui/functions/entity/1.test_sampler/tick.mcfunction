@@ -52,8 +52,8 @@ execute if score $entity.time ui_temp matches 0 run function ui:entity/1.test_sa
 
 #
 scoreboard players operation $entity.time ui_temp %= #10 ui_num
-#execute if score $entity.time ui_temp matches 0 run data merge storage ui:common {input:{Mode:"create",Var:-10110,Var2:3,Rand:{X:150,Y:10,Z:150}}}
-#execute if score $entity.time ui_temp matches 0 run function ui:common/particle
+execute if score $entity.time ui_temp matches 0 run data merge storage ui:common {input:{Mode:"create",Var:-10110,Var2:3,Rand:{X:150,Y:10,Z:150}}}
+execute if score $entity.time ui_temp matches 0 run function ui:common/particle
 
 execute if score $entity.time ui_temp matches 5 if score @s ui_is2 matches 80.. at @s run function ui:entity/1.test_sampler/missile_fire
 
