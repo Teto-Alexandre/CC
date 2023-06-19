@@ -22,6 +22,15 @@
 
 # 加速
     execute if score @s ui_uses matches 3.. rotated ~ 30 run function ui:template/accelerator/1
+    #ride @p mount @s
+
+#
+    execute if score $team ui_temp matches 1 store result score $paint ui_temp run fill ~-0.1 ~ ~-0.1 ~0.1 ~-3 ~0.1 light_blue_wool replace #ui:wools
+    execute if score $team ui_temp matches 2 store result score $paint ui_temp run fill ~-0.1 ~ ~-0.1 ~0.1 ~-3 ~0.1 pink_wool replace #ui:wools
+    execute if score $team ui_temp matches 3 store result score $paint ui_temp run fill ~-0.1 ~ ~-0.1 ~0.1 ~-3 ~0.1 yellow_wool replace #ui:wools
+    execute if score $team ui_temp matches 4 store result score $paint ui_temp run fill ~-0.1 ~ ~-0.1 ~0.1 ~-3 ~0.1 lime_wool replace #ui:wools
+    execute if entity @s[tag=!tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
+    execute if entity @s[tag=tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
 
 # 処理終了
     execute if entity @s[tag=ui_237_sub_explode] run function ui:tmw/237/sub/explosive/114/end

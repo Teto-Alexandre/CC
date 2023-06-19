@@ -15,7 +15,7 @@ execute as @a run attribute @s generic.max_health modifier remove 2a93cf3d-b14d-
 execute if score $module ui_world matches 1 as @a if score @s module matches 18 run attribute @s generic.max_health modifier add 2a93cf3d-b14d-4538-87cc-5fd0119eac2d "module18" 0.2 multiply
 
 #
-bossbar set minecraft:time players @a
+bossbar set ui:tmw237 players @a
 tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"Start","color":"gold"}]
 gamemode adventure @a[tag=!spectate]
 playsound minecraft:entity.wither.spawn player @a ~ ~ ~ 1 1 1
@@ -61,7 +61,7 @@ effect give @a instant_health 10 10 true
 
 #
 scoreboard players operation $time ui_world = $time.max ui_world
-execute store result bossbar minecraft:time max run scoreboard players get $time ui_world
+execute store result bossbar ui:tmw237 max run scoreboard players get $time ui_world
 
 #
 scoreboard players set @a ui_paint 0

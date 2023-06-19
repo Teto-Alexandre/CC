@@ -318,6 +318,19 @@ scoreboard players set $limited_weapon party_mode 0
 
     gamerule maxCommandChainLength 1000000
     gamerule mobGriefing false
+    gamerule doDaylightCycle false
+    gamerule doWeatherCycle false
+    gamerule doMobSpawning false
+    gamerule fallDamage false
+    gamerule doImmediateRespawn true
+    gamerule doFireTick false
+    gamerule commandBlockOutput false
+    gamerule naturalRegeneration false
+    gamerule doLimitedCrafting true
+    gamerule keepInventory true
+    
+    time set noon
+    weather clear
 
 #=====================================================================================
 #

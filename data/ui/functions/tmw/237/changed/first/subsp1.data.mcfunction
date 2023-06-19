@@ -166,6 +166,7 @@ execute if score $type ui_temp matches 258 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 259 run data modify storage ui:temp temp.Name set value " - SP:アウェイクパワー"
 execute if score $type ui_temp matches 351 run data modify storage ui:temp temp.Name set value " - SP:メガホンレーザー"
 execute if score $type ui_temp matches 352 run data modify storage ui:temp temp.Name set value " - SP:グレートバリア"
+execute if score $type ui_temp matches 353 run data modify storage ui:temp temp.Name set value " - SP:イルカライド"
 execute if score $type ui_temp matches 451 run data modify storage ui:temp temp.Name set value " - SP:スーパーショット"
 execute if score $type ui_temp matches 452 run data modify storage ui:temp temp.Name set value " - SP:マルチミサイル"
 execute if score $type ui_temp matches 453 run data modify storage ui:temp temp.Name set value " - SP:セプタングル"
