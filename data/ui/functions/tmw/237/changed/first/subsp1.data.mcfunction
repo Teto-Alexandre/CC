@@ -77,7 +77,6 @@ execute if score $type ui_temp matches 462 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 463 run scoreboard players set $w.time ui_temp 150
 
 execute if score $type ui_temp matches 1013 run scoreboard players set $w.time ui_temp 10
-execute if score $type ui_temp matches 1014 run scoreboard players set $w.time ui_temp 0
 
 # クールタイム
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.ct ui_temp 3
@@ -116,7 +115,6 @@ execute if score $type ui_temp matches 462 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 463 run scoreboard players set $w.ct ui_temp 10
 
 execute if score $type ui_temp matches 1013 run scoreboard players set $w.ct ui_temp 10
-execute if score $type ui_temp matches 1014 run scoreboard players set $w.ct ui_temp 0
 
 # 発動中移動速度 初期:-1
 execute if score $type ui_temp matches 401.. run scoreboard players set $w.speed ui_temp 0
