@@ -3,7 +3,7 @@ execute as @e[tag=ui_temp_unpower] run tp @s ^ ^ ^1.0 ~ ~
 scoreboard players set @e[tag=ui_temp_unpower] ui_bpart 3
 scoreboard players set @e[tag=ui_temp_unpower] ui_hpart 2
 scoreboard players set @e[tag=ui_temp_unpower] ui_bm 30
-scoreboard players set @e[tag=ui_temp_unpower] ui_br 10
+scoreboard players set @e[tag=ui_temp_unpower] ui_br 15
 scoreboard players set @e[tag=ui_temp_unpower] ui_gpc 1
 scoreboard players set @e[tag=ui_temp_unpower] ui_bdt 1
 scoreboard players operation @e[tag=ui_temp_unpower] ui_id = $id ui_temp
