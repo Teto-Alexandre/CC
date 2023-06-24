@@ -2,6 +2,9 @@
 
 # チャージキープ
     execute if score $ishold ui_temp matches 2.. run function ui:tmw/237/constant/charge_cancel
+    execute if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. run function ui:tmw/237/constant/charge_cancel
+    execute if score @s ui_tmw237_speedcover matches 1.. run scoreboard players remove @s ui_tmw237_speedcover 1
+    execute if score @s ui_tmw237_speedcover matches 1.. run effect give @s glowing 1 0 false
 
 # 特殊効果
     effect clear @s slowness

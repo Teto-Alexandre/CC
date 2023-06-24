@@ -26,26 +26,21 @@
     execute as @e[tag=ui_temp_this] if score $team ui_temp matches 2 rotated ~ 0 run function ui:tmw/237/sub/explosive/353/2
     execute as @e[tag=ui_temp_this] if score $team ui_temp matches 3 rotated ~ 0 run function ui:tmw/237/sub/explosive/353/3
     execute as @e[tag=ui_temp_this] if score $team ui_temp matches 4 rotated ~ 0 run function ui:tmw/237/sub/explosive/353/4
-    execute as @e[tag=ui_temp_this] run effect give @p resistance 3 3 false
-    execute as @e[tag=ui_temp_this] run ride @p mount @s
     tag @e[tag=ui_temp_this] remove ui_temp_this
     #ダメージ計算
     scoreboard players add @s ui_is 1
 
 # 常時実行
-    execute as @e[tag=ui_temp_obj,tag=tmw_237_sub_353_1] on passengers run tag @s add ui_237_sub_passenger
-    execute unless entity @a[tag=ui_237_sub_passenger] run tag @s add ui_237_sub_explode
     execute if score @s ui_is matches 43.. run tag @s add ui_237_sub_explode
-    execute positioned ~-0.5 ~ ~-0.5 if entity @e[dx=0,dy=0,dz=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run tag @s add ui_237_sub_explode
-    tag @a[tag=ui_237_sub_passenger] remove ui_237_sub_passenger 
+    execute if score @s ui_is matches 20.. positioned ~-0.5 ~ ~-0.5 if entity @e[dx=0,dy=0,dz=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run tag @s add ui_237_sub_explode
 
 # 反射
     execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]
     scoreboard players set $success ui_temp 0
-    execute unless block ~0.5 ~0.5 ~ #ui:nocol run tag @s add ui_237_sub_explode
-    execute unless block ~-0.5 ~0.5 ~ #ui:nocol run tag @s add ui_237_sub_explode
-    execute unless block ~ ~0.5 ~0.5 #ui:nocol run tag @s add ui_237_sub_explode
-    execute unless block ~ ~0.5 ~-0.5 #ui:nocol run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. unless block ~0.5 ~0.5 ~ #ui:nocol run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. unless block ~-0.5 ~0.5 ~ #ui:nocol run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. unless block ~ ~0.5 ~0.5 #ui:nocol run tag @s add ui_237_sub_explode
+    execute if score @s ui_is matches 20.. unless block ~ ~0.5 ~-0.5 #ui:nocol run tag @s add ui_237_sub_explode
     tag @s[tag=tmw237_reflected] remove tmw237_reflected
     execute if score $success ui_temp matches 1 run tag @s add tmw237_reflected
     teleport @e[tag=ui_temp_obj,tag=tmw_237_sub_353_1] @s
@@ -84,3 +79,4 @@
 
 # 処理終了
     execute if entity @s[tag=ui_237_sub_explode] run function ui:tmw/237/sub/explosive/353/end
+    tag @e[tag=ui_temp_obj] remove ui_temp_obj
