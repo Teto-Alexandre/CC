@@ -28,7 +28,7 @@ execute as @a run function ui:tmw/243/core/gear_reader/active
 function ui:game/pl_comp/
 execute as @a[tag=king] run scoreboard players add @s health 800
 execute if score $module ui_world matches 1 as @a if score @s module matches 30 run scoreboard players add @s ink_regen 200
-execute if score $module ui_world matches 1 as @a if score @s module matches 33 run scoreboard players add @s health 200
+execute if score $module ui_world matches 1 as @a if score @s module matches 33 run scoreboard players add @s health 100
 execute if score $module ui_world matches 1 as @a if score @s module matches 33 run scoreboard players remove @s ink_regen 50
 
 #
