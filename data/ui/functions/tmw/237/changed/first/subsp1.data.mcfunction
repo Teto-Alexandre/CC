@@ -77,7 +77,7 @@ execute if score $type ui_temp matches 462 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 463 run scoreboard players set $w.time ui_temp 150
 
 execute if score $type ui_temp matches 1013 run scoreboard players set $w.time ui_temp 10
-execute if score $type ui_temp matches 1014 run scoreboard players set $w.time ui_temp 200
+execute if score $type ui_temp matches 1014 run scoreboard players set $w.time ui_temp 0
 
 # クールタイム
 execute if score $type ui_temp matches 101..400 run scoreboard players set $w.ct ui_temp 3

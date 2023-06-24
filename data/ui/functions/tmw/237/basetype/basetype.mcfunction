@@ -5,7 +5,6 @@
 # -1,-2.装備型サブスペを発動中なら最優先で適応する
     execute if score $subtype ui_temp matches 401..500 if score $subtime ui_temp matches 1.. run function ui:tmw/237/basetype/sub
     execute if score $sptype ui_temp matches 401..500 if score $sptime ui_temp matches 1.. run function ui:tmw/237/basetype/sp
-    execute if score $sptype ui_temp matches 1014 if score $sptime ui_temp matches 1.. run function ui:tmw/237/basetype/sp
     execute if score $fusion_plus party_mode matches 1 if score $subtime ui_temp matches 1.. run function ui:tmw/237/basetype/sub
     execute if score $fusion_plus party_mode matches 1 if score $sptime ui_temp matches 1.. run function ui:tmw/237/basetype/sp
 
