@@ -6,3 +6,5 @@ execute as @a[tag=tds_attacker_temp,scores={module=24}] run function tds:core/mo
 execute as @a[tag=tds_attacker_temp,scores={module=25}] run function tds:core/module/dist15
 execute as @a[tag=tds_attacker_temp,scores={module=26}] run function tds:core/module/dist20
 execute as @a[tag=tds_attacker_temp,scores={module=27}] run function tds:core/module/dist25
+execute if score @s module matches 32 if score @s ui_s_paint matches 2000.. run scoreboard players operation $Damage tds_dmg *= #7 ui_num
+execute if score @s module matches 34 as @a[tag=tds_attacker_temp] run function tds:core/module/lantern
