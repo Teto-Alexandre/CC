@@ -1,11 +1,5 @@
 # データ読み取り
 
-    ## サブ: 101:スプラッシュ, 102:リフレク, 103:クイック, 104:ライト, 105:レンバク, 106:リジェネ
-    ##     : 107:ボルテク, 108:キューバン, 109:ポイズン, 110:シールド, 111:スプリン, 112:アクセラ
-    ##     : 201:リコール
-    ##     : 301:トラップ
-    ##     : 401:ブロードソード, 402:ヘルハウンド
-
 # スロットが空白ならボタンが押されたと判断する＋changedを1に
     scoreboard players set $changed ui_temp 0
     data merge storage ui:common {input:{Mode:"check"}}
@@ -26,7 +20,8 @@
     execute if score $slot ui_temp matches 23 run scoreboard players set $sp ui_temp 120
     execute if score $slot ui_temp matches 24 run scoreboard players set $sp ui_temp 204
 
-    execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 1
+    execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
+    execute if score $slot ui_temp matches 25 run scoreboard players set $page ui_temp 13
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
 

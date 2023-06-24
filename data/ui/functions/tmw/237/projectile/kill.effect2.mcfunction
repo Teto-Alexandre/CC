@@ -101,6 +101,8 @@
         execute if score @s ui_hpart matches 411 run function ui:tmw/237/projectile/killeffect/411
         # ヴァンガード - デッドリーチャージ
         execute if score @s ui_hpart matches 412 run function ui:tmw/237/projectile/killeffect/412/
+        # モジュール - 爆裂インク
+        execute if score @s ui_hpart matches 413 run function ui:tmw/237/projectile/killeffect/413
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint

@@ -26,6 +26,7 @@
     execute as @e[tag=ui_temp_this] if score $team ui_temp matches 2 rotated ~ 0 run function ui:tmw/237/sub/explosive/353/2
     execute as @e[tag=ui_temp_this] if score $team ui_temp matches 3 rotated ~ 0 run function ui:tmw/237/sub/explosive/353/3
     execute as @e[tag=ui_temp_this] if score $team ui_temp matches 4 rotated ~ 0 run function ui:tmw/237/sub/explosive/353/4
+    execute as @e[tag=ui_temp_this] run effect give @p resistance 3 3 false
     execute as @e[tag=ui_temp_this] run ride @p mount @s
     tag @e[tag=ui_temp_this] remove ui_temp_this
     #ダメージ計算

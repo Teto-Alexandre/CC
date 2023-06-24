@@ -26,6 +26,14 @@
     execute if score $activator ui_temp matches 204 run scoreboard players operation @s ui_tmw237_ink_regen += $temp ui_temp
     execute if score $activator ui_temp matches 204 run scoreboard players operation @s ui_tmw237_ink_regen < #1000 ui_num
 
+# スピードカバー
+    execute if score $activator ui_temp matches 205 run playsound entity.wither.shoot player @a ~ ~ ~ 1 1 0
+    execute if score $activator ui_temp matches 205 run playsound block.anvil.use player @a ~ ~ ~ 1 1.2 0
+    execute if score $activator ui_temp matches 205 run playsound block.lever.click player @a ~ ~ ~ 2 1.2 0
+    execute if score $activator ui_temp matches 205 run particle crit ~ ~-1 ~ 0.5 0.5 0.5 1 20 force
+    execute if score $activator ui_temp matches 205 run particle sweep_attack ~ ~-1 ~ 0.8 0.05 0.8 0 6 force
+    execute if score $activator ui_temp matches 205 run scoreboard players set @s ui_tmw237_speedcover 200
+
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 251 run particle explosion_emitter ~ ~ ~ 5 5 5 0 20 force

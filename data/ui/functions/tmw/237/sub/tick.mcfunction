@@ -29,6 +29,7 @@
     execute if score $type ui_temp matches 118 run function ui:tmw/237/sub/explosive/118/tick
     execute if score $type ui_temp matches 119 run function ui:tmw/237/sub/explosive/119/tick
     execute if score $type ui_temp matches 120 run function ui:tmw/237/sub/explosive/120/tick
+    execute if score $type ui_temp matches 121 run function ui:tmw/237/sub/explosive/121/tick
 
     execute if score $type ui_temp matches 151 run function ui:tmw/237/sub/explosive/151/tick
     execute if score $type ui_temp matches 152 run function ui:tmw/237/sub/explosive/152/tick
