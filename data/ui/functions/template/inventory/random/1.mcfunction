@@ -10,6 +10,8 @@ function ui:common/rand
 execute if score @s random_qf matches 1 run scoreboard players set $rand ui_calc1 0
 execute if score @s random_qf matches 2 run scoreboard players set $rand ui_calc1 3
 execute if score @s random_qf matches 3 run scoreboard players set $rand ui_calc1 5
+execute if score @s random_qf matches 4 run scoreboard players set $rand ui_calc1 0
+execute if score @s random_qf matches 4 if predicate ui:percentage/50 run scoreboard players set $rand ui_calc1 3
 execute if score @s random_main matches 3 run scoreboard players set $rand ui_calc1 5
 
 execute if score $rand ui_calc1 matches 0..2 run data modify storage ui:common input.Item.tag.tmw.gun.now.QFType set value 1
