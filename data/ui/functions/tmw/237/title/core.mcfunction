@@ -1,28 +1,45 @@
 # 状態をタイトルに表示
 
 # インク残量
-scoreboard players operation $ink.temp ui_temp = $ink ui_temp
-scoreboard players operation $ink.temp ui_temp *= #100 ui_num
-scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp
-scoreboard players operation $sp.temp ui_temp = @s ui_paint
-scoreboard players operation $sp.temp ui_temp *= #100 ui_num
-scoreboard players operation $sp.temp ui_temp /= $spneed ui_temp
+#scoreboard players operation $ink.temp ui_temp = $ink ui_temp
+#scoreboard players operation $ink.temp ui_temp *= #100 ui_num
+#scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp
+#scoreboard players operation $sp.temp ui_temp = @s ui_paint
+#scoreboard players operation $sp.temp ui_temp *= #100 ui_num
+#scoreboard players operation $sp.temp ui_temp /= $spneed ui_temp
 
 # タイトル表示
 
 # 時間設定
 title @s times 0 5 0
 
-# サブタイトル
-execute if score $ink.temp ui_temp matches 100 run function ui:tmw/237/title/10
-execute if score $ink.temp ui_temp matches 90..99 run function ui:tmw/237/title/9
-execute if score $ink.temp ui_temp matches 80..89 run function ui:tmw/237/title/8
-execute if score $ink.temp ui_temp matches 70..79 run function ui:tmw/237/title/7
-execute if score $ink.temp ui_temp matches 60..69 run function ui:tmw/237/title/6
-execute if score $ink.temp ui_temp matches 50..59 run function ui:tmw/237/title/5
-execute if score $ink.temp ui_temp matches 40..49 run function ui:tmw/237/title/4
-execute if score $ink.temp ui_temp matches 30..39 run function ui:tmw/237/title/3
-execute if score $ink.temp ui_temp matches 20..29 run function ui:tmw/237/title/2
-execute if score $ink.temp ui_temp matches 10..19 run function ui:tmw/237/title/1
-execute if score $ink.temp ui_temp matches 1..9 run function ui:tmw/237/title/0
-execute if score $ink.temp ui_temp matches ..0 run function ui:tmw/237/title/-1
+function ui:template/text_board/open
+function oh_my_dat:please
+data modify storage ui:text_board temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board
+
+execute store result score $text_count ui_temp run data get storage ui:text_board temp.actionbar
+execute if score $text_count ui_temp matches 1.. run function ui:tmw/237/title/temp_shift/actionbar
+execute if score $text_count ui_temp matches 1.. run function ui:tmw/237/title/read_shift/pull.lp
+
+function ui:template/text_board/bro_actionbar
+
+function ui:template/text_board/clear
+
+execute store result score $text_count ui_temp run data get storage ui:text_board temp.subtitle
+execute if score $text_count ui_temp matches 1.. run function ui:tmw/237/title/temp_shift/subtitle
+execute if score $text_count ui_temp matches 1.. run function ui:tmw/237/title/read_shift/pull.lp
+
+function ui:template/text_board/bro_subtitle
+
+function ui:template/text_board/clear
+
+execute store result score $text_count ui_temp run data get storage ui:text_board temp.title
+execute if score $text_count ui_temp matches 1.. run function ui:tmw/237/title/temp_shift/title
+execute if score $text_count ui_temp matches 1.. run function ui:tmw/237/title/read_shift/pull.lp
+
+function ui:template/text_board/bro_title
+
+scoreboard players reset $text_count ui_temp
+scoreboard players reset $text_id ui_temp
+data remove storage ui:text_board temp
+function ui:template/text_board/close

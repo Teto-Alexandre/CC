@@ -1,0 +1,27 @@
+function oh_my_dat:please
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle set value []
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title set value []
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:1}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:5}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:2}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:5}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:3}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:5}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar append value {ID:4}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:3}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:5}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:5}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:5}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:6}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:5}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:5}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:5}
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle append value {ID:4}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:1}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:5}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:2}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:5}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:3}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:5}
+#data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title append value {ID:4}

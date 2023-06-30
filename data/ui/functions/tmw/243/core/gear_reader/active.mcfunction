@@ -26,6 +26,7 @@ scoreboard players set @s sp_need_acc 100
 scoreboard players set @s ink_regen 100
 scoreboard players set @s main_eff_acc 100
 scoreboard players set @s sub_eff_acc 100
+scoreboard players set @s charge_acc 0
 scoreboard players set @s health_regen 0
 
 scoreboard players set @s pl_comp_buff 0

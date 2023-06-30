@@ -9,7 +9,7 @@ execute if score $slot ui_temp matches 26 run tag @s remove setting_module
 item replace entity @s enderchest.0 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
 item replace entity @s enderchest.1 with carrot_on_a_stick{CustomModelData:110022,display:{Name:'{"text":"チャージアップ！","color": "red","bold": true,"italic": false}',Lore:['{"text":"ゲーム開始時からSPゲージが最大","color": "gray","italic": false}']},ui:{ismenu:1}}
-item replace entity @s enderchest.2 with knowledge_book{display:{Name:'{"text":"最低保障プログラム","color": "blue","bold": true,"italic": false}',Lore:['{"text":"ゲーム開始時、死亡時に有効化","color": "gray","italic": false}','{"text":"SPゲージが半分まで溜まる","color": "gray","italic": false}']},ui:{ismenu:1}}
+item replace entity @s enderchest.2 with knowledge_book{display:{Name:'{"text":"最低保障プログラム","color": "blue","bold": true,"italic": false}',Lore:['{"text":"ゲーム開始時、死亡時に有効化","color": "gray","italic": false}','{"text":"SPゲージが30%まで溜まる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.3 with carrot_on_a_stick{CustomModelData:110255,display:{Name:'{"text":"達人の間合い10","color": "white","bold": true,"italic": false}',Lore:['{"text":"攻撃命中時、相手との距離が10mなら","color": "gray","italic": false}','{"text":"ダメージが2倍になる","color": "gray","italic": false}','{"text":"少しズレてもある程度ダメージは増える","color": "gray","italic": false}','{"text":"それ以外のダメージは減少する","color": "red","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.4 with carrot_on_a_stick{CustomModelData:110256,display:{Name:'{"text":"達人の間合い15","color": "white","bold": true,"italic": false}',Lore:['{"text":"攻撃命中時、相手との距離が15mなら","color": "gray","italic": false}','{"text":"ダメージが2倍になる","color": "gray","italic": false}','{"text":"少しズレてもある程度ダメージは増える","color": "gray","italic": false}','{"text":"それ以外のダメージは減少する","color": "red","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.5 with carrot_on_a_stick{CustomModelData:110257,display:{Name:'{"text":"達人の間合い20","color": "white","bold": true,"italic": false}',Lore:['{"text":"攻撃命中時、相手との距離が20mなら","color": "gray","italic": false}','{"text":"ダメージが2倍になる","color": "gray","italic": false}','{"text":"少しズレてもある程度ダメージは増える","color": "gray","italic": false}','{"text":"それ以外のダメージは減少する","color": "red","italic": false}']},ui:{ismenu:1}}
@@ -66,7 +66,7 @@ execute if score @s module matches 35 run item modify entity @s enderchest.16 ui
 
 item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次のページ","color":"white","italic":false}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.19 with gray_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}
+item replace entity @s enderchest.19 with red_stained_glass_pane{display:{Name:'{"text":"素材（バグ多めにつき稼働停止中）","color": "yellow","bold": false,"italic": false}',Lore:['{"text":"建築上限を撤廃する","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.20 with gray_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with gray_stained_glass_pane{display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -82,7 +82,7 @@ item replace entity @s enderchest.25 with gray_stained_glass_pane{display:{Name:
 #item replace entity @s enderchest.24 with spyglass{display:{Name:'{"text":"13スコープ","color": "#9966ff","bold": false,"italic": false}',Lore:['{"text":"チャージ完了時の光を消す","color": "gray","italic": false}']},ui:{ismenu:1}}
 #item replace entity @s enderchest.25 with gold_block{display:{Name:'{"text":"物語の終わり","color": "#ffcc66","bold": true,"italic": false}',Lore:['{"text":"攻撃時に15%の確率でダメージ2倍","color": "gray","italic": false}']},ui:{ismenu:1}}
 #
-#execute if score $slot ui_temp matches 19 run scoreboard players set @s module 15
+#execute if score $slot ui_temp matches 19 run scoreboard players set @s module 36
 #execute if score $slot ui_temp matches 20 run scoreboard players set @s module 16
 #execute if score $slot ui_temp matches 21 run scoreboard players set @s module 17
 #execute if score $slot ui_temp matches 21 run attribute @s generic.movement_speed modifier add 2a93cf3d-b14d-4538-87cc-5fd0119eac2c "module17" 0.1 multiply
@@ -94,7 +94,7 @@ item replace entity @s enderchest.25 with gray_stained_glass_pane{display:{Name:
 #execute if score $slot ui_temp matches 24 run scoreboard players set @s module 20
 #execute if score $slot ui_temp matches 25 run scoreboard players set @s module 21
 #
-#execute if score @s module matches 15 run item modify entity @s enderchest.19 ui:gun/add_glow
+#execute if score @s module matches 36 run item modify entity @s enderchest.19 ui:gun/add_glow
 #execute if score @s module matches 16 run item modify entity @s enderchest.20 ui:gun/add_glow
 #execute if score @s module matches 17 run item modify entity @s enderchest.21 ui:gun/add_glow
 #execute if score @s module matches 18 run item modify entity @s enderchest.22 ui:gun/add_glow

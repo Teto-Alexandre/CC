@@ -1,0 +1,16 @@
+[
+  {
+    "function": "minecraft:copy_nbt",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "ui:text_board"
+    },
+    "ops": [
+      {
+        "source": "temp.actionbar[15].CustomModelData",
+        "target": "CustomModelData",
+        "op": "replace"
+      }
+    ]
+  }
+]

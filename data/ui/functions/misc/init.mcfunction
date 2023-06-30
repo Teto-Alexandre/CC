@@ -17,6 +17,9 @@ scoreboard players set $life ui_world -1
     scoreboard players set $phase game_state 0
     scoreboard objectives add wool_count dummy
     scoreboard objectives add module_page dummy
+    scoreboard objectives add title_whole dummy
+    scoreboard objectives add title_node dummy
+    scoreboard objectives add title_data dummy
 
 scoreboard players set $ke2 party_mode 0
 scoreboard players set $dmg party_mode 0
