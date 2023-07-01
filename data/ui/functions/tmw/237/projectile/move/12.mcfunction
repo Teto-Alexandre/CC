@@ -9,15 +9,11 @@
         execute if entity @s[tag=!tmw_237_proj_first] run tag @e[tag=ui_temp_unpower] add tmw_237_noref
     
     # 弾にデータを込める
-        execute if entity @s[tag=!tmw_237_proj_first] as @e[tag=ui_temp_unpower] run function ui:tmw/237/projectile/move/12.1
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_id = @s ui_id
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_team = @s ui_team
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_is = @s ui_is
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_br = @s ui_fhl
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = @s ui_fhd
-        execute if entity @s[tag=!tmw_237_proj_first] run data modify entity @e[tag=ui_temp_unpower,limit=1] ArmorItems.[0].tag.display.Name set from entity @s ArmorItems.[0].tag.display.Name
-        execute if entity @s[tag=!tmw_237_proj_first] run tag @e[tag=ui_temp_unpower] remove ui_temp_unpower
-        execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players add $temp ui_temp 10
+        execute if entity @s[tag=!tmw_237_proj_first] run data modify storage ui_temp: Unpower set value {Damage:0,Range:0,RangeType:1,Speed:900,FlyParticle:18,EndParticle:-1,Name:'',Pierce:1b}
+        execute if entity @s[tag=!tmw_237_proj_first] store result storage ui_temp: Unpower.Damage int 1 run scoreboard players get @s ui_fhd
+        execute if entity @s[tag=!tmw_237_proj_first] store result storage ui_temp: Unpower.Range int 1 run scoreboard players get @s ui_fhl
+        execute if entity @s[tag=!tmw_237_proj_first] run data modify storage ui_temp: Unpower.Name set from entity @s ArmorItems.[0].tag.display.Name
+        execute if entity @s[tag=!tmw_237_proj_first] run function ui:tmw/237/misc/unpower
 
     execute if entity @s[tag=!tmw_237_proj_first] run tag @s add tmw_237_proj_first
     
