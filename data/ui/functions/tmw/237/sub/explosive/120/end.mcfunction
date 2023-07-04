@@ -1,7 +1,8 @@
 # クイックヒール
 
 # ダメージを与える
-    execute as @a[distance=..4,tag=ui_temp_team] run effect give @s instant_health 1 2 true
+    data modify storage ui:temp Effect set value [{Id:"instant_health",Duration:20,Amplifier:2b,ShowParticles:0b}]
+    execute as @a[distance=..4,tag=ui_temp_team] run function ui:tmw/237/misc/giveeffect/
 
 # パーティクルで描画、演出
     particle firework ~ ~ ~ 0.5 0.5 0.5 0.1 20 force

@@ -253,8 +253,6 @@ execute positioned ^-0.175 ^-0.699 ^6.963 facing entity @s feet positioned as @s
     particle end_rod ~ ~ ~ 0 0 0 0.3 30 force @a
     playsound block.beacon.power_select player @a ~ ~ ~ 1.5 1.2 0
     scoreboard players operation $temp ui_temp = @s ui_team
-    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog,tag=!module19] unless score @s ui_team = $temp ui_temp run effect give @s glowing 10 0 false
-    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog,tag=!module19] unless score @s ui_team = $temp ui_temp run effect give @s fire_resistance 10 0 false
-    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog,tag=module19] unless score @s ui_team = $temp ui_temp run effect give @s glowing 5 0 false
-    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..8,tag=!tds_nolog,tag=module19] unless score @s ui_team = $temp ui_temp run effect give @s fire_resistance 5 0 false
+    data modify storage ui:temp Effect set value [{Id:"glowing",Duration:100,Amplifier:0b},{Id:"fire_resistance",Duration:100,Amplifier:0b}]
+    execute as @e[predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},distance=..6,tag=!tds_nolog] unless score @s ui_team = $temp ui_temp run function ui:tmw/237/misc/giveeffect/
     execute as @a[distance=..8] unless score @s ui_team = $temp ui_temp run scoreboard players operation @s tds_recent_attacked_by = $id ui_temp

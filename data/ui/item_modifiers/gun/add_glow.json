@@ -1,7 +1,7 @@
 [
   {
     "function": "minecraft:set_nbt",
-    "tag": "{HideFlags:1}"
+    "tag": "{HideFlags:255}"
   },
   {
     "function": "minecraft:set_enchantments",

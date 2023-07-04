@@ -122,6 +122,7 @@
 
 # 返り値をここで記録（ ♥3,6ダメージ → 60000 ）
     scoreboard players operation $Return tds_dmg = $Damage tds_dmg
+    tag @a[tag=tds_tempa] add tds_return_attacker
 
 # ダメージを数値表示
     execute if score $Damage tds_dmg matches 1.. if score $damage_indicator ui_world matches 1 run function tds:core/num_indicator

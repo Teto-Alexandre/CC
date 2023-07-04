@@ -17,11 +17,16 @@
     execute store result storage tds: temp.DamageType int 1 run scoreboard players get $temp ui_bdt
     data modify storage tds: temp.WeaponName set from storage ui:temp Name
     execute if score @s ui_tmw237_survive matches 1.. at @s run function ui:tmw/237/misc/survive
-    execute if entity @s[scores={ui_tmw_id=237}] if score @s ui_tmw237_drain matches 1.. at @s run function ui:tmw/237/misc/drain
+    execute if entity @s[scores={ui_tmw_id=237},tag=drain] at @s run function ui:tmw/237/misc/drain
     execute if score $survive ui_temp matches 0 if score $drain ui_temp matches 0 at @s run function tds:attack
     scoreboard players operation $Return tds_dmg /= #2000 ui_num
     execute if score $temp ui_bdt matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
     execute if score $temp ui_bdt matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg
 
 # この攻撃で死んだら
+    execute if score $Lethal tds_dmg matches 1 if score $module ui_world matches 1 if entity @p[tag=tds_return_attacker,scores={module=38}] run function ui:module/recycle
+    execute if score $Lethal tds_dmg matches 1 if score $module ui_world matches 1 as @p[tag=tds_return_attacker,scores={module=39}] at @s run function ui:module/energy_charge/get
     execute if score $Lethal tds_dmg matches 1 run function ui:tmw/237/attack/ink_explode
+
+# リセット
+    tag @a[tag=tds_return_attacker] remove tds_return_attacker

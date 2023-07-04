@@ -12,7 +12,8 @@
     execute if score $activator ui_temp matches 401..458 run playsound block.piston.contract player @a ~ ~ ~ 1.5 0.8 0
 
 # ジェットパック
-    execute if score $activator ui_temp matches 455 run effect give @s instant_health 1 3 true
+    execute if score $activator ui_temp matches 455 run data modify storage ui:temp Effect set value [{Id:"instant_health",Duration:20,Amplifier:3b,ShowParticles:0b}]
+    execute if score $activator ui_temp matches 455 run function ui:tmw/237/misc/giveeffect/
 
 # ロケッティア
     execute if score $activator ui_temp matches 459 run playsound entity.ender_dragon.growl player @a ~ ~ ~ 1.2 1.5 0

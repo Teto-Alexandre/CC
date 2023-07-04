@@ -41,3 +41,4 @@ execute at @s if score @s ui_br_temp >= @s ui_br run function ui:tmw/237/project
 
 #
 execute if score $Cache ui_temp matches 1 run scoreboard players reset @s
+tag @a[tag=tds_return_attacker] remove tds_return_attacker

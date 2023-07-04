@@ -7,7 +7,8 @@ scoreboard players operation @s ui_tmw237_drained_damage += $drained_damage ui_t
 #scoreboard players operation $ink ui_temp += $drain.ink.add ui_temp
 #scoreboard players operation $ink ui_temp < $ink.max ui_temp
 #function ui:tmw/237/changed/core
-effect give @s resistance 1 5 false
+data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:4b}]
+function ui:tmw/237/misc/giveeffect/
 playsound block.note_block.xylophone player @a ~ ~ ~ 1 1 0
 particle crit ~ ~1 ~ 0.4 0.6 0.4 0.3 15 force
 scoreboard players set $drain ui_temp 1

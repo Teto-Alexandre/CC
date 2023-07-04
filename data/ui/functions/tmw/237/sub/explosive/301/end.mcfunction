@@ -10,8 +10,8 @@
     execute at @e[distance=3..5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     scoreboard players set $damage ui_temp 150
     execute at @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute as @e[distance=..5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},tag=!tds_nolog,tag=!module19] run effect give @s glowing 4 0
-    execute as @e[distance=..5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},tag=!tds_nolog,tag=module19] run effect give @s glowing 2 0
+    data modify storage ui:temp Effect set value [{Id:"glowing",Duration:80,Amplifier:0b}]
+    execute as @e[distance=..5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!ui_resistance,nbt=!{Invulnerable:1b},tag=!tds_nolog] run function ui:tmw/237/misc/giveeffect/
 
 # パーティクルで描画、演出
     function ui:template/sphere_particle/3.5

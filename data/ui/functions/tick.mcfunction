@@ -59,6 +59,7 @@
     execute as @a unless score @s health = @s health_old run function ui:template/stats/health
     execute as @a unless score @s armor = @s armor_old run function ui:template/stats/armor
     execute as @a if score @s energy_buff matches 1.. at @s run function ui:template/stats/energy/
+    execute as @a if score @s ui_tmw237_energy_charge_time matches 1.. at @s run function ui:module/energy_charge/
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append
