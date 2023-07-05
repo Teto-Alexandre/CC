@@ -3,10 +3,10 @@ scoreboard players set $temp ui_temp 0
 execute if block ~ ~-1 ~ #ui:nocol_water if block ~ ~-2 ~ #ui:nocol_water if block ~ ~-3 ~ #ui:nocol_water if block ~ ~-4 ~ #ui:nocol_water if block ~ ~-5 ~ #ui:nocol_water if block ~ ~-6 ~ #ui:nocol_water if block ~ ~-7 ~ #ui:nocol_water if block ~ ~-8 ~ #ui:nocol_water if block ~ ~-9 ~ #ui:nocol_water run scoreboard players set $temp ui_temp 1
 execute if score $temp ui_temp matches 0.. run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:1b,ShowParticles:0b}]
 execute if score $temp ui_temp matches 0.. run function ui:tmw/237/misc/giveeffect/
-execute if score $temp ui_temp matches 0 run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:9b,ShowParticles:0b}]
+execute if score $temp ui_temp matches 0 run data modify storage ui:temp Effect set value [{Id:"levitation",Duration:20,Amplifier:9b,ShowParticles:0b}]
 execute if score $temp ui_temp matches 0 run function ui:tmw/237/misc/giveeffect/
 execute if score $temp ui_temp matches 1 run effect clear @s levitation
-execute if score $time ui_temp matches 5..6 run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:49b,ShowParticles:0b}]
+execute if score $time ui_temp matches 5..6 run data modify storage ui:temp Effect set value [{Id:"levitation",Duration:20,Amplifier:49b,ShowParticles:0b}]
 execute if score $time ui_temp matches 5..6 run function ui:tmw/237/misc/giveeffect/
 execute if score $time ui_temp matches 0..4 run effect clear @s levitation
 execute if score $time ui_temp matches 6 run particle cloud ~ ~ ~ 0.2 0.2 0.2 0.05 5 force
