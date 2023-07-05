@@ -8,7 +8,10 @@ data modify storage ui:text_board temp set from storage oh_my_dat: _[-4][-4][-4]
 playsound block.piston.contract player @a ~ ~ ~ 1 1 0
 playsound entity.villager.trade player @a ~ ~ ~ 1 1 0
 data modify storage ui:text_board temp set from entity @s EnderItems[0].tag.TextBoard
-item replace entity @s enderchest.0 with air
+item replace entity @s enderchest.9 with white_stained_glass_pane
+item replace entity @s enderchest.18 with white_stained_glass_pane
+item replace entity @s enderchest.8 with white_stained_glass_pane
+item replace entity @s enderchest.17 with white_stained_glass_pane
 
 # OMD に送信
 data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board set from storage ui:text_board temp
