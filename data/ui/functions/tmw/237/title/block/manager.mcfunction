@@ -30,3 +30,9 @@ execute if score $text_id ui_temp matches 8 run function ui:tmw/237/title/block/
 execute if score $text_id ui_temp matches 9 run function ui:tmw/237/title/block/9
 # カウンター
 execute if score $text_id ui_temp matches 10 run function ui:tmw/237/title/block/10
+# スーパーブースト
+execute if score $text_id ui_temp matches 11 run function ui:tmw/237/title/block/11
+# 武器チャージタイム
+execute if score $text_id ui_temp matches 12 run function ui:tmw/237/title/block/12
+# 武器クールタイム（デジ2）
+execute if score $text_id ui_temp matches 13 run function ui:tmw/237/title/block/13

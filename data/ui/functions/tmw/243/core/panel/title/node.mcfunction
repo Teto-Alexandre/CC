@@ -20,20 +20,20 @@ item replace entity @s enderchest.8 with cyan_stained_glass_pane{display:{Name:'
 item replace entity @s enderchest.9 with cyan_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.10 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"スピードカバー残量（１０ライン）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"サヴァイブ残量（１０ライン）","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:10","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:11","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:12","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:13","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:14","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"カウンターダメージ（デジタル表記３桁）","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ブーストリチャージ（１０ライン）","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"武器チャージ率（１０ライン）","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"硬直（デジタル表記２桁）","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.16 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:14","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.17 with cyan_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.18 with cyan_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:15","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:16","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:17","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:18","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:19","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:20","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:21","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.19 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:15","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.20 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:16","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.21 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:17","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.22 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:18","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.23 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:19","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.24 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:20","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.25 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:21","italic": false}'},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 1 run data modify storage ui:text_board temp.node set value {ID:1,CustomModelData:123001}
 execute if score $slot ui_temp matches 2 run data modify storage ui:text_board temp.node set value {ID:2,CustomModelData:123002}
@@ -49,13 +49,13 @@ execute if score $slot ui_temp matches 13 run data modify storage ui:text_board 
 execute if score $slot ui_temp matches 14 run data modify storage ui:text_board temp.node set value {ID:12,CustomModelData:123012}
 execute if score $slot ui_temp matches 15 run data modify storage ui:text_board temp.node set value {ID:13,CustomModelData:123013}
 execute if score $slot ui_temp matches 16 run data modify storage ui:text_board temp.node set value {ID:14,CustomModelData:123014}
-execute if score $slot ui_temp matches 19 run data modify storage ui:text_board temp.node set value {ID:15,CustomModelData:123015}
-execute if score $slot ui_temp matches 20 run data modify storage ui:text_board temp.node set value {ID:16,CustomModelData:123016}
-execute if score $slot ui_temp matches 21 run data modify storage ui:text_board temp.node set value {ID:17,CustomModelData:123017}
-execute if score $slot ui_temp matches 22 run data modify storage ui:text_board temp.node set value {ID:18,CustomModelData:123018}
-execute if score $slot ui_temp matches 23 run data modify storage ui:text_board temp.node set value {ID:19,CustomModelData:123019}
-execute if score $slot ui_temp matches 24 run data modify storage ui:text_board temp.node set value {ID:20,CustomModelData:123020}
-execute if score $slot ui_temp matches 25 run data modify storage ui:text_board temp.node set value {ID:21,CustomModelData:123021}
+execute if score $slot ui_temp matches 19 run data modify storage ui:text_board temp.node set value {ID:15,CustomModelData:123000}
+execute if score $slot ui_temp matches 20 run data modify storage ui:text_board temp.node set value {ID:16,CustomModelData:123000}
+execute if score $slot ui_temp matches 21 run data modify storage ui:text_board temp.node set value {ID:17,CustomModelData:123000}
+execute if score $slot ui_temp matches 22 run data modify storage ui:text_board temp.node set value {ID:18,CustomModelData:123000}
+execute if score $slot ui_temp matches 23 run data modify storage ui:text_board temp.node set value {ID:19,CustomModelData:123000}
+execute if score $slot ui_temp matches 24 run data modify storage ui:text_board temp.node set value {ID:20,CustomModelData:123000}
+execute if score $slot ui_temp matches 25 run data modify storage ui:text_board temp.node set value {ID:21,CustomModelData:123000}
 execute if score $slot ui_temp matches 26 run data modify storage ui:text_board temp.node set value {}
 
 execute if score $slot ui_temp matches 1 run scoreboard players set @s title_data 1
