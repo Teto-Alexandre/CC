@@ -155,7 +155,8 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_tmw237_ready dummy {"text":"UtilityItems_Tmw237_Ready","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_drain dummy {"text":"UtilityItems_Tmw237_Drain","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_drained_damage dummy {"text":"UtilityItems_Tmw237_Drained_Damage","color":"dark_blue"}
-    scoreboard objectives add ui_tmw237_speedcover dummy {"text":"UtilityItems_Tmw237_Survive","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_speedcover dummy {"text":"UtilityItems_Tmw237_Speed","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_title_jammer dummy {"text":"UtilityItems_Tmw237_Title","color":"dark_blue"}
     scoreboard objectives add ui_uses dummy {"text":"UtilityItems_UseS","color":"dark_blue"}
 
 ## 復活、ゲームモード関連

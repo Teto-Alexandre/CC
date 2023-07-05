@@ -1,14 +1,8 @@
 # 状態をタイトルに表示
 
 # インク残量
-#scoreboard players operation $ink.temp ui_temp = $ink ui_temp
-#scoreboard players operation $ink.temp ui_temp *= #100 ui_num
-#scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp
-#scoreboard players operation $sp.temp ui_temp = @s ui_paint
-#scoreboard players operation $sp.temp ui_temp *= #100 ui_num
-#scoreboard players operation $sp.temp ui_temp /= $spneed ui_temp
-
-# タイトル表示
+execute store result score $jammer ui_temp run scoreboard players get @s ui_tmw237_title_jammer
+execute if score @s ui_tmw237_title_jammer matches 1.. run scoreboard players remove @s ui_tmw237_title_jammer 1
 
 # 時間設定
 title @s times 0 5 0

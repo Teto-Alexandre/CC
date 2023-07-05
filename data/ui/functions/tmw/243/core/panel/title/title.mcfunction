@@ -8,7 +8,7 @@ function ui:common/ender
 function oh_my_dat:please
 data modify storage ui:text_board temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board
 
-item replace entity @s enderchest.0 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.0 with blue_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.1 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"1個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.2 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"2個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.3 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"3個目","italic": false}'},ui:{ismenu:1}}
@@ -16,8 +16,8 @@ item replace entity @s enderchest.4 with gray_stained_glass_pane{CustomModelData
 item replace entity @s enderchest.5 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"5個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"6個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"7個目","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.8 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.9 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.8 with blue_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.9 with blue_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.10 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"8個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.11 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"9個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.12 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"10個目","italic": false}'},ui:{ismenu:1}}
@@ -25,8 +25,8 @@ item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"12個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"13個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"14個目","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.17 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.18 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.17 with blue_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.18 with blue_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"15個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"16個目","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"17個目","italic": false}'},ui:{ismenu:1}}

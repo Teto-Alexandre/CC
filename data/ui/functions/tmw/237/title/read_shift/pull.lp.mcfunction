@@ -1,4 +1,5 @@
 execute store result score $text_id ui_temp run data get storage ui:text_board temp.shift[0].ID
+execute store result score $text_data ui_temp run data get storage ui:text_board temp.shift[0].Data
 
 execute unless score $text_id ui_temp matches 0 run function ui:tmw/237/title/block/manager
 
