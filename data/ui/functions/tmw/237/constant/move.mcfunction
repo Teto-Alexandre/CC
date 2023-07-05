@@ -11,7 +11,8 @@
     #effect give @s speed 1 25 true
     effect give @s jump_boost 1 3 true
     effect give @s invisibility 1 0 true
-    execute as @e[nbt={HurtTime:0s}] if score @s ui_st2 matches 20.. run function ui:tmw/237/constant/regen/
+    execute as @e[nbt={HurtTime:0s}] unless score @s module matches 37 if score @s ui_st2 matches 20.. run function ui:tmw/237/constant/regen/
+    execute as @e[nbt={HurtTime:0s}] if score @s module matches 37 if score @s ui_st2 matches 1.. run function ui:tmw/237/constant/regen/
     execute if score $burst ui_temp matches 1.. store result score $ct ui_temp run data get entity @s SelectedItem.tag.tmw.main.BurstCT
     execute if score $burst ui_temp matches 1.. run execute store result score $cooltime ui_temp run time query gametime
     execute if score $burst ui_temp matches 1.. run scoreboard players operation $cooltime ui_temp += $ct ui_temp
@@ -47,7 +48,8 @@
     execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 2 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block pink_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
     execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 3 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block yellow_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
     execute if score $temp ui_temp matches 1.. if score $team ui_temp matches 4 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block lime_concrete ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
-    execute if score $world ui_tc matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
+    execute if score $world ui_tc matches 1 unless score $module ui_world matches 1 unless entity @s[scores={module=42}] run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
+    execute if score $world ui_tc matches 1 if score $module ui_world matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
 
 # 素早く坂を上る挙動
     execute as @s if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #ui:slabs unless block ^ ^ ^0.5 #ui:nocol unless block ^ ^ ^0.5 #ui:nocol if block ^ ^1 ^0.5 #ui:nocol if block ^0.4 ^1 ^0.5 #ui:nocol if block ^-0.4 ^1 ^0.5 #ui:nocol if block ^ ^1 ^0.9 #ui:nocol unless block ^ ^ ^0.5 #ui:slabs unless block ^ ^ ^0.5 #ui:nocol run teleport @s ^ ^1 ^0.4

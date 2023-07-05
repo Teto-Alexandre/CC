@@ -71,7 +71,8 @@
     execute if score $temp ui_temp matches 6 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 2.0 1 0
     execute if score $temp ui_temp matches 101 run playsound minecraft:entity.bat.loop player @a ~ ~ ~ 1 1.6 0
     execute if score $temp ui_temp matches 102 run playsound entity.firework_rocket.blast player @a ~ ~ ~ 2.0 0.9 0
-    execute if score $temp ui_temp matches 102 run effect give @s jump_boost 1 6 true
+    execute if score $temp ui_temp matches 102 run data modify storage ui:temp Effect set value [{Id:"jump_boost",Duration:20,Amplifier:6b,ShowParticles:0b}]
+    execute if score $temp ui_temp matches 102 run function ui:tmw/237/misc/giveeffect/
     execute if score $temp ui_temp matches -1 run playsound minecraft:entity.blaze.shoot player @a ~ ~ ~ 0.8 0.8 0
 
 # クールタイム解除時刻.mod

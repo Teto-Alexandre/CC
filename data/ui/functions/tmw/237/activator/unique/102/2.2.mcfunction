@@ -1,14 +1,15 @@
 summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Tags:["tds.attack","ui","ui_proj","tmw_237","ui_temp_unpower"],ArmorItems:[{id:"minecraft:stone",Count:1b,tag:{display:{Name:'{"text":"null"}'}}},{},{},{}]}
-execute as @e[tag=ui_temp_unpower] run tp @s ^ ^ ^1.0 ~ ~ 
-scoreboard players set @e[tag=ui_temp_unpower] ui_bpart 3
-scoreboard players set @e[tag=ui_temp_unpower] ui_hpart 2
-scoreboard players set @e[tag=ui_temp_unpower] ui_bm 50
-scoreboard players set @e[tag=ui_temp_unpower] ui_br 20
-scoreboard players set @e[tag=ui_temp_unpower] ui_gpc 1
-scoreboard players set @e[tag=ui_temp_unpower] ui_bdt 1
-scoreboard players operation @e[tag=ui_temp_unpower] ui_id = $id ui_temp
-scoreboard players operation @e[tag=ui_temp_unpower] ui_team = $team ui_temp
-scoreboard players operation @e[tag=ui_temp_unpower] ui_dmg = @s ui_tmw237_drained_damage
-execute as @e[tag=ui_temp_unpower] run data modify entity @s ArmorItems.[0].tag.display.Name set value '{"text":"カウンター","color":"gray"}'
-tag @e[tag=ui_temp_unpower] remove ui_temp_unpower
+data modify storage ui_temp: Unpower set value {Damage:0,Range:0,RangeType:1,Speed:0,FlyParticle:3,EndParticle:2,Name:'{"text":"カウンター","color":"gray"}'}
+execute store result storage ui_temp: Unpower.Damage int 1 run scoreboard players get @s ui_tmw237_drained_damage
+scoreboard players set $speed ui_temp 30
+scoreboard players operation $temp ui_temp = @s ui_tmw237_drained_damage
+scoreboard players operation $temp ui_temp /= #10 ui_num
+scoreboard players operation $speed ui_temp += $temp ui_temp
+execute store result storage ui_temp: Unpower.Speed int 1 run scoreboard players get $speed ui_temp
+scoreboard players set $range ui_temp 5
+scoreboard players operation $temp ui_temp = @s ui_tmw237_drained_damage
+scoreboard players operation $temp ui_temp /= #10 ui_num
+scoreboard players operation $range ui_temp += $temp ui_temp
+execute store result storage ui_temp: Unpower.Range int 1 run scoreboard players get $range ui_temp
+function ui:tmw/237/misc/unpower
 playsound entity.firework_rocket.blast player @a ~ ~ ~ 1.4 1.4 0

@@ -1,7 +1,8 @@
 # クイックアーマー
 
 # ダメージを与える
-    execute as @a[distance=..4,tag=ui_temp_team] run effect give @s resistance 15 0 false
+    data modify storage ui:temp Effect set value [{Id:"resistance",Duration:300,Amplifier:0b}]
+    execute as @a[distance=..4,tag=ui_temp_team] run function ui:tmw/237/misc/giveeffect/
 
 # パーティクルで描画、演出
     particle firework ~ ~ ~ 0.5 0.5 0.5 0.1 20 force

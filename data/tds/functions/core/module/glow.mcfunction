@@ -1,3 +1,3 @@
 #
-effect give @a[tag=tds_victim_temp,tag=!module19] glowing 3 0 false
-effect give @a[tag=tds_victim_temp,tag=module19] glowing 1 0 false
+data modify storage ui:temp Effect set value [{Id:"glowing",Duration:60,Amplifier:0b}]
+execute as @a[tag=tds_victim_temp] run function ui:tmw/237/misc/giveeffect/

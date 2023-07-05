@@ -48,9 +48,9 @@ execute if score $template ui_temp matches 2.. run scoreboard players remove $te
 execute if score $template ui_temp matches 1.. run attribute @s generic.movement_speed modifier add 0-0-1-0-C "ui_curse3" 0.001 add
 execute if score $template ui_temp matches 1.. run scoreboard players remove $template ui_temp 1
 
-execute if score $template ui_temp matches ..-64 run attribute @s generic.movement_speed modifier add 0-0-1-1-8 "ui_curse3" -0.064 add
+execute if score $template ui_temp matches ..-64 run attribute @s generic.movement_speed modifier add 0-0-1-1-6 "ui_curse3" -0.064 add
 execute if score $template ui_temp matches ..-64 run scoreboard players add $template ui_temp 64
-execute if score $template ui_temp matches ..-32 run attribute @s generic.movement_speed modifier add 0-0-1-1-8 "ui_curse3" -0.032 add
+execute if score $template ui_temp matches ..-32 run attribute @s generic.movement_speed modifier add 0-0-1-1-7 "ui_curse3" -0.032 add
 execute if score $template ui_temp matches ..-32 run scoreboard players add $template ui_temp 32
 execute if score $template ui_temp matches ..-16 run attribute @s generic.movement_speed modifier add 0-0-1-1-8 "ui_curse3" -0.016 add
 execute if score $template ui_temp matches ..-16 run scoreboard players add $template ui_temp 16
@@ -64,6 +64,20 @@ execute if score $template ui_temp matches ..-1 run attribute @s generic.movemen
 execute if score $template ui_temp matches ..-1 run scoreboard players add $template ui_temp 1
 
 #say shoot
+
+# 諸々を消す
+    effect clear @s speed
+    effect clear @s[nbt={ActiveEffects:[{Id:8,Amplifier:3b}]}] jump_boost
+    effect clear @s[nbt={ActiveEffects:[{Id:8,Amplifier:8b}]}] jump_boost
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:7b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:3b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:0b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-1b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-5b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-9b}]}] levitation
+    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-128b,Duration:15}]}] levitation
+    effect clear @s invisibility
+    effect clear @s regeneration
 
 tag @s remove speedtype_move
 tag @s remove speedtype_weapon

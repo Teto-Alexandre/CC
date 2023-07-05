@@ -11,10 +11,9 @@
     execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^-0.4 ^ positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s positioned ^-0.6 ^ ^ positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s run function ui:tmw/237/projectile/hit
 
 #
-    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog,tag=!module19] glowing 6 0 false
-    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog,tag=!module19] fire_resistance 6 0 false
-    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog,tag=module19] glowing 3 0 false
-    execute at @s positioned ~ ~-1 ~ run effect give @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog,tag=module19] fire_resistance 3 0 false
+
+    data modify storage ui:temp Effect set value [{Id:"glowing",Duration:120,Amplifier:0b},{Id:"fire_resistance",Duration:120,Amplifier:0b}]
+    execute at @s positioned ~ ~-1 ~ as @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog] run function ui:tmw/237/misc/giveeffect/
 
 #
     execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]

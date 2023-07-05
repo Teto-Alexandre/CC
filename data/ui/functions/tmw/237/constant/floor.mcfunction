@@ -4,7 +4,8 @@
     effect clear @s speed
     effect clear @s invisibility
     effect clear @s regeneration
-    effect give @s slowness 1 0 true
+    data modify storage ui:temp Effect set value [{Id:"slowness",Duration:20,Amplifier:0b,ShowParticles:0b}]
+    function ui:tmw/237/misc/giveeffect/
     execute store result score $health ui_temp run data get entity @s Health -1.5
     scoreboard players reset $Attacker tds_dmg
     data merge storage tds: {temp:{Damage:2.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}

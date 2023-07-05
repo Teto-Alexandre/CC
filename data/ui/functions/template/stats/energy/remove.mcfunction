@@ -14,3 +14,6 @@ playsound block.respawn_anchor.deplete player @a ~ ~ ~ 1 1 0
 
 scoreboard players reset @s energy_buff
 tag @s remove energy_buff
+
+execute if entity @s[tag=speedtype_shoot] run function ui:template/stats/shoot_speed
+execute if entity @s[tag=speedtype_move] run function ui:template/stats/move_speed

@@ -12,6 +12,7 @@
 # 常時実行
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
     execute if score @s ui_uses matches 20 run scoreboard players set @s ui_is 800
+    execute if score @s ui_uses matches 20 run scoreboard players set @s[tag=ui_237_thrown_by_module41] ui_is 1200
     execute if score @s ui_uses matches 20 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
     #execute if score @s ui_is matches 1.. run teleport @s ~ ~0.5 ~ ~ ~
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 run particle dust 0.5 1 1 2 ~ ~0.5 ~ 0.3 0.3 0.3 0 1 force
@@ -53,7 +54,8 @@
     execute if entity @s[tag=ui_237_sub_stop] run tag @e[distance=1..20,tag=!ui_temp_team,predicate=ui:load_unhurtable,nbt=!{ActiveEffects:[{Id:14}]},sort=nearest,limit=1] add ui_temp_target
     execute if entity @s[tag=ui_237_sub_stop] unless entity @e[tag=ui_temp_target] run teleport @s ~ ~ ~ ~2 -5
     execute if entity @s[tag=ui_237_sub_stop] if entity @e[tag=ui_temp_target] facing entity @e[tag=ui_temp_target,limit=1] feet run teleport @s ~ ~ ~ ~ -5
-    execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches ..750 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
+    execute if entity @s[tag=ui_237_sub_stop,tag=!ui_237_thrown_by_module41] if score @s ui_is matches ..750 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
+    execute if entity @s[tag=ui_237_sub_stop,tag=ui_237_thrown_by_module41] if score @s ui_is matches ..1150 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
 
 # 角度変更
     execute if score @s ui_is matches ..797 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_3,limit=1] Pose merge value {Head:[0.0f,1.0f,0.0f]}

@@ -7,6 +7,12 @@ scoreboard players operation @s ui_rst = $respawntime ui_world
 scoreboard players operation @s ui_rst *= #100 ui_num
 scoreboard players operation @s ui_rst /= @s respawn_acc
 execute if score $module ui_world matches 1 if score @s module matches 15 run scoreboard players operation @s ui_rst /= #2 ui_num
+execute if score $module ui_world matches 1 if score @s module matches 39 run scoreboard players operation $add ui_rst = @s ui_tmw237_energy_charge_count
+execute if score $module ui_world matches 1 if score @s module matches 39 run scoreboard players operation $add ui_rst *= #20 ui_num
+execute if score $module ui_world matches 1 if score @s module matches 39 run scoreboard players operation @s ui_rst += $add ui_rst
+execute if score $module ui_world matches 1 if score @s module matches 39 run scoreboard players reset $add ui_rst
+execute if score $module ui_world matches 1 if score @s module matches 39 run scoreboard players operation @s ui_tmw237_energy_charge_penalty = @s ui_tmw237_energy_charge_count
+execute if score $module ui_world matches 1 if score @s module matches 39 run scoreboard players operation @s ui_tmw237_energy_charge_penalty *= #30 ui_num
 scoreboard players operation @s ui_rst > #2 ui_num
     #誰も死んでなかったら乱数をリロール
     scoreboard players set $mod ui_calc1 23
@@ -24,9 +30,9 @@ execute if score $phase game_state matches 1.. if score $life ui_world matches 0
 # 変数リセット
 scoreboard players reset @s ui_tmw237_boost
 scoreboard players reset @s ui_tmw237_survive
-scoreboard players reset @s ui_tmw237_drain
 scoreboard players reset @s ui_tmw237_drained_damage
 scoreboard players reset @s ui_tmw237_ink_regen
+execute if score @s ui_tmw237_energy_charge_time matches 1.. run scoreboard players set @s ui_tmw237_energy_charge_time 1
 
 # サブ消滅
 #scoreboard players set $success ui_temp 0

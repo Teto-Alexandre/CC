@@ -7,7 +7,6 @@ execute if entity @s[tag=speedtype_weapon] unless score $subtime ui_temp matches
 # スペ以外の時に実行される常駐効果の管理
     execute if entity @s[tag=floor_proof] at @s run function ui:tmw/237/constant/superstar
     execute if score @s ui_tmw237_survive matches 1.. at @s run function ui:tmw/237/constant/survive
-    execute if score @s ui_tmw237_drain matches 1.. at @s run function ui:tmw/237/constant/drain
     execute at @s[scores={ui_st=0}] run function ui:tmw/237/constant/shoot
     execute unless score @s ui_team matches 1 at @s[tag=!floor_proof2] if block ~ ~-0.3 ~ light_blue_wool run function ui:tmw/237/constant/floor
     execute unless score @s ui_team matches 2 at @s[tag=!floor_proof2] if block ~ ~-0.3 ~ pink_wool run function ui:tmw/237/constant/floor

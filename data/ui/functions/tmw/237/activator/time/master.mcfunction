@@ -24,7 +24,8 @@ tag @s add speedtype_weapon
     execute if score $activator ui_temp matches 452 run function ui:tmw/237/activator/time/452
 
 # セプタングル
-    execute if score $activator ui_temp matches 453 run effect give @s resistance 1 0 true
+    execute if score $activator ui_temp matches 453 run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:0b,ShowParticles:0b}]
+    execute if score $activator ui_temp matches 453 run function ui:tmw/237/misc/giveeffect/
 
 # ハイドロポンプ
     execute if score $activator ui_temp matches 454 run function ui:tmw/237/activator/time/454
@@ -42,4 +43,8 @@ tag @s add speedtype_weapon
     execute if score $activator ui_temp matches 460 run function ui:tmw/237/activator/time/460
 
 # トライスプレッダー
-    execute if score $activator ui_temp matches 462 run effect give @s resistance 1 0 true
+    execute if score $activator ui_temp matches 462 run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:0b,ShowParticles:0b}]
+    execute if score $activator ui_temp matches 462 run function ui:tmw/237/misc/giveeffect/
+
+# カウンター
+    execute if score $activator ui_temp matches 1013 run function ui:tmw/237/activator/time/1013

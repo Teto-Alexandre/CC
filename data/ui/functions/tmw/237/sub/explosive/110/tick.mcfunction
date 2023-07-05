@@ -12,6 +12,7 @@
 # 常時実行
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
     execute if score @s ui_uses matches 20 run scoreboard players set @s ui_is 600
+    execute if score @s ui_uses matches 20 run scoreboard players set @s[tag=ui_237_thrown_by_module41] ui_is 900
     execute if score @s ui_uses matches 20 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
     execute store result score $time ui_temp run time query gametime
     scoreboard players operation $time ui_temp %= #3 ui_num
