@@ -39,8 +39,8 @@
     execute if score $team ui_temp matches 2 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block pink_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
     execute if score $team ui_temp matches 3 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block yellow_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
     execute if score $team ui_temp matches 4 unless score @s ui_tmw237_sprint_particle matches 1.. run particle block lime_concrete ~ ~1.5 ~ 0.1 0.1 0.1 0 2 normal
-    execute if score $world ui_tc matches 1 unless score $module ui_world matches 1 unless entity @s[scores={module=42}] run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
-    execute if score $world ui_tc matches 1 if score $module ui_world matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
+    execute if score $world ui_tc matches 1 if score $module ui_world matches 1 unless entity @s[scores={module=42}] run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
+    execute if score $world ui_tc matches 1 unless score $module ui_world matches 1 run playsound block.honey_block.step player @a ~ ~ ~ 0.8 1.2 0
 
 # タグを返す
     tag @s add ui_temp_move
