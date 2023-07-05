@@ -6,7 +6,7 @@
     execute if score @s ui_is matches 70.. run tag @s add ui_237_sub_explode
     #設置数上限デストロイ
     scoreboard players set $count ui_temp 0
-    execute as @e[tag=tmw_237_sub] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
+    execute as @e[tag=tmw_237_sub,tag=!ui_no_count_as_mult] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
     execute if score $count ui_temp matches 4.. run function ui:tmw/237/sub/explosive/mult_lim.ex
 
 # 見た目

@@ -41,7 +41,7 @@
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_team = $team ui_temp
     #設置数上限デストロイ
     scoreboard players set $count ui_temp 0
-    execute as @e[tag=tmw_237_sub_mult] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
+    execute as @e[tag=tmw_237_sub_mult,tag=!ui_no_count_as_mult] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
     execute if score $count ui_temp matches 2.. run function ui:tmw/237/sub/explosive/mult_lim
     tag @e[tag=ui_temp_this] remove ui_temp_this
     #ダメージ計算
