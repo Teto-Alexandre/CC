@@ -150,5 +150,5 @@ execute if entity @s[tag=tmw_237_random] unless score @s random_main matches 3 i
 execute if entity @s[tag=tmw_237_random] if score @s random_main matches 3 run item replace entity @s enderchest.25 with gray_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: 融合バグ適用中","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=!tmw_237_random] run item replace entity @s enderchest.25 with gray_stained_glass_pane{display:{Name:'{"text":"ランダムサブスペ: Null","color": "gray","italic": false}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.26 with black_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":"タイトルの編集"}'},ui:{ismenu:1}}
+item replace entity @s enderchest.26 with black_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":"タイトルの編集","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 26 run tag @s add setting_title
