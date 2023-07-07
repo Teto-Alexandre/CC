@@ -21,7 +21,7 @@ item replace entity @s enderchest.10 with black_stained_glass{display:{Name:'{"t
 item replace entity @s enderchest.11 with white_stained_glass{display:{Name:'{"text":"旧UIに変更","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.12 with white_stained_glass{display:{Name:'{"text":"新UIに変更","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.13 with white_stained_glass{display:{Name:'{"text":"旧UI-サーキュレーター対応に変更","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.14 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.14 with white_stained_glass{display:{Name:'{"text":"新UI2に変更","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.15 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.16 with gray_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 
@@ -45,6 +45,7 @@ execute if score $slot ui_temp matches 10 run function ui:tmw/237/title/debug/in
 execute if score $slot ui_temp matches 11 run function ui:tmw/237/title/debug/default
 execute if score $slot ui_temp matches 12 run function ui:tmw/237/title/debug/easy
 execute if score $slot ui_temp matches 13 run function ui:tmw/237/title/debug/circulator
+execute if score $slot ui_temp matches 14 run function ui:tmw/237/title/debug/quick
 
 execute if score $slot ui_temp matches 24 unless data entity @s EnderItems[0].tag.TextBoard run playsound entity.villager.no player @s ~ ~ ~ 1 2 0
 execute if score $slot ui_temp matches 24 if data entity @s EnderItems[0].tag.TextBoard run function ui:tmw/243/core/panel/title/whole_act/import

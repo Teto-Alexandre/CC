@@ -1,0 +1,4 @@
+function oh_my_dat:please
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.actionbar set value [{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.subtitle set value [{CustomModelData:123020,ID:18,Data:4},{CustomModelData:123007,ID:1,Data:6},{CustomModelData:123022,ID:20},{CustomModelData:123007,ID:1,Data:6},{CustomModelData:123021,ID:19,Data:4},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]
+data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].text_board.title set value [{CustomModelData:123019,ID:17},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}]

@@ -5,6 +5,8 @@ tellraw @s [{"color":"gray","text":"system"},{"color":"green","text":"> "},{"tex
 function ui:misc/reset_gears
 function ui:misc/reset_preset
 
+function ui:tmw/237/title/debug/default
+
 title @s times 0 20 0
 
 advancement grant @s only ui:main/root

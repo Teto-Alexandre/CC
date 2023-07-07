@@ -36,3 +36,17 @@ execute if score $text_id ui_temp matches 11 run function ui:tmw/237/title/block
 execute if score $text_id ui_temp matches 12 run function ui:tmw/237/title/block/12
 # 武器クールタイム（デジ2）
 execute if score $text_id ui_temp matches 13 run function ui:tmw/237/title/block/13
+# 体力バー
+execute if score $text_id ui_temp matches 14 run function ui:tmw/237/title/block/14
+# インク（ボリューム）
+execute if score $text_id ui_temp matches 15 run function ui:tmw/237/title/block/15
+# SP（ボリューム）
+execute if score $text_id ui_temp matches 16 run function ui:tmw/237/title/block/16
+# SPチャージ完了
+execute if score $text_id ui_temp matches 17 run function ui:tmw/237/title/block/17
+# インク（三色）
+execute if score $text_id ui_temp matches 18 run function ui:tmw/237/title/block/18
+# SP（三色）
+execute if score $text_id ui_temp matches 19 run function ui:tmw/237/title/block/19
+# HP
+execute if score $text_id ui_temp matches 20 run function ui:tmw/237/title/block/20
