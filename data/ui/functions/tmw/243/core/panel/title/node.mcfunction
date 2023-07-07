@@ -31,7 +31,7 @@ item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:123018,display:{Name:'{"text":"ＳＰゲージ（ボリューム）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:123019,display:{Name:'{"text":"チャージ完了表示","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:123020,display:{Name:'{"text":"インク残量（サブ使用可能）","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:123021,display:{Name:'{"text":"ＳＰゲージ（サブ使用可能）","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:123021,display:{Name:'{"text":"ＳＰゲージ（スペ使用可能）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:123022,display:{Name:'{"text":"ＨＰ表示","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.25 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:21","italic": false}'},ui:{ismenu:1}}
 
