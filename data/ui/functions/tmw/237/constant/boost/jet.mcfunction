@@ -5,11 +5,12 @@ scoreboard players remove $boost ui_temp 2
 
 execute if score $boost ui_temp matches 0 run execute store result score $cooltime ui_temp run time query gametime
 execute if score $boost ui_temp matches 0 run scoreboard players add $cooltime ui_temp 20
-execute if score $boost ui_temp matches 0.. run scoreboard players remove $ink ui_temp 6
-execute if score $boost ui_temp matches 5 run scoreboard players remove $ink ui_temp 150
+execute if score $boost ui_temp matches 0.. run scoreboard players remove $ink ui_temp 1
+execute if score $boost ui_temp matches 5 run scoreboard players remove $ink ui_temp 100
 execute if score $boost ui_temp matches 0 run scoreboard players set $changed ui_temp 1
 
 execute if score $boost ui_temp matches 5 run effect give @s levitation 1 6 true
+execute if score $boost ui_temp matches 5 run scoreboard players set @s ui_tmw237_air_ink_lock 4
 execute if score $boost ui_temp matches 6.. run effect give @s levitation 1 0 true
 execute at @s if block ~ ~-1 ~ #ui:nocol_water if block ~ ~-2 ~ #ui:nocol_water if block ~ ~-3 ~ #ui:nocol_water if block ~ ~-4 ~ #ui:nocol_water if block ~ ~-5 ~ #ui:nocol_water if block ~ ~-6 ~ #ui:nocol_water if block ~ ~-7 ~ #ui:nocol_water if block ~ ~-8 ~ #ui:nocol_water run effect clear @s levitation
 

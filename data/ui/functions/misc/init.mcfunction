@@ -156,6 +156,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_tmw237_drained_damage dummy {"text":"UtilityItems_Tmw237_Drained_Damage","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_speedcover dummy {"text":"UtilityItems_Tmw237_Speed","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_title_jammer dummy {"text":"UtilityItems_Tmw237_Title","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_air_ink_lock dummy {"text":"UtilityItems_Tmw237_Air","color":"dark_blue"}
     scoreboard objectives add ui_uses dummy {"text":"UtilityItems_UseS","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_energy_charge_count dummy {"text":"UtilityItems_Tmw237_EnergyCharge_Count","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_energy_charge_time dummy {"text":"UtilityItems_Tmw237_EnergyCharge_Time","color":"dark_blue"}
@@ -226,6 +227,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #40 ui_num 40
     scoreboard players set #50 ui_num 50
     scoreboard players set #60 ui_num 60
+    scoreboard players set #80 ui_num 80
     scoreboard players set #81 ui_num 81
     scoreboard players set #85 ui_num 85
     scoreboard players set #90 ui_num 90

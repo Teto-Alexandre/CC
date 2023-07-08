@@ -43,7 +43,7 @@ scoreboard players operation @s ui_bm_temp = @s ui_temp
 tag @s[tag=ui_temp_col] remove ui_temp_col
 
 #キル条件
-execute as @s[scores={ui_br=..100}] if predicate ui:percentage/20 run playsound minecraft:block.note_block.harp player @a ~ ~ ~ 0.8 1.5 0
+execute as @s[scores={ui_br=..100}] if predicate ui:percentage/15 run playsound minecraft:block.note_block.harp player @a ~ ~ ~ 0.8 1.5 0
 execute as @s[scores={ui_br=..0}] run function ui:tmw/237/projectile/kill
 
 #一時タグ削除

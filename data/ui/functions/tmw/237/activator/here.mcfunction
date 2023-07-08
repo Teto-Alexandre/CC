@@ -7,6 +7,7 @@
     execute if score $activator ui_temp matches 202 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
     execute if score $activator ui_temp matches 202 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.5 0
     execute if score $activator ui_temp matches 202 run tp @s @s
+    execute if score $activator ui_temp matches 202 run scoreboard players set @s ui_tmw237_air_ink_lock 4
     execute if score $activator ui_temp matches 202 run data modify storage ui:temp Effect set value [{Id:"levitation",Duration:20,Amplifier:29b}]
     execute if score $activator ui_temp matches 202 run function ui:tmw/237/misc/giveeffect/
 
@@ -33,7 +34,7 @@
     execute if score $activator ui_temp matches 205 run playsound block.lever.click player @a ~ ~ ~ 2 1.2 0
     execute if score $activator ui_temp matches 205 run particle crit ~ ~-1 ~ 0.5 0.5 0.5 1 20 force
     execute if score $activator ui_temp matches 205 run particle sweep_attack ~ ~-1 ~ 0.8 0.05 0.8 0 6 force
-    execute if score $activator ui_temp matches 205 run scoreboard players set @s ui_tmw237_speedcover 200
+    execute if score $activator ui_temp matches 205 run scoreboard players set @s ui_tmw237_speedcover 160
     execute if score $activator ui_temp matches 205 if score $module ui_world matches 1 run scoreboard players set @s[scores={module=40}] ui_tmw237_speedcover 300
 
 # ノヴァ

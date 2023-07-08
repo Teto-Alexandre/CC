@@ -1,5 +1,6 @@
 scoreboard players operation $text.temp ui_temp = @s ui_tmw237_speedcover
-scoreboard players operation $text.temp ui_temp /= #2 ui_num
+scoreboard players operation $text.temp ui_temp *= #5 ui_num
+scoreboard players operation $text.temp ui_temp /= #8 ui_num
 scoreboard players operation $text.temp ui_temp < #100 ui_num
 scoreboard players operation $text.temp ui_temp > #0 ui_num
 

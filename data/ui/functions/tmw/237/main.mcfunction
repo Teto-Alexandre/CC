@@ -109,6 +109,7 @@ effect give @s saturation 1 0 true
 execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
 
 # インク回復
+execute if score @s ui_tmw237_air_ink_lock matches 1.. run scoreboard players remove @s[nbt={OnGround:1b}] ui_tmw237_air_ink_lock 1
 execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
 
 # クールタイム解除

@@ -4,6 +4,10 @@
     scoreboard players operation $ink.m ui_temp *= @s ink_regen
     scoreboard players operation $ink.m ui_temp /= #100 ui_num
 
+# 空中にいる間はインクロックする
+    execute if score @s ui_tmw237_air_ink_lock matches 1.. run scoreboard players set $ink.s ui_temp 0
+    execute if score @s ui_tmw237_air_ink_lock matches 1.. run scoreboard players set $ink.m ui_temp 0
+
 # $ink = $ink.max になるまで.lp
     execute if score $cooltime ui_temp matches 0 if entity @s[nbt={ActiveEffects:[{Id:15}]}] run scoreboard players operation $ink.s ui_temp /= #3 ui_num
     execute if score $cooltime ui_temp matches 0 if entity @s[nbt={ActiveEffects:[{Id:15}]}] run scoreboard players operation $ink.m ui_temp /= #3 ui_num
