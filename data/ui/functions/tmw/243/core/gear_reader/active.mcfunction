@@ -30,6 +30,9 @@ scoreboard players set @s charge_acc 0
 scoreboard players set @s health_regen 0
 
 scoreboard players set @s pl_comp_buff 0
+scoreboard players reset @s ui_tmw237_energy_charge_count
+scoreboard players reset @s ui_tmw237_energy_charge_penalty
+scoreboard players reset @s ui_tmw237_energy_charge_time
 
 # 切削
 execute if score $gear_off party_mode matches 1 run tellraw @s [{"text":"> ","color": "gray"},{"text":"ギア読み込みは無効化されています","color": "gray"}]

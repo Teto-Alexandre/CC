@@ -55,6 +55,9 @@
     # ストライク近接
     execute if score @s ui_bpart matches 18 run function ui:tmw/237/projectile/move/12.2
     execute if score @s ui_bpart matches 21 run function ui:tmw/237/projectile/move/21
+    # 新アンカー近接
+    execute if score @s ui_bpart matches 23 run function ui:tmw/237/projectile/move/23
+    execute if score @s ui_bpart matches 24 run function ui:tmw/237/projectile/move/23.2
     execute if score @s ui_bpart matches 101 run function ui:tmw/237/projectile/move/101
     execute if score @s ui_bpart matches 102 run function ui:tmw/237/projectile/move/102
     execute if score @s ui_bpart matches 103 run function ui:tmw/237/projectile/move/103

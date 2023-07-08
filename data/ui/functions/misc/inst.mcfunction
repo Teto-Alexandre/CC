@@ -124,6 +124,32 @@ tag @s remove adv75
 tag @s remove adv80
 
 item replace entity @s enderchest.0 with air
+item replace entity @s enderchest.1 with stone
+item replace entity @s enderchest.2 with stone
+item replace entity @s enderchest.3 with stone
+item replace entity @s enderchest.4 with stone
+item replace entity @s enderchest.5 with stone
+item replace entity @s enderchest.6 with stone
+item replace entity @s enderchest.7 with stone
+item replace entity @s enderchest.8 with stone
+item replace entity @s enderchest.9 with stone
+item replace entity @s enderchest.10 with stone
+item replace entity @s enderchest.11 with stone
+item replace entity @s enderchest.12 with stone
+item replace entity @s enderchest.13 with stone
+item replace entity @s enderchest.14 with stone
+item replace entity @s enderchest.15 with stone
+item replace entity @s enderchest.16 with stone
+item replace entity @s enderchest.17 with stone
+item replace entity @s enderchest.18 with stone
+item replace entity @s enderchest.19 with stone
+item replace entity @s enderchest.20 with stone
+item replace entity @s enderchest.21 with stone
+item replace entity @s enderchest.22 with stone
+item replace entity @s enderchest.23 with stone
+item replace entity @s enderchest.24 with stone
+item replace entity @s enderchest.25 with stone
+item replace entity @s enderchest.26 with stone
 
 teleport @s -2 30.5 6
 spawnpoint @s -2 30 6

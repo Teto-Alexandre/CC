@@ -16,6 +16,8 @@
     execute if entity @s[nbt={OnGround:0b}] store result score $spread ui_temp run data get storage ui:gun temp2.AirSpread
     execute if entity @s[nbt={OnGround:1b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.SpreadType
     execute if entity @s[nbt={OnGround:0b}] store result score $spreadtype ui_temp run data get storage ui:gun temp2.AirSpreadType
+    execute if data storage ui:gun temp2.FreeHitLength store result score $freehitlength ui_temp run data get storage ui:gun temp2.FreeHitLength
+    execute if data storage ui:gun temp2.DamageFree store result score $damagefree ui_temp run data get storage ui:gun temp2.DamageFree
     scoreboard players set $speed.add ui_temp 0
 
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run function ui:tmw/237/attack/shot/core_data.burst11
