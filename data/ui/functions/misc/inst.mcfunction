@@ -77,6 +77,10 @@ scoreboard players set @s energy_buff 0
 scoreboard players set @s random_qf 0
 scoreboard players set @s random_main 0
 
+scoreboard players set @s title_data 0
+scoreboard players set @s title_node 0
+scoreboard players set @s title_whole 0
+
 ## -------------------
 tag @s add gear_unlocked
 ## -------------------
