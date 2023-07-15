@@ -23,8 +23,14 @@
 
 # トラップドアをすり抜ける
     scoreboard players set $fall ui_temp 0
-    execute as @s[scores={ui_st=1..}] if block ~ ~-0.1 ~ iron_trapdoor run scoreboard players set $fall ui_temp 1
+    execute as @s[scores={ui_st=1..}] unless score @s ui_sneak_fall_ct matches 1.. if block ~ ~-0.1 ~ iron_trapdoor run scoreboard players set $fall ui_temp 1
     execute if score $fall ui_temp matches 1 run teleport @s ~ ~-1 ~
+    execute if score $fall ui_temp matches 1 run scoreboard players set @s ui_sneak_float_ct 10
+    scoreboard players set $float ui_temp 0
+    execute as @s[scores={ui_st=1..}] unless score @s ui_sneak_float_ct matches 1.. if block ~ ~1.3 ~ iron_trapdoor if data entity @s {OnGround:0b} run scoreboard players set $float ui_temp 1
+    execute as @s[scores={ui_st=1..}] unless score @s ui_sneak_float_ct matches 1.. if block ~ ~0.3 ~ iron_trapdoor if data entity @s {OnGround:0b} run scoreboard players set $float ui_temp 1
+    execute if score $float ui_temp matches 1 run teleport @s ~ ~2 ~
+    execute if score $float ui_temp matches 1 run scoreboard players set @s ui_sneak_fall_ct 10
 
 # スライムブロックの上にいるとジャンプ力アップ 
     execute if block ~ ~-0.3 ~ slime_block run effect give @s jump_boost 1 8 true

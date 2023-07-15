@@ -18,6 +18,10 @@ scoreboard players reset $multibullet ui_temp
 #
 tag @s[tag=advancement_using_sp] remove advancement_using_sp
 tag @s[tag=drain] remove drain
+scoreboard players remove @s[scores={ui_sneak_fall_ct=1..}] ui_sneak_fall_ct 1
+scoreboard players reset @s[scores={ui_sneak_fall_ct=..0}] ui_sneak_fall_ct
+scoreboard players remove @s[scores={ui_sneak_float_ct=1..}] ui_sneak_float_ct 1
+scoreboard players reset @s[scores={ui_sneak_float_ct=..0}] ui_sneak_float_ct
 
 # 必要データ収集
 data modify storage ui:gun temp set from entity @s SelectedItem.tag.tmw.gun
@@ -109,7 +113,6 @@ effect give @s saturation 1 0 true
 execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
 
 # インク回復
-execute if score @s ui_tmw237_air_ink_lock matches 1.. run scoreboard players remove @s[nbt={OnGround:1b}] ui_tmw237_air_ink_lock 1
 execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
 
 # クールタイム解除
