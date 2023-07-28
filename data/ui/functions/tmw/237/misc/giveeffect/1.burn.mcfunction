@@ -2,8 +2,10 @@
 
 # 数値IDでなかったら数値に変換
 scoreboard players reset $potionId ui_temp
-function ui:tmw/237/misc/giveeffect/2.string_to_number
-execute unless score $potionId ui_temp matches 1.. store result score $potionId ui_temp run data get storage ui:temp Effect[0].Id
+data modify storage ui:temp _._ set value [[""],[0]]
+data modify storage ui:temp _._[] append from storage ui:temp Effect[0].Id
+execute if data storage ui:temp _._[0][1] run function ui:tmw/237/misc/giveeffect/2.string_to_number
+execute if data storage ui:temp _._[1][1] store result score $potionId ui_temp run data get storage ui:temp Effect[0].Id
 
 # 計算し適応
 data modify storage ui:temp _ set from storage ui:temp Effect[0]
