@@ -8,6 +8,8 @@
     "#ui:torches",
     "#ui:vines",
     "#ui:crops",
+    "minecraft:iron_trapdoor",
+    "minecraft:iron_bars",
     "minecraft:oak_button",
     "minecraft:spruce_button",
     "minecraft:birch_button",

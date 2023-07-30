@@ -18,7 +18,7 @@ execute if score $bursttype ui_temp matches 11 store result storage ui:gun temp.
 
 execute if score $bursttype ui_temp matches 12 store result storage ui:gun temp.now.Multibullet int 1 run scoreboard players get $multibullet ui_temp
 
-#tellraw @a [{"score":{"objective":"ui_temp","name":"$ishold"}}]
+#execute if score $ishold ui_temp matches 2.. run tellraw @s [{"text":"IsHold:"},{"score":{"objective":"ui_temp","name":"$ishold"}}]
 execute if score $subtime ui_temp matches 0 if score $sptime ui_temp matches 0 run function ui:tmw/237/changed/bar_ink
 execute if score $subtime ui_temp matches 1.. if score $sptime ui_temp matches 0 run function ui:tmw/237/changed/bar_sub
 execute if score $sptime ui_temp matches 1.. run function ui:tmw/237/changed/bar_sp

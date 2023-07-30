@@ -68,7 +68,7 @@ item replace entity @s enderchest.20 with carrot_on_a_stick{CustomModelData:1800
 item replace entity @s enderchest.21 with iron_boots{HideFlags:2,display:{Name:'{"text":"スリッパ","color": "#66cc00","bold": true,"italic": false}',Lore:['{"text":"移動速度が10%上がる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with heart_of_the_sea{display:{Name:'{"text":"冷たくなった心臓","color": "aqua","bold": false,"italic": false}',Lore:['{"text":"最大体力が20%上がる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with elytra{display:{Name:'{"text":"アンチマーカーシステム","color": "dark_purple","bold": true,"italic": false}',Lore:['{"text":"発光の持続時間が半減する","color": "gray","italic": false}']},ui:{ismenu:1}}
-item replace entity @s enderchest.24 with spyglass{display:{Name:'{"text":"13スコープ","color": "#9966ff","bold": false,"italic": false}',Lore:['{"text":"チャージ完了時の光を消す","color": "gray","italic": false}']},ui:{ismenu:1}}
+item replace entity @s enderchest.24 with spyglass{display:{Name:'{"text":"13スコープ","color": "#9966ff","bold": false,"italic": false}',Lore:['{"text":"チャージ完了時の光を消す","color": "gray","italic": false}','{"text":"射線も見えなくなる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.25 with gold_block{display:{Name:'{"text":"物語の終わり","color": "#ffcc66","bold": true,"italic": false}',Lore:['{"text":"攻撃時に15%の確率でダメージ2倍","color": "gray","italic": false}']},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 19 run scoreboard players set @s module 15

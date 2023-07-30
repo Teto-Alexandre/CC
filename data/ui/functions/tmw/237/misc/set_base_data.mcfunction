@@ -17,3 +17,5 @@ execute store result score $sptime.max ui_temp run data get storage ui:gun temp.
 execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
+execute store result score $burst ui_temp run data get storage ui:gun temp.now.Burst
+execute store result score $ishold ui_temp run data get storage ui:gun temp.now.IsHold

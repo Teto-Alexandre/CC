@@ -4,7 +4,8 @@
     execute if entity @s[tag=tmw_237_king] run function ui:tmw/237/amp/king
 
 # レーザーサイト
-    execute if data storage ui:gun temp{Model:110811} run function ui:tmw/237/constant/laser
+    execute unless score $module ui_world matches 1 if data storage ui:gun temp{Model:110811} run function ui:tmw/237/constant/laser
+    execute if score $module ui_world matches 1 unless score @s module matches 20 if data storage ui:gun temp{Model:110811} run function ui:tmw/237/constant/laser
 
 # エフェクトクリア
     execute if block ~ ~-0.3 ~ slime_block run effect give @s jump_boost 1 8 true
