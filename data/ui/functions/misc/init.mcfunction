@@ -148,6 +148,8 @@ scoreboard players set $limited_weapon party_mode 0
 
 ## 必殺技カウント
     scoreboard objectives add ui_paint dummy {"text":"UtilityItems_Paint","color":"dark_blue"}
+    scoreboard objectives add ui_sneak_fall_ct dummy {"text":"UtilityItems_FallCT","color":"dark_blue"}
+    scoreboard objectives add ui_sneak_float_ct dummy {"text":"UtilityItems_FloatCT","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_survive dummy {"text":"UtilityItems_Tmw237_Survive","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_boost dummy {"text":"UtilityItems_Tmw237_Boost","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_sprint_particle dummy {"text":"UtilityItems_Tmw237_Sprint_Particle","color":"dark_blue"}
@@ -156,7 +158,6 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_tmw237_drained_damage dummy {"text":"UtilityItems_Tmw237_Drained_Damage","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_speedcover dummy {"text":"UtilityItems_Tmw237_Speed","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_title_jammer dummy {"text":"UtilityItems_Tmw237_Title","color":"dark_blue"}
-    scoreboard objectives add ui_tmw237_air_ink_lock dummy {"text":"UtilityItems_Tmw237_Air","color":"dark_blue"}
     scoreboard objectives add ui_uses dummy {"text":"UtilityItems_UseS","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_energy_charge_count dummy {"text":"UtilityItems_Tmw237_EnergyCharge_Count","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_energy_charge_time dummy {"text":"UtilityItems_Tmw237_EnergyCharge_Time","color":"dark_blue"}
@@ -227,7 +228,6 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #40 ui_num 40
     scoreboard players set #50 ui_num 50
     scoreboard players set #60 ui_num 60
-    scoreboard players set #80 ui_num 80
     scoreboard players set #81 ui_num 81
     scoreboard players set #85 ui_num 85
     scoreboard players set #90 ui_num 90
@@ -235,11 +235,9 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #98 ui_num 98
     scoreboard players set #99 ui_num 99
     scoreboard players set #100 ui_num 100
-    scoreboard players set #140 ui_num 140
     scoreboard players set #150 ui_num 150
     scoreboard players set #180 ui_num 180
     scoreboard players set #200 ui_num 200
-    scoreboard players set #240 ui_num 240
     scoreboard players set #250 ui_num 250
     scoreboard players set #300 ui_num 300
     scoreboard players set #325 ui_num 325
