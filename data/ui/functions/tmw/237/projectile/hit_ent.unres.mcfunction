@@ -3,9 +3,6 @@
 # サヴァイブ検知
     scoreboard players set $survive ui_temp 0
 
-# カウンター検知
-    scoreboard players set $drain ui_temp 0
-
 # ダメージ本体
     scoreboard players set $Return tds_dmg 0
     scoreboard players set $Lethal tds_dmg 0
@@ -18,8 +15,7 @@
     scoreboard players operation $Attacker tds_dmg = $id ui_temp
     data modify storage tds: temp.WeaponName set from storage ui:temp Name
     execute if score @s ui_tmw237_survive matches 1.. at @s run function ui:tmw/237/misc/survive
-    execute if entity @s[scores={ui_tmw_id=237},tag=drain] at @s run function ui:tmw/237/misc/drain
-    execute if score $survive ui_temp matches 0 if score $drain ui_temp matches 0 at @s run function tds:attack
+    execute if score $survive ui_temp matches 0 at @s run function tds:attack
     scoreboard players operation $Return tds_dmg /= #2000 ui_num
     execute if score $damage_type ui_temp matches 2 run scoreboard players operation @s tds_fire += $Return tds_dmg
     execute if score $damage_type ui_temp matches 6 run scoreboard players operation @s tds_cold += $Return tds_dmg

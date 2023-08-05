@@ -14,5 +14,7 @@ execute if score $def party_mode matches 1.. run function ui:party/def
 
 execute if score $Attacker tds_dmg matches 1..2147483647 run function tds:core/attacker/
 
+execute if score $Damage tds_dmg matches 1.. run function tds:core/calc
 #
-execute if score $Damage tds_dmg matches 1.. run function tds:core/attack
+execute if entity @s[scores={ui_tmw_id=237},tag=drain] if score $Damage tds_dmg matches 1.. at @s run function ui:tmw/237/misc/drain
+execute unless entity @s[scores={ui_tmw_id=237},tag=drain] if score $Damage tds_dmg matches 1.. run function tds:core/attack
