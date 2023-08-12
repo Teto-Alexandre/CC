@@ -10,7 +10,7 @@ execute unless score @s ui_tmw237_energy_charge_count matches 5.. run scoreboard
 execute unless score @s ui_tmw237_energy_charge_count matches 5.. run scoreboard players add @s charge_acc 28
 
 execute unless score @s ui_tmw237_energy_charge_count matches 5.. run scoreboard players add @s ui_tmw237_energy_charge_count 1
-scoreboard players set @s ui_tmw237_energy_charge_time 600
+scoreboard players set @s ui_tmw237_energy_charge_time 200
 
 particle minecraft:glow ~ ~0.9 ~ 0.5 0.5 0.5 0.1 40 force
 particle minecraft:wax_on ~ ~0.9 ~ 0.5 0.5 0.5 0.1 20 force

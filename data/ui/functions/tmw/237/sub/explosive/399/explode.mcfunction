@@ -14,9 +14,7 @@
     execute if score @s ui_is matches 15..16 run execute at @e[distance=..5.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 17..18 run execute at @e[distance=..6.0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 19..20 run execute at @e[distance=..6.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 21..22 run execute at @e[distance=..7,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 23..24 run execute at @e[distance=..7.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 25..30 run execute at @e[distance=..8,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute if score @s ui_is matches 30 run execute at @e[distance=..8.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出
     execute if score @s ui_is matches 1..2 run function ui:template/sphere_particle/1.5
@@ -29,12 +27,14 @@
     execute if score @s ui_is matches 15..16 run function ui:template/sphere_particle/5
     execute if score @s ui_is matches 17..18 run function ui:template/sphere_particle/5.5
     execute if score @s ui_is matches 19..20 run function ui:template/sphere_particle/6
-    execute if score @s ui_is matches 21..22 run function ui:template/sphere_particle/6.5
-    execute if score @s ui_is matches 23..24 run function ui:template/sphere_particle/7
-    execute if score @s ui_is matches 25..30 run function ui:template/sphere_particle/7.5
+    execute if score @s ui_is matches 30 run function ui:template/sphere_particle/8
     function ui:tmw/237/misc/particle_paint
     execute if score @s ui_is matches 1..30 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
-    playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
+    execute if score @s ui_is matches 1..20 run playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
+    execute if score @s ui_is matches 20 run playsound block.beacon.activate player @a ~ ~ ~ 1.2 2 0
+    execute if score @s ui_is matches 30 run playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
+    execute if score @s ui_is matches 21 run data merge storage ui:common {input:{Mode:"create",Var:-10028}}
+    execute if score @s ui_is matches 21 run function ui:common/particle
 
 # 塗りポイント加算
 
