@@ -15,7 +15,7 @@
     execute if score @s ui_is matches 15..16 run execute at @e[distance=..5.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 17..18 run execute at @e[distance=..6.0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 19..20 run execute at @e[distance=..6.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 35 run execute at @e[distance=..9.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute if score @s ui_is matches 36 run execute at @e[distance=..9.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出
     execute if score @s ui_is matches 1..2 run function ui:template/sphere_particle/1.5
@@ -28,12 +28,12 @@
     execute if score @s ui_is matches 15..16 run function ui:template/sphere_particle/5
     execute if score @s ui_is matches 17..18 run function ui:template/sphere_particle/5.5
     execute if score @s ui_is matches 19..20 run function ui:template/sphere_particle/6
-    execute if score @s ui_is matches 35 run function ui:template/sphere_particle/9
+    execute if score @s ui_is matches 36 run function ui:template/sphere_particle/9
     function ui:tmw/237/misc/particle_paint
     execute if score @s ui_is matches 1..35 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     execute if score @s ui_is matches 1..20 run playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
     execute if score @s ui_is matches 20 run playsound block.beacon.activate player @a ~ ~ ~ 1.2 2 0
-    execute if score @s ui_is matches 35 run playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
+    execute if score @s ui_is matches 36 run playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
     execute if score @s ui_is matches 21 run data merge storage ui:common {input:{Mode:"create",Var:-10028}}
     execute if score @s ui_is matches 21 run function ui:common/particle
 
