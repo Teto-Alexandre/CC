@@ -25,7 +25,7 @@ execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=neares
     #            これを100以上にすると減速限界が発生 & 速度キャパが無くなる
     scoreboard players set @e[tag=tag] ui_bm 100
     #加速度係数 - 加速度の倍加係数 多いほどよく追尾する 推奨値は20
-    scoreboard players set @e[tag=tag] ui_bm_temp 20
+    scoreboard players set @e[tag=tag] ui_bm_temp 15
     #寿命 - 爆発までのtick数
     scoreboard players set @e[tag=tag] ui_br 36
     #ターゲットを選択
