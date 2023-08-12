@@ -3,7 +3,9 @@
 # ターゲット可能なすべてのエンティティの位置情報を半径５m地点に集積
 
 # idがないターゲット可能な存在全てにidを振る
-execute as @e[distance=1..75,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/killeffect/106.2
+tag @a[nbt={ActiveEffects:[{Id:14}]}] add ui_temp_unlock
+execute as @e[distance=1..75,tag=!ui_temp_team,tag=!ui_temp_unlock,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/killeffect/106.2
+tag @a remove ui_temp_unlock
 execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=nearest,limit=1] add ui_temp_target2
 #execute positioned ^ ^ ^4 run particle explosion ~ ~ ~ 0 0 0 0 1 force
 #execute at @e[tag=ui_temp_target,sort=random,limit=1] run particle dust 1 1 1 10 ~ ~ ~ 0 0 0 0 1 force
@@ -23,9 +25,9 @@ execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=neares
     scoreboard players set @e[tag=tag] ui_bt 2
     #継速度係数 - 前のtickの速度を何倍にするかの計算に使用 100なら等倍 50なら半減 
     #            これを100以上にすると減速限界が発生 & 速度キャパが無くなる
-    scoreboard players set @e[tag=tag] ui_bm 100
+    scoreboard players set @e[tag=tag] ui_bm 102
     #加速度係数 - 加速度の倍加係数 多いほどよく追尾する 推奨値は20
-    scoreboard players set @e[tag=tag] ui_bm_temp 15
+    scoreboard players set @e[tag=tag] ui_bm_temp 20
     #寿命 - 爆発までのtick数
     scoreboard players set @e[tag=tag] ui_br 36
     #ターゲットを選択
