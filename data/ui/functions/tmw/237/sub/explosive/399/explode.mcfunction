@@ -15,9 +15,8 @@
     execute if score @s ui_is matches 17..18 run execute at @e[distance=..6.0,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 19..20 run execute at @e[distance=..6.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
     execute if score @s ui_is matches 21..22 run execute at @e[distance=..7,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 23..24 run execute at @e[distance=..8,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 25..26 run execute at @e[distance=..9,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute if score @s ui_is matches 27..30 run execute at @e[distance=..10,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute if score @s ui_is matches 23..24 run execute at @e[distance=..7.5,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute if score @s ui_is matches 25..30 run execute at @e[distance=..8,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出
     execute if score @s ui_is matches 1..2 run function ui:template/sphere_particle/1.5
@@ -30,10 +29,9 @@
     execute if score @s ui_is matches 15..16 run function ui:template/sphere_particle/5
     execute if score @s ui_is matches 17..18 run function ui:template/sphere_particle/5.5
     execute if score @s ui_is matches 19..20 run function ui:template/sphere_particle/6
-    execute if score @s ui_is matches 21..22 run function ui:template/sphere_particle/7
-    execute if score @s ui_is matches 23..24 run function ui:template/sphere_particle/8
-    execute if score @s ui_is matches 25..26 run function ui:template/sphere_particle/9
-    execute if score @s ui_is matches 27..30 run function ui:template/sphere_particle/10
+    execute if score @s ui_is matches 21..22 run function ui:template/sphere_particle/6.5
+    execute if score @s ui_is matches 23..24 run function ui:template/sphere_particle/7
+    execute if score @s ui_is matches 25..30 run function ui:template/sphere_particle/7.5
     function ui:tmw/237/misc/particle_paint
     execute if score @s ui_is matches 1..30 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
