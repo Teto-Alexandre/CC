@@ -28,7 +28,9 @@
     execute if score @s ui_is matches 15..16 run function ui:template/sphere_particle/5
     execute if score @s ui_is matches 17..18 run function ui:template/sphere_particle/5.5
     execute if score @s ui_is matches 19..20 run function ui:template/sphere_particle/6
+    execute if score @s ui_is matches 19..20 run kill @e[tag=ui_temp_particle,distance=..5]
     execute if score @s ui_is matches 36 run function ui:template/sphere_particle/9
+    execute if score @s ui_is matches 36 run kill @e[tag=ui_temp_particle,distance=..6]
     function ui:tmw/237/misc/particle_paint
     execute if score @s ui_is matches 1..35 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     execute if score @s ui_is matches 1..20 run playsound entity.generic.explode player @a ~ ~ ~ 1 1.5 0
