@@ -14,6 +14,6 @@ execute if score @s ui_hpart matches 108 run scoreboard players set @e[tag=ui_te
 execute if score @s ui_hpart matches 108 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 30
 execute if score @s ui_hpart matches 109 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 20
 execute if score @s ui_hpart matches 109 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 40
-execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 30
+execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 35
 execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 50
 tag @e[tag=ui_temp_this_plus] remove ui_temp_this_plus
