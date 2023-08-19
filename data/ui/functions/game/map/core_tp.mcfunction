@@ -32,3 +32,8 @@ execute if score $map ui_world matches 31 run teleport @a 600 51 200
 execute if score $map ui_world matches 32 run teleport @a 500 49 200
 execute if score $map ui_world matches 33 run teleport @a -100 44 0
 execute if score $map ui_world matches 34 run teleport @a -188 40 -175
+execute if score $map ui_world matches 35 run teleport @a -152 36 256
+execute if score $map ui_world matches 36 run teleport @a -244 35 144
+execute if score $map ui_world matches 37 run teleport @a -139 53 124
+execute if score $map ui_world matches 38 run teleport @a -300 56 0
+execute if score $map ui_world matches 39 run teleport @a -267 43 259
