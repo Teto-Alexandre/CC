@@ -10,7 +10,7 @@
     execute if score $slot ui_temp matches 5 run scoreboard players set $sub ui_temp 301
     execute if score $slot ui_temp matches 6 run scoreboard players set $sub ui_temp 401
     execute if score $slot ui_temp matches 11 run scoreboard players set $sub ui_temp 402
-    execute if score $slot ui_temp matches 12 run scoreboard players set $sub ui_temp 403
+    execute if score $slot ui_temp matches 12 run scoreboard players set $sub ui_temp 206
     execute if score $slot ui_temp matches 13 run scoreboard players set $sub ui_temp 404
     execute if score $slot ui_temp matches 14 run scoreboard players set $sub ui_temp 405
     execute if score $slot ui_temp matches 15 run scoreboard players set $sub ui_temp 203

@@ -37,6 +37,9 @@
     execute if score $activator ui_temp matches 205 run scoreboard players set @s ui_tmw237_speedcover 160
     execute if score $activator ui_temp matches 205 if score $module ui_world matches 1 run scoreboard players set @s[scores={module=40}] ui_tmw237_speedcover 300
 
+# 新ラインマーカー
+    execute if score $activator ui_temp matches 206 at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/237/activator/here/206
+
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 251 run particle explosion_emitter ~ ~ ~ 5 5 5 0 20 force

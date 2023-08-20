@@ -10,7 +10,7 @@
     scoreboard players set @e[tag=ui_temp_unpower] ui_bm 40
     scoreboard players set @e[tag=ui_temp_unpower] ui_br 4
     scoreboard players set @e[tag=ui_temp_unpower] ui_gpc 5
-    scoreboard players set @e[tag=ui_temp_unpower] ui_dmg 50
+    scoreboard players set @e[tag=ui_temp_unpower] ui_dmg 60
     scoreboard players set @e[tag=ui_temp_unpower] ui_bdt 1
     scoreboard players operation @e[tag=ui_temp_unpower] ui_id = $id ui_temp
     scoreboard players operation @e[tag=ui_temp_unpower] ui_team = $team ui_temp

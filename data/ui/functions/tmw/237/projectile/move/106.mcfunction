@@ -6,7 +6,7 @@
 
 #
     data modify storage ui:temp Effect set value [{Id:"glowing",Duration:100,Amplifier:0b}]
-    execute at @s positioned ~ ~-1 ~ as @e[distance=..1.5,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog] run function ui:tmw/237/misc/giveeffect/
+    execute at @s positioned ~ ~-1 ~ as @e[distance=..3,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog] run function ui:tmw/237/misc/giveeffect/
 
 #
     execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]
