@@ -67,7 +67,7 @@ execute if score @s module matches 35 run item modify entity @s enderchest.16 ui
 item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次のページ","color":"white","italic":false}'},ui:{ismenu:1}}
 #execute if score $slot ui_temp matches 17 run scoreboard players set @s module_page 3
 
-item replace entity @s enderchest.19 with red_stained_glass_pane{display:{Name:'{"text":"素材（バグ多めにつき稼働停止中）","color": "yellow","bold": false,"italic": false}',Lore:['{"text":"建築上限を撤廃する","color": "gray","italic": false}']},ui:{ismenu:1}}
+item replace entity @s enderchest.19 with bone_meal{display:{Name:'{"text":"素材","color": "yellow","bold": false,"italic": false}',Lore:['{"text":"建築上限を撤廃する","color": "gray","italic": false}','{"text":"サブ効率が50%下がる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.20 with potion{display:{Name:'{"text":"リカバー","color":"red","bold": false,"italic": false}',Lore:['{"text":"体力の回復開始までにかかる時間を短縮する","color": "gray","italic": false}']},CustomPotionColor:16711808,HideFlags:255,ui:{ismenu:1}}
 item replace entity @s enderchest.21 with bucket{display:{Name:'{"text":"リサイクル","color":"green","bold": false,"italic": false}',Lore:['{"text":"敵を倒した時、倒した敵の残りインク分自身のインクを回復する","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with blaze_powder{display:{Name:'{"text":"エナジーチャージ","color":"gold","bold": true,"italic": false}',Lore:['{"text":"敵を倒した時、10秒間能力が強化される","color": "gray","italic": false}','{"text":"効果時間中にもう一度敵を倒すと効果は重複する","color": "gray","italic": false}','{"text":"効果時間中に死亡すると","color": "red","italic": false}','{"text":"強化回数に応じた復活ペナルティを受ける","color": "red","italic": false}']},ui:{ismenu:1}}
@@ -75,15 +75,8 @@ item replace entity @s enderchest.23 with clock{display:{Name:'{"text":"壊れ�
 item replace entity @s enderchest.24 with netherite_scrap{display:{Name:'{"text":"強化パーツ","color":"blue","bold": false,"italic": false}',Lore:['{"text":"設置物の耐久力を50%向上させる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.25 with leather_chestplate{display:{Name:'{"text":"アノティ","color":"white","bold": false,"italic": false}',Lore:['{"text":"潜伏音を消す","color": "gray","italic": false}'],color:12961221},HideFlags:255,ui:{ismenu:1}}
 
-#item replace entity @s enderchest.19 with echo_shard{display:{Name:'{"text":"深淵の呼び声","color": "#0066cc","bold": true,"italic": false}',Lore:['{"text":"リスポーン時間が半分になる","color": "gray","italic": false}']},ui:{ismenu:1}}
-#item replace entity @s enderchest.20 with carrot_on_a_stick{CustomModelData:180029,display:{Name:'{"text":"エコバッグ","color": "#999900","bold": true,"italic": false}',Lore:['{"text":"インク最大値が10%増える","color": "gray","italic": false}']},ui:{ismenu:1}}
-#item replace entity @s enderchest.21 with iron_boots{HideFlags:2,display:{Name:'{"text":"スリッパ","color": "#66cc00","bold": true,"italic": false}',Lore:['{"text":"移動速度が10%上がる","color": "gray","italic": false}']},ui:{ismenu:1}}
-#item replace entity @s enderchest.22 with heart_of_the_sea{display:{Name:'{"text":"冷たくなった心臓","color": "aqua","bold": false,"italic": false}',Lore:['{"text":"最大体力が20%上がる","color": "gray","italic": false}']},ui:{ismenu:1}}
-#item replace entity @s enderchest.23 with elytra{display:{Name:'{"text":"アンチマーカーシステム","color": "dark_purple","bold": true,"italic": false}',Lore:['{"text":"発光の持続時間が半減する","color": "gray","italic": false}']},ui:{ismenu:1}}
-#item replace entity @s enderchest.24 with spyglass{display:{Name:'{"text":"13スコープ","color": "#9966ff","bold": false,"italic": false}',Lore:['{"text":"チャージ完了時の光を消す","color": "gray","italic": false}']},ui:{ismenu:1}}
-#item replace entity @s enderchest.25 with gold_block{display:{Name:'{"text":"物語の終わり","color": "#ffcc66","bold": true,"italic": false}',Lore:['{"text":"攻撃時に15%の確率でダメージ2倍","color": "gray","italic": false}']},ui:{ismenu:1}}
-#
-#execute if score $slot ui_temp matches 19 run scoreboard players set @s module 36
+execute if score $slot ui_temp matches 19 run scoreboard players set @s module 36
+execute if score $slot ui_temp matches 19 run scoreboard players set @s sub_eff_acc 50
 execute if score $slot ui_temp matches 20 run scoreboard players set @s module 37
 execute if score $slot ui_temp matches 21 run scoreboard players set @s module 38
 execute if score $slot ui_temp matches 22 run scoreboard players set @s module 39
@@ -91,7 +84,7 @@ execute if score $slot ui_temp matches 23 run scoreboard players set @s module 4
 execute if score $slot ui_temp matches 24 run scoreboard players set @s module 41
 execute if score $slot ui_temp matches 25 run scoreboard players set @s module 42
 #
-#execute if score @s module matches 36 run item modify entity @s enderchest.19 ui:gun/add_glow
+execute if score @s module matches 36 run item modify entity @s enderchest.19 ui:gun/add_glow
 execute if score @s module matches 37 run item modify entity @s enderchest.20 ui:gun/add_glow
 execute if score @s module matches 38 run item modify entity @s enderchest.21 ui:gun/add_glow
 execute if score @s module matches 39 run item modify entity @s enderchest.22 ui:gun/add_glow
