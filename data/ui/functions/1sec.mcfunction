@@ -17,6 +17,7 @@
     execute if score $module ui_world matches 1 as @a if score @s module matches 14 run scoreboard players set @s ui_tmw237_sprint_particle 25
     tag @a[tag=module19] remove module19
     execute if score $module ui_world matches 1 as @a if score @s module matches 19 run tag @s add module19
+    execute if score $module ui_world matches 1 as @a if score @s module matches 46 run effect give @s slow_falling 2 0 true
     execute as @a[tag=spectate] run team join spectate @s
 
 # 殴り合い防止
