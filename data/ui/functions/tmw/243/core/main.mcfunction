@@ -9,3 +9,4 @@
     execute if score $success ui_temp matches 0 if entity @s[tag=setting_game,tag=setting_party] run function ui:tmw/243/core/panel/party
     execute if score $success ui_temp matches 0 if entity @s[tag=setting_game,tag=!setting_party] run function ui:tmw/243/core/panel/setting
     execute if score $success ui_temp matches 0 if entity @s[tag=!setting_module,tag=!setting_game,tag=!setting_gear,tag=!setting_preset,tag=!setting_title] run function ui:tmw/243/core/panel/all
+    clear @s #ui:ui{ui:{ismenu:1}} 1
