@@ -22,7 +22,7 @@ execute if score $rand ui_calc1 matches 17 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 18 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 301
 execute if score $rand ui_calc1 matches 19 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 401
 execute if score $rand ui_calc1 matches 20 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 402
-execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 403
+execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 206
 execute if score $rand ui_calc1 matches 22 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 404
 execute if score $rand ui_calc1 matches 23 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 405
 execute if score $rand ui_calc1 matches 24 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 203
