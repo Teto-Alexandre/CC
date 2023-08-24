@@ -38,7 +38,7 @@
     scoreboard players operation $Damage tds_dmg *= $CalcD tds_dmg
     scoreboard players operation $Damage tds_dmg /= $10 tds_dmg
         # エンチャントによる軽減
-    scoreboard players operation $EPF tds_dmg < $20 tds_dmg
+    scoreboard players operation $EPF tds_dmg < $25 tds_dmg
     scoreboard players operation $EPF tds_dmg *= $4 tds_dmg
     scoreboard players operation $CalcE tds_dmg = $100 tds_dmg
     scoreboard players operation $CalcE tds_dmg -= $EPF tds_dmg

@@ -23,10 +23,10 @@
     execute as @s[tag=speedtype_shoot] run function ui:template/stats/move_speed
 
 # チームカラーに合わせた防具を削除
-    item replace entity @s[nbt={Inventory:[{Slot:103b,id:"minecraft:leather_helmet"}]}] armor.head with air
-    item replace entity @s[nbt={Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]}] armor.chest with air
-    item replace entity @s[nbt={Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]}] armor.legs with air
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.feet with air
+    item replace entity @s[nbt={Inventory:[{Slot:103b}]}] armor.head with air
+    item replace entity @s[nbt={Inventory:[{Slot:102b}]}] armor.chest with air
+    item replace entity @s[nbt={Inventory:[{Slot:101b}]}] armor.legs with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b}]}] armor.feet with air
 
 # ストレージにモデルデータを隔離
     item modify entity @s weapon.mainhand ui:gun/value/model_air

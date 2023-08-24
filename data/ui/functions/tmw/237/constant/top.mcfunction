@@ -25,10 +25,10 @@
     #schedule function ui:misc/kill_slime 1t append
 
 # チームカラーに合わせた防具を削除
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.head with air
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.chest with air
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.legs with air
-    item replace entity @s[nbt={Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]}] armor.feet with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b}]}] armor.head with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b}]}] armor.chest with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b}]}] armor.legs with air
+    item replace entity @s[nbt={Inventory:[{Slot:100b}]}] armor.feet with air
 
 # ストレージにモデルデータを隔離
     execute store result score $model ui_temp run data get entity @s SelectedItem.tag.CustomModelData

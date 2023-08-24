@@ -6,6 +6,8 @@
 # レーザーサイト
     execute unless score $module ui_world matches 1 if data storage ui:gun temp{Model:110811} run function ui:tmw/237/constant/laser
     execute if score $module ui_world matches 1 unless score @s module matches 20 if data storage ui:gun temp{Model:110811} run function ui:tmw/237/constant/laser
+    execute unless score $module ui_world matches 1 if data storage ui:gun temp{Model:110911} run function ui:tmw/237/constant/laser_short
+    execute if score $module ui_world matches 1 unless score @s module matches 20 if data storage ui:gun temp{Model:110911} run function ui:tmw/237/constant/laser_short
 
 # エフェクトクリア
     execute if block ~ ~-0.3 ~ slime_block run effect give @s jump_boost 1 8 true
@@ -17,10 +19,10 @@
     #execute as @s[tag=speedtype_move] run function ui:template/stats/shoot_speed
 
 # チームカラーに合わせた防具を装備
-    execute if score $team ui_temp matches 1 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:8247039}}}]}] run function ui:tmw/237/constant/armor/eq1
-    execute if score $team ui_temp matches 2 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:16752832}}}]}] run function ui:tmw/237/constant/armor/eq2
-    execute if score $team ui_temp matches 3 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:16646013}}}]}] run function ui:tmw/237/constant/armor/eq3
-    execute if score $team ui_temp matches 4 if entity @s[nbt=!{Inventory:[{Slot:100b,tag:{display:{color:10551208}}}]}] run function ui:tmw/237/constant/armor/eq4
+    execute if score $team ui_temp matches 1 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq1
+    execute if score $team ui_temp matches 2 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq2
+    execute if score $team ui_temp matches 3 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq3
+    execute if score $team ui_temp matches 4 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq4
     execute if score $module ui_world matches 1 if entity @s[scores={module=42}] run stopsound @a player minecraft:item.armor.equip_leather
 
 #

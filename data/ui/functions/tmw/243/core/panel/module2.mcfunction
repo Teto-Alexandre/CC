@@ -65,7 +65,7 @@ execute if score @s module matches 34 run item modify entity @s enderchest.15 ui
 execute if score @s module matches 35 run item modify entity @s enderchest.16 ui:gun/add_glow
 
 item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次のページ","color":"white","italic":false}'},ui:{ismenu:1}}
-#execute if score $slot ui_temp matches 17 run scoreboard players set @s module_page 3
+execute if score $slot ui_temp matches 17 run scoreboard players set @s module_page 3
 
 item replace entity @s enderchest.19 with bone_meal{display:{Name:'{"text":"素材","color": "yellow","bold": false,"italic": false}',Lore:['{"text":"建築上限を撤廃する","color": "gray","italic": false}','{"text":"サブ効率が50%下がる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.20 with potion{display:{Name:'{"text":"リカバー","color":"red","bold": false,"italic": false}',Lore:['{"text":"体力の回復開始までにかかる時間を短縮する","color": "gray","italic": false}']},CustomPotionColor:16711808,HideFlags:255,ui:{ismenu:1}}

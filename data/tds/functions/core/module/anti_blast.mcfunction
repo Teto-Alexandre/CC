@@ -1,0 +1,1 @@
+scoreboard players operation $Damage tds_dmg /= #2 ui_num
