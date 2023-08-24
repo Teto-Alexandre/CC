@@ -24,6 +24,7 @@
     execute if score $slot ui_temp matches 21 run scoreboard players set $sp ui_temp 259
     execute if score $slot ui_temp matches 22 run scoreboard players set $sp ui_temp 463
     execute if score $slot ui_temp matches 23 run scoreboard players set $sp ui_temp 353
+    execute if score $slot ui_temp matches 24 run scoreboard players set $sp ui_temp 156
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
@@ -43,6 +44,7 @@
     execute if score $slot ui_temp matches 21 run data modify storage ui:gun temp.tmw.gun.SPName set value "アウェイクパワー"
     execute if score $slot ui_temp matches 22 run data modify storage ui:gun temp.tmw.gun.SPName set value "リフレクトレーザー"
     execute if score $slot ui_temp matches 23 run data modify storage ui:gun temp.tmw.gun.SPName set value "イルカライド"
+    execute if score $slot ui_temp matches 24 run data modify storage ui:gun temp.tmw.gun.SPName set value "ホップソナー"
 
 # 逆変換
     execute if score $changed ui_temp matches 1 run function ui:tmw/243/core/changed
@@ -66,6 +68,7 @@
     execute if score $sp ui_temp matches 259 run item modify entity @s enderchest.21 ui:gun/add_glow
     execute if score $sp ui_temp matches 463 run item modify entity @s enderchest.22 ui:gun/add_glow
     execute if score $sp ui_temp matches 353 run item modify entity @s enderchest.23 ui:gun/add_glow
+    execute if score $sp ui_temp matches 156 run item modify entity @s enderchest.24 ui:gun/add_glow
 
 # 変更した
     scoreboard players set $success ui_temp 1

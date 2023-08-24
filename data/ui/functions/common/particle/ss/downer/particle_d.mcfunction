@@ -1,6 +1,17 @@
 #各パーティクルに個別実行
 #ID,Teamを利用するパーティクル
 
+## 時間経過
+#    scoreboard players add @s ui_is 1
+#
+## 情報共有
+#    scoreboard players operation $type ui_temp = @s ui_gpc
+#    scoreboard players operation $is ui_temp = @s ui_is
+#    scoreboard players operation $id ui_temp = @s ui_id
+#    scoreboard players operation $team ui_temp = @s ui_team
+#    execute if score $type ui_temp matches ..-1 as @a if score @s ui_id = $id ui_temp run tag @s add ui_temp_player
+#    execute if score $type ui_temp matches ..-10001 as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+
 # 時間経過
     scoreboard players add @s ui_is 1
 
@@ -8,9 +19,6 @@
     scoreboard players operation $type ui_temp = @s ui_gpc
     scoreboard players operation $is ui_temp = @s ui_is
     scoreboard players operation $id ui_temp = @s ui_id
-    scoreboard players operation $team ui_temp = @s ui_team
-    execute if score $type ui_temp matches ..-1 as @a if score @s ui_id = $id ui_temp run tag @s add ui_temp_player
-    execute if score $type ui_temp matches ..-10001 as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
 
 # コンパス2
 execute if score $type ui_temp matches -1 run function ui:common/particle/ss/downer/1/core
@@ -68,6 +76,10 @@ execute if score $type ui_temp matches -10025 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10026 run function ui:common/particle/ss/downer/10026/core
 # ナイスダマフルチャージ
 execute if score $type ui_temp matches -10028 run function ui:common/particle/ss/downer/10028/core
+# ホップソナー
+execute if score $type ui_temp matches -10029 run function ui:common/particle/ss/downer/10029/core
+# ホップソナー予告
+execute if score $type ui_temp matches -10030 run function ui:common/particle/ss/downer/10030/core
 
 # サイズ別円形展開
 execute if score $type ui_temp matches -10102 run function ui:common/particle/ss/downer/10102/animate
@@ -84,5 +96,5 @@ execute if score $type ui_temp matches -10110 run function ui:common/particle/ss
 execute if score $type ui_temp matches -11001 run function ui:common/particle/ss/downer/11001/core
 
 #
-tag @a[tag=ui_temp_player] remove ui_temp_player
-tag @e[tag=ui_temp_team] remove ui_temp_team
+#tag @a[tag=ui_temp_player] remove ui_temp_player
+#tag @e[tag=ui_temp_team] remove ui_temp_team
