@@ -74,8 +74,8 @@ execute if score $type ui_temp matches -10024 run function ui:common/particle/ss
 execute if score $type ui_temp matches -10025 run function ui:common/particle/ss/downer/10025/animate
 # グレートバリア破壊後
 execute if score $type ui_temp matches -10026 run function ui:common/particle/ss/downer/10026/core
-# ナイスダマフルチャージ
-execute if score $type ui_temp matches -10028 run function ui:common/particle/ss/downer/10028/core
+# ナイスダマ
+execute if score $type ui_temp matches -10028 run function ui:common/particle/ss/downer/10028/animate
 # ホップソナー
 execute if score $type ui_temp matches -10029 run function ui:common/particle/ss/downer/10029/core
 # ホップソナー予告
