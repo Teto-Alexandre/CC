@@ -16,6 +16,3 @@
 
 # 塗りポイント加算
     execute as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
-
-# パーティクルと本体を消去
-    kill @s

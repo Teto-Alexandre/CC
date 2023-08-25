@@ -7,6 +7,9 @@
 # カラクラの死亡連動
 function ui:misc/dead/tmw237/dead
 
+#
+tag @s remove ui_unhurtable
+
 # もう一回死亡しないように状態異常リセット
 scoreboard players reset @s tds_fire
 scoreboard players reset @s tds_cold

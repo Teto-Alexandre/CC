@@ -81,6 +81,7 @@
         "minecraft:elytra",
         "minecraft:spyglass",
         "minecraft:gold_block",
-        "minecraft:phantom_membrane"
+        "minecraft:phantom_membrane",
+        "minecraft:apple"
     ]
 }

@@ -96,6 +96,7 @@ scoreboard players set $limited_weapon party_mode 0
 
 ## 条件起動型
     scoreboard objectives add ui_dc deathCount {"text":"UtilityItems_DeathCount","color":"dark_blue"}
+    scoreboard objectives add ui_dc_delay dummy {"text":"UtilityItems_DeathCount_Delay","color":"dark_blue"}
     scoreboard objectives add ui_dc_r dummy {"text":"UtilityItems_DeathCountRespawn","color":"dark_blue"}
     scoreboard objectives add ui_use1 minecraft.used:minecraft.carrot_on_a_stick {"text":"UtilityItems_Use1","color":"dark_blue"}
     scoreboard objectives add ui_use2 dummy {"text":"UtilityItems_Use2","color":"dark_blue"}
@@ -351,4 +352,4 @@ scoreboard players set $limited_weapon party_mode 0
 #
 #=====================================================================================
 
-    scoreboard players set $version ui_world 53
+    scoreboard players set $version ui_world 54
