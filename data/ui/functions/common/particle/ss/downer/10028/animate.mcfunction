@@ -1,5 +1,5 @@
 #Particles Generated with: Cloud Wolf's Particle Grapher
-teleport @s ~ ~ ~ ~30 0
+teleport @s ~ ~ ~ ~15 0
 scoreboard objectives add cw_particleplot dummy
 function ui:common/particle/ss/downer/10028/l1/l1_0
 scoreboard players add @s cw_particleplot 1

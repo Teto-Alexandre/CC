@@ -8,12 +8,12 @@ scoreboard players operation @e[tag=ui_temp_this_plus,limit=1] ui_id = $id ui_te
 scoreboard players operation @e[tag=ui_temp_this_plus,limit=1] ui_team = $team ui_temp
 scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_uses -1
 scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is -1
-execute if score @s ui_hpart matches 107 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 11
-execute if score @s ui_hpart matches 107 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 25
-execute if score @s ui_hpart matches 108 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 18
-execute if score @s ui_hpart matches 108 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 30
-execute if score @s ui_hpart matches 109 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 24
-execute if score @s ui_hpart matches 109 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 40
-execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 32
-execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 50
+execute if score @s ui_hpart matches 107 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 18
+execute if score @s ui_hpart matches 107 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 15
+execute if score @s ui_hpart matches 108 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 33
+execute if score @s ui_hpart matches 108 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 20
+execute if score @s ui_hpart matches 109 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 45
+execute if score @s ui_hpart matches 109 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 30
+execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_is2 60
+execute if score @s ui_hpart matches 110 run scoreboard players set @e[tag=ui_temp_this_plus,limit=1] ui_dmg 40
 tag @e[tag=ui_temp_this_plus] remove ui_temp_this_plus
