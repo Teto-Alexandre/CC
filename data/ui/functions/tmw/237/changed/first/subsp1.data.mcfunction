@@ -53,6 +53,7 @@ execute if score $type ui_temp matches 152 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 154 run scoreboard players set $w.time ui_temp 200
 execute if score $type ui_temp matches 155 run scoreboard players set $w.time ui_temp 160
 execute if score $type ui_temp matches 156 run scoreboard players set $w.time ui_temp 60
+execute if score $type ui_temp matches 171 run scoreboard players set $w.time ui_temp 100
 execute if score $type ui_temp matches 251 run scoreboard players set $w.time ui_temp 25
 execute if score $type ui_temp matches 252 run scoreboard players set $w.time ui_temp 120
 execute if score $type ui_temp matches 253 run scoreboard players set $w.time ui_temp 120
@@ -93,6 +94,7 @@ execute if score $type ui_temp matches 401 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ct ui_temp 6
 execute if score $type ui_temp matches 151 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 152 run scoreboard players set $w.ct ui_temp 0
+execute if score $type ui_temp matches 171 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 251 run scoreboard players set $w.ct ui_temp 0
 execute if score $type ui_temp matches 252 run scoreboard players set $w.ct ui_temp 15
 execute if score $type ui_temp matches 253 run scoreboard players set $w.ct ui_temp 3
@@ -167,6 +169,7 @@ execute if score $type ui_temp matches 152 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 154 run data modify storage ui:temp temp.Name set value " - SP:ガトリングタレット"
 execute if score $type ui_temp matches 155 run data modify storage ui:temp temp.Name set value " - SP:エナジースタンド"
 execute if score $type ui_temp matches 156 run data modify storage ui:temp temp.Name set value " - SP:ホップソナー"
+execute if score $type ui_temp matches 171 run data modify storage ui:temp temp.Name set value " - SP:スプラッシュトルネード"
 execute if score $type ui_temp matches 251 run data modify storage ui:temp temp.Name set value " - SP:ノヴァ"
 execute if score $type ui_temp matches 252 run data modify storage ui:temp temp.Name set value " - SP:スーパースター"
 execute if score $type ui_temp matches 253 run data modify storage ui:temp temp.Name set value " - SP:ボムラッシュ"

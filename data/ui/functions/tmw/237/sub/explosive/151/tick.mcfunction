@@ -53,8 +53,7 @@
     execute if score @s ui_team matches 4 run function ui:tmw/237/sub/explosive/151/4
     execute as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
 
-# チームを認識
-    execute as @e[type=!#ui:notmob] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
+# ダメージ計算
     scoreboard players set $damage ui_temp 50
     scoreboard players operation $temp ui_temp = @s ui_uses
     scoreboard players operation $temp ui_temp /= #5 ui_num
@@ -92,9 +91,6 @@
     execute if score @s ui_uses matches 2 run playsound item.elytra.flying player @a ~ ~ ~ 0.8 1.8 0
     execute if score @s ui_uses matches 2 run playsound entity.minecart.inside.underwater player @a ~ ~ ~ 1.5 1.2 0
     execute if score $temp2 ui_temp matches 0 if score @s ui_uses matches 2..80 run playsound block.honey_block.step player @a ~ ~ ~ 1 1.2 0
-
-# チーム識別解除
-    tag @e[tag=ui_temp_team] remove ui_temp_team
 
 # 死ぬ(同じidの奴らまとめて)
     execute if score @s ui_uses matches 100.. run tag @s add ui_237_sub_explode
