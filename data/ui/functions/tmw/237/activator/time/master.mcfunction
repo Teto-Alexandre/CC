@@ -34,7 +34,10 @@ tag @s add speedtype_weapon
     execute if score $activator ui_temp matches 455 run function ui:tmw/237/activator/time/455
 
 # 回数使用他
-    execute if score $activator ui_temp matches 456..458 run function ui:tmw/237/activator/time/456_
+    execute if score $activator ui_temp matches 456..457 run function ui:tmw/237/activator/time/456_
+
+# ウルショ
+    execute if score $activator ui_temp matches 458 run function ui:tmw/237/activator/time/458
 
 # ロケッティア
     execute if score $activator ui_temp matches 459 run function ui:tmw/237/activator/time/459

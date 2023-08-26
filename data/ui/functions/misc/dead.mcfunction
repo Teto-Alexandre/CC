@@ -9,6 +9,7 @@ function ui:misc/dead/tmw237/dead
 
 #
 tag @s remove ui_unhurtable
+tag @s remove ui_resistance
 
 # もう一回死亡しないように状態異常リセット
 scoreboard players reset @s tds_fire
