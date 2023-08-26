@@ -13,8 +13,8 @@ item replace entity @s enderchest.2 with minecraft:carrot_on_a_stick{CustomModel
 item replace entity @s enderchest.3 with minecraft:light_gray_dye{display:{Name:'{"text":"所属不明","color":"white","italic":false}',Lore:['[{"text":"防具を身に着けない","color":"gray","italic":false}]','[{"text":"ある意味初期環境","color":"gray","italic":false}]']},HideFlags:4,ui:{ismenu:1}}
 item replace entity @s enderchest.4 with phantom_membrane{display:{Name:'{"text":"ふわふわ","color":"aqua","italic":false}',Lore:['[{"text":"常時低速落下を得る","color":"gray","italic":false}]','[{"text":"最大体力が4減る","color":"gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.5 with apple{display:{Name:'{"text":"ゾンビゾンビ","color":"dark_green","italic":false}',Lore:['[{"text":"死亡後にちょっとだけ行動できる","color":"gray","italic":false}]','[{"text":"*おいしくてぞんびになる*","color":"dark_gray","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.6 with gold_ingot{CustomModelData:215003,display:{Name:'{"text":"オートリローダー","color":"light_purple","italic":false}',Lore:['[{"text":"最後のギアの効果を３倍にする","color":"gray","italic":false}]']},ui:{ismenu:1}}
 
-item replace entity @s enderchest.6 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 1 run scoreboard players set @s module 43

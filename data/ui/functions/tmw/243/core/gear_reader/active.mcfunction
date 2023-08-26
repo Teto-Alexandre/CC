@@ -6,6 +6,8 @@ function oh_my_dat:please
 data modify storage ui:gear temp.Reader set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Gears
 
 # カウント
+execute if score $module ui_world matches 1 if score @s module matches 48 run data modify storage ui:gear temp.Reader append from storage ui:gear temp.Reader[-1]
+execute if score $module ui_world matches 1 if score @s module matches 48 run data modify storage ui:gear temp.Reader append from storage ui:gear temp.Reader[-1]
 execute store result score $count ui_temp run data get storage ui:gear temp.Reader
 
 # エナスタバフリセット
@@ -37,6 +39,9 @@ scoreboard players reset @s ui_tmw237_energy_charge_time
 # 切削
 execute if score $gear_off party_mode matches 1 run tellraw @s [{"text":"> ","color": "gray"},{"text":"ギア読み込みは無効化されています","color": "gray"}]
 execute unless score $gear_off party_mode matches 1 if score $count ui_temp matches 1.. run function ui:tmw/243/core/gear_reader/1.burn
+
+# モジュール別の算術
+function ui:tmw/243/core/gear_reader/module_calc
 
 # 最後に
 data remove storage ui:gear temp.Reader

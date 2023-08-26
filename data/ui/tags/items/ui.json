@@ -82,6 +82,8 @@
         "minecraft:spyglass",
         "minecraft:gold_block",
         "minecraft:phantom_membrane",
-        "minecraft:apple"
+        "minecraft:apple",
+        "minecraft:gold_ingot",
+        "minecraft:structure_block"
     ]
 }
