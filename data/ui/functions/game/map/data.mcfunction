@@ -41,7 +41,7 @@ data modify storage ui:map maps append value {ID:34,upper:[-163.5d,29.5d,-150.5d
 # -115 34 306 -189 28 206   :   -146 34 209 -158 34 303 : -187 34 253 -117 34 259
 data modify storage ui:map maps append value {ID:35,upper:[-114.5d,34.5d,306.5d],downer:[-188.5d,28.5d,206.5d],blue:[-145.5d,34.5d,209.5d],red:[-186.5d,34.5d,253.5d],yellow:[-157.5d,34.5d,303.5d],green:[-116.5d,34.5d,259.5d],color:2,4team:true}
 # -215 30 165 -273 40 123   :   -225 37 160 -263 37 128
-data modify storage ui:map maps append value {ID:36,upper:[-214.5d,40.5d,165.5d],downer:[-272.5d,30.5d,123.5d],blue:[-224.5d,37.5d,160.5d],yellow:[-262.5d,37.5d,120.5d],color:1}
+data modify storage ui:map maps append value {ID:36,upper:[-214.5d,40.5d,165.5d],downer:[-272.5d,30.5d,123.5d],blue:[-224.5d,37.5d,160.5d],yellow:[-262.5d,37.5d,128.5d],color:1}
 # -108 52 163 -170 31 85    :   -142 53 89 -136 53 159
 data modify storage ui:map maps append value {ID:37,upper:[-107.5d,52.5d,163.5d],downer:[-169.5d,31.5d,85.5d],blue:[-141.5d,53.5d,89.5d],yellow:[-135.5d,53.5d,159.5d],color:1}
 # -277 42 39 -323 30 -39   :   -298 43 37 -302 43 -37

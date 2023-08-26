@@ -80,7 +80,7 @@ execute if entity @s[tag=tmw_237_readtag] run function ui:tmw/237/tag/reader
 execute if score $amp ui_temp matches 1.. run function ui:tmw/237/amp/manager
 
 # 最後に持った時間と連続していなかった場合ペナルティ
-#execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed/hand.sys
+execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed/hand.sys
 
 # キー入力検知範囲拡大
 #tag @s[tag=tmw_drop_s] add tmw_drop_n
