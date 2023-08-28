@@ -13,4 +13,5 @@ execute if score $team ui_temp matches 3 at @s run function ui:common/particle/s
 execute if score $team ui_temp matches 4 at @s run function ui:common/particle/ss/downer/10029/4
 
 #
-execute if score $is ui_temp matches 70.. run kill @s
+#execute if score $is ui_temp matches 70.. run kill @s
+execute if score $is ui_temp matches 20.. run kill @s

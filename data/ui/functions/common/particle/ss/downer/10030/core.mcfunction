@@ -10,4 +10,5 @@ execute at @s if block ~ ~-0.1 ~ #ui:nocol run function ui:common/particle/ss/do
 function ui:common/particle/ss/downer/10030/1
 
 #
-execute if score $is ui_temp matches 35.. run kill @s
+#execute if score $is ui_temp matches 35.. run kill @s
+execute if score $is ui_temp matches 15.. run kill @s
