@@ -1,15 +1,3 @@
-scoreboard players operation $ink.temp ui_temp = $ink ui_temp
-scoreboard players operation $ink.temp ui_temp *= #100 ui_num
-scoreboard players operation $ink.temp ui_temp /= $ink.max ui_temp
-scoreboard players operation $ink.temp ui_temp < #100 ui_num
-scoreboard players operation $ink.temp ui_temp > #0 ui_num
-
-scoreboard players operation $sp.temp ui_temp = @s ui_paint
-scoreboard players operation $sp.temp ui_temp *= #100 ui_num
-scoreboard players operation $sp.temp ui_temp /= $spneed ui_temp
-scoreboard players operation $sp.temp ui_temp < #100 ui_num
-scoreboard players operation $sp.temp ui_temp > #0 ui_num
-
 # 旧インク数値
 execute if score $text_id ui_temp matches 1 run function ui:tmw/237/title/block/1
 # 旧SP数値
