@@ -109,8 +109,8 @@ execute if entity @s[tag=tmw_237_nochargelog] run item replace entity @s enderch
 execute if entity @s[tag=!tmw_237_nochargelog] run item replace entity @s enderchest.15 with lime_stained_glass_pane{display:{Name:'{"text":"スペシャルチャージ完了ログ: 表示","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=tmw_237_nosplog] run item replace entity @s enderchest.16 with red_stained_glass_pane{display:{Name:'{"text":"スペシャル発動ログ: 非表示","italic": false}'},ui:{ismenu:1}}
 execute if entity @s[tag=!tmw_237_nosplog] run item replace entity @s enderchest.16 with lime_stained_glass_pane{display:{Name:'{"text":"スペシャル発動ログ: 表示","italic": false}'},ui:{ismenu:1}}
-execute if entity @s[tag=tmw_237_nomisclog] run item replace entity @s enderchest.17 with red_stained_glass_pane{display:{Name:'{"text":"その他ログ: 非表示","italic": false}'},ui:{ismenu:1}}
-execute if entity @s[tag=!tmw_237_nomisclog] run item replace entity @s enderchest.17 with lime_stained_glass_pane{display:{Name:'{"text":"その他ログ: 表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=tmw_237_nomisclog] run item replace entity @s enderchest.17 with red_stained_glass_pane{display:{Name:'{"text":"ギア・モジュール通知/その他ログ: 非表示","italic": false}'},ui:{ismenu:1}}
+execute if entity @s[tag=!tmw_237_nomisclog] run item replace entity @s enderchest.17 with lime_stained_glass_pane{display:{Name:'{"text":"ギア・モジュール通知/その他ログ: 表示","italic": false}'},ui:{ismenu:1}}
 execute unless entity @s[tag=game.ready] run item replace entity @s enderchest.18 with red_dye{display:{Name:'{"text":"クリックで準備完了する","italic": false,"color": "red"}'},ui:{ismenu:1}}
 execute if entity @s[tag=game.ready] run item replace entity @s enderchest.18 with lime_dye{display:{Name:'{"text":"クリックで準備完了解除","italic": false,"color": "green"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}
 execute if score $phase game_state matches 1.. run item replace entity @s enderchest.18 with orange_dye{display:{Name:'{"text":"開始中・・・","italic": false,"color": "gold"}'},ui:{ismenu:1},Enchantments:[{id:"unbreaking",lvl:1s}],HideFlags:1}

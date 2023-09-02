@@ -1,7 +1,7 @@
 #
-data modify storage tds: temp.WeaponName set value "ERROR"
-data modify storage tds: temp.SubWeaponName set value "ERROR"
-data modify storage tds: temp.SPWeaponName set value "ERROR"
+data modify storage tds: temp.WeaponName set value "NULL"
+data modify storage tds: temp.SubWeaponName set value "NULL"
+data modify storage tds: temp.SPWeaponName set value "NULL"
 
 #
 data modify storage tds: temp.WeaponName set from entity @s Inventory[{Slot:0b}].tag.tmw.gun.Name
@@ -13,6 +13,9 @@ execute if entity @s[tag=tmw_237_random] if score @s random_main matches 3 run t
 execute if data storage tds: temp{SubWeaponName:"ERROR"} if data storage tds: temp{SPWeaponName:"ERROR"} if entity @s[advancements={ui:add/basic/qf_none=false}] run advancement grant @s only ui:add/basic/qf_none
 
 #
+execute if score $secondary ui_world matches 1 run data modify storage tds: temp.WeaponName set value "NULL"
+execute if score $secondary ui_world matches 1 run data modify storage tds: temp.SubWeaponName set value "NULL"
+execute if score $secondary ui_world matches 1 run data modify storage tds: temp.SPWeaponName set value "NULL"
 execute if score $secondary ui_world matches 1 run data modify storage tds: temp.WeaponName set from entity @s Inventory[{Slot:1b}].tag.tmw.gun.Name
 execute if score $secondary ui_world matches 1 run data modify storage tds: temp.SubWeaponName set from entity @s Inventory[{Slot:1b}].tag.tmw.gun.SubName
 execute if score $secondary ui_world matches 1 run data modify storage tds: temp.SPWeaponName set from entity @s Inventory[{Slot:1b}].tag.tmw.gun.SPName
@@ -22,3 +25,8 @@ execute if score $secondary ui_world matches 1 run tellraw @a ["",{"text":" - [S
 data remove storage tds: temp.WeaponName
 data remove storage tds: temp.SubWeaponName
 data remove storage tds: temp.SPWeaponName
+
+#
+execute unless score $module ui_world matches 1 unless score $gear_off party_mode matches 1 run function ui:tmw/237/nofunc/bro_gear
+execute if score $module ui_world matches 1 if score $gear_off party_mode matches 1 run function ui:tmw/237/nofunc/bro_module
+execute if score $module ui_world matches 1 unless score $gear_off party_mode matches 1 run function ui:tmw/237/nofunc/bro_m_a_g
