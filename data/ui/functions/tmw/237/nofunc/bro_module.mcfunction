@@ -1,4 +1,4 @@
-execute if score @s module matches 0 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: NULL"}]
+execute unless score @s module matches 1.. run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: NULL"}]
 execute if score @s module matches 1 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 飛んで行けるなら"}]
 execute if score @s module matches 2 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 最強トリック"}]
 execute if score @s module matches 3 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 404 not found"}]
