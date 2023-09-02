@@ -6,6 +6,7 @@
     function ui:common/ender
     execute if score $slot ui_temp matches 2 run scoreboard players set $sub ui_temp 121
     execute if score $slot ui_temp matches 3 run scoreboard players set $sub ui_temp 205
+    execute if score $slot ui_temp matches 4 run scoreboard players set $sub ui_temp 123
 
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 2
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
@@ -14,6 +15,7 @@
 # 名前を入力
     execute if score $slot ui_temp matches 2 run data modify storage ui:gun temp.tmw.gun.SubName set value "クイックアーマー"
     execute if score $slot ui_temp matches 3 run data modify storage ui:gun temp.tmw.gun.SubName set value "スピードカバー"
+    execute if score $slot ui_temp matches 4 run data modify storage ui:gun temp.tmw.gun.SubName set value "フライングタレット"
 
 # 逆変換
     execute if score $changed ui_temp matches 1 run function ui:tmw/243/core/changed

@@ -62,6 +62,7 @@
     execute if score @s ui_rst matches 0 if score $temp2 ui_temp matches 1 run gamemode creative @s
     execute if score @s ui_rst matches 0 if score $temp2 ui_temp matches 2 run gamemode adventure @s
     execute if score @s ui_rst matches 0 run effect give @s resistance 5 127 false
+    execute if score @s ui_rst matches 0 if data storage ui:map {mode:"Boss"} run effect clear @s resistance
     execute if score @s ui_rst matches 0 if score $module ui_world matches 1 if score @s module matches 13 run scoreboard players set @s ui_tmw237_survive 300
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_tag_inkfill
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_tag_spdec

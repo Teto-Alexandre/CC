@@ -33,6 +33,7 @@ execute if score $rand ui_calc1 matches 28 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 29 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 204
 execute if score $rand ui_calc1 matches 30 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 121
 execute if score $rand ui_calc1 matches 31 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 205
+execute if score $rand ui_calc1 matches 32 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 123
 
 execute if score $rand ui_calc1 matches 0 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "スプラッシュボム"
 execute if score $rand ui_calc1 matches 1 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "リフレクター"
@@ -66,3 +67,4 @@ execute if score $rand ui_calc1 matches 28 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 29 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "サーキュレーター"
 execute if score $rand ui_calc1 matches 30 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "クイックアーマー"
 execute if score $rand ui_calc1 matches 31 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "スピードカバー"
+execute if score $rand ui_calc1 matches 32 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "フライングタレット"
