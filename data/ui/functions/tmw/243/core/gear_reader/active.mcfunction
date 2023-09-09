@@ -20,6 +20,7 @@ scoreboard players set @s move_speed 100
 scoreboard players set @s armor 0
 scoreboard players set @s blast_protection 0
 scoreboard players set @s norma_damage 1000
+scoreboard players set @s sub_damage 100
 scoreboard players set @s vsobj_damage 100
 scoreboard players set @s blast_damage 100
 scoreboard players set @s respawn_acc 100
