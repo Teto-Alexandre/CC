@@ -31,6 +31,8 @@ execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 a
 tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"5秒後に開始します・・・","color":"gold"}]
 playsound minecraft:entity.player.levelup master @a ~ ~ ~ 1 0.5 1
 effect give @a resistance 10 127 true
+tag @a remove ui_unhurtable
+tag @a remove ui_resistance
 execute as @a[tag=tmw_237_respawning] run scoreboard players set @s ui_rst 1
 gamemode spectator @a
 

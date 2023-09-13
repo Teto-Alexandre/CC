@@ -1,4 +1,4 @@
-# カーリングボム
+# イルカライド
 
 # ダメージを与える
     execute if score $team ui_temp matches 1 run data modify storage ui:temp Name set value '{"text":"イルカライド","color":"aqua"}'

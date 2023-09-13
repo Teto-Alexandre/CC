@@ -1,4 +1,4 @@
-# ガトリングタレット
+# エナジースタンド
 
 # 最初idがないなら生成
     execute unless score @s ui_obj_id matches -2147483648..2147483647 run function ui:misc/act/make_obj_id

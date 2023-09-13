@@ -15,3 +15,6 @@ playsound entity.zombie_villager.cure player @a ~ ~ ~ 1 0.8 0
 playsound block.respawn_anchor.deplete player @a ~ ~ ~ 1 1.5 0
 
 tag @s add energy_buff
+
+execute if entity @s[tag=speedtype_shoot] run function ui:template/stats/shoot_speed
+execute if entity @s[tag=speedtype_move] run function ui:template/stats/move_speed

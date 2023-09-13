@@ -1,4 +1,4 @@
-# インクタレット
+# ガトリングタレット
 
 # ダメージを与える
     data modify storage ui:temp Name set value '{"text":"ガトリングタレット","color":"gold"}'

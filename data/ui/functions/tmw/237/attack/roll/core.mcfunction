@@ -36,10 +36,13 @@
     execute if score $speed ui_temp matches -3 run effect give @s slowness 1 2 true
     execute if score $speed ui_temp matches -2 run effect give @s slowness 1 1 true
     execute if score $speed ui_temp matches -1 run effect give @s slowness 1 0 true
-    execute if score $speed ui_temp matches 1.. if score @s ui_use2 matches 10.. run effect give @s speed 1 0 true
-    execute if score $speed ui_temp matches 2.. if score @s ui_use2 matches 20.. run effect give @s speed 1 1 true
-    execute if score $speed ui_temp matches 3.. if score @s ui_use2 matches 30.. run effect give @s speed 1 2 true
-    execute if score $speed ui_temp matches 4.. if score @s ui_use2 matches 40.. run effect give @s speed 1 3 true
+    execute if score $speed ui_temp matches 1.. if score @s ui_use2 matches 20.. run effect give @s[nbt=!{ActiveEffects:[{Id:33}]}] speed 1 0 true
+    execute if score $speed ui_temp matches 2.. if score @s ui_use2 matches 40.. run effect give @s[nbt=!{ActiveEffects:[{Id:33}]}] speed 1 1 true
+    execute if score $speed ui_temp matches 2 if score @s ui_use2 matches 40.. run particle end_rod ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
+    execute if score $speed ui_temp matches 3.. if score @s ui_use2 matches 60.. run effect give @s[nbt=!{ActiveEffects:[{Id:33}]}] speed 1 2 true
+    execute if score $speed ui_temp matches 3 if score @s ui_use2 matches 60.. run particle end_rod ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
+    execute if score $speed ui_temp matches 4.. if score @s ui_use2 matches 80.. run effect give @s[nbt=!{ActiveEffects:[{Id:33}]}] speed 1 3 true
+    execute if score $speed ui_temp matches 4 if score @s ui_use2 matches 80.. run particle end_rod ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
 
 # 床保護
     execute if score $floor_proof ui_temp matches 1 run tag @s add floor_proof
