@@ -9,7 +9,7 @@
         execute if entity @s[tag=!tmw_237_proj_first] run tag @e[tag=ui_temp_unpower] add tmw_237_noref
     
     # 弾にデータを込める
-        execute if entity @s[tag=!tmw_237_proj_first] run data modify storage ui_temp: Unpower set value {Damage:0,Range:0,RangeType:1,Speed:900,FlyParticle:18,EndParticle:-1,Name:'',Pierce:1b}
+        execute if entity @s[tag=!tmw_237_proj_first] run data modify storage ui_temp: Unpower set value {Damage:0,Range:0,RangeType:1,Speed:2000,FlyParticle:18,EndParticle:-1,Name:'',Pierce:1b}
         execute if entity @s[tag=!tmw_237_proj_first] store result storage ui_temp: Unpower.Damage int 1 run scoreboard players get @s ui_fhd
         execute if entity @s[tag=!tmw_237_proj_first] store result storage ui_temp: Unpower.Range int 1 run scoreboard players get @s ui_fhl
         execute if entity @s[tag=!tmw_237_proj_first] run data modify storage ui_temp: Unpower.Name set from entity @s ArmorItems.[0].tag.display.Name

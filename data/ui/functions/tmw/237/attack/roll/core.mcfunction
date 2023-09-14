@@ -6,11 +6,9 @@
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
     execute store result score $floor_proof ui_temp run data get storage ui:gun temp2.FloorProof
 
-# 素早く坂を上り下りする挙動
-    execute as @s if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #ui:slabs unless block ^ ^ ^0.5 #ui:nocol unless block ^ ^ ^0.5 #ui:nocol if block ^ ^1 ^0.5 #ui:nocol if block ^0.4 ^1 ^0.5 #ui:nocol if block ^-0.4 ^1 ^0.5 #ui:nocol if block ^ ^1 ^0.9 #ui:nocol unless block ^ ^ ^0.5 #ui:slabs unless block ^ ^ ^0.5 #ui:nocol run scoreboard players set @s ui_use2 20
-    execute as @s if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #ui:slabs unless block ^ ^ ^0.5 #ui:nocol unless block ^ ^ ^0.5 #ui:nocol if block ^ ^1 ^0.5 #ui:nocol if block ^0.4 ^1 ^0.5 #ui:nocol if block ^-0.4 ^1 ^0.5 #ui:nocol if block ^ ^1 ^0.9 #ui:nocol unless block ^ ^ ^0.5 #ui:slabs unless block ^ ^ ^0.5 #ui:nocol run teleport @s ^ ^1 ^0.4
-    execute as @s[nbt={OnGround:1b}] rotated ~ 0 if block ^ ^-1 ^1 #ui:nocol if block ^ ^ ^1 #ui:nocol if block ^ ^-1 ^0.5 #ui:nocol if block ^ ^ ^0.5 #ui:nocol if block ^ ^-1 ^0.9 #ui:nocol if block ^0.4 ^-1 ^0.5 #ui:nocol if block ^-0.4 ^-1 ^0.5 #ui:nocol unless block ^ ^-2 ^0.5 #ui:nocol unless block ^ ^-2 ^0.5 water if block ~ ~ ~ #ui:nocol run scoreboard players set @s ui_use2 20
-    execute as @s[nbt={OnGround:1b}] rotated ~ 0 if block ^ ^-1 ^1 #ui:nocol if block ^ ^ ^1 #ui:nocol if block ^ ^-1 ^0.5 #ui:nocol if block ^ ^ ^0.5 #ui:nocol if block ^ ^-1 ^0.9 #ui:nocol if block ^0.4 ^-1 ^0.5 #ui:nocol if block ^-0.4 ^-1 ^0.5 #ui:nocol unless block ^ ^-2 ^0.5 #ui:nocol unless block ^ ^-2 ^0.5 water if block ~ ~ ~ #ui:nocol run teleport @s ^ ^-1 ^0.6
+# 素早く坂を上る挙動
+    execute as @s[nbt={OnGround:1b}] if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #ui:slabs unless block ^ ^ ^0.5 #ui:nocol_excludes_irons unless block ^ ^ ^0.5 #ui:nocol_excludes_irons if block ^ ^1 ^0.5 #ui:nocol_excludes_irons if block ^0.4 ^1 ^0.5 #ui:nocol_excludes_irons if block ^-0.4 ^1 ^0.5 #ui:nocol_excludes_irons if block ^ ^1 ^0.9 #ui:nocol_excludes_irons unless block ^ ^ ^0.5 #ui:slabs unless block ^ ^ ^0.5 #ui:nocol_excludes_irons run scoreboard players set @s ui_use2 20
+    execute as @s[nbt={OnGround:1b}] if score $fall ui_temp matches 0 rotated ~ 0 unless block ~ ~ ~ #ui:slabs unless block ^ ^ ^0.5 #ui:nocol_excludes_irons unless block ^ ^ ^0.5 #ui:nocol_excludes_irons if block ^ ^1 ^0.5 #ui:nocol_excludes_irons if block ^0.4 ^1 ^0.5 #ui:nocol_excludes_irons if block ^-0.4 ^1 ^0.5 #ui:nocol_excludes_irons if block ^ ^1 ^0.9 #ui:nocol_excludes_irons unless block ^ ^ ^0.5 #ui:slabs unless block ^ ^ ^0.5 #ui:nocol_excludes_irons run teleport @s ^ ^1 ^0.4
 
 # id共有
 

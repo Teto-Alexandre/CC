@@ -22,4 +22,6 @@
     execute if score $burst_alt.id ui_temp matches 214 run function ui:tmw/237/attack/shot/burst8/214
     execute if score $burst_alt.id ui_temp matches 215 run function ui:tmw/237/attack/shot/burst8/215
     execute if score $burst_alt.id ui_temp matches 216 run function ui:tmw/237/attack/shot/burst8/216
+    execute if score $burst_alt.id ui_temp matches 217 run function ui:tmw/237/attack/shot/burst8/217
+    execute if score $burst_alt.id ui_temp matches 218 run function ui:tmw/237/attack/shot/burst8/218
     execute if score $burst_alt.id ui_temp matches 251 run function ui:tmw/237/attack/shot/burst8/251

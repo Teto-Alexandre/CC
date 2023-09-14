@@ -16,6 +16,8 @@
     execute if score $burst_alt ui_temp >= $burst.max ui_temp store result score $ink.main ui_temp run data get storage ui:gun temp.Charge.MainInkUse
     execute if score $burst_alt ui_temp >= $burst.max ui_temp store result score $freehitlength ui_temp run data get storage ui:gun temp.Charge.FreeHitLength
 
+    execute if score $burst_alt ui_temp < $burst.max ui_temp store result score $damage.free ui_temp run data get storage ui:gun temp.Charge.DamageFreeNoCharge
+
     execute if score $burst_alt.id ui_temp matches 301 if score $burst_alt ui_temp < $burst.max ui_temp run scoreboard players set $burst ui_temp 2
     execute if score $burst_alt.id ui_temp matches 301 if score $burst_alt ui_temp < $burst.max ui_temp store result score $ct ui_temp run data get storage ui:gun temp2.ShotCT
     execute if score $burst_alt.id ui_temp matches 303 if score $burst_alt ui_temp < $burst.max ui_temp run scoreboard players set $burst ui_temp 3
