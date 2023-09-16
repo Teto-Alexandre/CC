@@ -8,6 +8,5 @@ execute as @e[tag=ui_18] at @s run particle flash ~ ~ ~ 0 0 0 1 5 force
 execute as @e[tag=ui_18] at @s run playsound entity.player.levelup player @a ~ ~ ~ 1 2 0
 
 scoreboard players set $area_color ui_temp -2
-scoreboard players add $area_progress_boost ui_temp 2
 
 tellraw @a [{"text":"黄チームがエリアを確保！","color": "yellow"}]
