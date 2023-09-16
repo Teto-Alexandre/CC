@@ -1,5 +1,10 @@
 # ボスバーの編集
 scoreboard players set $area_progress_display ui_temp 0
+scoreboard players operation $area_progress_boost_display1 ui_temp = $area_progress_boost ui_temp
+scoreboard players operation $area_progress_boost_display1 ui_temp /= #1000 ui_num
+scoreboard players operation $area_progress_boost_display2 ui_temp = $area_progress_boost ui_temp
+scoreboard players operation $area_progress_boost_display2 ui_temp /= #100 ui_num
+scoreboard players operation $area_progress_boost_display2 ui_temp %= #10 ui_num
 execute if score $area_progress ui_temp matches ..99999 run scoreboard players operation $area_progress_display ui_temp -= $area_progress ui_temp
 execute if score $area_progress ui_temp matches ..99999 store result bossbar ui:area value run scoreboard players add $area_progress_display ui_temp 100000
 execute if score $area_progress ui_temp matches ..99999 run scoreboard players operation $area_progress_display ui_temp /= #1000 ui_num
@@ -35,9 +40,9 @@ execute if score $area_color ui_temp matches 2 if score $area_blue ui_temp match
 execute if score $area_color ui_temp matches -2 if score $area_yellow ui_temp matches ..51 run function ui:ui/18/shift/no
 
 # 名前編集
-execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "aqua"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "yellow","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "yellow"},{"text": "%","color": "yellow","bold": true}]
-execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "aqua"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "white","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "white"},{"text": "%","color": "white","bold": true}]
-execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "aqua"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "aqua","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "aqua"},{"text": "%","color": "aqua","bold": true}]
+execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "yellow"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "yellow","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "yellow"},{"text": "%","color": "yellow","bold": true},{"text": "[+","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display1","objective": "ui_temp"},"color": "white"},{"text": ".","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display2","objective": "ui_temp"},"color": "white"},{"text": "%/s]","color": "white","bold": true}]
+execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "yellow"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "white","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "white"},{"text": "%","color": "white","bold": true},{"text": "[+","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display1","objective": "ui_temp"},"color": "white"},{"text": ".","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display2","objective": "ui_temp"},"color": "white"},{"text": "%/s]","color": "white","bold": true}]
+execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "yellow"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "aqua","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "aqua"},{"text": "%","color": "aqua","bold": true},{"text": "[+","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display1","objective": "ui_temp"},"color": "white"},{"text": ".","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display2","objective": "ui_temp"},"color": "white"},{"text": "%/s]","color": "white","bold": true}]
 
 # パーティクル
 execute as @e[tag=ui_18_rad4] at @s positioned ~ ~0.6 ~ run function ui:ui/18/particle/4
@@ -53,7 +58,8 @@ execute if score $area_color ui_temp matches 2 run scoreboard players operation 
 execute if score $area_color ui_temp matches -2 if score $area_progress ui_temp matches 160000.. run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
 execute if score $area_color ui_temp matches -2 if score $area_progress ui_temp matches 130000.. run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
 execute if score $area_color ui_temp matches -2 run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
-scoreboard players add $area_progress_boost ui_temp 15
+scoreboard players operation $area_progress_boost ui_temp *= #101 ui_num
+scoreboard players operation $area_progress_boost ui_temp /= #100 ui_num
 
 #
 execute if score $area_progress ui_temp matches 200000.. as @e[tag=ui_18] at @s run function ui:ui/18/blue_win

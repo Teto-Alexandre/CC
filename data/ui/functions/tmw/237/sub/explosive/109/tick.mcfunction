@@ -3,11 +3,7 @@
 # 常時実行
     scoreboard players operation $temp ui_temp = @s ui_team
     execute as @a unless score @s ui_team = $temp ui_temp run tag @s add ui_temp_temp_team
-    execute if score @s ui_uses matches 10.. run data modify storage ui:temp Effect set value [{Id:"slowness",Duration:20,Amplifier:0b},{Id:"darkness",Duration:100,Amplifier:0b}]
-    execute if score @s ui_uses matches 10.. as @e[type=!#ui:notmob,distance=..5] unless score @s ui_team = $temp ui_temp run function ui:tmw/237/misc/giveeffect/
-    execute if score @s ui_uses matches 10.. as @e[type=!#ui:notmob,distance=..5] unless score @s ui_team = $temp ui_temp run function ui:template/stats/shoot_speed
-    execute if score @s ui_uses matches 10.. as @e[type=!#ui:notmob,distance=..5] unless score @s ui_team = $temp ui_temp run function ui:template/stats/move_speed
-    execute if score @s ui_uses matches 10.. as @a[distance=..5] unless score @s ui_team = $temp ui_temp run scoreboard players operation @s tds_recent_attacked_by = $id ui_temp
+    execute if score @s ui_uses matches 10.. as @e[type=!#ui:notmob,distance=..5] unless score @s ui_team = $temp ui_temp run function ui:tmw/237/sub/explosive/109/give
     execute if score @s ui_uses matches 10.. run particle dragon_breath ~ ~ ~ 2.5 2.5 2.5 0 15 force
     execute if score @s ui_uses matches 10 run particle dust 0.8 0 0.8 4 ~ ~ ~ 2.5 2.5 2.5 0 60 force @a[tag=ui_temp_temp_team]
     execute if score @s ui_uses matches 50 run particle dust 0.8 0 0.8 4 ~ ~ ~ 2.5 2.5 2.5 0 60 force @a[tag=ui_temp_temp_team]

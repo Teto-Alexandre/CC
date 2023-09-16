@@ -238,6 +238,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #98 ui_num 98
     scoreboard players set #99 ui_num 99
     scoreboard players set #100 ui_num 100
+    scoreboard players set #101 ui_num 101
     scoreboard players set #140 ui_num 140
     scoreboard players set #150 ui_num 150
     scoreboard players set #180 ui_num 180
