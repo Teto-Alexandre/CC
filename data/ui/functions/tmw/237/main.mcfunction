@@ -48,7 +48,7 @@ execute store result score $sp ui_temp run data get storage ui:gun temp.now.SP
 execute store result score $sptype ui_temp run data get storage ui:gun temp.SPType
 execute store result score $sptime ui_temp run data get storage ui:gun temp.now.SPTime
 execute store result score $sptime.max ui_temp run data get storage ui:gun temp.SPTime
-execute if score $module ui_world matches 1 as @a if score @s module matches 40 run function ui:module/broken_clock
+execute if score $module ui_world matches 1 if score @s module matches 40 run function ui:module/broken_clock
 execute store result score $amp ui_temp run data get storage ui:gun temp.now.Amp
 execute store result score $qf ui_temp run data get storage ui:gun temp.now.QFType
 execute store result score $lasttime ui_temp run data get storage ui:gun temp.now.Time
