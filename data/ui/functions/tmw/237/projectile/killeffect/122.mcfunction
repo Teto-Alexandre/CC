@@ -1,4 +1,4 @@
-# ウルトラバスター
+# ミサイルの発射を媒介する
 
 #
 # 入力された方向に弾を出す
@@ -15,5 +15,5 @@ tag @e[tag=ui_temp_unpower] add ui_refd
 tag @e[tag=ui_temp_unpower] add tmw_237_noref
 
 scoreboard players set $temp ui_temp 0
-data modify storage ui_temp: Unpower set value {Damage:150,Range:80,RangeType:4,Speed:20,FlyParticle:105,EndParticle:-63,Name:'{"text":"ウルトラバスター","color":"gold"}',IS:0}
+data modify storage ui_temp: Unpower set value {Damage:150,Range:60,RangeType:4,Speed:20,FlyParticle:105,EndParticle:-63,Pierce:2b,Name:'{"text":"ウルトラバスター","color":"gold"}',IS:0}
 function ui:tmw/237/misc/unpower

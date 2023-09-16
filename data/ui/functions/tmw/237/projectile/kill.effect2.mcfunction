@@ -69,7 +69,9 @@
         # ラピッドショット
         execute if score @s ui_hpart matches 120 run function ui:tmw/237/projectile/killeffect/120
         # リングパルサー
-        execute if score @s ui_hpart matches 121..202 run function ui:tmw/237/projectile/killeffect/121
+        execute if score @s ui_hpart matches 121 run function ui:tmw/237/projectile/killeffect/121
+        # ウルトラバスター
+        execute if score @s ui_hpart matches 122..202 run function ui:tmw/237/projectile/killeffect/122
     # スペシャル溜まらない爆発
         execute if score @s ui_hpart matches 203 run function ui:tmw/237/projectile/killeffect/3
         execute if score @s ui_hpart matches 204 run function ui:tmw/237/projectile/killeffect/4
