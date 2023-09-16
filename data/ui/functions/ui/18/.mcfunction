@@ -3,15 +3,12 @@ scoreboard players set $area_progress_display ui_temp 0
 execute if score $area_progress ui_temp matches ..99999 run scoreboard players operation $area_progress_display ui_temp -= $area_progress ui_temp
 execute if score $area_progress ui_temp matches ..99999 store result bossbar ui:area value run scoreboard players add $area_progress_display ui_temp 100000
 execute if score $area_progress ui_temp matches ..99999 run scoreboard players operation $area_progress_display ui_temp /= #1000 ui_num
-execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area name [{"text": "エリア支配度: ","color": "yellow","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "yellow"},{"text": "%","color": "yellow","bold": true}]
 execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area color yellow
 execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area value 0
-execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area name [{"text": "エリア支配度: ","color": "white","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "white"},{"text": "%","color": "white","bold": true}]
 execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area color white
 execute if score $area_progress ui_temp matches 100001.. run scoreboard players operation $area_progress_display ui_temp = $area_progress ui_temp
 execute if score $area_progress ui_temp matches 100001.. store result bossbar ui:area value run scoreboard players remove $area_progress_display ui_temp 100000
 execute if score $area_progress ui_temp matches 100001.. run scoreboard players operation $area_progress_display ui_temp /= #1000 ui_num
-execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area name [{"text": "エリア支配度: ","color": "aqua","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "aqua"},{"text": "%","color": "aqua","bold": true}]
 execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area color blue
 
 # 触媒の最大値計算
@@ -37,6 +34,11 @@ execute if score $area_color ui_temp matches 0 if score $area_yellow ui_temp mat
 execute if score $area_color ui_temp matches 2 if score $area_blue ui_temp matches ..55 run function ui:ui/18/shift/no
 execute if score $area_color ui_temp matches -2 if score $area_yellow ui_temp matches ..51 run function ui:ui/18/shift/no
 
+# 名前編集
+execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "aqua"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "yellow","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "yellow"},{"text": "%","color": "yellow","bold": true}]
+execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "aqua"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "white","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "white"},{"text": "%","color": "white","bold": true}]
+execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "aqua"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "aqua","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "aqua"},{"text": "%","color": "aqua","bold": true}]
+
 # パーティクル
 execute as @e[tag=ui_18_rad4] at @s positioned ~ ~0.6 ~ run function ui:ui/18/particle/4
 execute as @e[tag=ui_18_rad5] at @s positioned ~ ~0.6 ~ run function ui:ui/18/particle/5
@@ -45,11 +47,11 @@ execute as @e[tag=ui_18_rad7] at @s positioned ~ ~0.6 ~ run function ui:ui/18/pa
 execute as @e[tag=ui_18_rad8] at @s positioned ~ ~0.6 ~ run function ui:ui/18/particle/8
 
 #
-execute if score $area_color ui_temp matches 2 if score $area_progress ui_temp matches ..400 run scoreboard players operation $area_progress ui_temp += $area_progress_boost ui_temp
-execute if score $area_color ui_temp matches 2 if score $area_progress ui_temp matches ..700 run scoreboard players operation $area_progress ui_temp += $area_progress_boost ui_temp
+execute if score $area_color ui_temp matches 2 if score $area_progress ui_temp matches ..40000 run scoreboard players operation $area_progress ui_temp += $area_progress_boost ui_temp
+execute if score $area_color ui_temp matches 2 if score $area_progress ui_temp matches ..70000 run scoreboard players operation $area_progress ui_temp += $area_progress_boost ui_temp
 execute if score $area_color ui_temp matches 2 run scoreboard players operation $area_progress ui_temp += $area_progress_boost ui_temp
-execute if score $area_color ui_temp matches -2 if score $area_progress ui_temp matches 1600.. run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
-execute if score $area_color ui_temp matches -2 if score $area_progress ui_temp matches 1300.. run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
+execute if score $area_color ui_temp matches -2 if score $area_progress ui_temp matches 160000.. run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
+execute if score $area_color ui_temp matches -2 if score $area_progress ui_temp matches 130000.. run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
 execute if score $area_color ui_temp matches -2 run scoreboard players operation $area_progress ui_temp -= $area_progress_boost ui_temp
 scoreboard players add $area_progress_boost ui_temp 15
 
