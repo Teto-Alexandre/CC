@@ -27,10 +27,61 @@ execute if data storage ui:map map.yellow run summon marker ~ ~ ~ {Tags:["temp_r
 execute if data storage ui:map map.green run summon marker ~ ~ ~ {Tags:["temp_respawn","temp_respawn_green"]}
 
 #
-execute if data storage ui:map map.blue run data modify entity @e[tag=temp_respawn_blue,limit=1] Pos set from storage ui:map map.blue
-execute if data storage ui:map map.red run data modify entity @e[tag=temp_respawn_red,limit=1] Pos set from storage ui:map map.red
-execute if data storage ui:map map.yellow run data modify entity @e[tag=temp_respawn_yellow,limit=1] Pos set from storage ui:map map.yellow
-execute if data storage ui:map map.green run data modify entity @e[tag=temp_respawn_green,limit=1] Pos set from storage ui:map map.green
+data merge storage ui:map {map:{temp:[0.0d,0.0d,0.0d]}}
+execute store result score $x1 ui_temp run data get storage ui:map map.blue[0] 10
+execute store result score $y1 ui_temp run data get storage ui:map map.blue[1] 10
+execute store result score $z1 ui_temp run data get storage ui:map map.blue[2] 10
+scoreboard players add $x1 ui_temp 5
+scoreboard players add $y1 ui_temp 5
+scoreboard players add $z1 ui_temp 5
+execute store result storage ui:map map.temp[0] double 0.1 run scoreboard players get $x1 ui_temp
+execute store result storage ui:map map.temp[1] double 0.1 run scoreboard players get $y1 ui_temp
+execute store result storage ui:map map.temp[2] double 0.1 run scoreboard players get $z1 ui_temp
+#execute if data storage ui:map map.blue run tellraw @a [{"text":"MapData[Blue]: "},{"storage":"ui:map","nbt":"map.blue","color": "aqua"},{"text":", TEMP: "},{"storage":"ui:map","nbt":"map.temp","color": "aqua"}]
+
+execute if data storage ui:map map.blue run data modify entity @e[tag=temp_respawn_blue,limit=1] Pos set from storage ui:map map.temp
+
+data merge storage ui:map {map:{temp:[0.0d,0.0d,0.0d]}}
+execute store result score $x1 ui_temp run data get storage ui:map map.red[0] 10
+execute store result score $y1 ui_temp run data get storage ui:map map.red[1] 10
+execute store result score $z1 ui_temp run data get storage ui:map map.red[2] 10
+scoreboard players add $x1 ui_temp 5
+scoreboard players add $y1 ui_temp 5
+scoreboard players add $z1 ui_temp 5
+execute store result storage ui:map map.temp[0] double 0.1 run scoreboard players get $x1 ui_temp
+execute store result storage ui:map map.temp[1] double 0.1 run scoreboard players get $y1 ui_temp
+execute store result storage ui:map map.temp[2] double 0.1 run scoreboard players get $z1 ui_temp
+#execute if data storage ui:map map.red run tellraw @a [{"text":"MapData[Red]: "},{"storage":"ui:map","nbt":"map.red","color": "light_purple"},{"text":", TEMP: "},{"storage":"ui:map","nbt":"map.temp","color": "light_purple"}]
+
+execute if data storage ui:map map.red run data modify entity @e[tag=temp_respawn_red,limit=1] Pos set from storage ui:map map.temp
+
+data merge storage ui:map {map:{temp:[0.0d,0.0d,0.0d]}}
+execute store result score $x1 ui_temp run data get storage ui:map map.yellow[0] 10
+execute store result score $y1 ui_temp run data get storage ui:map map.yellow[1] 10
+execute store result score $z1 ui_temp run data get storage ui:map map.yellow[2] 10
+scoreboard players add $x1 ui_temp 5
+scoreboard players add $y1 ui_temp 5
+scoreboard players add $z1 ui_temp 5
+execute store result storage ui:map map.temp[0] double 0.1 run scoreboard players get $x1 ui_temp
+execute store result storage ui:map map.temp[1] double 0.1 run scoreboard players get $y1 ui_temp
+execute store result storage ui:map map.temp[2] double 0.1 run scoreboard players get $z1 ui_temp
+#execute if data storage ui:map map.yellow run tellraw @a [{"text":"MapData[Yellow]: "},{"storage":"ui:map","nbt":"map.yellow","color": "yellow"},{"text":", TEMP: "},{"storage":"ui:map","nbt":"map.temp","color": "yellow"}]
+
+execute if data storage ui:map map.yellow run data modify entity @e[tag=temp_respawn_yellow,limit=1] Pos set from storage ui:map map.temp
+
+data merge storage ui:map {map:{temp:[0.0d,0.0d,0.0d]}}
+execute store result score $x1 ui_temp run data get storage ui:map map.green[0] 10
+execute store result score $y1 ui_temp run data get storage ui:map map.green[1] 10
+execute store result score $z1 ui_temp run data get storage ui:map map.green[2] 10
+scoreboard players add $x1 ui_temp 5
+scoreboard players add $y1 ui_temp 5
+scoreboard players add $z1 ui_temp 5
+execute store result storage ui:map map.temp[0] double 0.1 run scoreboard players get $x1 ui_temp
+execute store result storage ui:map map.temp[1] double 0.1 run scoreboard players get $y1 ui_temp
+execute store result storage ui:map map.temp[2] double 0.1 run scoreboard players get $z1 ui_temp
+#execute if data storage ui:map map.green run tellraw @a [{"text":"MapData[Green]: "},{"storage":"ui:map","nbt":"map.green","color": "green"},{"text":", TEMP: "},{"storage":"ui:map","nbt":"map.temp","color": "green"}]
+
+execute if data storage ui:map map.green run data modify entity @e[tag=temp_respawn_green,limit=1] Pos set from storage ui:map map.temp
 
 #
 execute as @e[tag=temp_respawn_blue] positioned as @s as @a[scores={ui_team=1},tag=!spectate] run teleport @s ~ ~ ~
@@ -43,6 +94,29 @@ execute as @e[tag=temp_respawn_green] positioned as @s as @a[scores={ui_team=4},
     execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=2}] at @e[tag=temp_respawn,tag=!temp_respawn_red,sort=random,limit=1] run teleport @s ~ ~ ~
     execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=3}] at @e[tag=temp_respawn,tag=!temp_respawn_yellow,sort=random,limit=1] run teleport @s ~ ~ ~
     execute if score $module ui_world matches 1 as @a[tag=!spectate] if score @s module matches 3 if entity @s[scores={ui_team=4}] at @e[tag=temp_respawn,tag=!temp_respawn_green,sort=random,limit=1] run teleport @s ~ ~ ~
+
+# ガチエリア
+execute if data storage ui:map {mode:"Area"} run function ui:ui/18/nofunc/start
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 1 positioned -82 34 -201 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 1 positioned -120 34 -201 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 2 positioned -32 33 92 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon8
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 3 positioned 46 32 100 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon7
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 4 positioned 0 35 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon7
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 5 positioned -200 37 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 7 positioned 315 41 -11 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 7 positioned 285 41 -11 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 8 positioned 200 42 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 9 positioned 500 37 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon8
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 12 positioned 116 33 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 12 positioned 78 42 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon5
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 13 positioned 500 36 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon5
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 16 positioned 137 33 105 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 16 positioned 113 33 117 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 17 positioned -20 36 194 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 17 positioned -46 36 194 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 18 positioned 209 34 102 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 18 positioned 191 34 108 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+
 
 # レイドボス
 execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 run data merge storage ui:common {input:{Mode:"summon",Var:1}}

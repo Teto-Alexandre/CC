@@ -84,6 +84,7 @@
         "minecraft:phantom_membrane",
         "minecraft:apple",
         "minecraft:gold_ingot",
-        "minecraft:structure_block"
+        "minecraft:structure_block",
+        "minecraft:repeater"
     ]
 }

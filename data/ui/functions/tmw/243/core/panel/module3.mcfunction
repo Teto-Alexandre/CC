@@ -14,8 +14,7 @@ item replace entity @s enderchest.3 with minecraft:light_gray_dye{display:{Name:
 item replace entity @s enderchest.4 with phantom_membrane{display:{Name:'{"text":"ふわふわ","color":"aqua","italic":false}',Lore:['[{"text":"常時低速落下を得る","color":"gray","italic":false}]','[{"text":"最大体力が4減る","color":"gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.5 with apple{display:{Name:'{"text":"ゾンビゾンビ","color":"dark_green","italic":false}',Lore:['[{"text":"死亡後にちょっとだけ行動できる","color":"gray","italic":false}]','[{"text":"*おいしくてぞんびになる*","color":"dark_gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.6 with gold_ingot{CustomModelData:215003,display:{Name:'{"text":"オートリローダー","color":"light_purple","italic":false}',Lore:['[{"text":"最後のギアの効果を３倍にする","color":"gray","italic":false}]']},ui:{ismenu:1}}
-
-item replace entity @s enderchest.7 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+item replace entity @s enderchest.7 with repeater{CustomModelData:215003,display:{Name:'{"text":"技術研究所","color":"yellow","italic":false}',Lore:['[{"text":"攻撃者と自身のキル数の差を参照","color":"gray","italic":false}]','[{"text":"被ダメージ時、差に応じて増減する","color":"gray","italic":false}]','[{"text":"自分より少ない敵から受けるダメージは増加する","color":"red","italic":false}]']},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 1 run scoreboard players set @s module 43
 execute if score $slot ui_temp matches 2 run scoreboard players set @s module 44

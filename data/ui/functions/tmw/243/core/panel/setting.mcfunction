@@ -55,47 +55,53 @@ item modify entity @s enderchest.19 ui:setting_sec
 execute unless score $gamemode ui_world matches 1.. run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ナワバリバトル","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $gamemode ui_world matches 1 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチキング","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $gamemode ui_world matches 2 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチ増え鬼","color": "gold","italic": false}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 3 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチアシバ","color": "gold","italic": false}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 4 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチレイド","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 3 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチエリア","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 4 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチアシバ","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 5 run item replace entity @s enderchest.2 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチレイド","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 2 run scoreboard players add $gamemode ui_world 1
 item replace entity @s enderchest.11 with crafting_table{display:{Name:'{"text":"ゲームモード","color": "gold","italic": false}',Lore:['{"text":"※クリックして初期化","color": "gray","italic": false}']},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 11 run scoreboard players set $gamemode ui_world 0
 execute unless score $gamemode ui_world matches 1.. run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ナワバリバトル","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $gamemode ui_world matches 1 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチキング","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $gamemode ui_world matches 2 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチ増え鬼","color": "gold","italic": false}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 3 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチアシバ","color": "gold","italic": false}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 4 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチレイド","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 3 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチエリア","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 4 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチアシバ","color": "gold","italic": false}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 5 run item replace entity @s enderchest.20 with yellow_stained_glass_pane{display:{Name:'{"text":"現在: ガチレイド","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 20 run scoreboard players remove $gamemode ui_world 1
-execute if score $gamemode ui_world matches 5.. run scoreboard players set $gamemode ui_world 0
-execute if score $gamemode ui_world matches ..-1 run scoreboard players set $gamemode ui_world 4
+execute if score $gamemode ui_world matches 6.. run scoreboard players set $gamemode ui_world 0
+execute if score $gamemode ui_world matches ..-1 run scoreboard players set $gamemode ui_world 5
 execute if score $slot ui_temp matches 2 unless score $gamemode ui_world matches 1.. run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがナワバリバトルになりました","color": "gray"}]
 execute if score $slot ui_temp matches 2 unless score $gamemode ui_world matches 1.. run data merge storage ui:map {mode:"2team"}
 execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチキングになりました","color": "gray"}]
 execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 1 run data merge storage ui:map {mode:"2team"}
 execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 2 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチ増え鬼になりました","color": "gray"}]
 execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 2 run data merge storage ui:map {mode:"2team"}
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 3 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチアシバになりました","color": "gray"}]
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 3 run data merge storage ui:map {mode:"Asiba"}
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 3 run function ui:game/team2
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 3 run scoreboard players set $teamset ui_world 0
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチレイドになりました","color": "gray"}]
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run data merge storage ui:map {mode:"Boss"}
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run scoreboard players set @a ui_team 1
-execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run scoreboard players set $teamset ui_world 3
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 3 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチエリアになりました","color": "gray"}]
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 3 run data merge storage ui:map {mode:"Area"}
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチアシバになりました","color": "gray"}]
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run data merge storage ui:map {mode:"Asiba"}
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run function ui:game/team2
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 4 run scoreboard players set $teamset ui_world 0
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 5 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチレイドになりました","color": "gray"}]
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 5 run data merge storage ui:map {mode:"Boss"}
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 5 run scoreboard players set @a ui_team 1
+execute if score $slot ui_temp matches 2 if score $gamemode ui_world matches 5 run scoreboard players set $teamset ui_world 3
 execute if score $slot ui_temp matches 20 unless score $gamemode ui_world matches 1.. run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがナワバリバトルになりました","color": "gray"}]
 execute if score $slot ui_temp matches 20 unless score $gamemode ui_world matches 1.. run data merge storage ui:map {mode:"2team"}
 execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 1 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチキングになりました","color": "gray"}]
 execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 1 run data merge storage ui:map {mode:"2team"}
 execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 2 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチ増え鬼になりました","color": "gray"}]
 execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 2 run data merge storage ui:map {mode:"2team"}
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 3 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチアシバになりました","color": "gray"}]
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 3 run data merge storage ui:map {mode:"Asiba"}
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 3 run function ui:game/team2
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 3 run scoreboard players set $teamset ui_world 0
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチレイドになりました","color": "gray"}]
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run data merge storage ui:map {mode:"Boss"}
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run scoreboard players set @a ui_team 1
-execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run scoreboard players set $teamset ui_world 3
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 3 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチエリアになりました","color": "gray"}]
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 3 run data merge storage ui:map {mode:"Area"}
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチアシバになりました","color": "gray"}]
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run data merge storage ui:map {mode:"Asiba"}
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run function ui:game/team2
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 4 run scoreboard players set $teamset ui_world 0
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 5 run tellraw @a [{"text":"> ","color": "gray"},{"text":"ゲームモードがガチレイドになりました","color": "gray"}]
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 5 run data merge storage ui:map {mode:"Boss"}
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 5 run scoreboard players set @a ui_team 1
+execute if score $slot ui_temp matches 20 if score $gamemode ui_world matches 5 run scoreboard players set $teamset ui_world 3
 
 execute unless score $teamset ui_world matches 1.. run item replace entity @s enderchest.3 with yellow_dye{display:{Name:'{"text":"2チーム","color": "gold","italic": false}'},ui:{ismenu:1}}
 execute if score $teamset ui_world matches 1 run item replace entity @s enderchest.3 with pink_dye{display:{Name:'{"text":"3チーム","color": "gold","italic": false}'},ui:{ismenu:1}}
@@ -111,13 +117,13 @@ execute if score $slot ui_temp matches 3 unless score $teamset ui_world matches 
 execute if score $slot ui_temp matches 3 if score $teamset ui_world matches 1..2 run data merge storage ui:map {mode:"4team"}
 execute if score $slot ui_temp matches 3 if score $teamset ui_world matches 3 run data merge storage ui:map {mode:"2team"}
 
-execute unless score $gamemode ui_world matches 4 run item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 4 unless score $difficulty ui_world matches 1.. run item replace entity @s enderchest.21 with lime_wool{display:{Name:'{"text":"難易度: イージー","italic":false,"color": "green"}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 4 if score $difficulty ui_world matches 1 run item replace entity @s enderchest.21 with yellow_wool{display:{Name:'{"text":"難易度: プレーン","italic":false,"color": "yellow"}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 4 if score $difficulty ui_world matches 2 run item replace entity @s enderchest.21 with orange_wool{display:{Name:'{"text":"難易度: ハザード","italic":false,"color": "gold"}'},ui:{ismenu:1}}
-execute if score $gamemode ui_world matches 4 if score $difficulty ui_world matches 3 run item replace entity @s enderchest.21 with red_wool{display:{Name:'{"text":"難易度: ジエンド","italic":false,"color": "red"}'},ui:{ismenu:1}}
-execute if score $slot ui_temp matches 21 if score $gamemode ui_world matches 4 run scoreboard players add $difficulty ui_world 1
-execute if score $slot ui_temp matches 21 if score $gamemode ui_world matches 4 if score $difficulty ui_world matches 3.. run scoreboard players set $difficulty ui_world 0
+execute unless score $gamemode ui_world matches 5 run item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 5 unless score $difficulty ui_world matches 1.. run item replace entity @s enderchest.21 with lime_wool{display:{Name:'{"text":"難易度: イージー","italic":false,"color": "green"}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 5 if score $difficulty ui_world matches 1 run item replace entity @s enderchest.21 with yellow_wool{display:{Name:'{"text":"難易度: プレーン","italic":false,"color": "yellow"}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 5 if score $difficulty ui_world matches 2 run item replace entity @s enderchest.21 with orange_wool{display:{Name:'{"text":"難易度: ハザード","italic":false,"color": "gold"}'},ui:{ismenu:1}}
+execute if score $gamemode ui_world matches 5 if score $difficulty ui_world matches 3 run item replace entity @s enderchest.21 with red_wool{display:{Name:'{"text":"難易度: ジエンド","italic":false,"color": "red"}'},ui:{ismenu:1}}
+execute if score $slot ui_temp matches 21 if score $gamemode ui_world matches 5 run scoreboard players add $difficulty ui_world 1
+execute if score $slot ui_temp matches 21 if score $gamemode ui_world matches 5 if score $difficulty ui_world matches 3.. run scoreboard players set $difficulty ui_world 0
 
 execute unless score $autoteam ui_world matches 1.. run item replace entity @s enderchest.12 with wooden_axe{display:{Name:'{"text":"チーム固定","color": "gold","italic": false}'},ui:{ismenu:1},HideFlags:2}
 execute if score $autoteam ui_world matches 1 run item replace entity @s enderchest.12 with iron_axe{display:{Name:'{"text":"チーム自動変更","color": "gold","italic": false}'},ui:{ismenu:1},HideFlags:2}
