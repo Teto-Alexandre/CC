@@ -116,7 +116,21 @@ execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 17 p
 execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 17 positioned -46 36 194 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
 execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 18 positioned 209 34 102 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
 execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 18 positioned 191 34 108 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
-
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 20 positioned -600 34 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 21 positioned -700 32 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon7
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 22 positioned 300 37 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 23 positioned 400 35 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon8
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 25 positioned 800 32 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 26 positioned 900 34 -200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 27 positioned 800 40 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 28 positioned 603 36 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 30 positioned 161 30 -2 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon7
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 31 positioned 600 38 200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon5
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 32 positioned 500 33 200 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon8
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 35 positioned -160 29 258 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 35 positioned -144 29 254 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon4
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 37 positioned -139 32 124 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon5
+execute if data storage ui:map {mode:"Area"} if score $map ui_world matches 38 positioned -300 31 0 positioned ~ ~-0.5 ~ run function ui:ui/18/nofunc/summon6
 
 # レイドボス
 execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 run data merge storage ui:common {input:{Mode:"summon",Var:1}}
