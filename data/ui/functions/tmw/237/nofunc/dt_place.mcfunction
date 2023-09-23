@@ -16,7 +16,7 @@ summon armor_stand 0 33 -104 {Marker:1b,Tags:["damage_tester","ui_12_1"]}
 summon armor_stand 0 34 -114 {Marker:1b,Tags:["damage_tester","ui_12_1"]}
 
 summon armor_stand 23 30 -40 {Marker:1b,Tags:["damage_tester","ui_12_1","tester_move"],Rotation:[45.0f,0.0f]}
-summon armor_stand 23 30 -42 {Marker:1b,Tags:["damage_tester","ui_12_1","tester_move"],Rotation:[135.0f,0.0f]}
+summon armor_stand 23 30 -43 {Marker:1b,Tags:["damage_tester","ui_12_1","tester_move"],Rotation:[135.0f,0.0f]}
 
 # ダメテスのロジック読み込み
 function ui:ui/12/ss
