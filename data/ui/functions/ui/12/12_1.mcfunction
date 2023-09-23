@@ -1,3 +1,6 @@
+#動く
+execute if entity @s[tag=tester_move] run function ui:ui/12/tester_move/
+
 #的の転置
 execute as @e[tag=ui_12_2] at @s unless entity @e[tag=ui_12_1,distance=..0.9] run kill @s
 execute unless entity @e[tag=ui_12_2,distance=..0.9] run summon minecraft:skeleton ~ ~ ~ {NoAI:1b,Tags:["damage_tester","ui_12_2"],Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1,ArmorItems:[{},{},{},{id:"stone_button",Count:1b}],ArmorDropChances:[-1f,-1f,-1f,-1f],DeathLootTable:"none"}

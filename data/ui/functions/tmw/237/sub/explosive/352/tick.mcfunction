@@ -25,6 +25,7 @@
     scoreboard players operation @s ui_is2 = @s ui_is
 
 # 処理終了
+    tag @s add tmw_237_sub_unmovable
     execute if score @s ui_uses matches 20 run tag @s add ui_237_sub_stop
     execute as @s[tag=ui_237_sub_stop] run scoreboard players remove @s ui_is 8
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}

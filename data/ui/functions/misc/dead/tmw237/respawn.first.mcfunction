@@ -18,6 +18,8 @@ tag @e[tag=ui_respawn_unpower] remove ui_respawn_unpower
 #タイトル表示時間
 title @s times 0 20 10
 effect give @s blindness 1 0 true
+effect give @a night_vision 1000000 0 true
+execute if score $module ui_world matches 1 as @a if score @s module matches 7 run effect clear @s night_vision
 
 #ゲームモード変更
 gamemode spectator @s

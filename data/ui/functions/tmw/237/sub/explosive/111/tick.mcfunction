@@ -22,6 +22,7 @@
     execute if entity @s[tag=ui_237_sub_stop] if score @s ui_is matches ..0 run tag @s add ui_237_sub_explode
 
 # 処理終了
+    #execute if score @s ui_uses matches 2 run tellraw @a [{"text":"it: "},{"entity":"@s","nbt":"Age"}]
     execute if score @s ui_uses matches 2 run tag @s add ui_237_sub_stop
     execute store result score $time ui_temp run time query gametime
     execute if score @s ui_is matches 201.. run scoreboard players operation $time ui_temp %= #4 ui_num

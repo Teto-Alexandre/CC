@@ -67,7 +67,7 @@
     execute if entity @s[tag=tmw237_sub_nopoint] as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
     #scoreboard players operation $temp ui_temp = @s ui_uses
     #execute store result score $temp ui_temp run data get entity @s OnGround
-    #tellraw @a {"score":{"name":"$temp","objective":"ui_temp"}}
+    #execute if score @s ui_uses matches ..1 run tellraw @a [{"text":"OG: "},{"entity":"@s","nbt":"OnGround"},{"text":", Pos: "},{"entity":"@s","nbt":"Pos"},{"text":", Mot: "},{"entity":"@s","nbt":"Motion"}]
     scoreboard players add @s[nbt={OnGround:1b}] ui_uses 1
 
 # 水対策

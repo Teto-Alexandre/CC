@@ -39,12 +39,12 @@ data modify storage ui:map maps append value {ID:33,upper:[-66,38,56],downer:[-1
 data modify storage ui:map maps append value {ID:34,upper:[-164,29,-151],downer:[-212,29,-199],yellow:[-188,30,-175],color:2,Boss:true}
 
 # -115 34 306 -189 28 206   :   -146 34 209 -158 34 303 : -187 34 253 -117 34 259
-data modify storage ui:map maps append value {ID:35,upper:[-115,34,306],downer:[-189,28,206],blue:[-146,34,209],red:[-187,34,253],yellow:[-158,34,303],green:[-117,34,259],color:2,4team:true,Asiba:true}
+data modify storage ui:map maps append value {ID:35,upper:[-115,34,306],downer:[-189,28,206],blue:[-146,34,209],red:[-187,34,253],yellow:[-158,34,303],green:[-117,34,259],color:2,4team:true,Area:true}
 # -215 30 165 -273 40 123   :   -225 37 160 -263 37 128
 data modify storage ui:map maps append value {ID:36,upper:[-215,40,165],downer:[-273,30,123],blue:[-225,37,160],yellow:[-263,37,128],color:1}
 # -108 52 163 -170 31 85    :   -142 53 89 -136 53 159
-data modify storage ui:map maps append value {ID:37,upper:[-108,52,163],downer:[-170,31,85],blue:[-142,53,89],yellow:[-136,53,159],color:1,Asiba:true}
+data modify storage ui:map maps append value {ID:37,upper:[-108,52,163],downer:[-170,31,85],blue:[-142,53,89],yellow:[-136,53,159],color:1,Area:true}
 # -277 42 39 -323 30 -39   :   -298 43 37 -302 43 -37
-data modify storage ui:map maps append value {ID:38,upper:[-277,42,39],downer:[-323,30,-39],blue:[-298,43,37],yellow:[-302,43,-37],color:2,Asiba:true}
+data modify storage ui:map maps append value {ID:38,upper:[-277,42,39],downer:[-323,30,-39],blue:[-298,43,37],yellow:[-302,43,-37],color:2,Area:true}
 # -243 37 309 -290 30 210   :   -250 37 216 -283 37 303
 data modify storage ui:map maps append value {ID:39,upper:[-243,37,309],downer:[-290,30,210],blue:[-250,37,216],yellow:[-283,37,303],color:2}
