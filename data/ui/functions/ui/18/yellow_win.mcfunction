@@ -7,6 +7,8 @@
 
     particle explosion_emitter ~ ~1.5 ~ 0 0 0 0 1 force
     playsound entity.generic.explode player @a ~ ~ ~ 5 0.5 0
-    tellraw @a {"text":"黄チームの勝利！","color":"yellow","bold":true}
+    execute if score $count ui_temp matches 0 run tellraw @a {"text":"黄チームの勝利！","color":"yellow","bold":true}
+    
+    scoreboard players add $count ui_temp 1
 
     function ui:ui/18/nofunc/end

@@ -62,6 +62,7 @@ execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area n
 execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "yellow"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "aqua","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "aqua"},{"text": "%","color": "aqua","bold": true},{"text": "[+","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display1","objective": "ui_temp"},"color": "white"},{"text": ".","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display2","objective": "ui_temp"},"color": "white"},{"text": "%/s]","color": "white","bold": true}]
 
 #
+scoreboard players set $count ui_temp 0
 execute if score $area_progress ui_temp matches 200000.. as @e[tag=ui_18] at @s run function ui:ui/18/blue_win
 execute if score $area_progress ui_temp matches ..0 as @e[tag=ui_18] at @s run function ui:ui/18/yellow_win
 
