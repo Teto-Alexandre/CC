@@ -54,8 +54,8 @@
     execute if entity @s[tag=ui_237_sub_stop] run tag @e[distance=1..20,tag=!ui_temp_team,predicate=ui:load_unhurtable,nbt=!{ActiveEffects:[{Id:14}]},sort=nearest,limit=1] add ui_temp_target
     execute if entity @s[tag=ui_237_sub_stop] unless entity @e[tag=ui_temp_target] run teleport @s ~ ~ ~ ~2 -5
     execute if entity @s[tag=ui_237_sub_stop] if entity @e[tag=ui_temp_target] facing entity @e[tag=ui_temp_target,limit=1] feet run teleport @s ~ ~ ~ ~ -5
-    execute if entity @s[tag=ui_237_sub_stop,tag=!ui_237_thrown_by_module41] if score @s ui_is matches ..750 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
-    execute if entity @s[tag=ui_237_sub_stop,tag=ui_237_thrown_by_module41] if score @s ui_is matches ..1150 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
+    execute if entity @s[tag=ui_237_sub_stop,tag=!ui_237_thrown_by_module41] if score @s ui_is matches ..720 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
+    execute if entity @s[tag=ui_237_sub_stop,tag=ui_237_thrown_by_module41] if score @s ui_is matches ..1120 if score $time ui_temp matches 0.. positioned ^ ^1.27 ^0.2 rotated ~ ~ run function ui:tmw/237/sub/explosive/154/rain
 
 # 角度変更
     execute if score @s ui_is matches ..797 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_3,limit=1] Pose merge value {Head:[0.0f,1.0f,0.0f]}
@@ -63,16 +63,16 @@
     execute if score @s ui_is matches ..797 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_3,limit=1] Rotation[0] set from entity @s Rotation[0]
     execute if score @s ui_is matches ..797 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Rotation[0] set from entity @s Rotation[0]
     scoreboard players operation $time ui_temp %= #10 ui_num
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 0 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 0.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 1 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 36.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 2 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 72.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 3 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 108.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 4 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 144.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 5 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 180.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 6 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 216.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 7 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 252.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 8 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 288.0f
-    execute if score @s ui_is matches ..750 if score $time ui_temp matches 9 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 324.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 0 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 0.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 1 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 36.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 2 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 72.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 3 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 108.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 4 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 144.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 5 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 180.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 6 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 216.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 7 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 252.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 8 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 288.0f
+    execute if score @s ui_is matches ..720 if score $time ui_temp matches 9 run data modify entity @e[tag=ui_temp_obj,tag=tmw_237_sub_154_4,limit=1] Pose.Head[2] set value 324.0f
 
 # 処理終了（消える）
     execute if entity @s[tag=ui_237_sub_explode] run function ui:tmw/237/sub/explosive/154/end

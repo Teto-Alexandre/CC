@@ -10,6 +10,10 @@
     execute store result score $holdjump ui_temp run data get storage ui:gun temp.HoldJump
     execute store result score $holdsnd ui_temp run data get storage ui:gun temp.HoldSnd
 
+#
+    execute if entity @s[nbt={ActiveEffects:[{Id:14}]}] run scoreboard players set @s ui_use1 0
+    execute if entity @s[nbt={ActiveEffects:[{Id:14}]}] run scoreboard players set @s ui_use2 0
+
 # 構える演出
     execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run playsound block.piston.extend player @a ~ ~ ~ 1 0.8 0
     execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run playsound block.tripwire.click_on player @a ~ ~ ~ 1 0.6 0

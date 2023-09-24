@@ -48,13 +48,13 @@ scoreboard players operation $area_progress_boost_display2 ui_temp %= #10 ui_num
 execute if score $area_progress ui_temp matches ..99999 run scoreboard players operation $area_progress_display ui_temp -= $area_progress ui_temp
 execute if score $area_progress ui_temp matches ..99999 store result bossbar ui:area value run scoreboard players add $area_progress_display ui_temp 100000
 execute if score $area_progress ui_temp matches ..99999 run scoreboard players operation $area_progress_display ui_temp /= #1000 ui_num
-execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area color yellow
+execute if score $area_color ui_temp matches -2 run bossbar set ui:area color yellow
 execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area value 0
-execute if score $area_progress ui_temp matches 100000 run bossbar set ui:area color white
+execute if score $area_color ui_temp matches 0 run bossbar set ui:area color white
 execute if score $area_progress ui_temp matches 100001.. run scoreboard players operation $area_progress_display ui_temp = $area_progress ui_temp
 execute if score $area_progress ui_temp matches 100001.. store result bossbar ui:area value run scoreboard players remove $area_progress_display ui_temp 100000
 execute if score $area_progress ui_temp matches 100001.. run scoreboard players operation $area_progress_display ui_temp /= #1000 ui_num
-execute if score $area_progress ui_temp matches 100001.. run bossbar set ui:area color blue
+execute if score $area_color ui_temp matches 2 run bossbar set ui:area color blue
 
 # 名前編集
 execute if score $area_progress ui_temp matches ..99999 run bossbar set ui:area name [{"text": "占領:[","color": "white","bold": true},{"score":{"name": "$area_blue","objective": "ui_temp"},"color": "aqua"},{"text": "-","color": "white","bold": true},{"score":{"name": "$area_yellow","objective": "ui_temp"},"color": "yellow"},{"text": "] ","color": "white","bold": true},{"text": "エリア支配度: ","color": "yellow","bold": true},{"score":{"name": "$area_progress_display","objective": "ui_temp"},"color": "yellow"},{"text": "%","color": "yellow","bold": true},{"text": "[+","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display1","objective": "ui_temp"},"color": "white"},{"text": ".","color": "white","bold": true},{"score":{"name": "$area_progress_boost_display2","objective": "ui_temp"},"color": "white"},{"text": "%/s]","color": "white","bold": true}]
