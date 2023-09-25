@@ -5,6 +5,8 @@
     execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation $dmg.temp ui_temp /= #2 ui_num
     execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players operation @s ui_dmg += $dmg.temp ui_temp
     execute if entity @s[tag=!tmw_237_proj_first] run scoreboard players reset @a[tag=tmw237_464_temp,limit=1] ui_tmw237_drained_damage
+    execute if entity @s[tag=!tmw_237_proj_first] run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:2b}]
+    execute if entity @s[tag=!tmw_237_proj_first] as @a[tag=tmw237_464_temp,limit=1] run function ui:tmw/237/misc/giveeffect/
     execute if entity @s[tag=!tmw_237_proj_first] run tag @a[tag=tmw237_464_temp,limit=1] remove tmw237_464_temp
     execute if entity @s[tag=!tmw_237_proj_first] run tag @s add tmw_237_proj_first
 
