@@ -40,6 +40,7 @@ execute if score $sptype ui_temp matches 460 run tellraw @a[tag=!tmw_237_nosplog
 execute if score $sptype ui_temp matches 461 run tellraw @a[tag=!tmw_237_nosplog] [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"ウルトラハンコ","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 execute if score $sptype ui_temp matches 462 run tellraw @a[tag=!tmw_237_nosplog] [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"トライスプレッダー","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 execute if score $sptype ui_temp matches 463 run tellraw @a[tag=!tmw_237_nosplog] [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"リフレクトレーザー","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
+execute if score $sptype ui_temp matches 464 run tellraw @a[tag=!tmw_237_nosplog] [{"selector":"@s"},{"text":"が","color":"white"},{"text":"[","color":"gray"},{"text":"キューインキ","color":"gold"},{"text":"]","color":"gray"},{"text":"を発動しました！","color":"white"}]
 
 # スペシャルタイムをセット
 scoreboard players operation $sptime ui_temp = $sptime.max ui_temp

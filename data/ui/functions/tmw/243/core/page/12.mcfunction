@@ -26,6 +26,7 @@
     execute if score $slot ui_temp matches 23 run scoreboard players set $sp ui_temp 353
     execute if score $slot ui_temp matches 24 run scoreboard players set $sp ui_temp 156
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 11
+    execute if score $slot ui_temp matches 25 run scoreboard players set $page ui_temp 13
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
     execute if score $slot ui_temp matches 1.. run scoreboard players set $changed ui_temp 1
 

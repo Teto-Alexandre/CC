@@ -49,5 +49,8 @@ tag @s add speedtype_weapon
     execute if score $activator ui_temp matches 462 run data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:0b,ShowParticles:0b}]
     execute if score $activator ui_temp matches 462 run function ui:tmw/237/misc/giveeffect/
 
+# キューインキ
+    execute if score $activator ui_temp matches 464 run function ui:tmw/237/activator/time/464/
+
 # カウンター
     execute if score $activator ui_temp matches 1013 run function ui:tmw/237/activator/time/1013
