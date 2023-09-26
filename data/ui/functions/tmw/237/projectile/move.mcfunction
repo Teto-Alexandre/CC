@@ -10,6 +10,7 @@
     execute if score $sub102 ui_temp matches 1 as @s[tag=!ui_refd] at @s run function ui:tmw/214/ref_common
     execute if score $sub112 ui_temp matches 1 run function ui:tmw/237/projectile/acc
     execute if score $sub352 ui_temp matches 1 run function ui:tmw/237/projectile/hitbox
+    execute if score $sub464 ui_temp matches 1 run function ui:tmw/237/projectile/inkvac
 
 # 貫通リセット
     execute if entity @s[tag=Pierce,tag=tmw_237_pierce_attacked,tag=!tmw_237_pierce_unattacked] run tag @s remove tmw_237_pierce_attacked

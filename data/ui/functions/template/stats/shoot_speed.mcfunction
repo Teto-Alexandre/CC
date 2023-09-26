@@ -1,5 +1,6 @@
 scoreboard players operation $template ui_temp = @s shoot_speed
 scoreboard players operation $template ui_temp += @s wep_speed
+execute if entity @s[nbt={ActiveEffects:[{Id:19}]}] run scoreboard players set $template ui_temp 180
 execute if entity @s[nbt={ActiveEffects:[{Id:33}]}] run scoreboard players set $template ui_temp 180
 scoreboard players remove $template ui_temp 200
 
