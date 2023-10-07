@@ -12,5 +12,11 @@ execute if score $team ui_temp matches 1 run data modify storage ui:gun temp.Dis
 execute if score $team ui_temp matches 2 run data modify storage ui:gun temp.DisplayName set value '{"text":"インクタレット","color":"light_purple"}'
 execute if score $team ui_temp matches 3 run data modify storage ui:gun temp.DisplayName set value '{"text":"インクタレット","color":"yellow"}'
 execute if score $team ui_temp matches 4 run data modify storage ui:gun temp.DisplayName set value '{"text":"インクタレット","color":"green"}'
+
+# 他の設定 通常死亡メッセージ、サブウェポン、サブウェポン
+scoreboard players set $deathmessage ui_temp 0
+scoreboard players set $basetype ui_temp -2
+scoreboard players set $subtype ui_temp 401
+
 function ui:tmw/237/attack/shot/fire_straight
 playsound entity.firework_rocket.blast player @a ~ ~ ~ 0.8 1.2 0

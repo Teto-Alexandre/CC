@@ -9,5 +9,11 @@ scoreboard players set $range ui_temp 70
 scoreboard players set $rangetype ui_temp 3
 scoreboard players set $damage ui_temp 30
 data modify storage ui:gun temp.DisplayName set value '{"text":"ガトリングタレット","color":"gold"}'
+
+# 他の設定 特殊死亡メッセージ、反射できる、スペシャルウェポン
+scoreboard players set $deathmessage ui_temp 1
+scoreboard players set $basetype ui_temp 1
+scoreboard players set $subtype ui_temp 451
+
 function ui:tmw/237/attack/shot/fire_straight
 playsound entity.firework_rocket.blast player @a ~ ~ ~ 0.8 1.2 0
