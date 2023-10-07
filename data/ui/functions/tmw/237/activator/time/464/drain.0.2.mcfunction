@@ -18,4 +18,4 @@ execute store result storage ui:gun temp.now.IsHold int 1 run scoreboard players
 execute store result storage ui:gun temp.now.Time int 1 run scoreboard players get $lasttime ui_temp
 execute store result storage ui:gun temp.now.Amp int 1 run scoreboard players get $amp ui_temp
 
-execute as @p[tag=tds_return_attacker] run function ui:tmw/237/changed/core
+execute as @s run function ui:tmw/237/changed/core

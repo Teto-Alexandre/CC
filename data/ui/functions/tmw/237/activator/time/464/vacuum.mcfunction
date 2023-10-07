@@ -18,7 +18,6 @@ execute as @e[tag=ui_temp_target_sub] run function ui:tmw/237/activator/time/464
 
 execute if score $drain.add ui_temp matches 1.. run scoreboard players operation @s ui_tmw237_drained_damage += $drain.add ui_temp
 
-tag @s remove ui_temp_this
 tag @e[tag=tmw_237_sub,tag=ui_temp_team] remove ui_temp_team
 kill @e[tag=ui_temp_marker]
 kill @e[tag=ui_temp_marker_sub]

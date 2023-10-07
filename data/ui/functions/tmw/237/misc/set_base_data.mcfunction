@@ -4,6 +4,8 @@ execute if score $module ui_world matches 1 as @a if score @s module matches 16 
 execute store result score $spneed ui_temp run data get storage ui:gun temp.SPNeed
 scoreboard players operation $spneed ui_temp *= #100 ui_num
 scoreboard players operation $spneed ui_temp /= @s sp_need_acc
+execute if score $module ui_world matches 1 if score @s module matches 50 run scoreboard players operation $spneed ui_temp *= #15 ui_num
+execute if score $module ui_world matches 1 if score @s module matches 50 run scoreboard players operation $spneed ui_temp /= #10 ui_num
 execute store result score $ink.m ui_temp run data get storage ui:gun temp.MoveInkRegen
 execute store result score $ink.s ui_temp run data get storage ui:gun temp.ShootInkRegen
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
