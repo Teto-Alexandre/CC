@@ -28,3 +28,9 @@
     execute if score $activator ui_temp matches 463 run playsound block.beacon.activate player @a ~ ~ ~ 1.2 1.5 0
     execute if score $activator ui_temp matches 463 run playsound block.piston.contract player @a ~ ~ ~ 1.5 0.6 0
     execute if score $activator ui_temp matches 463 run playsound block.iron_door.open player @a ~ ~ ~ 2 1.2 0
+
+# キューインキ
+    execute if score $activator ui_temp matches 464 run playsound block.iron_trapdoor.close player @a ~ ~ ~ 2 0.6 0
+    execute if score $activator ui_temp matches 464 run playsound block.piston.contract player @a ~ ~ ~ 1.5 0.8 0
+    execute if score $activator ui_temp matches 464 run playsound block.iron_door.open player @a ~ ~ ~ 2 1.2 0
+    execute if score $activator ui_temp matches 464 run tag @s add ui_c_inkvac

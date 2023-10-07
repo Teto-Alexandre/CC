@@ -40,4 +40,7 @@
     execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 41.. run data merge storage ui:gun {temp2:{Sound:4}}
     execute if score $burst_alt.id ui_temp matches 51 if score $burst_alt ui_temp matches 60.. run data merge storage ui:gun {temp2:{Sound:5}}
 
+# 射程増加
+execute if score $module ui_world matches 1 if score @s module matches 51 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players add $range ui_temp 15
+
 #

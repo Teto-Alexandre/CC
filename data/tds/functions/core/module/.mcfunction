@@ -11,4 +11,7 @@ execute if score @s module matches 34 as @a[tag=tds_attacker_temp] run function 
 execute as @a[tag=tds_attacker_temp,scores={module=35}] run function tds:core/module/explode_ready
 execute if score @s module matches 43 if score $DamageType tds_dmg matches 3 run function tds:core/module/anti_blast
 execute if score @s module matches 49 run function tds:core/module/tech
+execute as @a[tag=tds_attacker_temp,scores={module=50}] unless score $subdamage ui_temp matches 1 run function tds:core/module/record
+execute as @a[tag=tds_attacker_temp,scores={module=52},gamemode=!spectator] run function tds:core/module/wind_boots
+execute as @a[tag=tds_attacker_temp,scores={module=53}] unless score $DamageType tds_dmg matches 3 run function tds:core/module/slime
 #execute unless score $DamageType tds_dmg matches 3 as @a[tag=tds_attacker_temp,scores={module=35}] run function tds:core/module/explode_ready

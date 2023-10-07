@@ -80,6 +80,7 @@ execute if score $type ui_temp matches 460 run scoreboard players set $w.time ui
 execute if score $type ui_temp matches 461 run scoreboard players set $w.time ui_temp 200
 execute if score $type ui_temp matches 462 run scoreboard players set $w.time ui_temp 200
 execute if score $type ui_temp matches 463 run scoreboard players set $w.time ui_temp 150
+execute if score $type ui_temp matches 464 run scoreboard players set $w.time ui_temp 120
 
 execute if score $type ui_temp matches 1013 run scoreboard players set $w.time ui_temp 10
 
@@ -119,6 +120,7 @@ execute if score $type ui_temp matches 460 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 462 run scoreboard players set $w.ct ui_temp 10
 execute if score $type ui_temp matches 463 run scoreboard players set $w.ct ui_temp 10
+execute if score $type ui_temp matches 464 run scoreboard players set $w.ct ui_temp 10
 
 execute if score $type ui_temp matches 1013 run scoreboard players set $w.ct ui_temp 10
 
@@ -197,6 +199,7 @@ execute if score $type ui_temp matches 460 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 461 run data modify storage ui:temp temp.Name set value " - SP:ウルトラハンコ"
 execute if score $type ui_temp matches 462 run data modify storage ui:temp temp.Name set value " - SP:トライスプレッダー"
 execute if score $type ui_temp matches 463 run data modify storage ui:temp temp.Name set value " - SP:リフレクトレーザー"
+execute if score $type ui_temp matches 464 run data modify storage ui:temp temp.Name set value " - SP:キューインキ"
 
 execute if score $type ui_temp matches 491 run data modify storage ui:temp temp.Name set value " - SP:ジェスター・レリック"
 

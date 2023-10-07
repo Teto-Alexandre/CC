@@ -34,10 +34,12 @@ scoreboard players operation $team ui_temp = @s ui_team
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
 execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
 execute store result score $ink.max ui_temp run data get storage ui:gun temp.InkMax
-execute if score $module ui_world matches 1 as @a if score @s module matches 16 run function ui:module/eco_bag
+execute if score $module ui_world matches 1 if score @s module matches 16 run function ui:module/eco_bag
 execute store result score $spneed ui_temp run data get storage ui:gun temp.SPNeed
 scoreboard players operation $spneed ui_temp *= #100 ui_num
 scoreboard players operation $spneed ui_temp /= @s sp_need_acc
+execute if score $module ui_world matches 1 if score @s module matches 50 run scoreboard players operation $spneed ui_temp *= #15 ui_num
+execute if score $module ui_world matches 1 if score @s module matches 50 run scoreboard players operation $spneed ui_temp /= #10 ui_num
 execute store result score $ink.m ui_temp run data get storage ui:gun temp.MoveInkRegen
 execute store result score $ink.s ui_temp run data get storage ui:gun temp.ShootInkRegen
 execute store result score $cooltime ui_temp run data get storage ui:gun temp.now.CT
@@ -67,6 +69,9 @@ function ui:tmw/237/basetype/basetype
 # 固有
 execute if score $bursttype ui_temp matches 11 run function ui:tmw/237/main/11.reader
 execute if score $bursttype ui_temp matches 12 run function ui:tmw/237/main/12.reader
+
+# モジュールの移動速度適応
+execute unless score $subtime ui_temp matches 1.. unless score $sptime ui_temp matches 1.. if score $module ui_world matches 1 if score @s module matches 51 run function ui:module/charge_slowness
 
 # 非メインウェポン消費インク取得
 execute store result score $ink.sub ui_temp run data get storage ui:gun temp.SubInkUse

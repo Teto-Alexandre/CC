@@ -2,15 +2,17 @@
 
     ## サブ: 101:スプラッシュ, 102:リフレク, 103:クイック, 104:ライト, 105:レンバク, 106:リジェネ
     ##     : 107:ボルテク, 108:キューバン, 109:ポイズン, 110:シールド, 111:スプリン, 112:アクセラ
-    ##     : 113:ロボム, 114:カーリング, 115:タンサン, 116:タレット
-    ##     : 201:リコール, 202:ハイジャンプ
+    ##     : 113:ロボム, 114:カーリング, 115:タンサン, 116:タレット, 117:チョコB, 118:チョコW
+    ##     : 119:キューバンライト 120:クイックヒール 121:クイックアーマー 122:ハッキング 123:フラタレ
+    ##     : 201:リコール, 202:ハイジャンプ, 203:スライド, 204:サーキュレーター 205:スピードカバー 206:ラインマーカー
     ##     : 301:トラップ
-    ##     : 401:ブロードソード, 402:ヘルハウンド, 403:ラインマーカー, 404:ブーメラン, 405:ペネトレーター
+    ##     : 401:ブロードソード, 402:ヘルハウンド, 403:旧ラインマーカー, 404:ブーメラン, 405:ペネトレーター
+    ##     : 1011,1012:リモートボム, 1013,1014:カウンター
 
-    ## スペ: 151:トルネード, 152:アメフラシ, 154:ガトタレ, 155:エナスタ
+    ## スペ: 151:トルネード, 152:アメフラシ, 154:ガトタレ, 155:エナスタ, 156:ホップソナー, 171:スプラッシュトルネード
     ##     : 251:ノヴァ, 252:スーパースター, 253:サブ減, 254:インク, 255:レーダー, 256:チャクチ
-    ##     : 257:サヴァ, 258:リゲイン
-    ##     : 351:メガホン
+    ##     : 257:サヴァ, 258:リゲイン, 259:アウェイクパワー
+    ##     : 351:メガホン, 352:グレートバリア, 353:イルカライド
     ##     : 451:スパショ, 452:ミサイル, 453:セプタ, 454:ハイドロ, 455:ジェッパ, 456:バウンシー
     ##     : 457:トリトル, 458:ウルショ, 459:ロケッティア, 460:ナイスダマ, 461:ハンコ, 462:トライ, 463:リフレクト
 
@@ -61,5 +63,5 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ミアレローラー
 give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ミアレローラー・ナーラ",SubType:-1,SPType:-1,BaseType:4,WaitCT:8,HoldJump:1,HoldSnd:0,BurstType:1,Burst:1,BurstMax:-1,HoldBurstType:2,HoldBurst:4,HoldBurstMax:-1,MainInkUse:150,HoldInkUse:3,now:{Speed:0.0,Model:110821}},hold:{ShotType:2,CT:0,Reach:20,Width:8,Speed:1,Damage:40,Sound:1},main:{ShotType:1,ShotCT:1,BurstCT:5,Spread:100,AirSpread:100,SpreadType:2,AirSpreadType:3,Speed:35,SpeedPlus:0,RangeType:3,Range:40,FlyParticle:5,EndParticle:4,Damage:60,MultiShot:7,ShotFootStep:2,Sound:4}},display:{Lore:['[{"text":"長いローラーで広範囲を塗りつくす","color":"gray","italic":false}]','[{"text":"ローラーが伸長しないモデル","color":"gray","italic":false}]']}}
 
 # スピーダー:追加
-give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ヘヴィスピーダー",SubType:-1,SPType:-1,BaseType:4,HoldJump:1,WaitCT:10,BurstType:1,Burst:1,BurstMax:-1,HoldBurstType:2,HoldBurst:4,HoldBurstMax:-1,MainInkUse:130,HoldInkUse:6,now:{Speed:0.0,Model:110871}},hold:{ShotType:2,CT:0,Reach:20,Width:3,Speed:2,Damage:90,Sound:1},main:{ShotType:1,ShotCT:1,BurstCT:2,Spread:700,AirSpread:700,SpreadType:1,AirSpreadType:1,Speed:30,SpeedPlus:5,RangeType:3,Range:20,FlyParticle:5,EndParticle:4,Damage:80,MultiShot:8,ShotFootStep:2,Sound:3}},display:{Lore:['[{"text":"スピーダーらしからぬ豪快な振り","color":"gray","italic":false}]','[{"text":"重すぎて溜め時間がある","color":"gray","italic":false}]']}}
-give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ヘヴィスピーダー・ナーラ",SubType:-1,SPType:-1,BaseType:4,HoldJump:1,WaitCT:10,BurstType:1,Burst:1,BurstMax:-1,HoldBurstType:2,HoldBurst:4,HoldBurstMax:-1,MainInkUse:130,HoldInkUse:7,now:{Speed:0.0,Model:110871}},hold:{ShotType:2,CT:0,Reach:20,Width:3,Speed:2,Damage:90,Sound:1,FloorProof:1},main:{ShotType:1,ShotCT:1,BurstCT:2,Spread:700,AirSpread:700,SpreadType:1,AirSpreadType:1,Speed:30,SpeedPlus:5,RangeType:3,Range:20,FlyParticle:5,EndParticle:4,Damage:80,MultiShot:8,ShotFootStep:2,Sound:3}},display:{Lore:['[{"text":"スピーダーらしからぬ豪快な振り","color":"gray","italic":false}]','[{"text":"重すぎて溜め時間がある","color":"gray","italic":false}]','[{"text":"足元への塗りを追加したモデル","color":"gray","italic":false}]']}}
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ヘヴィスピーダー",SubType:-1,SPType:-1,BaseType:4,HoldJump:0,WaitCT:10,BurstType:1,Burst:1,BurstMax:-1,HoldBurstType:2,HoldBurst:4,HoldBurstMax:-1,MainInkUse:130,HoldInkUse:6,now:{Speed:0.0,Model:110871}},hold:{ShotType:2,CT:0,Reach:20,Width:3,Speed:2,Damage:90,Sound:1},main:{ShotType:1,ShotCT:1,BurstCT:2,Spread:400,AirSpread:400,SpreadType:1,AirSpreadType:1,Speed:30,SpeedPlus:5,RangeType:3,Range:20,FlyParticle:5,EndParticle:1,Damage:100,MultiShot:8,ShotFootStep:2,Sound:3}},display:{Lore:['[{"text":"スピーダーらしからぬ豪快な振り","color":"gray","italic":false}]','[{"text":"重すぎて溜め時間がある","color":"gray","italic":false}]']}}
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ヘヴィスピーダー・ナーラ",SubType:-1,SPType:-1,BaseType:4,HoldJump:0,WaitCT:10,BurstType:1,Burst:1,BurstMax:-1,HoldBurstType:2,HoldBurst:4,HoldBurstMax:-1,MainInkUse:130,HoldInkUse:7,now:{Speed:0.0,Model:110871}},hold:{ShotType:2,CT:0,Reach:20,Width:3,Speed:2,Damage:90,Sound:1,FloorProof:1},main:{ShotType:1,ShotCT:1,BurstCT:2,Spread:400,AirSpread:400,SpreadType:1,AirSpreadType:1,Speed:30,SpeedPlus:5,RangeType:3,Range:20,FlyParticle:5,EndParticle:1,Damage:100,MultiShot:8,ShotFootStep:2,Sound:3}},display:{Lore:['[{"text":"スピーダーらしからぬ豪快な振り","color":"gray","italic":false}]','[{"text":"重すぎて溜め時間がある","color":"gray","italic":false}]','[{"text":"足元への塗りを追加したモデル","color":"gray","italic":false}]']}}

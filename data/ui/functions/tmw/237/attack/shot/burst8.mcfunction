@@ -25,3 +25,6 @@
     execute if score $burst_alt.id ui_temp matches 217 run function ui:tmw/237/attack/shot/burst8/217
     execute if score $burst_alt.id ui_temp matches 218 run function ui:tmw/237/attack/shot/burst8/218
     execute if score $burst_alt.id ui_temp matches 251 run function ui:tmw/237/attack/shot/burst8/251
+
+# 射程増加
+execute if score $module ui_world matches 1 if score @s module matches 51 if score $burst_alt ui_temp >= $burst.max ui_temp run scoreboard players add $range ui_temp 15

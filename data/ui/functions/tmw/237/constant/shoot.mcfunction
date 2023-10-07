@@ -19,11 +19,13 @@
     #execute as @s[tag=speedtype_move] run function ui:template/stats/shoot_speed
 
 # チームカラーに合わせた防具を装備
+    execute if score $module ui_world matches 1 if entity @s[scores={module=42}] if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run tag @s add tmw237_module42_temp
     execute if score $team ui_temp matches 1 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq1
     execute if score $team ui_temp matches 2 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq2
     execute if score $team ui_temp matches 3 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq3
     execute if score $team ui_temp matches 4 if entity @s[nbt=!{Inventory:[{Slot:103b}]}] run function ui:tmw/237/constant/armor/eq4
-    execute if score $module ui_world matches 1 if entity @s[scores={module=42}] run stopsound @a player minecraft:item.armor.equip_leather
+    execute if entity @s[tag=tmw237_module42_temp] run stopsound @a player minecraft:item.armor.equip_leather
+    tag @s[tag=tmw237_module42_temp] remove tmw237_module42_temp
 
 #
     execute store result score $temp ui_temp run data get entity @s ActiveEffects[{Id:11}].Amplifier
