@@ -15,6 +15,7 @@
     execute if score $boost ui_temp matches 0 if entity @s[advancements={ui:add/basic/boost=false}] run advancement grant @s only ui:add/basic/boost
     execute if score $boost ui_temp matches 0 run execute store result score $cooltime ui_temp run time query gametime
     execute if score $boost ui_temp matches 0 run scoreboard players add $cooltime ui_temp 70
+    execute if score $module ui_world matches 1 if score @s module matches 1 if score $boost ui_temp matches 0 run scoreboard players remove $cooltime ui_temp 20
     execute if score $boost ui_temp matches 0 run scoreboard players set $changed ui_temp 1
     execute if score $boost ui_temp matches 80 at @s run playsound entity.experience_orb.pickup player @a ~ ~ ~ 0.5 1.5
     execute if score $boost ui_temp matches 80 at @s run particle cloud ~ ~ ~ 0.5 0.5 0.5 1 50 force

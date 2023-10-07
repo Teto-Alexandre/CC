@@ -12,7 +12,7 @@
     execute as @a[scores={ui_lg=1..}] run function ui:misc/leave_game
 
 ##
-    execute as @a[scores={ui_tmw237_boost=..70}] run scoreboard players set @s ui_use1 0
+    execute as @a[scores={ui_tmw237_boost=..50}] run scoreboard players set @s ui_use1 0
 
 ## メニューキル
     kill @e[type=item,nbt={Item:{tag:{ui:{ismenu:1}}}}]

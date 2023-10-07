@@ -7,7 +7,7 @@
 
 ## 進捗
     scoreboard players operation $victim_id ui_id = @s ui_id
-    execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/meteor=false}] if score @s ui_tmw237_boost matches 70..130 run advancement grant @s only ui:add/kill/meteor
+    execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/meteor=false}] if score @s ui_tmw237_boost matches 50..130 run advancement grant @s only ui:add/kill/meteor
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/overkill=false}] if score $Damage_Log tds_dmg matches 300000.. run advancement grant @s only ui:add/kill/overkill
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/doublekill=false}] if score @s ui_s_kill_time matches 1.. run advancement grant @s only ui:add/kill/doublekill
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/sniper_duel=false}] if score @s ui_s_kill_dist matches 30.. run advancement grant @s only ui:add/kill/sniper_duel

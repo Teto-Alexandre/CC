@@ -12,8 +12,8 @@
 
 # 上のプレイヤーカウント
     scoreboard players set $temp ui_temp 0
-    execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,dx=2,dy=1,dz=2,scores={ui_team=1}] run scoreboard players add $temp ui_temp 1
-    execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,dx=2,dy=1,dz=2,scores={ui_team=3}] run scoreboard players remove $temp ui_temp 1
+    execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,gamemode=!spectator,dx=2,dy=1,dz=2,scores={ui_team=1}] run scoreboard players add $temp ui_temp 1
+    execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,gamemode=!spectator,dx=2,dy=1,dz=2,scores={ui_team=3}] run scoreboard players remove $temp ui_temp 1
     execute if score $temp ui_temp matches 1 as @e[tag=ui_17_3_they] run data merge entity @s {Color:3}
     execute if score $temp ui_temp matches 0 as @e[tag=ui_17_3_they] run data merge entity @s {Color:0}
     execute if score $temp ui_temp matches -1 as @e[tag=ui_17_3_they] run data merge entity @s {Color:4}

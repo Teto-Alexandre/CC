@@ -8,4 +8,5 @@ teleport @a -2 30.5 6
 spawnpoint @a -2 30 6
 gamemode adventure @a
 
-schedule function ui:tmw/237/nofunc/dt_place 1s
+schedule function ui:game/end/12.win 1s
+schedule function ui:tmw/237/nofunc/dt_place 5s

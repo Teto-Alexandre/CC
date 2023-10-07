@@ -20,6 +20,11 @@ execute if score $red wool_count matches 1.. run tellraw @a ["",{"text":"赤チ�
 execute if score $yellow wool_count matches 1.. run tellraw @a ["",{"text":"黄チーム: "},{"score":{"name":"$yellow","objective":"wool_count"},"color":"yellow"},{"text":"P (","color":"yellow"},{"score":{"name":"$yellow_p","objective":"wool_count"},"color":"yellow"},{"text":"%)","color":"yellow"}]
 execute if score $green wool_count matches 1.. run tellraw @a ["",{"text":"緑チーム: "},{"score":{"name":"$green","objective":"wool_count"},"color":"green"},{"text":"P (","color":"green"},{"score":{"name":"$green_p","objective":"wool_count"},"color":"green"},{"text":"%)","color":"green"}]
 
+execute unless score $gamemode ui_world matches 1.. if score $blue wool_count > $red wool_count if score $blue wool_count > $yellow wool_count if score $blue wool_count > $green wool_count run tag @e[scores={ui_team=1}] add win
+execute unless score $gamemode ui_world matches 1.. if score $red wool_count > $blue wool_count if score $red wool_count > $yellow wool_count if score $red wool_count > $green wool_count run tag @e[scores={ui_team=2}] add win
+execute unless score $gamemode ui_world matches 1.. if score $yellow wool_count > $blue wool_count if score $yellow wool_count > $red wool_count if score $yellow wool_count > $green wool_count run tag @e[scores={ui_team=3}] add win
+execute unless score $gamemode ui_world matches 1.. if score $green wool_count > $blue wool_count if score $green wool_count > $red wool_count if score $green wool_count > $yellow wool_count run tag @e[scores={ui_team=4}] add win
+
 execute if score $blue_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
 execute if score $red_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
 execute if score $yellow_p wool_count matches 100.. run advancement grant @a only ui:hidden/misc/too_small
@@ -30,4 +35,4 @@ execute if score $blue wool_count matches 0 if score $red wool_count matches 0 i
 # デフォルトの色を戻す
 scoreboard players set $default_color ui_temp 2
 
-function ui:game/end/11.after_count
+schedule function ui:game/end/11.after_count 1s append

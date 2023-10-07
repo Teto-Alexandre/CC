@@ -8,7 +8,7 @@ execute if score $slot ui_temp matches 26 run tag @s remove setting_module
 
 item replace entity @s enderchest.0 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
-item replace entity @s enderchest.1 with feather{display:{Name:'{"text":"飛んで行けるなら","color": "aqua","bold": true,"italic": false}',Lore:['{"text":"ブーストのリチャージが速くなり","color": "gray","italic": false}','{"text":"ブースト時の移動力も向上する","color": "gray","italic": false}']},ui:{ismenu:1}}
+item replace entity @s enderchest.1 with feather{display:{Name:'{"text":"飛んで行けるなら","color": "aqua","bold": true,"italic": false}',Lore:['{"text":"ブーストのリチャージが速くなり","color": "gray","italic": false}','{"text":"ブースト時の移動力も向上する","color": "gray","italic": false}','{"text":"ブースト後の硬直が1秒減少する","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.2 with tripwire_hook{display:{Name:'{"text":"最強トリック","color": "gold","bold": true,"italic": false}',Lore:['{"text":"一度だけインク消費量を無視して","color": "gray","italic": false}','{"text":"サブウェポンを使用できる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.3 with barrier{display:{Name:'{"text":"404 not found","color": "dark_red","bold": true,"italic": false}',Lore:['{"text":"最初のリスポーン地点が他のチームになる","color": "gray","italic": false}']},ui:{ismenu:1}}
 item replace entity @s enderchest.4 with oak_boat{display:{Name:'{"text":"誤安全に","color": "green","bold": true,"italic": false}',Lore:['{"text":"悪性地形影響を無効化する","color": "gray","italic": false}']},ui:{ismenu:1}}
