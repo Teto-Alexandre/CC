@@ -13,3 +13,4 @@ scoreboard players set $sptime ui_temp 0
 # タグ消し
 tag @s remove tmw_237_tag_spdec
 scoreboard players reset @s ui_tmw237_energy_charge_penalty
+tag @s remove ui_c_inkvac
