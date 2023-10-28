@@ -19,5 +19,6 @@ scoreboard players reset $Attacker tds_dmg
 tag @e[tag=tds_tempa] remove tds_tempa
 tag @s add tds_ui_highdamage_temp
 data merge storage tds: {temp:{Damage:1024.00,DamageType:1,DeathMessage:11,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
+tag @s remove drain
 execute at @s run function tds:attack
 advancement grant @s[tag=tds_ui_highdamage_temp] only ui:hidden/misc/go_swimming
