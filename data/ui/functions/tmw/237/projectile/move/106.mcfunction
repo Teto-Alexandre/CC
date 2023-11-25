@@ -25,5 +25,8 @@
     tag @s[tag=tmw237_reflected] remove tmw237_reflected
     execute if score $success ui_temp matches 1 run tag @s add tmw237_reflected
 
+    execute if entity @s[tag=tmw237_reflected] run function ui:tmw/237/projectile/killeffect/11
+    execute as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
+
 # 消す
     execute if entity @s[tag=tmw_237_proj_del] run function ui:tmw/237/projectile/kill
