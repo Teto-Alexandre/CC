@@ -105,7 +105,18 @@
         # ヴァンガード - デッドリーチャージ
         execute if score @s ui_hpart matches 412 run function ui:tmw/237/projectile/killeffect/412/
         # モジュール - 爆裂インク
-        execute if score @s ui_hpart matches 413 run function ui:tmw/237/projectile/killeffect/413
+        execute if score @s ui_hpart matches 413..502 run function ui:tmw/237/projectile/killeffect/413
+        # ダメージ可変爆発
+        execute if score @s ui_hpart matches 506..510 unless score @s ui_expdmg_n matches 0.. run scoreboard players operation @s ui_expdmg_n = @s ui_expdmg
+        execute if score @s ui_hpart matches 506..510 unless score @s ui_expdmg_f matches 0.. run scoreboard players operation @s ui_expdmg_f = @s ui_expdmg
+        execute if score @s ui_hpart matches 503 run function ui:tmw/237/projectile/killeffect/503
+        execute if score @s ui_hpart matches 504 run function ui:tmw/237/projectile/killeffect/504
+        execute if score @s ui_hpart matches 505 run function ui:tmw/237/projectile/killeffect/505
+        execute if score @s ui_hpart matches 506 run function ui:tmw/237/projectile/killeffect/506
+        execute if score @s ui_hpart matches 507 run function ui:tmw/237/projectile/killeffect/507
+        execute if score @s ui_hpart matches 508 run function ui:tmw/237/projectile/killeffect/508
+        execute if score @s ui_hpart matches 509 run function ui:tmw/237/projectile/killeffect/509
+        execute if score @s ui_hpart matches 510 run function ui:tmw/237/projectile/killeffect/510
 
 # その他
     execute if score @s ui_hpart matches ..200 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
