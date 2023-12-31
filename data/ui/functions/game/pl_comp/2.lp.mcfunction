@@ -1,6 +1,6 @@
 scoreboard players add @s health 6
 scoreboard players add @s health_regen 12
-scoreboard players add @s gener_damage 4
+scoreboard players add @s norma_damage 4
 scoreboard players add @s ink_regen 2
 scoreboard players add @s main_eff_acc 2
 scoreboard players add @s sub_eff_acc 2
