@@ -8,6 +8,9 @@
     execute store result score $range ui_temp run data get storage ui:gun temp2.Range
     execute store result score $rangetype ui_temp run data get storage ui:gun temp2.RangeType
     execute store result score $damage ui_temp run data get storage ui:gun temp2.Damage
+    execute if data storage ui:gun temp2.ExplodeDamage unless data storage ui:gun temp2.ExplodeDamage.near unless data storage ui:gun temp2.ExplodeDamage.far store result score $explode_damage ui_temp run data get storage ui:gun temp2.ExplodeDamage
+    execute if data storage ui:gun temp2.ExplodeDamage.near store result score $explode_damage.near ui_temp run data get storage ui:gun temp2.ExplodeDamage.near
+    execute if data storage ui:gun temp2.ExplodeDamage.far store result score $explode_damage.far ui_temp run data get storage ui:gun temp2.ExplodeDamage.far
     execute store result score $multishot ui_temp run data get storage ui:gun temp2.MultiShot
     execute store result score $speed ui_temp run data get storage ui:gun temp2.Speed
     execute store result score $speed.plus ui_temp run data get storage ui:gun temp2.SpeedPlus

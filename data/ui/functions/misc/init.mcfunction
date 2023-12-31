@@ -137,6 +137,9 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_kb dummy {"text":"UtilityItems_Knockback","color":"dark_blue"}
     scoreboard objectives add ui_bdt dummy {"text":"UtilityItems_BulletDamageType","color":"dark_blue"}
     scoreboard objectives add ui_dmg dummy {"text":"UtilityItems_DamageMultiple","color":"dark_blue"}
+    scoreboard objectives add ui_expdmg dummy {"text":"UtilityItems_ExplodeDamage","color":"dark_blue"}
+    scoreboard objectives add ui_expdmg_n dummy {"text":"UtilityItems_ExplodeDamage_near","color":"dark_blue"}
+    scoreboard objectives add ui_expdmg_f dummy {"text":"UtilityItems_ExplodeDamage_far","color":"dark_blue"}
     scoreboard objectives add ui_gct dummy {"text":"UtilityItems_GunCoolTime","color":"dark_blue"}
     scoreboard objectives add ui_gms dummy {"text":"UtilityItems_GunMultiShot","color":"dark_blue"}
     scoreboard objectives add ui_bu dummy {"text":"UtilityItems_BulletUse","color":"dark_blue"}

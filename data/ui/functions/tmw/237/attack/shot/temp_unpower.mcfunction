@@ -8,6 +8,9 @@ scoreboard players operation @s ui_bn = $number ui_temp
 scoreboard players operation @s ui_br = $range ui_temp
 scoreboard players operation @s ui_gpc = $rangetype ui_temp
 scoreboard players operation @s ui_dmg = $damage ui_temp
+scoreboard players operation @s ui_expdmg = $explode_damage ui_temp
+scoreboard players operation @s ui_expdmg_n = $explode_damage.near ui_temp
+scoreboard players operation @s ui_expdmg_f = $explode_damage.far ui_temp
 scoreboard players set @s ui_bdt 1
 scoreboard players operation @s ui_id = $id ui_temp
 scoreboard players operation @s ui_team = $team ui_temp
