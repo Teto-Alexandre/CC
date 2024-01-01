@@ -31,7 +31,7 @@
     execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 16..17 run title @s title {"text":"Respawning ...","color":"red","bold":true,"italic":false}
     execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 18..19 run title @s title {"text":"You crashed ...","color":"red","bold":true,"italic":false}
     execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 20 run title @s title {"text":"Ooh Unlucky","color":"gold","bold":true,"italic":true}
-    execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 21 run title @s title {"text":"Launcher isn't ready yet","color":"light_gray","bold":true,"italic":false}
+    execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 21 run title @s title {"text":"Launcher isn't ready yet","color":"gray","bold":true,"italic":false}
     execute unless score @s ui_rst matches 0 if score #tmw237_txt ui_rst matches 22 run function ui:misc/dead/tmw237/respawn.11
 
 # サブタイ
