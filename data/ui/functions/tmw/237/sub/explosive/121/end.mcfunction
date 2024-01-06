@@ -1,7 +1,7 @@
 # クイックアーマー
 
 # ダメージを与える
-    data modify storage ui:temp Effect set value [{Id:"resistance",Duration:300,Amplifier:0b}]
+    data modify storage ui:temp Effect set value [{id:"resistance",duration:300,amplifier:0b}]
     execute as @a[distance=..5,tag=ui_temp_team] run function ui:tmw/237/misc/giveeffect/
 
 # パーティクルで描画、演出

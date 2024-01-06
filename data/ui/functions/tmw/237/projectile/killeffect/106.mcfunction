@@ -3,7 +3,7 @@
 # ターゲット可能なすべてのエンティティの位置情報を半径５m地点に集積
 
 # idがないターゲット可能な存在全てにidを振る
-tag @a[nbt={ActiveEffects:[{Id:14}]}] add ui_temp_unlock
+tag @a[nbt={active_effects:[{id:"minecraft:invisibility"}]}] add ui_temp_unlock
 execute as @e[distance=1..75,tag=!ui_temp_team,tag=!ui_temp_unlock,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/killeffect/106.2
 tag @a remove ui_temp_unlock
 execute positioned ^ ^ ^4 run tag @e[tag=ui_temp_marker,distance=..3,sort=nearest,limit=1] add ui_temp_target2

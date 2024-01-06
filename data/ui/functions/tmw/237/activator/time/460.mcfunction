@@ -1,10 +1,10 @@
 # ナイスダマ
-data modify storage ui:temp Effect set value [{Id:"resistance",Duration:20,Amplifier:3b,ShowParticles:0b}]
+data modify storage ui:temp Effect set value [{id:"resistance",duration:20,amplifier:3b,show_particles:0b}]
 function ui:tmw/237/misc/giveeffect/
 
 scoreboard players set $temp ui_temp 0
 execute if block ~ ~-1 ~ #ui:nocol if block ~ ~-2 ~ #ui:nocol if block ~ ~-3 ~ #ui:nocol if block ~ ~-4 ~ #ui:nocol if block ~ ~-5 ~ #ui:nocol if block ~ ~-6 ~ #ui:nocol if block ~ ~-7 ~ #ui:nocol run scoreboard players set $temp ui_temp 1
-execute if score $temp ui_temp matches 0 run data modify storage ui:temp Effect set value [{Id:"levitation",Duration:20,Amplifier:5b,ShowParticles:0b}]
+execute if score $temp ui_temp matches 0 run data modify storage ui:temp Effect set value [{id:"levitation",duration:20,amplifier:5b,show_particles:0b}]
 execute if score $temp ui_temp matches 0 run function ui:tmw/237/misc/giveeffect/
 execute if score $temp ui_temp matches 1 run effect clear @s levitation
 

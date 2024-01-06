@@ -28,7 +28,7 @@
     execute as @s[tag=ui_237_sub_stop] run scoreboard players remove @s ui_is 3
     execute as @s[tag=ui_237_sub_stop] run scoreboard players add @s ui_is2 1
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}
-    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_156_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:20000,ShowParticles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
+    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_156_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:20000,show_particles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon armor_stand ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_156_2","ui_temp_obj","ui_temp_team"],Marker:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192014}}]}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon armor_stand ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_156_3","ui_temp_obj","ui_temp_team"],Marker:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192015}}]}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run playsound block.iron_door.open player @a ~ ~ ~ 2 0.6 0

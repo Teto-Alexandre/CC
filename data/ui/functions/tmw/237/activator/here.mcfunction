@@ -8,7 +8,7 @@
     execute if score $activator ui_temp matches 202 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 1.5 0
     execute if score $activator ui_temp matches 202 run tp @s @s
     execute if score $activator ui_temp matches 202 run scoreboard players set @s ui_tmw237_air_ink_lock 4
-    execute if score $activator ui_temp matches 202 run data modify storage ui:temp Effect set value [{Id:"levitation",Duration:20,Amplifier:29b}]
+    execute if score $activator ui_temp matches 202 run data modify storage ui:temp Effect set value [{id:"levitation",duration:20,amplifier:29b}]
     execute if score $activator ui_temp matches 202 run function ui:tmw/237/misc/giveeffect/
 
 # スライド
@@ -43,28 +43,28 @@
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0
     execute if score $activator ui_temp matches 251 run particle explosion_emitter ~ ~ ~ 5 5 5 0 20 force
-    execute if score $activator ui_temp matches 251 run data modify storage ui:temp Effect set value [{Id:"instant_health",Duration:20,Amplifier:8b,ShowParticles:0b},{Id:"resistance",Duration:20,Amplifier:126b,ShowParticles:0b}]
+    execute if score $activator ui_temp matches 251 run data modify storage ui:temp Effect set value [{id:"instant_health",duration:20,amplifier:8b,show_particles:0b},{id:"resistance",duration:20,amplifier:126b,show_particles:0b}]
     execute if score $activator ui_temp matches 251 run function ui:tmw/237/misc/giveeffect/
 
 # スーパースター
     execute if score $activator ui_temp matches 252 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 3 0.5 0
     execute if score $activator ui_temp matches 252 run particle totem_of_undying ~ ~ ~ 5 5 5 0.02 20 force
-    execute if score $activator ui_temp matches 252 run data modify storage ui:temp Effect set value [{Id:"glowing",Duration:120,Amplifier:0b},{Id:"resistance",Duration:120,Amplifier:126b}]
+    execute if score $activator ui_temp matches 252 run data modify storage ui:temp Effect set value [{id:"glowing",duration:120,amplifier:0b},{id:"resistance",duration:120,amplifier:126b}]
     execute if score $activator ui_temp matches 252 run function ui:tmw/237/misc/giveeffect/
 
 # サブラッシュ
     execute if score $activator ui_temp matches 253 run playsound block.beacon.power_select player @a ~ ~ ~ 3 1.8 0
 
 # インクリメント
-    execute if score $activator ui_temp matches 254 run data modify storage ui:temp Effect set value [{Id:"health_boost",Duration:160,Amplifier:1b,ShowParticles:0b},{Id:"resistance",Duration:160,Amplifier:0b}]
+    execute if score $activator ui_temp matches 254 run data modify storage ui:temp Effect set value [{id:"health_boost",duration:160,amplifier:1b,show_particles:0b},{id:"resistance",duration:160,amplifier:0b}]
     execute if score $activator ui_temp matches 254 run function ui:tmw/237/misc/giveeffect/
     execute if score $activator ui_temp matches 254 run playsound block.beacon.activate player @a ~ ~ ~ 3 1.4 0
 
 # レーダー
     execute if score $activator ui_temp matches 255 run scoreboard players operation $team ui_temp = @s ui_team
-    execute if score $activator ui_temp matches 255 run data modify storage ui:temp Effect set value [{Id:"glowing",Duration:200,Amplifier:0b},{Id:"fire_resistance",Duration:200,Amplifier:0b}]
+    execute if score $activator ui_temp matches 255 run data modify storage ui:temp Effect set value [{id:"glowing",duration:200,amplifier:0b},{id:"fire_resistance",duration:200,amplifier:0b}]
     execute if score $activator ui_temp matches 255 as @a unless score $team ui_temp = @s ui_team run function ui:tmw/237/misc/giveeffect/
-    execute if score $activator ui_temp matches 255 run data modify storage ui:temp Effect set value [{Id:"fire_resistance",Duration:200,Amplifier:0b}]
+    execute if score $activator ui_temp matches 255 run data modify storage ui:temp Effect set value [{id:"fire_resistance",duration:200,amplifier:0b}]
     execute if score $activator ui_temp matches 255 as @e[tag=entity.hitbox] unless score $team ui_temp = @s ui_team run function ui:tmw/237/misc/giveeffect/
     execute if score $activator ui_temp matches 255 as @e[tag=entity.hitbox] unless score $team ui_temp = @s ui_team at @s run particle firework ~ ~ ~ 1 1 1 0.05 50 force
     execute if score $activator ui_temp matches 255 as @e[tag=entity.hitbox] unless score $team ui_temp = @s ui_team at @s run particle end_rod ~ ~ ~ 2 2 2 0.01 50 force
@@ -76,7 +76,7 @@
     execute if score $activator ui_temp matches 256 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0
     execute if score $activator ui_temp matches 256 run playsound entity.firework_rocket.launch player @a ~ ~ ~ 1 0.6 0
     execute if score $activator ui_temp matches 256 run tp @s @s
-    execute if score $activator ui_temp matches 256 run data modify storage ui:temp Effect set value [{Id:"levitation",Duration:20,Amplifier:29b}]
+    execute if score $activator ui_temp matches 256 run data modify storage ui:temp Effect set value [{id:"levitation",duration:20,amplifier:29b}]
     execute if score $activator ui_temp matches 256 run function ui:tmw/237/misc/giveeffect/
 
 # トーテム
@@ -91,5 +91,5 @@
     execute if score $activator ui_temp matches 259 run playsound item.goat_horn.sound.2 player @a ~ ~ ~ 2 1 0
     execute if score $activator ui_temp matches 259 run particle firework ~ ~ ~ 5 5 5 0.02 20 force
     execute if score $activator ui_temp matches 259 run particle lava ~ ~ ~ 5 5 5 0.02 20 force
-    execute if score $activator ui_temp matches 259 run data modify storage ui:temp Effect set value [{Id:"instant_health",Duration:20,Amplifier:1b},{Id:"resistance",Duration:160,Amplifier:2b},{Id:"luck",Duration:160,Amplifier:0b,ShowParticles:0b}]
+    execute if score $activator ui_temp matches 259 run data modify storage ui:temp Effect set value [{id:"instant_health",duration:20,amplifier:1b},{id:"resistance",duration:160,amplifier:2b},{id:"luck",duration:160,amplifier:0b,show_particles:0b}]
     execute if score $activator ui_temp matches 259 run function ui:tmw/237/misc/giveeffect/

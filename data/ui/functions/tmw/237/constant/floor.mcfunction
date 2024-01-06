@@ -4,7 +4,7 @@
     effect clear @s speed
     effect clear @s invisibility
     effect clear @s regeneration
-    data modify storage ui:temp Effect set value [{Id:"slowness",Duration:20,Amplifier:0b,ShowParticles:0b}]
+    data modify storage ui:temp Effect set value [{id:"slowness",duration:20,amplifier:0b,show_particles:0b}]
     function ui:tmw/237/misc/giveeffect/
     execute store result score $health ui_temp run data get entity @s Health -1.5
     scoreboard players reset $Attacker tds_dmg

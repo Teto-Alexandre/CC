@@ -35,7 +35,7 @@
     # プレイヤーじゃないなら見た目だけダメージ （オバフロ形式は直後にダメージを喰らうと100%バグるのが分かったので利用中止）
     # プレイヤーはエフェクトクラウドで一瞬耐性を付ける
         execute if entity @s[type=!player,type=!ender_dragon] if score $Health tds_dmg matches 1.. run function tds:core/damage
-        execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,Effects:[{Id:11,Amplifier:127b,Duration:1,ShowParticles:0b},{Id:7,Amplifier:0b,Duration:1,ShowParticles:0b}]}
+        execute if entity @s[type=player] run summon area_effect_cloud ~ ~ ~ {Duration:6,Age:4,effects:[{id:"minecraft:resistance",amplifier:127b,duration:1,show_particles:0b},{id:"minecraft:instant_damage",amplifier:0b,duration:1,show_particles:0b}]}
 
     # プレイヤーかつヘルス0なら死亡メッセージ
         ## 攻撃者特定
