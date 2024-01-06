@@ -148,6 +148,8 @@
     "minecraft:scaffolding",
     "minecraft:repeater",
     "minecraft:comparator",
-    "minecraft:sculk_vein"
+    "minecraft:sculk_vein",
+    "minecraft:iron_bars",
+    "minecraft:iron_trapdoor"
   ]
 }
