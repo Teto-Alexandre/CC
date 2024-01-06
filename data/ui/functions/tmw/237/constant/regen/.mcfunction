@@ -1,7 +1,7 @@
 # 回復を行う
 
 #
-effect give @s minecraft:regeneration 3 3 false
+effect give @s minecraft:regeneration 3 3 true
 
 #
 scoreboard players operation @s health_regen_temp += @s health_regen
