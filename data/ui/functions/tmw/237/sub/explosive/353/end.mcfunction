@@ -14,6 +14,7 @@
     execute at @e[distance=..2,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
 
 # パーティクルで描画、演出
+    ride @p dismount
     function ui:template/sphere_particle/5
     function ui:tmw/237/misc/particle_paint
     playsound entity.generic.explode player @a ~ ~ ~ 1 0.6 0
