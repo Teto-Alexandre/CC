@@ -22,7 +22,7 @@
     scoreboard players set $paint ui_temp 0
 
 # 壁接触判定
-    execute unless block ~ ~ ~ #ui:nocol run tag @s add tmw_237_proj_del
+    execute unless block ~ ~ ~ #ui:nocol_excludes_irons run tag @s add tmw_237_proj_del
     execute if block ~ ~ ~ #ui:liq run tag @s add tmw_237_proj_del
     execute unless entity @s[tag=tmw_237_proj_del] positioned ~-0.5 ~0.1 ~-0.5 positioned ~0.3 ~0.0 ~0.3 if entity @e[dx=0,tag=ui_17_3] at @s positioned ~-0.5 ~-0.4 ~-0.5 positioned ~-0.3 ~-0.3 ~-0.3 if entity @e[dx=0,tag=ui_17_3] run tag @s add tmw_237_proj_del
 
