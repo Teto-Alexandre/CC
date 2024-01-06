@@ -18,5 +18,6 @@ scoreboard players operation $lasttime ui_temp = $store.lasttime ui_temp
 scoreboard players operation $burst ui_temp = $store.burst ui_temp
 scoreboard players operation $ishold ui_temp = $store.ishold ui_temp
 scoreboard players operation $speed ui_temp = $store.speed ui_temp
-data modify storage ui:gun temp.now set from storage ui:temp temp.storedata
+data modify storage ui:gun temp.now set from storage ui:temp temp.storedata.now
+data modify storage ui:gun temp.Name set from storage ui:temp temp.storedata.Name
 data remove storage ui:temp temp.storedata
