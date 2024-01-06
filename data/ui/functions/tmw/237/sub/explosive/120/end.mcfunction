@@ -1,7 +1,7 @@
 # クイックヒール
 
 # ダメージを与える
-    data modify storage ui:temp Effect set value [{Id:"instant_health",Duration:20,Amplifier:2b,ShowParticles:0b}]
+    data modify storage ui:temp Effect set value [{id:"instant_health",duration:20,amplifier:2b,show_particles:0b}]
     execute as @a[distance=..4,tag=ui_temp_team] run function ui:tmw/237/misc/giveeffect/
 
 # パーティクルで描画、演出

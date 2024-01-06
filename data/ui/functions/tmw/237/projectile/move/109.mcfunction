@@ -12,7 +12,7 @@
 
 #
 
-    data modify storage ui:temp Effect set value [{Id:"glowing",Duration:140,Amplifier:0b},{Id:"fire_resistance",Duration:140,Amplifier:0b}]
+    data modify storage ui:temp Effect set value [{id:"glowing",duration:140,amplifier:0b},{id:"fire_resistance",duration:140,amplifier:0b}]
     execute at @s positioned ~ ~-1 ~ as @e[distance=..1,tag=!ui_temp_team,predicate=ui:load_unhurtable,tag=!tds_nolog] run function ui:tmw/237/misc/giveeffect/
 
 #

@@ -1,7 +1,7 @@
 scoreboard players operation $template ui_temp = @s shoot_speed
 scoreboard players operation $template ui_temp += @s wep_speed
-execute if entity @s[nbt={ActiveEffects:[{Id:19}]}] run scoreboard players set $template ui_temp 180
-execute if entity @s[nbt={ActiveEffects:[{Id:33}]}] run scoreboard players set $template ui_temp 180
+execute if entity @s[nbt={active_effects:[{id:"minecraft:poison"}]}] run scoreboard players set $template ui_temp 180
+execute if entity @s[nbt={active_effects:[{id:"minecraft:darkness"}]}] run scoreboard players set $template ui_temp 180
 scoreboard players remove $template ui_temp 200
 
 attribute @s generic.movement_speed modifier remove 0-0-1-0-1
@@ -69,15 +69,15 @@ execute if score $template ui_temp matches ..-1 run scoreboard players add $temp
 
 # 諸々を消す
     effect clear @s speed
-    effect clear @s[nbt={ActiveEffects:[{Id:8,Amplifier:3b}]}] jump_boost
-    effect clear @s[nbt={ActiveEffects:[{Id:8,Amplifier:8b}]}] jump_boost
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:7b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:3b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:0b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-1b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-5b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-9b}]}] levitation
-    effect clear @s[nbt={ActiveEffects:[{Id:25,Amplifier:-128b,Duration:15}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:jump_boost",amplifier:3b}]}] jump_boost
+    effect clear @s[nbt={active_effects:[{id:"minecraft:jump_boost",amplifier:8b}]}] jump_boost
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:7b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:3b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:0b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:-1b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:-5b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:-9b}]}] levitation
+    effect clear @s[nbt={active_effects:[{id:"minecraft:levitation",amplifier:-128b,duration:15}]}] levitation
     effect clear @s invisibility
     effect clear @s regeneration
 

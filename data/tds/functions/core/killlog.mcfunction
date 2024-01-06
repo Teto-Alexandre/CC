@@ -12,9 +12,9 @@
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/doublekill=false}] if score @s ui_s_kill_time matches 1.. run advancement grant @s only ui:add/kill/doublekill
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/sniper_duel=false}] if score @s ui_s_kill_dist matches 30.. run advancement grant @s only ui:add/kill/sniper_duel
     execute if entity @s[nbt={OnGround:0b}] as @a[tag=tds_tempa,nbt={OnGround:0b}] if entity @s[advancements={ui:add/kill/niceshot=false}] run advancement grant @s only ui:add/kill/niceshot
-    execute if entity @s[nbt={ActiveEffects:[{Id:14}]}] as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/moving=false}] run advancement grant @s only ui:add/kill/moving
+    execute if entity @s[nbt={active_effects:[{id:"minecraft:invisibility"}]}] as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/moving=false}] run advancement grant @s only ui:add/kill/moving
     execute if entity @s[tag=advancement_using_sp] as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/giant=false}] run advancement grant @s only ui:add/kill/giant
-    execute if entity @s[nbt={ActiveEffects:[{Id:11}]}] as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/pierce=false}] run advancement grant @s only ui:add/kill/pierce
+    execute if entity @s[nbt={active_effects:[{id:"minecraft:resistance"}]}] as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/pierce=false}] run advancement grant @s only ui:add/kill/pierce
     execute if score @s ui_tmw237_boost matches 1..70 as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/escape=false}] run advancement grant @s only ui:add/kill/escape
     execute as @a[tag=tds_tempa] if entity @s[advancements={ui:add/kill/revenge=false}] if score @s tds_recent_attacked_by = $victim_id ui_id run advancement grant @s only ui:add/kill/revenge
     scoreboard players reset $victim_id ui_id

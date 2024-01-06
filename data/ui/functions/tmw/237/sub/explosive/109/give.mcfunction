@@ -1,4 +1,4 @@
-data modify storage ui:temp Effect set value [{Id:"darkness",Duration:100,Amplifier:0b}]
+data modify storage ui:temp Effect set value [{id:"darkness",duration:100,amplifier:0b}]
 function ui:tmw/237/misc/giveeffect/
 effect clear @s speed
 execute if entity @s[tag=speedtype_shoot] run function ui:template/stats/shoot_speed

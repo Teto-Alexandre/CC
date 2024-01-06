@@ -28,7 +28,7 @@
     tag @s[tag=tmw237_module42_temp] remove tmw237_module42_temp
 
 #
-    execute store result score $temp ui_temp run data get entity @s ActiveEffects[{Id:11}].Amplifier
+    execute store result score $temp ui_temp run data get entity @s active_effects[{id:"minecraft:resistance"}].amplifier
     execute if score $time ui_world matches 1.. if score $temp ui_temp matches 4.. run particle dust 1 0.6 0 1.2 ~ ~0.9 ~ 0.5 0.5 0.5 0 5 force @a[distance=1..,tag=!tmw_237_noresparticle]
 
 # ストレージのモデルデータを読み込み

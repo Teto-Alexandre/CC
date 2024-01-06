@@ -27,7 +27,7 @@
     scoreboard players operation $time ui_temp %= #20 ui_num
     execute as @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 run scoreboard players remove @s ui_is 20
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}
-    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_116_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,ActiveEffects:[{Id:14,Amplifier:0,Duration:20000,ShowParticles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
+    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon iron_golem ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_116_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:20000,show_particles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon armor_stand ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_116_2","ui_temp_obj","ui_temp_team"],Marker:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192002}}]}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon armor_stand ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_116_3","ui_temp_obj","ui_temp_team"],Marker:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192003}}]}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon armor_stand ~ ~-0.4 ~ {Tags:["ui_temp_this","tmw_237_sub_116_4","ui_temp_obj","ui_temp_team"],Marker:1b,NoGravity:1b,Invisible:1b,ArmorItems:[{},{},{},{id:"minecraft:command_block",Count:1b,tag:{CustomModelData:192004}}]}
@@ -49,7 +49,7 @@
     execute if entity @s[tag=ui_237_sub_first] run data merge entity @e[tag=ui_temp_obj,tag=tmw_237_sub_116_1,limit=1] {Health:1000f}
 
 # 射撃
-    execute if entity @s[tag=ui_237_sub_stop] run tag @e[distance=6..25,tag=!ui_temp_team,predicate=ui:load_unhurtable,nbt=!{ActiveEffects:[{Id:14}]},sort=nearest,limit=1] add ui_temp_target
+    execute if entity @s[tag=ui_237_sub_stop] run tag @e[distance=6..25,tag=!ui_temp_team,predicate=ui:load_unhurtable,nbt=!{active_effects:[{id:"minecraft:invisibility"}]},sort=nearest,limit=1] add ui_temp_target
     execute if entity @s[tag=ui_237_sub_stop] unless entity @e[tag=ui_temp_target] run teleport @s ~ ~ ~ ~2 -15
     execute if entity @s[tag=ui_237_sub_stop] if entity @e[tag=ui_temp_target] positioned ~ ~5 ~ facing entity @e[tag=ui_temp_target,limit=1] eyes run teleport @s ~ ~-5 ~ ~ ~-20
     execute if entity @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 positioned ^0.65 ^1.4 ^-0.1 rotated ~ ~ run function ui:tmw/237/sub/explosive/116/rain

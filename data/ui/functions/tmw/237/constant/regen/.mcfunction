@@ -1,7 +1,7 @@
 # 回復を行う
 
 #
-data modify storage ui:temp Effect set value [{Id:"regeneration",Duration:60,Amplifier:3b,ShowParticles:0b}]
+data modify storage ui:temp Effect set value [{id:"regeneration",duration:60,amplifier:3b,show_particles:0b}]
 
 #
 scoreboard players operation @s health_regen_temp += @s health_regen

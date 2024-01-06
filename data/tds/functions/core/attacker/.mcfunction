@@ -9,7 +9,7 @@ scoreboard players operation $Damage tds_dmg *= @a[tag=tds_attacker_temp] norma_
 scoreboard players operation $Damage tds_dmg /= #1000 ui_num
 
 #
-execute if entity @a[tag=tds_attacker_temp,nbt={ActiveEffects:[{Id:26}]}] run function tds:core/attacker/awake_power
+execute if entity @a[tag=tds_attacker_temp,nbt={active_effects:[{id:"minecraft:luck"}]}] run function tds:core/attacker/awake_power
 execute if score $subdamage ui_temp matches 1 run function tds:core/attacker/sub
 execute if score $DamageType tds_dmg matches 3 run function tds:core/attacker/blast
 execute if entity @s[type=!player,tag=!entity.hitbox] run function tds:core/attacker/vsobj
