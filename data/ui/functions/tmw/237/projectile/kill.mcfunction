@@ -7,6 +7,9 @@ scoreboard players operation $hpart ui_temp = @s ui_hpart
 execute if score @s ui_hpart matches ..1000 run scoreboard players set $hpart2 ui_temp 0
 execute if score @s ui_hpart matches 1001.. run function ui:tmw/237/projectile/kill2
 scoreboard players operation @e[tag=ui_temp] ui_hpart = $hpart ui_temp
+scoreboard players operation @e[tag=ui_temp] ui_expdmg = @s ui_expdmg
+scoreboard players operation @e[tag=ui_temp] ui_expdmg_n = @s ui_expdmg_n
+scoreboard players operation @e[tag=ui_temp] ui_expdmg_f = @s ui_expdmg_f
 scoreboard players operation @e[tag=ui_temp] ui_team = @s ui_team
 scoreboard players operation @e[tag=ui_temp] ui_id = @s ui_id
 scoreboard players operation @e[tag=ui_temp] ui_is = $hpart2 ui_temp
