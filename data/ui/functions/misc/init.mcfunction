@@ -173,7 +173,7 @@ scoreboard players set $limited_weapon party_mode 0
         scoreboard objectives add ui_rst dummy {"text":"UtilityItems_RespawnTime","color":"dark_blue"}
 
 ## ゲーム内記録レコード
-    #scoreboard objectives add ui_s_kill minecraft.custom:player_kills
+    #scoreboard objectives add ui_s_kill dummy
     #scoreboard objectives add ui_s_assist dummy
     #scoreboard objectives add ui_s_death deathCount
     #scoreboard objectives add ui_s_paint dummy

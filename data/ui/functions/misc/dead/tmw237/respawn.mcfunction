@@ -63,11 +63,13 @@
     execute if score @s ui_rst matches 0 if score $temp2 ui_temp matches 2 run gamemode adventure @s
     execute if score @s ui_rst matches 0 run tp @s @s
     execute if score @s ui_rst matches 0 run effect give @s resistance 5 127 false
+    execute if score @s ui_rst matches 0 run effect give @s instant_health 3 10 false
     execute if score @s ui_rst matches 0 if data storage ui:map {mode:"Boss"} run effect clear @s resistance
     execute if score @s ui_rst matches 0 if score $module ui_world matches 1 if score @s module matches 13 run scoreboard players set @s ui_tmw237_survive 600
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_tag_inkfill
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_tag_spdec
     execute if score @s ui_rst matches 0 run tag @s add tmw_237_readtag
+    execute if score @s ui_rst matches 0 run scoreboard players remove @s health 1
 
 # タグ消し
     execute if score @s ui_rst matches 0 run tag @s remove tmw_237_respawning

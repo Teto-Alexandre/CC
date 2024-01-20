@@ -27,3 +27,6 @@ scoreboard players reset @s ui_s_kill_streak
 
 # リスポーンの始動スコア
 scoreboard players set @s ui_dc_r 1
+
+# 体力反映
+scoreboard players add @s health 1

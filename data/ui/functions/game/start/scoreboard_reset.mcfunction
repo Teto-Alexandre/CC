@@ -10,7 +10,7 @@
     scoreboard objectives remove ui_s_kill_time
 
 ## ゲーム内記録レコード
-    scoreboard objectives add ui_s_kill minecraft.custom:player_kills
+    scoreboard objectives add ui_s_kill dummy
     scoreboard objectives add ui_s_assist dummy
     scoreboard objectives add ui_s_death deathCount
     scoreboard objectives add ui_s_paint dummy
