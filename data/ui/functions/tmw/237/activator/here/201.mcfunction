@@ -13,7 +13,7 @@
     execute positioned as @e[tag=ui_temp_marker,limit=1] run teleport @s ~ ~ ~
     kill @e[tag=ui_temp_marker]
 
-    data modify storage ui:temp Effect set value [{id:"resistance",duration:100,amplifier:127b}]
+    data modify storage ui:temp Effect set value [{id:"instant_health",duration:1,amplifier:10b}]
     function ui:tmw/237/misc/giveeffect/
 
     execute at @s run playsound entity.chicken.egg player @a ~ ~ ~ 2 0.8 0

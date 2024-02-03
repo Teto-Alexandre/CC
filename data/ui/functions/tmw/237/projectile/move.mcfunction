@@ -78,9 +78,12 @@
     execute if score @s ui_bpart matches 115 run function ui:tmw/237/projectile/move/115
     #キューインキ
     execute if score @s ui_bpart matches 116 run function ui:tmw/237/projectile/move/116
+    #execute unless score @s ui_bpart matches 104 unless score @s ui_bpart matches 13 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
+    #execute if score @s ui_bpart matches 104 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
+    #execute if score @s ui_bpart matches 13 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint.total ui_temp
     execute unless score @s ui_bpart matches 104 unless score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
     execute if score @s ui_bpart matches 104 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
-    execute if score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint.total ui_temp
+    execute if score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
 
 # タグ除去
     tag @e[tag=tmw_237_hit_at_this_move] remove tmw_237_hit_at_this_move

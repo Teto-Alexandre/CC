@@ -17,6 +17,7 @@ execute if score $module ui_world matches 1 as @a if score @s module matches 18 
 bossbar set ui:tmw237 players @a
 tellraw @a ["",{"text":"system>> ","color":"white"},{"text":"Start","color":"gold"}]
 gamemode adventure @a[tag=!spectate]
+execute as @a[tag=!spectate] run tp @s @s
 playsound minecraft:entity.wither.spawn player @a ~ ~ ~ 1 1 1
 
 #

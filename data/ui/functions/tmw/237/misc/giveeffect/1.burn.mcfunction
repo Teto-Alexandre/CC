@@ -14,7 +14,7 @@ data modify storage ui:temp _.effect set from storage ui:temp Effect[0]
     execute if score @s module matches 19 if data storage ui:temp _.effect{id:"fire_protection"} store result storage ui:temp _.effect.duration int 1 run scoreboard players get $duration ui_temp
 
     # 壊れた時計
-    execute if score @s module matches 40 store result score $duration ui_temp run data get storage ui:temp _.duration
+    execute if score @s module matches 40 store result score $duration ui_temp run data get storage ui:temp _.effect.duration
     execute if score @s module matches 40 run scoreboard players operation $duration ui_temp *= #15 ui_num
     execute if score @s module matches 40 run scoreboard players operation $duration ui_temp /= #10 ui_num
     execute if score @s module matches 40 store result storage ui:temp _.effect.duration int 1 run scoreboard players get $duration ui_temp
