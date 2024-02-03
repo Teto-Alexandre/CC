@@ -16,9 +16,11 @@
     execute positioned ~-1.5 ~2.9 ~-1.5 if entity @e[type=player,gamemode=!spectator,dx=2,dy=1,dz=2,scores={ui_team=3}] run scoreboard players remove $temp ui_temp 1
     execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run playsound block.note_block.snare block @a ~ ~ ~ 1 0.5 1
     execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run tellraw @a [{"text":"青チームがアシバを確保！","color": "aqua"}]
+    execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run team join blue @e[tag=ui_17_3_they]
     execute if score $temp ui_temp matches 1 run scoreboard players set @s ui_asiba_team 1
     execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run playsound block.note_block.snare block @a ~ ~ ~ 1 1 1
     execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run tellraw @a [{"text":"黄チームがアシバを確保！","color": "yellow"}]
+    execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run team join yellow @e[tag=ui_17_3_they]
     execute if score $temp ui_temp matches -1 run scoreboard players set @s ui_asiba_team -1
 
     scoreboard players operation $temp ui_temp = @s ui_asiba_team

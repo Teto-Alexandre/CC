@@ -35,6 +35,7 @@ execute as @s[tag=ui_17] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible
 execute as @s[tag=ui_17] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ui_17_2","ui_17_2_23","ui_17_2_temp"],Passengers:[{id:"shulker",Color:0b,NoAI:1b,Invulnerable:1b,DeathLootTable:"none",Silent:1b,Health:1000.0f,Attributes:[{Name:"generic.max_health",Base:1000}],Tags:["ui_resistance","ui_unhurtable","ui_17_3","ui_17_2_temp","tds_nolog"]}]}
 execute as @s[tag=ui_17] at @s run summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,NoGravity:1b,Tags:["ui_17_2","ui_17_2_24","ui_17_2_temp"],Passengers:[{id:"shulker",Color:0b,NoAI:1b,Invulnerable:1b,DeathLootTable:"none",Silent:1b,Health:1000.0f,Attributes:[{Name:"generic.max_health",Base:1000}],Tags:["ui_resistance","ui_unhurtable","ui_17_3","ui_17_2_temp","tds_nolog"]}]}
 execute at @s[tag=ui_17] as @e[tag=ui_17_2_temp] run scoreboard players operation @s ui_id = @e[tag=ui_17_1_temp] ui_id
+execute at @s[tag=ui_17] as @e[tag=ui_17_2_temp] run effect give @s glowing 3600 127 true
 execute as @s[tag=ui_17] run tag @e[tag=ui_17_1_temp] remove ui_17_1_temp
 execute as @s[tag=ui_17] run tag @e[tag=ui_17_2_temp] remove ui_17_2_temp
 execute as @s[tag=ui_17] at @s run function ui:ui/17/ss
