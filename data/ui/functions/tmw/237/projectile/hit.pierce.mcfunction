@@ -22,6 +22,6 @@
     execute if entity @e[tag=tmw_237_pierce_temp] run tag @e[tag=tmw_237_pierce_temp] add tmw_237_pierce_unhit
     execute if entity @e[tag=tmw_237_pierce_temp] run tag @s add tmw_237_pierce_attacked
     execute if entity @e[tag=tmw_237_pierce_temp] run tag @s add tmw_237_pierce_unattacked
-    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 run function ui:tmw/237/projectile/move/109/reflect.2
+    execute if entity @e[tag=tmw_237_pierce_temp] if score @s ui_bpart matches 109 run scoreboard players set @s ui_br_temp 0
     tag @s remove tmw_237_pierce_hit_hitbox
     tag @e[tag=tmw_237_pierce_temp] remove tmw_237_pierce_temp
