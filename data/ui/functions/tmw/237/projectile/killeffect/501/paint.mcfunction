@@ -1,0 +1,1 @@
+$function ui:template/sphere_particle/$(paint)

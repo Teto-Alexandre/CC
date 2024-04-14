@@ -109,6 +109,7 @@
         # ダメージ可変爆発
         execute if score @s ui_hpart matches 506..510 unless score @s ui_expdmg_n matches 0.. run scoreboard players operation @s ui_expdmg_n = @s ui_expdmg
         execute if score @s ui_hpart matches 506..510 unless score @s ui_expdmg_f matches 0.. run scoreboard players operation @s ui_expdmg_f = @s ui_expdmg
+        execute if score @s ui_hpart matches 501 run function ui:tmw/237/projectile/killeffect/501
         execute if score @s ui_hpart matches 503 run function ui:tmw/237/projectile/killeffect/503
         execute if score @s ui_hpart matches 504 run function ui:tmw/237/projectile/killeffect/504
         execute if score @s ui_hpart matches 505 run function ui:tmw/237/projectile/killeffect/505

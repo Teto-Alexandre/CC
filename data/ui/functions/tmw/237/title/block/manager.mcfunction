@@ -38,3 +38,5 @@ execute if score $text_id ui_temp matches 18 run function ui:tmw/237/title/block
 execute if score $text_id ui_temp matches 19 run function ui:tmw/237/title/block/19
 # HP
 execute if score $text_id ui_temp matches 20 run function ui:tmw/237/title/block/20
+# 固有数値
+execute if score $text_id ui_temp matches 21 run function ui:tmw/237/title/block/21

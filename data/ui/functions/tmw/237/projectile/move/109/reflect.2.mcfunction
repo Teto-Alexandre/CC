@@ -23,4 +23,4 @@ tag @s[tag=tmw237_reflected.east] remove mw237_reflected.east
 tag @s[tag=tmw237_reflected.west] remove tmw237_reflected.west
 tag @s[tag=tmw237_reflected.south] remove tmw237_reflected.south
 tag @s[tag=tmw237_reflected.north] remove tmw237_reflected.north
-tag @p[tag=tmw272_reflect.target] remove tmw272_reflect.target
+tag @e[tag=tmw272_reflect.target] remove tmw272_reflect.target

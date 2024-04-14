@@ -5,6 +5,9 @@
 # @public
 
 #
+execute if entity @s[tag=tmw237_has_bullet_data] run data modify storage ui:gun temp3.BulletData set from entity @s ArmorItems.[0].tag.BulletData
+
+#
 scoreboard players set $Lethal tds_dmg 0
 scoreboard players set $Cache ui_temp 0
 
@@ -42,3 +45,4 @@ execute at @s if score @s ui_br_temp >= @s ui_br run function ui:tmw/237/project
 #
 execute if score $Cache ui_temp matches 1 run scoreboard players reset @s
 tag @a[tag=tds_return_attacker] remove tds_return_attacker
+execute if data storage ui:gun temp3 run data remove storage ui:gun temp3
