@@ -145,6 +145,7 @@ effect clear @a
 effect give @a night_vision 1000000 0 true
 execute if score $module ui_world matches 1 as @a if score @s module matches 7 run effect clear @s night_vision
 effect give @a instant_health 10 10 true
+tag @a remove deadmans_immune
 #effect give @a resistance 10 127 false
 
 #

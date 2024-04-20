@@ -73,6 +73,7 @@
 
 # タグ消し
     execute if score @s ui_rst matches 0 run tag @s remove tmw_237_respawning
+    execute if score @s ui_rst matches 0 run tag @s remove deadmans_immune
     tag @s remove ui_temp_this
 
 # ss管理: 復活待ち人数が減る
