@@ -232,10 +232,13 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #20 ui_num 20
     scoreboard players set #24 ui_num 24
     scoreboard players set #25 ui_num 25
+    scoreboard players set #27 ui_num 27
     scoreboard players set #30 ui_num 30
     scoreboard players set #36 ui_num 36
     scoreboard players set #40 ui_num 40
+    scoreboard players set #45 ui_num 45
     scoreboard players set #50 ui_num 50
+    scoreboard players set #54 ui_num 54
     scoreboard players set #60 ui_num 60
     scoreboard players set #80 ui_num 80
     scoreboard players set #81 ui_num 81
@@ -246,6 +249,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #99 ui_num 99
     scoreboard players set #100 ui_num 100
     scoreboard players set #101 ui_num 101
+    scoreboard players set #135 ui_num 135
     scoreboard players set #140 ui_num 140
     scoreboard players set #150 ui_num 150
     scoreboard players set #180 ui_num 180
