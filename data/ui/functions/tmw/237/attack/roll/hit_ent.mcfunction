@@ -22,6 +22,7 @@
 # この攻撃で死んだら
     execute if score $Lethal tds_dmg matches 1 if score $module ui_world matches 1 if entity @p[tag=tds_return_attacker,scores={module=38}] run function ui:module/recycle
     execute if score $Lethal tds_dmg matches 1 if score $module ui_world matches 1 as @p[tag=tds_return_attacker,scores={module=39}] at @s run function ui:module/energy_charge/get
+    execute if score $Lethal tds_dmg matches 1 if score $module ui_world matches 1 as @p[tag=tds_return_attacker,scores={module=54}] at @s run function ui:module/recharge
     execute if score $Lethal tds_dmg matches 1 run function ui:tmw/237/attack/ink_explode
 
 # リセット

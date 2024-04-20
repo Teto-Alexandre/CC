@@ -18,3 +18,7 @@ execute if score $Damage tds_dmg matches 1.. run function tds:core/calc
 #
 execute if entity @s[scores={ui_tmw_id=237},tag=drain] if score $Damage tds_dmg matches 1.. at @s run function ui:tmw/237/misc/drain
 execute unless entity @s[scores={ui_tmw_id=237},tag=drain] if score $Damage tds_dmg matches 1.. run function tds:core/attack
+
+execute if score $module ui_world matches 1 if score @s module matches 37 run scoreboard players set @s ui_tmw237_heal_cooldown 5
+execute if score $module ui_world matches 1 unless score @s module matches 37 run scoreboard players set @s ui_tmw237_heal_cooldown 20
+execute unless score $module ui_world matches 1 run scoreboard players set @s ui_tmw237_heal_cooldown 20

@@ -1,0 +1,1 @@
+item replace entity @s armor.chest with iron_chestplate

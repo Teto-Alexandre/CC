@@ -8,3 +8,5 @@ execute if score $module ui_world matches 1 if score @s module matches 50 run sc
 execute if score $module ui_world matches 1 if score @s module matches 50 run scoreboard players add @s sub_damage 40
 execute if score $module ui_world matches 1 if score @s module matches 50 run scoreboard players add @s sub_eff_acc 40
 execute if score $module ui_world matches 1 if score @s module matches 53 run scoreboard players add @s blast_damage 50
+execute if score $module ui_world matches 1 if score @s module matches 54 run scoreboard players remove @s charge_acc 10
+execute if score $module ui_world matches 1 if score @s module matches 57 run scoreboard players set @s health -199

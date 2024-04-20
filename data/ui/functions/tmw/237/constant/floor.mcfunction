@@ -10,9 +10,11 @@
     scoreboard players reset $Attacker tds_dmg
     data merge storage tds: {temp:{Damage:2.00,DamageType:1,DeathMessage:-1,WeaponName:"",EPF:-1,BypassArmor:0,BypassResistance:false}}
     execute store result storage tds: temp.EPF int 1 run scoreboard players add $health ui_temp 30
-    function tds:attack
+    execute if score $module ui_world matches 1 unless score @s module matches 57 run function tds:attack
+    execute unless score $module ui_world matches 1 run function tds:attack
     scoreboard players set @s ui_st2 0
 
+    execute if score $module ui_world matches 1 if score @s module matches 57 run function ui:tmw/237/constant/floor.death
 # 消す
     execute if score $default_color ui_temp matches 0 run setblock ~ ~-0.3 ~ white_wool replace
     execute if score $default_color ui_temp matches 1 run setblock ~ ~-0.3 ~ light_gray_wool replace

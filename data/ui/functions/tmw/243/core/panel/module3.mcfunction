@@ -41,10 +41,10 @@ execute if score $slot ui_temp matches 9 run scoreboard players set @s module_pa
 item replace entity @s enderchest.10 with carrot_on_a_stick{CustomModelData:110006,display:{Name:'{"text":"アカシックレコード","color":"light_purple","italic":false}',Lore:['[{"text":"サブのインク効率とダメージが40%増加する","color":"gray","italic":false}]','[{"text":"サブ以外のインク効率とダメージが30%減少し、スペシャル必要ポイントが1.5倍になる","color":"gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.11 with smithing_table{display:{Name:'{"text":"動く固定砲台","color":"white","italic":false}',Lore:['[{"text":"チャージ完了後の射程が伸びる","color":"gray","italic":false}]','[{"text":"チャージ中、チャージ後に移動速度が低下する","color":"gray","italic":false}]','[{"text":"対応していないチャージ武器も多い","color":"green","italic":false}]']},HideFlags:4,ui:{ismenu:1}}
 item replace entity @s enderchest.12 with leather_boots{display:{Name:'{"text":"風の靴","color":"aqua","italic":false}',Lore:['[{"text":"攻撃時相手より上にいるほどダメージ増加","color":"gray","italic":false}]','[{"text":"相手より下にいるとダメージ減少","color":"red","italic":false}]','[{"text":"スペクテイター中は無効","color":"green","italic":false}]'],color:65535},HideFlags:255,ui:{ismenu:1}} 1
-item replace entity @s enderchest.13 with cookie{CustomModelData:170011,display:{Name:'{"text":"スノースライム甘口","color":"green","italic":false}',Lore:['[{"text":"爆発によるダメージが50%増加","color":"gray","italic":false}]','[{"text":"それ以外は50%減少","color":"gray","italic":false}]']},ui:{ismenu:1}}
-item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+item replace entity @s enderchest.13 with cookie{CustomModelData:170011,display:{Name:'{"text":"スノースライム甘口","color":"green","italic":false}',Lore:['[{"text":"爆発により与えるダメージが50%増加","color":"gray","italic":false}]','[{"text":"それ以外は50%減少","color":"gray","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.14 with netherite_upgrade_smithing_template{display:{Name:'{"text":"リ・チャージ","color":"gold","italic":false}',Lore:['[{"text":"射撃で敵を倒した時即座にチャージを完了させる","color":"gray","italic":false}]','[{"text":"チャージ速度が10%減少する","color":"gray","italic":false}]']},ui:{ismenu:1},HideFlags:255}
+item replace entity @s enderchest.15 with iron_chestplate{display:{Name:'{"text":"装備せよ","color":"green","italic":false}',Lore:['[{"text":"鉄のチェストプレートを装備する","color":"gray","italic":false}]']},ui:{ismenu:1},HideFlags:255}
+item replace entity @s enderchest.16 with heart_pottery_sherd{display:{Name:'{"text":"生命維持装置","color":"light_purple","italic":false}',Lore:['[{"text":"射撃形態時に移動形態時の半分の速度で体力が回復する","color":"gray","italic":false}]','[{"text":"ただし回復するごとにスペシャルポイントを消費する","color":"gray","italic":false}]']},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 10 run scoreboard players set @s module 50
 execute if score $slot ui_temp matches 10 run scoreboard players set @s main_eff_acc 70
@@ -55,6 +55,7 @@ execute if score $slot ui_temp matches 12 run scoreboard players set @s module 5
 execute if score $slot ui_temp matches 13 run scoreboard players set @s module 53
 execute if score $slot ui_temp matches 13 run scoreboard players set @s blast_damage 150
 execute if score $slot ui_temp matches 14 run scoreboard players set @s module 54
+execute if score $slot ui_temp matches 14 run scoreboard players set @s charge_acc -10
 execute if score $slot ui_temp matches 15 run scoreboard players set @s module 55
 execute if score $slot ui_temp matches 16 run scoreboard players set @s module 56
 
@@ -69,7 +70,7 @@ execute if score @s module matches 56 run item modify entity @s enderchest.16 ui
 item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次のページ","color":"white","italic":false}'},ui:{ismenu:1}}
 #execute if score $slot ui_temp matches 17 run scoreboard players set @s module_page 3
 
-item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+item replace entity @s enderchest.19 with player_head{display:{Name:'{"text":"スペランカー","color":"yellow","italic":false}',Lore:['[{"text":"体力が1に固定され、地形ダメージでも死に至る","color":"gray","italic":false}]','[{"text":"全てのギアの効力が3倍になる","color":"gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -78,6 +79,7 @@ item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 19 run scoreboard players set @s module 57
+execute if score $slot ui_temp matches 19 run scoreboard players set @s health -199
 execute if score $slot ui_temp matches 20 run scoreboard players set @s module 58
 execute if score $slot ui_temp matches 21 run scoreboard players set @s module 59
 execute if score $slot ui_temp matches 22 run scoreboard players set @s module 60

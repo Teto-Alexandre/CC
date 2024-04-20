@@ -6,3 +6,4 @@ item replace entity @s armor.head with leather_helmet{display:{color:16646013},A
 
 execute if score $module ui_world matches 1 if score @s module matches 44 run function ui:tmw/237/constant/armor/kigurumi
 execute if score $module ui_world matches 1 if score @s module matches 45 run function ui:tmw/237/constant/armor/none
+execute if score $module ui_world matches 1 if score @s module matches 55 run function ui:tmw/237/constant/armor/iron

@@ -1,5 +1,12 @@
 # 射撃形態になる
 
+# 
+    execute if score $module ui_world matches 1 if score @s module matches 56 unless score @s ui_tmw237_heal_cooldown matches 1.. store result score #Health ui_temp run data get entity @s Health 100
+    execute if score $module ui_world matches 1 if score @s module matches 56 unless score @s ui_tmw237_heal_cooldown matches 1.. store result score #HealthMax ui_temp run attribute @s generic.max_health get 100
+    execute if score $module ui_world matches 1 if score @s module matches 56 unless score @s ui_tmw237_heal_cooldown matches 1.. if score #Health ui_temp < #HealthMax ui_temp if score @s ui_paint matches 10.. run function ui:tmw/237/constant/regen/module56
+    execute if score $module ui_world matches 1 if score @s module matches 56 unless score @s ui_tmw237_heal_cooldown matches 1.. run scoreboard players reset #Health ui_temp
+    execute if score $module ui_world matches 1 if score @s module matches 56 unless score @s ui_tmw237_heal_cooldown matches 1.. run scoreboard players reset #HealthMax ui_temp
+
 # タグチェック
     execute if entity @s[tag=tmw_237_king] run function ui:tmw/237/amp/king
 
