@@ -15,7 +15,7 @@
     execute rotated as @s as @e[tag=ui_temp_this] run teleport @s ~ ~ ~ ~ ~
     execute as @e[tag=ui_temp_this] run scoreboard players operation @s ui_obj_id = $obj_id ui_temp
     tag @e[tag=ui_temp_this] remove ui_temp_this
-    execute if score @s ui_is matches 1 run playsound block.portal.travel ambient @a ~ ~ ~ 3 2 0
+    execute if score @s ui_is matches 1 run playsound block.portal.travel ambient @a ~ ~ ~ 0.6 2 0.6
     execute if score @s ui_is matches 40.. run tag @s add ui_237_sub_stop2
     execute if score @s ui_is matches 1..40 positioned ~ ~1 ~ run function ui:tmw/237/sub/explosive/351/tick.line
     execute if score @s ui_is2 matches 1.. run playsound entity.dolphin.death ambient @a ^ ^ ^5 1 0.8 0
