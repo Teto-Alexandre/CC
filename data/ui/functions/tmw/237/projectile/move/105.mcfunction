@@ -34,7 +34,9 @@
     execute if score $temp ui_temp matches 28 run summon marker ^-0.407 ^0.913 ^ {Tags:["ui_temp_marker"]}
     execute if score $temp ui_temp matches 29 run summon marker ^-0.208 ^0.978 ^ {Tags:["ui_temp_marker"]}
 # 当たり判定拡張
+    execute at @e[tag=ui_temp_marker] positioned ~-0.5 ~-0.15 ~-0.5 as @e[dx=0,dy=0,dz=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s as @e[tag=ui_temp_this] run tag @s add tmw237.temp.hit
     execute at @e[tag=ui_temp_marker] positioned ~-0.5 ~-0.15 ~-0.5 as @e[dx=0,dy=0,dz=0,tag=!ui_temp_team,predicate=ui:load_unhurtable] at @s as @e[tag=ui_temp_this] run function ui:tmw/237/projectile/hit
+    tag @e[tag=tmw237.temp.hit] add tmw237.temp.hit
 # 見た目
     execute if score $team ui_temp matches 1 at @e[tag=ui_temp_marker] run function ui:tmw/237/projectile/move/105/1
     execute if score $team ui_temp matches 2 at @e[tag=ui_temp_marker] run function ui:tmw/237/projectile/move/105/2

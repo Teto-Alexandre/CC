@@ -52,3 +52,7 @@ execute if score @s module matches 50 run tellraw @a[tag=!tmw_237_nomisclog] [{"
 execute if score @s module matches 51 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 動く固定砲台"}]
 execute if score @s module matches 52 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 風の靴"}]
 execute if score @s module matches 53 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: スノースライム甘口"}]
+execute if score @s module matches 54 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: リ・チャージ"}]
+execute if score @s module matches 55 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 装備せよ"}]
+execute if score @s module matches 56 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 生命維持装置"}]
+execute if score @s module matches 57 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: スペランカー"}]
