@@ -19,3 +19,4 @@ tag @s[tag=cant_hide] remove cant_hide
 tag @s[tag=floor_proof] remove floor_proof
 tag @s[tag=floor_proof2] remove floor_proof2
 execute if score @s ui_tmw237_sprint_particle matches 1.. run scoreboard players remove @s ui_tmw237_sprint_particle 1
+scoreboard players remove @s[scores={ui_tmw237_heal_cooldown=1..}] ui_tmw237_heal_cooldown 1

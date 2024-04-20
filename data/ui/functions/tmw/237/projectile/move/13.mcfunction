@@ -23,16 +23,16 @@
     execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]
     execute store result score $rotation_y ui_temp run data get entity @s Rotation.[1]
     scoreboard players set $success ui_temp 0
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~0.5 ~ #ui:nocol store result entity @s Rotation.[1] float 1 store success score $success ui_temp run data get entity @s Rotation.[1]
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol run teleport @s ~ ~ ~ ~ ~1
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol if score $rotation_y ui_temp matches 41.. store success score $success ui_temp run data modify entity @s Rotation.[1] set value -40.0f
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol unless score $rotation_y ui_temp matches 41.. store result entity @s Rotation.[1] float -1 store success score $success ui_temp run data get entity @s Rotation.[1]
-    execute at @s[tag=!tmw237_reflected] unless block ~0.5 ~ ~ #ui:nocol store result entity @s Rotation.[0] float -1 store success score $success ui_temp run scoreboard players get $rotation_x ui_temp
-    execute at @s[tag=!tmw237_reflected] unless block ~-0.5 ~ ~ #ui:nocol store result entity @s Rotation.[0] float -1 store success score $success ui_temp run scoreboard players get $rotation_x ui_temp
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.5 #ui:nocol store result score $rotation_x ui_temp run data get entity @s Rotation.[0] -1
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.5 #ui:nocol store result entity @s Rotation.[0] float 1 store success score $success ui_temp run scoreboard players operation $rotation_x ui_temp -= #180 ui_num
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.5 #ui:nocol store result score $rotation_x ui_temp run data get entity @s Rotation.[0] -1
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.5 #ui:nocol store result entity @s Rotation.[0] float 1 store success score $success ui_temp run scoreboard players operation $rotation_x ui_temp -= #180 ui_num
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~0.5 ~ #ui:nocol_excludes_irons store result entity @s Rotation.[1] float 1 store success score $success ui_temp run data get entity @s Rotation.[1]
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol_excludes_irons run teleport @s ~ ~ ~ ~ ~1
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol_excludes_irons if score $rotation_y ui_temp matches 41.. store success score $success ui_temp run data modify entity @s Rotation.[1] set value -40.0f
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.5 ~ #ui:nocol_excludes_irons unless score $rotation_y ui_temp matches 41.. store result entity @s Rotation.[1] float -1 store success score $success ui_temp run data get entity @s Rotation.[1]
+    execute at @s[tag=!tmw237_reflected] unless block ~0.5 ~ ~ #ui:nocol_excludes_irons store result entity @s Rotation.[0] float -1 store success score $success ui_temp run scoreboard players get $rotation_x ui_temp
+    execute at @s[tag=!tmw237_reflected] unless block ~-0.5 ~ ~ #ui:nocol_excludes_irons store result entity @s Rotation.[0] float -1 store success score $success ui_temp run scoreboard players get $rotation_x ui_temp
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.5 #ui:nocol_excludes_irons store result score $rotation_x ui_temp run data get entity @s Rotation.[0] -1
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.5 #ui:nocol_excludes_irons store result entity @s Rotation.[0] float 1 store success score $success ui_temp run scoreboard players operation $rotation_x ui_temp -= #180 ui_num
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.5 #ui:nocol_excludes_irons store result score $rotation_x ui_temp run data get entity @s Rotation.[0] -1
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.5 #ui:nocol_excludes_irons store result entity @s Rotation.[0] float 1 store success score $success ui_temp run scoreboard players operation $rotation_x ui_temp -= #180 ui_num
     tag @s[tag=tmw237_reflected] remove tmw237_reflected
     execute if score $success ui_temp matches 1 run tag @s add tmw237_reflected
     execute if score $success ui_temp matches 1 if score $team ui_temp matches 1 at @s store result score $paint ui_temp run fill ~-0.7 ~-1.2 ~-0.7 ~0.7 ~0.7 ~0.7 light_blue_wool replace #ui:wools

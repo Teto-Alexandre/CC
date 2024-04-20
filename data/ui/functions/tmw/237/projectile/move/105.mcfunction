@@ -43,7 +43,7 @@
 # 時間カウント
     scoreboard players add @s ui_is 1
 # 壁接触時
-    execute at @e[tag=ui_temp_marker] unless block ~ ~ ~ #ui:nocol run tag @s add tmw_237_proj_del
+    execute at @e[tag=ui_temp_marker] unless block ~ ~ ~ #ui:nocol_excludes_irons run tag @s add tmw_237_proj_del
     execute at @e[tag=ui_temp_marker] if block ~ ~ ~ #ui:liq run tag @s add tmw_237_proj_del
 # 消す
     execute if entity @s[tag=tmw_237_proj_del] run function ui:tmw/237/projectile/kill
