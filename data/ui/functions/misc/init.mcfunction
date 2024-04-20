@@ -252,6 +252,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard players set #105 ui_num 105
     scoreboard players set #127 ui_num 127
     scoreboard players set #135 ui_num 135
+    scoreboard players set #136 ui_num 136
     scoreboard players set #140 ui_num 140
     scoreboard players set #145 ui_num 145
     scoreboard players set #150 ui_num 150
