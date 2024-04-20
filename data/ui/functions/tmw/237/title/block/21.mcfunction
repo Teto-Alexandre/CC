@@ -1,0 +1,6 @@
+execute unless score $jammer ui_temp matches 1.. if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 1 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"Short Mode","color":"aqua"}'
+execute unless score $jammer ui_temp matches 1.. if score $bursttype ui_temp matches 11 unless score $shotmode ui_temp matches 1 run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"Long Mode","color":"yellow"}'
+execute unless score $jammer ui_temp matches 1.. if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name":"$multibullet","objective":"ui_temp"},"color":"green"}'
+execute unless score $jammer ui_temp matches 1.. if score $bursttype ui_temp matches 12 unless score $multibullet ui_temp matches 1.. run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"score":{"name":"$multibullet","objective":"ui_temp"},"color":"red"}'
+
+execute if score $jammer ui_temp matches 1.. run data modify entity @e[tag=ui_template_text_board,limit=1] Item.tag.display.Lore append value '{"text":"000","color":"dark_red","obfuscated":true}'

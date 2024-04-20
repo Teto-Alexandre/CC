@@ -1,3 +1,6 @@
+#
+    execute if entity @s[tag=tmw237_has_bullet_data] run data modify storage ui:gun temp3.BulletData set from entity @s data.BulletData
+
 # 同じチームを認識して識別（もしかしたら回復スペル作るかもしれないのでメモ）
     tag @s add ui_temp_this
     scoreboard players operation $id ui_temp = @s ui_id
@@ -105,7 +108,11 @@
         # ヴァンガード - デッドリーチャージ
         execute if score @s ui_hpart matches 412 run function ui:tmw/237/projectile/killeffect/412/
         # モジュール - 爆裂インク
-        execute if score @s ui_hpart matches 413..502 run function ui:tmw/237/projectile/killeffect/413
+        execute if score @s ui_hpart matches 413..500 run function ui:tmw/237/projectile/killeffect/413
+        # 可変爆発
+        execute if score @s ui_hpart matches 501 run function ui:tmw/237/projectile/killeffect/501
+        # 可変塗り
+        execute if score @s ui_hpart matches 502 run function ui:tmw/237/projectile/killeffect/502
         # ダメージ可変爆発
         execute if score @s ui_hpart matches 506..510 unless score @s ui_expdmg_n matches 0.. run scoreboard players operation @s ui_expdmg_n = @s ui_expdmg
         execute if score @s ui_hpart matches 506..510 unless score @s ui_expdmg_f matches 0.. run scoreboard players operation @s ui_expdmg_f = @s ui_expdmg

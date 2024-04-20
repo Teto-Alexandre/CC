@@ -14,6 +14,8 @@ scoreboard players operation @e[tag=ui_temp] ui_team = @s ui_team
 scoreboard players operation @e[tag=ui_temp] ui_id = @s ui_id
 scoreboard players operation @e[tag=ui_temp] ui_is = $hpart2 ui_temp
 execute if entity @s[tag=subdamage] run tag @e[tag=ui_temp] add subdamage
+execute if entity @s[tag=tmw237_has_bullet_data] run data modify entity @e[tag=ui_temp,limit=1] data.BulletData set from entity @s ArmorItems.[0].tag.BulletData
+execute if entity @s[tag=tmw237_has_bullet_data] run tag @e[tag=ui_temp,limit=1] add tmw237_has_bullet_data
 tag @e[tag=ui_temp] remove ui_temp
 scoreboard players set $Cache ui_temp 1
 kill @s

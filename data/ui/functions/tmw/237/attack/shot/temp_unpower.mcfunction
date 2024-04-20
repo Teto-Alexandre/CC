@@ -19,4 +19,6 @@ execute if score $pierce ui_temp matches 2 run tag @s add SuperPierce
 execute if score $freehitlength ui_temp matches -2147483648..2147483647 run scoreboard players operation @s ui_fhl = $freehitlength ui_temp
 execute if score $damage.free ui_temp matches -2147483648..2147483647 run scoreboard players operation @s ui_fhd = $damage.free ui_temp
 data modify entity @s ArmorItems.[0].tag.display.Name set from storage ui:gun temp.DisplayName
+execute if data storage ui:gun temp2.BulletData run data modify entity @s ArmorItems.[0].tag.BulletData set from storage ui:gun temp2.BulletData
+execute if data storage ui:gun temp2.BulletData run tag @s add tmw237_has_bullet_data
 tag @s remove ui_temp_unpower

@@ -33,7 +33,7 @@ item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:123020,display:{Name:'{"text":"インク残量（サブ使用可能）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:123021,display:{Name:'{"text":"ＳＰゲージ（スペ使用可能）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:123022,display:{Name:'{"text":"ＨＰ表示","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.25 with light_gray_stained_glass_pane{CustomModelData:123000,display:{Name:'{"text":"ID:21","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:123023,display:{Name:'{"text":"固有数値表示","italic": false}'},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 1 run data modify storage ui:text_board temp.node set value {ID:1,CustomModelData:123001}
 execute if score $slot ui_temp matches 2 run data modify storage ui:text_board temp.node set value {ID:2,CustomModelData:123002}
@@ -55,7 +55,7 @@ execute if score $slot ui_temp matches 21 run data modify storage ui:text_board 
 execute if score $slot ui_temp matches 22 run data modify storage ui:text_board temp.node set value {ID:18,CustomModelData:123020}
 execute if score $slot ui_temp matches 23 run data modify storage ui:text_board temp.node set value {ID:19,CustomModelData:123021}
 execute if score $slot ui_temp matches 24 run data modify storage ui:text_board temp.node set value {ID:20,CustomModelData:123022}
-execute if score $slot ui_temp matches 25 run data modify storage ui:text_board temp.node set value {ID:21,CustomModelData:123000}
+execute if score $slot ui_temp matches 25 run data modify storage ui:text_board temp.node set value {ID:21,CustomModelData:123023}
 execute if score $slot ui_temp matches 26 run data modify storage ui:text_board temp.node set value {}
 
 execute if score $slot ui_temp matches 1 run scoreboard players set @s title_data 1
