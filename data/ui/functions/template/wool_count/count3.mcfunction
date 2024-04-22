@@ -9,7 +9,7 @@ execute if score $default_color ui_temp matches 2 if block ~ ~ ~ #ui:wools_inclu
 execute if score $default_color ui_temp matches 3 if block ~ ~ ~ #ui:wools_include_black run setblock ~ ~ ~ gray_wool
 execute if score $default_color ui_temp matches 4 if block ~ ~ ~ #ui:wools_include_black run setblock ~ ~ ~ green_wool
 execute if score $default_color ui_temp matches 5 if block ~ ~ ~ #ui:wools_include_black run setblock ~ ~ ~ brown_wool
-particle dust 1 1 1 1 ~ ~ ~ 0 0 0 0 1 force
+#particle dust 1 1 1 1 ~ ~ ~ 0 0 0 0 1 force
 teleport @s ~ ~ ~1
 scoreboard players add @s ui_is 1
 execute if score @s ui_is > #count_z wool_count run kill @s
