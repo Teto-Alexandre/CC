@@ -30,7 +30,7 @@ give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"ラレユピアサー
 
 
 
-give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"エルドハンダー",SubType:-1,SPType:-1,BaseType:1,BurstType:1,Burst:1,BurstMax:-1,MainInkUse:25,now:{Speed:0,Model:110811}},main:{ShotType:1,ShotCT:1,BurstCT:5,Spread:50,AirSpread:100,SpreadType:1,AirSpreadType:1,Speed:90,SpeedPlus:30,RangeType:1,Range:30,FlyParticle:2,EndParticle:2,Damage:60,MultiShot:1,ShotFootStep:1,Sound:3,BulletData:{hitbox_x:0.2,hitbox_y:0.2}}},display:{Lore:['[{"text":"最も基本的なハンダー","color":"gray","italic":false}]']}}
+give @p minecraft:carrot_on_a_stick{tmw:{id:237,gun:{Name:"エルドハンダー",SubType:-1,SPType:-1,BaseType:1,BurstType:1,Burst:1,BurstMax:-1,MainInkUse:45,now:{Speed:0,Model:110811}},main:{ShotType:1,ShotCT:1,BurstCT:5,Spread:50,AirSpread:100,SpreadType:1,AirSpreadType:1,Speed:900,SpeedPlus:0,RangeType:1,Range:40,FlyParticle:2,EndParticle:2,Damage:60,MultiShot:1,ShotFootStep:1,Sound:3,BulletData:{hitbox_x:0.2,hitbox_y:0.2}}},display:{Lore:['[{"text":"最も基本的なハンダー","color":"gray","italic":false}]','[{"text":"射程が長く、環境にいい","color":"gray","italic":false}]']}}
 
 
 

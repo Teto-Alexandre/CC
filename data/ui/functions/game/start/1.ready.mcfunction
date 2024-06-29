@@ -35,6 +35,7 @@ tag @a remove ui_unhurtable
 tag @a remove ui_resistance
 execute as @a[tag=tmw_237_respawning] run scoreboard players set @s ui_rst 1
 gamemode spectator @a
+scoreboard players set @a ui_tmw237_ink_debit 0
 
 #
 execute if score $autoteam ui_world matches 1 unless score $teamset ui_world matches 1.. run function ui:game/team2

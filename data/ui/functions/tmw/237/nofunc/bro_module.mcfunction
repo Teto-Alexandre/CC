@@ -56,3 +56,4 @@ execute if score @s module matches 54 run tellraw @a[tag=!tmw_237_nomisclog] [{"
 execute if score @s module matches 55 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 装備せよ"}]
 execute if score @s module matches 56 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: 生命維持装置"}]
 execute if score @s module matches 57 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: スペランカー"}]
+execute if score @s module matches 58 run tellraw @a[tag=!tmw_237_nomisclog] [{"text":"Module: インク銀行券"}]
