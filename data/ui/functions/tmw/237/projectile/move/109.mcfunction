@@ -18,6 +18,8 @@
     tag @s[tag=tmw237_reflected] remove tmw237_reflected
     execute if score #success ui_temp matches 1 run tag @s add tmw237_reflected
     execute if entity @s[tag=tmw237_reflected] at @s run function ui:tmw/237/projectile/move/109/reflect
+    scoreboard players add @s ui_is2 1
+    execute if score @s ui_is2 matches 30.. run tag @s add tmw_237_proj_del
 
 # 消す
     execute if entity @s[tag=tmw_237_proj_del] run function ui:tmw/237/projectile/kill
