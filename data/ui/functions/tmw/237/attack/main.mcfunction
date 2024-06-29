@@ -15,7 +15,8 @@
     scoreboard players operation $ink.main ui_temp *= #100 ui_num
     scoreboard players operation $ink.main ui_temp /= @s main_eff_acc
     scoreboard players operation $ink.main ui_temp > #1 ui_num
-    scoreboard players operation $ink ui_temp -= $ink.main ui_temp
+    execute unless score @s module matches 58 run scoreboard players operation $ink ui_temp -= $ink.main ui_temp
+    execute if score @s module matches 58 run scoreboard players operation @s ui_tmw237_ink_debit -= $ink.main ui_temp
 
 # 変更した
     execute if score $burst ui_temp matches ..0 unless score $bursttype ui_temp matches 7..8 unless score $bursttype ui_temp matches 10..11 unless score $bursttype ui_temp matches 13 unless score $bursttype ui_temp matches 15 run scoreboard players set $ishold ui_temp 1

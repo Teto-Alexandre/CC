@@ -168,6 +168,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_tmw237_energy_charge_time dummy {"text":"UtilityItems_Tmw237_EnergyCharge_Time","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_energy_charge_penalty dummy {"text":"UtilityItems_Tmw237_EnergyCharge_Penalty","color":"dark_blue"}
     scoreboard objectives add ui_tmw237_heal_cooldown dummy {"text":"UtilityItems_Tmw237_Heal_Cooldown","color":"dark_blue"}
+    scoreboard objectives add ui_tmw237_ink_debit dummy {"text":"UtilityItems_Tmw237_Ink_Debit","color":"dark_blue"}
     scoreboard objectives add ui_asiba_team dummy
     scoreboard objectives add ui_asiba_progress_blue dummy
     scoreboard objectives add ui_asiba_progress_yellow dummy

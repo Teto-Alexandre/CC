@@ -120,6 +120,7 @@ execute if entity @s[gamemode=!spectator] run function ui:tmw/237/constant/core
 # インク回復
 execute if score @s ui_tmw237_air_ink_lock matches 1.. run scoreboard players remove @s[nbt={OnGround:1b}] ui_tmw237_air_ink_lock 1
 execute if score $ink ui_temp < $ink.max ui_temp run function ui:tmw/237/reload
+execute unless score @s ui_tmw237_ink_debit matches 0 run function ui:tmw/237/debit
 
 # クールタイム解除
 execute unless score $cooltime ui_temp matches 0 run function ui:tmw/237/ct
