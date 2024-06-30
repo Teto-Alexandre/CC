@@ -1,7 +1,8 @@
 # その場系ウェポン発動
 
 # リコール
-    execute if score $activator ui_temp matches 201 run function ui:tmw/237/activator/here/201
+    #execute if score $activator ui_temp matches 201 run function ui:tmw/237/activator/here/201
+    execute if score $activator ui_temp matches 201 run tellraw @s [{"text":"このサブは理由あって現在使用できません","color":"red"}]
 
 # ハイジャンプ
     execute if score $activator ui_temp matches 202 run playsound entity.ender_dragon.flap player @a ~ ~ ~ 1 1 0

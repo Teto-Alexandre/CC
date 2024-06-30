@@ -71,7 +71,7 @@ item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次の�
 #execute if score $slot ui_temp matches 17 run scoreboard players set @s module_page 3
 
 item replace entity @s enderchest.19 with player_head{display:{Name:'{"text":"スペランカー","color":"yellow","italic":false}',Lore:['[{"text":"体力が1に固定され、地形ダメージでも死に至る","color":"gray","italic":false}]','[{"text":"全てのギアの効力が3倍になる","color":"gray","italic":false}]','[{"text":"一種類につき9個分までしか効果がない","color":"gray","italic":false}]']},ui:{ismenu:1}}
-item replace entity @s enderchest.20 with paper{display:{Name:'{"text":"インク銀行券","color":"yellow","italic":false}',Lore:['[{"text":"定額返済率 1%/秒","color":"gray","italic":false}]','[{"text":"あなたのインク回復で返済できます","color":"gray","italic":false}]','[{"text":"インク消費を代替する","color":"blue","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.20 with paper{display:{Name:'{"text":"インク銀行券","color":"yellow","italic":false}',Lore:['[{"text":"定額返済率 1%/秒","color":"gray","italic":false}]','[{"text":"あなたのインク回復で返済できます","color":"gray","italic":false}]','[{"text":"メイン武器のインク消費を代替する","color":"blue","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
