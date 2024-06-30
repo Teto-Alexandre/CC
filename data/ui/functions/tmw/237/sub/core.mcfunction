@@ -16,6 +16,14 @@ scoreboard players operation $subtime ui_temp = $subtime.max ui_temp
 # インク減少
 scoreboard players operation $ink.sub ui_temp *= #100 ui_num
 scoreboard players operation $ink.sub ui_temp /= @s sub_eff_acc
+
+execute if entity @s[tag=sub_custom_1] run scoreboard players operation $ink.sub ui_temp *= #2 ui_num
+execute if entity @s[tag=sub_custom_2] run scoreboard players operation $ink.sub ui_temp *= #3 ui_num
+execute if entity @s[tag=sub_custom_2] run scoreboard players operation $ink.sub ui_temp /= #2 ui_num
+execute if entity @s[tag=sub_custom_3] run scoreboard players operation $ink.sub ui_temp /= #2 ui_num
+execute if entity @s[tag=sub_custom_4] run scoreboard players operation $ink.sub ui_temp *= #2 ui_num
+execute if entity @s[tag=sub_custom_4] run scoreboard players operation $ink.sub ui_temp /= #3 ui_num
+
 scoreboard players operation $ink ui_temp -= $ink.sub ui_temp
 scoreboard players operation $cooltime_old ui_temp = $cooltime ui_temp
 execute store result score $cooltime ui_temp run time query gametime

@@ -61,6 +61,10 @@ execute if score $slot ui_temp matches 23 run scoreboard players set @s title_no
 execute if score $slot ui_temp matches 24 run scoreboard players set @s title_node 20
 execute if score $slot ui_temp matches 25 run scoreboard players set @s title_node 21
 
+execute if score $slot ui_temp matches 1..7 run scoreboard players set @s title_node_page 1
+execute if score $slot ui_temp matches 10..16 run scoreboard players set @s title_node_page 1
+execute if score $slot ui_temp matches 19..25 run scoreboard players set @s title_node_page 1
+
 item replace entity @s enderchest.26 with black_stained_glass_pane{display:{Name:'{"text":"場所選択に戻る","italic": false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 26 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 0.8 2 0
 execute if score $slot ui_temp matches 26 run scoreboard players set @s title_whole 0

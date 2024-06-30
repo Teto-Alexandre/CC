@@ -22,4 +22,10 @@ execute if score $sptype ui_temp matches 253 if score $sptime ui_temp matches 1.
 playsound entity.snowball.throw player @a ~ ~ ~ 1 0.8 0
 #data modify entity @e[tag=ui_temp_this,limit=1] Item.tag.CustomModelData set from entity @e[type=snowball,sort=nearest,limit=1] Item.tag.CustomModelData
 execute if entity @s[scores={module=41}] run tag @e[tag=ui_temp_this,limit=1] add ui_237_thrown_by_module41
+
+execute if entity @s[tag=sub_custom_1] run tag @e[tag=ui_temp_this,limit=1] add sub_custom_1
+execute if entity @s[tag=sub_custom_2] run tag @e[tag=ui_temp_this,limit=1] add sub_custom_2
+execute if entity @s[tag=sub_custom_3] run tag @e[tag=ui_temp_this,limit=1] add sub_custom_3
+execute if entity @s[tag=sub_custom_4] run tag @e[tag=ui_temp_this,limit=1] add sub_custom_4
+
 tag @e[tag=ui_temp_this] remove ui_temp_this

@@ -19,6 +19,7 @@ scoreboard players set $life ui_world -1
     scoreboard objectives add module_page dummy
     scoreboard objectives add title_whole dummy
     scoreboard objectives add title_node dummy
+    scoreboard objectives add title_node_page dummy
     scoreboard objectives add title_data dummy
 
 scoreboard players set $ke2 party_mode 0

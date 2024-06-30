@@ -40,3 +40,5 @@ execute if score $text_id ui_temp matches 19 run function ui:tmw/237/title/block
 execute if score $text_id ui_temp matches 20 run function ui:tmw/237/title/block/20
 # 固有数値
 execute if score $text_id ui_temp matches 21 run function ui:tmw/237/title/block/21
+# 銀行券
+execute if score $text_id ui_temp matches 22 run function ui:tmw/237/title/block/22

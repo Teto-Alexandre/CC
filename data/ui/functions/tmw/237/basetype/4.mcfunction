@@ -18,7 +18,7 @@
     execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run playsound block.piston.extend player @a ~ ~ ~ 1 0.8 0
     execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run playsound block.tripwire.click_on player @a ~ ~ ~ 1 0.6 0
     execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run particle crit ~ ~1 ~ 0.2 0.2 0.2 1 10 normal
-    execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run tag @s remove tmw_237_jumped
+    execute if score $holdsnd ui_temp matches 0 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 at @s run tag @s[nbt={OnGround:1b}] remove tmw_237_jumped
 
 # 初入力でクールタイム読み込み(+慣性打ち消し)、さらにホールド状態を0にする
     execute if score $holdjump ui_temp matches 1 if score @s ui_use1 matches 1.. if score @s ui_use2 matches 0 if score $cooltime ui_temp matches 0 if entity @s[tag=!tmw_237_jumped,nbt={OnGround:0b}] run effect give @s slow_falling 1 0 true

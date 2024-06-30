@@ -25,7 +25,7 @@ item replace entity @s enderchest.13 with gray_stained_glass_pane{CustomModelDat
 item replace entity @s enderchest.14 with gray_stained_glass_pane{CustomModelData:123014,display:{Name:'{"text":"武器チャージ率（１０ライン）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.15 with gray_stained_glass_pane{CustomModelData:123015,display:{Name:'{"text":"硬直（デジタル表記２桁）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.16 with gray_stained_glass_pane{CustomModelData:123016,display:{Name:'{"text":"ＨＰゲージ（１０ライン）","italic": false}'},ui:{ismenu:1}}
-item replace entity @s enderchest.17 with cyan_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
+item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次のページ","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.18 with cyan_stained_glass_pane{display:{Name:'{"text":"","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.19 with gray_stained_glass_pane{CustomModelData:123017,display:{Name:'{"text":"インク残量（ボリューム）","italic": false}'},ui:{ismenu:1}}
 item replace entity @s enderchest.20 with gray_stained_glass_pane{CustomModelData:123018,display:{Name:'{"text":"ＳＰゲージ（ボリューム）","italic": false}'},ui:{ismenu:1}}
@@ -59,6 +59,7 @@ execute if score $slot ui_temp matches 25 run data modify storage ui:text_board 
 execute if score $slot ui_temp matches 26 run data modify storage ui:text_board temp.node set value {}
 
 execute if score $slot ui_temp matches 1 run scoreboard players set @s title_data 1
+execute if score $slot ui_temp matches 17 run scoreboard players add @s title_node_page 1
 execute if score $slot ui_temp matches 22 run scoreboard players set @s title_data 18
 execute if score $slot ui_temp matches 23 run scoreboard players set @s title_data 19
 
@@ -67,8 +68,8 @@ execute if score $slot ui_temp matches 1..26 if score @s title_whole matches 2 r
 execute if score $slot ui_temp matches 1..26 if score @s title_whole matches 3 run function ui:tmw/243/core/panel/title/node2_actionbar
 
 item replace entity @s enderchest.26 with black_stained_glass_pane{display:{Name:'{"text":"何も設定せずに戻る","italic": false}'},ui:{ismenu:1}}
-execute if score $slot ui_temp matches 1..26 unless score $slot ui_temp matches 1 unless score $slot ui_temp matches 22 unless score $slot ui_temp matches 23 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 0.8 2 0
-execute if score $slot ui_temp matches 1..26 unless score $slot ui_temp matches 1 unless score $slot ui_temp matches 22 unless score $slot ui_temp matches 23 run scoreboard players set @s title_node 0
+execute if score $slot ui_temp matches 1..26 unless score $slot ui_temp matches 1 unless score $slot ui_temp matches 9 unless score $slot ui_temp matches 17 unless score $slot ui_temp matches 22 unless score $slot ui_temp matches 23 run playsound entity.experience_orb.pickup player @a ~ ~ ~ 0.8 2 0
+execute if score $slot ui_temp matches 1..26 unless score $slot ui_temp matches 1 unless score $slot ui_temp matches 9 unless score $slot ui_temp matches 17 unless score $slot ui_temp matches 22 unless score $slot ui_temp matches 23 run scoreboard players set @s title_node 0
 
 # OMD に送信
 data remove storage ui:text_board temp.node

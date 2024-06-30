@@ -16,6 +16,8 @@
     scoreboard players operation $ink.main ui_temp /= @s main_eff_acc
     scoreboard players operation $ink.main ui_temp > #1 ui_num
     execute unless score @s module matches 58 run scoreboard players operation $ink ui_temp -= $ink.main ui_temp
+    execute if score @s module matches 58 run scoreboard players operation $ink.main ui_temp *= #11 ui_num
+    execute if score @s module matches 58 run scoreboard players operation $ink.main ui_temp /= #10 ui_num
     execute if score @s module matches 58 run scoreboard players operation @s ui_tmw237_ink_debit -= $ink.main ui_temp
 
 # 変更した
