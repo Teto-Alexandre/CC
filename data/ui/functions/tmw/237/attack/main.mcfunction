@@ -22,4 +22,6 @@
 
 # 変更した
     execute if score $burst ui_temp matches ..0 unless score $bursttype ui_temp matches 7..8 unless score $bursttype ui_temp matches 10..11 unless score $bursttype ui_temp matches 13 unless score $bursttype ui_temp matches 15 run scoreboard players set $ishold ui_temp 1
+    execute if score $burst ui_temp matches ..0 if score $setishold ui_temp matches 1 run scoreboard players set $ishold ui_temp 1
+    #tellraw @a [{"text":"Type:"},{"score":{"name":"$bursttype","objective":"ui_temp"}},{"text":",Unset:"},{"score":{"name":"$setishold","objective":"ui_temp"}},{"text":",Ishold:"},{"score":{"name":"$ishold","objective":"ui_temp"}}]
     scoreboard players set $changed ui_temp 1

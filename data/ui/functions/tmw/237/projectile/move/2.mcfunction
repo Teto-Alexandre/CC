@@ -1,4 +1,12 @@
 #当たり判定拡張
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^-0.7 ^0.1 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^ ^0.1 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^-0.7 ^0.2 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^ ^0.2 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^-0.7 ^0.3 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^ ^0.3 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^-0.7 ^0.4 run function ui:tmw/237/projectile/hit.search
+    execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^ ^0.4 run function ui:tmw/237/projectile/hit.search
     execute if entity @s[tag=!tmw_237_proj_del] positioned ^ ^-0.7 ^ run function ui:tmw/237/projectile/hit.search
 
 #見た目

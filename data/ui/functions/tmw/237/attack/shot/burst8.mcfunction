@@ -8,6 +8,7 @@
 # チャージ数に応じて強化
     execute if score $burst_alt.id ui_temp matches 200 run function ui:tmw/237/attack/shot/burst8/200/
     execute if score $burst_alt.id ui_temp matches 201 run function ui:tmw/237/attack/shot/burst8/201/
+    execute if score $burst_alt.id ui_temp matches 202 run function ui:tmw/237/attack/shot/burst8/202/
     execute if score $burst_alt.id ui_temp matches 203 run function ui:tmw/237/attack/shot/burst8/203
     execute if score $burst_alt.id ui_temp matches 204 run function ui:tmw/237/attack/shot/burst8/204
     execute if score $burst_alt.id ui_temp matches 205 run function ui:tmw/237/attack/shot/burst8/205

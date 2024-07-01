@@ -32,6 +32,7 @@ execute unless data storage ui:gun temp.now.First run function ui:tmw/237/change
 scoreboard players operation $id ui_temp = @s ui_id
 scoreboard players operation $team ui_temp = @s ui_team
 execute store result score $basetype ui_temp run data get storage ui:gun temp.BaseType
+execute store result score $setishold ui_temp run data get storage ui:gun temp.SetIsHold
 execute store result score $ink ui_temp run data get storage ui:gun temp.now.Ink
 execute store result score $ink.max ui_temp run data get storage ui:gun temp.InkMax
 execute if score $module ui_world matches 1 if score @s module matches 16 run function ui:module/eco_bag
@@ -95,7 +96,9 @@ execute if score $tmw237.hand ui_world matches 1 run function ui:tmw/237/changed
 execute unless score $swap_save party_mode matches 1.. unless score @s last_slot_old = @s last_slot run function ui:tmw/237/constant/another_hold_cancel
 
 # バースト数
-# 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4
+# 1:定量バースト, 2:継続射撃, 3:チャージ連射+倍率, 4:ID式チャージ単射撃, 5:ID式連射補正関数, 6:遅延認識, 7:新3, 8:新4 9:近接判定ダメージ付きチャージ単発
+# 10:途中チャージ付きチャージ連射倍率 11:チャージ中モード切替連射倍率 12:連装チャージ単発 13:チャージ係数付きチャージ連射倍率 14:チャージ係数付きチャージ連射倍率(射撃後自動でチャージ再開)
+# 15:途中チャージ+チャージ係数付きチャージ連射倍率
 #tellraw @a[scores={ui_use1=1..}] [{"score":{"objective":"ui_temp","name":"$bursttype"}}]
 execute if score $bursttype ui_temp matches 1 if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/1
 execute if score $bursttype ui_temp matches 2 as @s[scores={ui_use1=1..}] run function ui:tmw/237/burst/1

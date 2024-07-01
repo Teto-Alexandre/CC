@@ -1,8 +1,8 @@
 # $ink = $ink.max になるまで.lp
-    execute if score @s ui_tmw237_ink_debit matches ..-1 run scoreboard players remove $ink ui_temp 5
-    execute if score @s ui_tmw237_ink_debit matches ..-1 run scoreboard players add @s ui_tmw237_ink_debit 5
-    execute if score @s ui_tmw237_ink_debit matches ..-1000 run scoreboard players remove $ink ui_temp 10
-    execute if score @s ui_tmw237_ink_debit matches ..-1000 run scoreboard players add @s ui_tmw237_ink_debit 10
+    execute if score @s ui_tmw237_ink_debit matches ..-1 run scoreboard players remove $ink ui_temp 10
+    execute if score @s ui_tmw237_ink_debit matches ..-1 run scoreboard players add @s ui_tmw237_ink_debit 10
+    execute if score @s ui_tmw237_ink_debit matches ..-1000 run scoreboard players remove $ink ui_temp 90
+    execute if score @s ui_tmw237_ink_debit matches ..-1000 run scoreboard players add @s ui_tmw237_ink_debit 90
 
     scoreboard players operation $ink ui_temp < $ink.max ui_temp
     scoreboard players operation @s ui_tmw237_ink_debit < #0 ui_num
