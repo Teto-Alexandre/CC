@@ -38,7 +38,7 @@ item replace entity @s enderchest.8 with gray_stained_glass_pane{CustomModelData
 item replace entity @s enderchest.9 with arrow{display:{Name:'{"text":"前のページ","color":"white","italic":false}'},ui:{ismenu:1}}
 execute if score $slot ui_temp matches 9 run scoreboard players set @s module_page 2
 
-item replace entity @s enderchest.10 with carrot_on_a_stick{CustomModelData:110006,display:{Name:'{"text":"アカシックレコード","color":"light_purple","italic":false}',Lore:['[{"text":"サブのインク効率とダメージが40%増加する","color":"gray","italic":false}]','[{"text":"サブ以外のインク効率とダメージが40%減少し、最大体力-5","color":"gray","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.10 with carrot_on_a_stick{CustomModelData:110006,display:{Name:'{"text":"アカシックレコード","color":"light_purple","italic":false}',Lore:['[{"text":"サブのインク効率とダメージが40%増加する","color":"gray","italic":false}]','[{"text":"サブ以外のインク効率とダメージが40%減少し、サブを使うたび4ダメージ受ける","color":"gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.11 with smithing_table{display:{Name:'{"text":"動く固定砲台","color":"white","italic":false}',Lore:['[{"text":"チャージ完了後の射程が伸びる","color":"gray","italic":false}]','[{"text":"チャージ中、チャージ後に移動速度が低下する","color":"gray","italic":false}]','[{"text":"対応していないチャージ武器も多い","color":"green","italic":false}]']},HideFlags:4,ui:{ismenu:1}}
 item replace entity @s enderchest.12 with leather_boots{display:{Name:'{"text":"風の靴","color":"aqua","italic":false}',Lore:['[{"text":"攻撃時相手より上にいるほどダメージ増加","color":"gray","italic":false}]','[{"text":"相手より下にいるとダメージ減少","color":"red","italic":false}]','[{"text":"スペクテイター中は無効","color":"green","italic":false}]'],color:65535},HideFlags:255,ui:{ismenu:1}} 1
 item replace entity @s enderchest.13 with cookie{CustomModelData:170011,display:{Name:'{"text":"スノースライム甘口","color":"green","italic":false}',Lore:['[{"text":"爆発により与えるダメージが50%増加","color":"gray","italic":false}]','[{"text":"それ以外は50%減少","color":"gray","italic":false}]']},ui:{ismenu:1}}
@@ -50,7 +50,6 @@ execute if score $slot ui_temp matches 10 run scoreboard players set @s module 5
 execute if score $slot ui_temp matches 10 run scoreboard players set @s main_eff_acc 60
 execute if score $slot ui_temp matches 10 run scoreboard players set @s sub_damage 140
 execute if score $slot ui_temp matches 10 run scoreboard players set @s sub_eff_acc 140
-execute if score $slot ui_temp matches 10 run scoreboard players set @s health -50
 execute if score $slot ui_temp matches 11 run scoreboard players set @s module 51
 execute if score $slot ui_temp matches 12 run scoreboard players set @s module 52
 execute if score $slot ui_temp matches 13 run scoreboard players set @s module 53

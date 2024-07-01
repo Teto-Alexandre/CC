@@ -1,6 +1,11 @@
 # 必要データ収集
 execute store result score $ct ui_temp run data get storage ui:gun temp.SPCT
 
+# アカシック
+scoreboard players operation #_ ui_temp = $activator ui_temp
+scoreboard players operation #_ ui_temp %= #100 ui_num
+execute if score #_ ui_temp matches ..50 if score $module ui_world matches 1 if score @s module matches 50 run function ui:tmw/237/sub/record
+
 # サブウェポン発動
 scoreboard players operation $activator ui_temp = $sptype ui_temp
 execute if score $activator ui_temp matches 101..200 run function ui:tmw/237/activator/throw
