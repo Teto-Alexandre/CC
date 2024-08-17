@@ -11,8 +11,7 @@
     #effect give @s speed 1 25 true
     effect give @s jump_boost 1 3 true
     effect give @s invisibility 1 0 true
-    execute if score $module ui_world matches 1 unless score @s module matches 56 unless score @s ui_tmw237_heal_cooldown matches 1.. run function ui:tmw/237/constant/regen/
-    execute if score $module ui_world matches 0 unless score @s ui_tmw237_heal_cooldown matches 1.. run function ui:tmw/237/constant/regen/
+    execute unless score @s ui_tmw237_heal_cooldown matches 1.. run function ui:tmw/237/constant/regen/
     execute if score $burst ui_temp matches 1.. store result score $ct ui_temp run data get entity @s SelectedItem.tag.tmw.main.BurstCT
     execute if score $burst ui_temp matches 1.. run execute store result score $cooltime ui_temp run time query gametime
     execute if score $burst ui_temp matches 1.. run scoreboard players operation $cooltime ui_temp += $ct ui_temp
