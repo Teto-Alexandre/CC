@@ -44,7 +44,7 @@ item replace entity @s enderchest.12 with leather_boots{display:{Name:'{"text":"
 item replace entity @s enderchest.13 with cookie{CustomModelData:170011,display:{Name:'{"text":"スノースライム甘口","color":"green","italic":false}',Lore:['[{"text":"爆発により与えるダメージが50%増加","color":"gray","italic":false}]','[{"text":"それ以外は50%減少","color":"gray","italic":false}]']},ui:{ismenu:1}}
 item replace entity @s enderchest.14 with netherite_upgrade_smithing_template{display:{Name:'{"text":"リ・チャージ","color":"gold","italic":false}',Lore:['[{"text":"射撃で敵を倒した時即座にチャージを完了させる","color":"gray","italic":false}]','[{"text":"チャージ速度が10%減少する","color":"gray","italic":false}]']},ui:{ismenu:1},HideFlags:255}
 item replace entity @s enderchest.15 with iron_chestplate{display:{Name:'{"text":"装備せよ","color":"green","italic":false}',Lore:['[{"text":"鉄のチェストプレートを装備する","color":"gray","italic":false}]']},ui:{ismenu:1},HideFlags:255}
-item replace entity @s enderchest.16 with heart_pottery_sherd{display:{Name:'{"text":"生命維持装置","color":"light_purple","italic":false}',Lore:['[{"text":"射撃形態時に移動形態時の半分の速度で体力が回復する","color":"gray","italic":false}]','[{"text":"ただし回復するごとにスペシャルポイントを消費する","color":"gray","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.16 with heart_pottery_sherd{display:{Name:'{"text":"生命維持装置","color":"light_purple","italic":false}',Lore:['[{"text":"射撃形態時に体力が回復する","color":"gray","italic":false}]','[{"text":"ただし移動形態時に回復しなくなる","color":"gray","italic":false}]']},ui:{ismenu:1}}
 
 execute if score $slot ui_temp matches 10 run scoreboard players set @s module 50
 execute if score $slot ui_temp matches 10 run scoreboard players set @s main_eff_acc 60
