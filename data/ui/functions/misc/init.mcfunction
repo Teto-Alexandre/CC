@@ -21,6 +21,14 @@ scoreboard players set $life ui_world -1
     scoreboard objectives add title_node dummy
     scoreboard objectives add title_node_page dummy
     scoreboard objectives add title_data dummy
+    
+    scoreboard objectives add player_x_old dummy
+    scoreboard objectives add player_y_old dummy
+    scoreboard objectives add player_z_old dummy
+    scoreboard objectives add player_x dummy
+    scoreboard objectives add player_y dummy
+    scoreboard objectives add player_z dummy
+    scoreboard objectives add monitor_player_speed dummy
 
 scoreboard players set $ke2 party_mode 0
 scoreboard players set $dmg party_mode 0

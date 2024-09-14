@@ -30,6 +30,7 @@
     execute if score @s ui_bpart matches -2 run function ui:tmw/237/projectile/move/-2
     execute if score @s ui_bpart matches 1 run function ui:tmw/237/projectile/move/1
     execute if score @s ui_bpart matches 2 run function ui:tmw/237/projectile/move/2
+    execute if score @s ui_bpart matches -22 run function ui:tmw/237/projectile/move/2.2
     execute if score @s ui_bpart matches 3 run function ui:tmw/237/projectile/move/3
     execute if score @s ui_bpart matches 4 run function ui:tmw/237/projectile/move/4
     execute if score @s ui_bpart matches 5 run function ui:tmw/237/projectile/move/5

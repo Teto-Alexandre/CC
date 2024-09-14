@@ -40,3 +40,6 @@
     execute if entity @e[tag=ui_17_yellow] run scoreboard players set @a life 0
     execute if entity @e[tag=ui_17_red] run scoreboard players set @a life 0
     execute if entity @e[tag=ui_17_green] run scoreboard players set @a life 0
+
+##
+    execute as @a run function ui:misc/first_each

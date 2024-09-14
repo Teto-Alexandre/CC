@@ -21,7 +21,7 @@
     execute if score $temp ui_temp matches 112 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"アクセラレーター : 弾を加速する装置を投げる","color":"white"}]
     execute if score $temp ui_temp matches 201 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"リコール : 瞬時にリスポーン地点に戻る","color":"white"}]
     execute if score $temp ui_temp matches 301 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"トラップ : その場に周囲の敵に反応する爆弾を設置","color":"white"}]
-    execute if score $temp ui_temp matches 401 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ブロードソード : 至近距離の敵を即死させる攻撃","color":"white"}]
+    execute if score $temp ui_temp matches 401 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ブロードソード : 至近距離の敵に即死級の攻撃","color":"white"}]
     execute if score $temp ui_temp matches 402 run tellraw @s [{"text":"   > ","color":"gray"},{"text":"ヘルハウンド : 最寄りの敵にミサイルを撃つ","color":"white"}]
 
 # スペ情報開示
