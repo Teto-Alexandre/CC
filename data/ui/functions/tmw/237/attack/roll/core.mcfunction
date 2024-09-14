@@ -42,6 +42,10 @@
     execute if score $speed ui_temp matches 4.. if score @s ui_use2 matches 80.. run effect give @s[nbt=!{active_effects:[{id:"minecraft:darkness"}]}] speed 1 3 true
     execute if score $speed ui_temp matches 4 if score @s ui_use2 matches 80.. run particle end_rod ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
 
+    # ドライブローラー専用
+    execute if score $speed ui_temp matches 100.. if score @s ui_use2 matches 40.. run effect give @s[nbt=!{active_effects:[{id:"minecraft:darkness"}]}] speed 1 9 true
+    execute if score $speed ui_temp matches 100 if score @s ui_use2 matches 40.. run particle end_rod ~ ~0.2 ~ 0.1 0.1 0.1 0 1 force
+
 # 床保護
     execute if score $floor_proof ui_temp matches 1 run tag @s add floor_proof
     scoreboard players reset $floor_proof ui_temp

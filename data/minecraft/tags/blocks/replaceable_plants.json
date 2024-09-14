@@ -1,6 +1,7 @@
 {
   "values": [
-    "minecraft:grass",
+    {"id":"minecraft:grass","required":false},
+    {"id":"minecraft:short_grass","required":false},
     "minecraft:fern",
     "minecraft:dead_bush",
     "minecraft:vine",

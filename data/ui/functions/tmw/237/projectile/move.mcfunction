@@ -42,6 +42,7 @@
     execute if score @s ui_bpart matches 10 run function ui:tmw/237/projectile/move/10
     #ストライク横
     execute if score @s ui_bpart matches 11 run function ui:tmw/237/projectile/move/11
+    execute if score @s ui_bpart matches -11 run function ui:tmw/237/projectile/move/11.2
     #ストライク縦
     execute if score @s ui_bpart matches 12 run function ui:tmw/237/projectile/move/12
     #バウンド小弾
