@@ -12,3 +12,4 @@ execute if score @s ui_bpart matches 105 run scoreboard players add $temp ui_tem
 execute if data storage ui_temp: Unpower{Pierce:1b} run tag @s add Pierce
 execute if data storage ui_temp: Unpower{Pierce:2b} run tag @s add SuperPierce
 data modify entity @s ArmorItems.[0].tag.display.Name set from storage ui_temp: Unpower.Name
+data modify entity @s ArmorItems.[0].tag.BulletData set from storage ui_temp: Unpower.BulletData
