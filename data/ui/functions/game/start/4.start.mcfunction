@@ -139,6 +139,9 @@ execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 p
 execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 run spreadplayers -188 -175 1 25 under 40 false @a[scores={ui_team=1}]
 execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 as @a[scores={ui_team=1}] positioned -188 30 -175 facing entity @s eyes rotated ~180 ~ positioned as @s run teleport @s ~ ~ ~ ~ ~
 
+# ガチアシバ
+execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run function ui:ui/19/nofunc/start
+
 execute as @a[tag=!spectate] at @s run spawnpoint @s ~ ~ ~
 
 effect clear @a

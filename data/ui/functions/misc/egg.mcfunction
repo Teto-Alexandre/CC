@@ -40,6 +40,12 @@ execute as @s[tag=ui_17] run tag @e[tag=ui_17_1_temp] remove ui_17_1_temp
 execute as @s[tag=ui_17] run tag @e[tag=ui_17_2_temp] remove ui_17_2_temp
 execute as @s[tag=ui_17] at @s run function ui:ui/17/ss
 
+# ヤグラ2
+execute as @s[tag=ui_19] at @s align xyz positioned ~0.5 ~ ~0.5 run summon minecraft:armor_stand ~ ~ ~ {Marker:1b,NoGravity:1b,Invisible:1b,Glowing:1b,Tags:["ui_19_1","ui_19_1_temp"],ArmorItems:[{},{},{},{id:"beacon",Count:1b}]}
+execute at @s[tag=ui_19] as @e[tag=ui_19_1_temp] run function ui:misc/act/make_id
+execute as @s[tag=ui_19] run tag @e[tag=ui_19_1_temp] remove ui_19_1_temp
+execute as @s[tag=ui_19] at @s run function ui:ui/19/ss
+
 teleport @s 0 -200 0
 kill @s
 

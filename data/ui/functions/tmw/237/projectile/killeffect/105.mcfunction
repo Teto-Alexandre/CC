@@ -15,5 +15,5 @@ tag @e[tag=ui_temp_unpower] add ui_refd
 tag @e[tag=ui_temp_unpower] add tmw_237_noref
 
 scoreboard players set $temp ui_temp 0
-data modify storage ui_temp: Unpower set value {Damage:150,Range:60,RangeType:3,Speed:30,FlyParticle:105,EndParticle:208,Name:'{"text":"ウルトラショット","color":"gold"}',IS:0}
+data modify storage ui_temp: Unpower set value {Damage:150,Range:60,RangeType:3,Speed:30,FlyParticle:105,EndParticle:414,Name:'{"text":"ウルトラショット","color":"gold"}',IS:0}
 function ui:tmw/237/misc/unpower

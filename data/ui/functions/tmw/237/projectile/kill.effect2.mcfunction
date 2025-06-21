@@ -109,7 +109,9 @@
         # ヴァンガード - デッドリーチャージ
         execute if score @s ui_hpart matches 412 run function ui:tmw/237/projectile/killeffect/412/
         # モジュール - 爆裂インク
-        execute if score @s ui_hpart matches 413..500 run function ui:tmw/237/projectile/killeffect/413
+        execute if score @s ui_hpart matches 413 run function ui:tmw/237/projectile/killeffect/413
+        # ウルトラショットの爆発
+        execute if score @s ui_hpart matches 414..500 run function ui:tmw/237/projectile/killeffect/414
         # 可変爆発
         execute if score @s ui_hpart matches 501 run function ui:tmw/237/projectile/killeffect/501
         # 可変塗り

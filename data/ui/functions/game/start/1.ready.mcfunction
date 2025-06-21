@@ -17,7 +17,7 @@ execute store result score $default_color ui_temp run data get storage ui:map ma
 function ui:game/map/core_tp
 
 # ガチアシバ
-execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run summon bat -117 32 0 {Silent:1b,NoAI:1b,Tags:["ui_egg","ui_17"]}
+execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run summon bat -117 32 0 {Silent:1b,NoAI:1b,Tags:["ui_egg","ui_19"]}
 execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 31 -1 -19 31 -28 light_blue_concrete replace white_concrete
 execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 31 -1 -19 31 -28 light_blue_concrete replace yellow_concrete
 execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 31 1 -19 31 28 yellow_concrete replace white_concrete

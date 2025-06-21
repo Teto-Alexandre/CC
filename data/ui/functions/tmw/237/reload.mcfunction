@@ -33,7 +33,7 @@
     scoreboard players set $changed ui_temp 1
 
 # エフェクト
-    execute if score $team ui_temp matches 1 at @s run particle dust 0.5 1 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
-    execute if score $team ui_temp matches 2 at @s run particle dust 1 0.5 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
-    execute if score $team ui_temp matches 3 at @s run particle dust 1 1 0.5 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
-    execute if score $team ui_temp matches 4 at @s run particle dust 0.5 1 0.5 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+    execute if score $team ui_temp matches 1 unless score @s module matches 14 at @s run particle dust 0.5 1 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+    execute if score $team ui_temp matches 2 unless score @s module matches 14 at @s run particle dust 1 0.5 1 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+    execute if score $team ui_temp matches 3 unless score @s module matches 14 at @s run particle dust 1 1 0.5 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
+    execute if score $team ui_temp matches 4 unless score @s module matches 14 at @s run particle dust 0.5 1 0.5 0.6 ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
