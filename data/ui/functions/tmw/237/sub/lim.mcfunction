@@ -10,7 +10,7 @@ scoreboard players set $fatal_weapon ui_temp 0
 #
 execute if score $subtype ui_temp matches 202 run scoreboard players set $quick_use ui_temp 1
 execute if score $subtype ui_temp matches 203 run scoreboard players set $quick_use ui_temp 1
-execute if score $subtype ui_temp matches 1013 run scoreboard players set $quick_use ui_temp 1
+execute unless entity @s[tag=drain] if score $subtype ui_temp matches 1013 run scoreboard players set $quick_use ui_temp 1
 
 #
 execute if score $sub_quick party_mode matches 1 run scoreboard players set $quick_use ui_temp 1
