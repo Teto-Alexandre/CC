@@ -24,7 +24,7 @@ execute if score $type ui_temp matches 120 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 121 run scoreboard players set $w.ink ui_temp 750
 execute if score $type ui_temp matches 122 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 123 run scoreboard players set $w.ink ui_temp 800
-execute if score $type ui_temp matches 124 run scoreboard players set $w.ink ui_temp 900
+execute if score $type ui_temp matches 124 run scoreboard players set $w.ink ui_temp 700
 execute if score $type ui_temp matches 201 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 202 run scoreboard players set $w.ink ui_temp 300
 execute if score $type ui_temp matches 203 run scoreboard players set $w.ink ui_temp 300

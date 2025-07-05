@@ -7,9 +7,9 @@
     execute if score $team ui_temp matches 4 run data modify storage ui:temp Name set value '{"text":"ハッキングボム","color":"green"}'
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 30
-    execute at @e[distance=..7,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
-    execute as @a[distance=..7,tag=!ui_temp_team] run scoreboard players set @s ui_tmw237_title_jammer 200
-    execute as @a[distance=..7,tag=!ui_temp_team] if score $module ui_world matches 1 run scoreboard players set @s[scores={module=40}] ui_tmw237_title_jammer 300
+    execute at @e[distance=..6,tag=!ui_temp_team,predicate=ui:load_unhurtable] run function ui:tmw/237/projectile/hit.marker
+    execute as @a[distance=..6,tag=!ui_temp_team] run scoreboard players set @s ui_tmw237_title_jammer 200
+    execute as @a[distance=..6,tag=!ui_temp_team] if score $module ui_world matches 1 run scoreboard players set @s[scores={module=40}] ui_tmw237_title_jammer 300
 
 # パーティクルで描画、演出
     function ui:template/sphere_particle/1.5
