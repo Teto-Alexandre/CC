@@ -30,7 +30,7 @@
 
 # レーン敷設
     execute if entity @e[tag=ui_19_4_they,tag=!ui_19_4_mid,distance=..0.1] run function ui:ui/19/1_root.del
-    execute unless entity @e[tag=ui_19_4_they] run function ui:ui/19/1_root
+    execute unless entity @e[tag=ui_19_4_they] at @s run function ui:ui/19/1_root
     #execute if score $temp ui_temp matches 1 facing entity @e[tag=ui_19_4_they,tag=ui_19_4_aqua] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
     #execute if score $temp ui_temp matches -1 facing entity @e[tag=ui_19_4_they,tag=ui_19_4_yellow] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
     #execute if score $temp ui_temp matches 1 facing entity @e[tag=ui_19_4_they,tag=ui_19_4_aqua] feet positioned ~-1.5 ~2.9 ~-1.5 as @e[tag=tmw_237_sub,tag=tmw_237_sub_unmovable,dx=2,dy=1,dz=2,scores={ui_uses=2..}] positioned as @s run teleport @s ^ ^ ^0.1
