@@ -14,9 +14,9 @@
     execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run tellraw @a [{"text":"青チームがアシバを確保！","color": "aqua"}]
     execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run team join blue @s
     execute if score $temp ui_temp matches 1 run scoreboard players set @s ui_asiba_team 1
-    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0.. run playsound block.note_block.snare block @a ~ ~ ~ 1 1 1
-    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0.. run tellraw @a [{"text":"アシバが停止！","color": "white"}]
-    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0.. run team join yellow @s
+    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run playsound block.note_block.snare block @a ~ ~ ~ 1 1 1
+    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run tellraw @a [{"text":"アシバが停止！","color": "white"}]
+    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run team leave @s
     execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. run scoreboard players set @s ui_asiba_team 0
     execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run playsound block.note_block.snare block @a ~ ~ ~ 1 1 1
     execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run tellraw @a [{"text":"黄チームがアシバを確保！","color": "yellow"}]
@@ -30,7 +30,7 @@
 
 # レーン敷設
     execute if entity @e[tag=ui_19_4_they,tag=!ui_19_4_mid,distance=..0.1] run function ui:ui/19/1_root.del
-    execute unless entity @e[tag=ui_19_4_they] run function ui:ui/19/1_root
+    execute unless entity @e[tag=ui_19_4_they] at @s run function ui:ui/19/1_root
     #execute if score $temp ui_temp matches 1 facing entity @e[tag=ui_19_4_they,tag=ui_19_4_aqua] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
     #execute if score $temp ui_temp matches -1 facing entity @e[tag=ui_19_4_they,tag=ui_19_4_yellow] feet positioned ~-1.5 ~2.9 ~-1.5 as @a[dx=2,dy=1,dz=2] positioned as @s run teleport @s ^ ^ ^0.1
     #execute if score $temp ui_temp matches 1 facing entity @e[tag=ui_19_4_they,tag=ui_19_4_aqua] feet positioned ~-1.5 ~2.9 ~-1.5 as @e[tag=tmw_237_sub,tag=tmw_237_sub_unmovable,dx=2,dy=1,dz=2,scores={ui_uses=2..}] positioned as @s run teleport @s ^ ^ ^0.1
