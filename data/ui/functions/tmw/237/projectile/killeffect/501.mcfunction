@@ -19,3 +19,5 @@
     execute if data storage ui:gun temp3.BulletData.Explosion.sound run function ui:tmw/237/projectile/killeffect/501/sound/
 
     particle flash ~ ~ ~ 0 0 0 0 1 force
+
+    scoreboard players set @s ui_hpart 1
