@@ -28,6 +28,10 @@
     execute store result score $particle.fly ui_temp run data get storage ui:gun temp2.FlyParticle
     execute store result score $particle.end ui_temp run data get storage ui:gun temp2.EndParticle
 
+# 空中で変化
+    execute unless score $spreadtype ui_temp matches 4 if entity @s[nbt={OnGround:0b}] if data storage ui:gun temp2.Air run function ui:tmw/237/attack/shot/core_data.air
+    execute if score $spreadtype ui_temp matches 4 if entity @s[tag=tmw_237_jumped] if data storage ui:gun temp2.Air run function ui:tmw/237/attack/shot/core_data.air
+
 # ローラー限定SpreadType
     execute if score $spreadtype ui_temp matches 4 unless entity @s[tag=tmw_237_jumped] run scoreboard players set $spreadtype ui_temp 2
     execute if score $spreadtype ui_temp matches 4 if entity @s[tag=tmw_237_jumped] run scoreboard players set $spreadtype ui_temp 3
