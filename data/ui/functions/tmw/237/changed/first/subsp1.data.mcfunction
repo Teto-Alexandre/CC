@@ -120,7 +120,7 @@ execute if score $type ui_temp matches 459 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 460 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 461 run scoreboard players set $w.ct ui_temp 20
 execute if score $type ui_temp matches 462 run scoreboard players set $w.ct ui_temp 10
-execute if score $type ui_temp matches 463 run scoreboard players set $w.ct ui_temp 10
+execute if score $type ui_temp matches 463 run scoreboard players set $w.ct ui_temp 0
 execute if score $type ui_temp matches 464 run scoreboard players set $w.ct ui_temp 10
 
 execute if score $type ui_temp matches 1013 run scoreboard players set $w.ct ui_temp 60
