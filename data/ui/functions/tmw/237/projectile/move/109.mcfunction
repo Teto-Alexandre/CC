@@ -6,12 +6,12 @@
 
 #
     scoreboard players set #success ui_temp 0
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~0.75 ~ ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.up
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.75 ~ ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.down
-    execute at @s[tag=!tmw237_reflected] unless block ~0.75 ~ ~ ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.east
-    execute at @s[tag=!tmw237_reflected] unless block ~-0.75 ~ ~ ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.west
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.75 ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.south
-    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.75 ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.north
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~0.75 ~ #ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.up
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~-0.75 ~ #ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.down
+    execute at @s[tag=!tmw237_reflected] unless block ~0.75 ~ ~ #ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.east
+    execute at @s[tag=!tmw237_reflected] unless block ~-0.75 ~ ~ #ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.west
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~0.75 #ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.south
+    execute at @s[tag=!tmw237_reflected] unless block ~ ~ ~-0.75 #ui:irreflectable store success score #success ui_temp run tag @s add tmw237_reflected.north
     #execute store result score $rotation_x ui_temp run data get entity @s Rotation.[0]
     #execute store result score $rotation_y ui_temp run data get entity @s Rotation.[1]
     #execute if score #success ui_temp matches 1 run tellraw @a [{"score":{"name":"$rotation_x","objective":"ui_temp"}},{"text":","},{"score":{"name":"$rotation_y","objective":"ui_temp"}}]
