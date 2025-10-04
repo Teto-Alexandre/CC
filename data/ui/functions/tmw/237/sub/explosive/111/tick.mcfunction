@@ -12,7 +12,6 @@
 # 常時実行
     execute if score @s ui_uses matches 2 run playsound block.lever.click player @a ~ ~ ~ 1 0.9 0
     execute if score @s ui_uses matches 2 run scoreboard players set @s ui_is 300
-    execute if score @s ui_uses matches 2 run scoreboard players set @s[tag=ui_237_thrown_by_module41] ui_is 450
     execute if score @s ui_uses matches 2 run playsound block.end_portal_frame.fill player @a ~ ~ ~ 2 0.8 0
     #execute if score @s ui_is matches 1.. run teleport @s ~ ~0.5 ~ ~ ~
     execute if score @s ui_is matches 1.. if score $team ui_temp matches 1 run particle dust 0.5 1 1 2 ~ ~0.5 ~ 0.3 0.3 0.3 0 1 force
@@ -31,6 +30,7 @@
     execute as @s[tag=ui_237_sub_stop] if score $time ui_temp matches 0 run scoreboard players remove @s ui_is 3
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run data merge entity @s {NoGravity:1b,Motion:[0.0d,0.0001d,0.0d]}
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run summon cow ~ ~ ~ {Tags:["ui_temp_this","tmw_237_sub_111_1","tmw_237_sub_mult","ui_temp_obj","tds_nolog","ui_temp_team"],NoAI:1b,active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:20000,show_particles:false}],DeathLootTable:"none",Attributes:[{Name:"generic.max_health",Base:1000}],Health:1000f,Silent:1}
+    execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first,tag=ui_237_thrown_by_module41] run effect give @e[tag=ui_temp_obj,tag=tmw_237_sub_111_1,limit=1,sort=nearest] resistance infinite 1 true
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run tag @s add ui_refd
     execute as @s[tag=ui_237_sub_stop,tag=!ui_237_sub_first] run tag @s add ui_237_sub_first
     #idコピー
