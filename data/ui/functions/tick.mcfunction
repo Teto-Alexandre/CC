@@ -44,6 +44,7 @@
 # モジュール適応時
     execute if score $module ui_world matches 1 if entity @a[scores={module=5}] run function ui:module/rainbow
     execute if score $module ui_world matches 1 as @a if score @s module matches 10 run tag @s add immune_water
+    execute if score $module ui_world matches 1 as @a if entity @a[scores={module=2}] if score @s module_temp matches 1.. run function ui:module/fatal
 
 # パーティーモード - リフレクター反射制限解除
     execute if score $ref_limit party_mode matches 1 run tag @s remove ui_refd
@@ -60,6 +61,8 @@
     execute as @a unless score @s armor = @s armor_old run function ui:template/stats/armor
     execute as @a if score @s energy_buff matches 1.. at @s run function ui:template/stats/energy/
     execute as @a if score @s ui_tmw237_energy_charge_time matches 1.. at @s run function ui:module/energy_charge/
+    execute as @e[scores={ui_hop_damage_ct=0..}] run scoreboard players remove @s ui_hop_damage_ct 1
+    execute as @e[scores={ui_hop_damage_ct=0..}] run scoreboard players reset @s[scores={ui_hop_damage_ct=..0}] ui_hop_damage_ct
 
 # Tickの最後にやることの予約: どんなscheduleよりも遅く実行されるようにここに配置
     schedule function ui:misc/last 1t append

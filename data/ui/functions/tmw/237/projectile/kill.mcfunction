@@ -1,7 +1,7 @@
 #魔法の弾を削除
 execute if entity @s[tag=Pierce] run tag @e[tag=tmw_237_pierce_hit,tag=tmw_237_hit_at_this_move] remove tmw_237_pierce_hit
 tag @s add ui_proj_common_nocol
-summon marker ~ ~ ~ {Tags:["tmw237_killeffect","ui_temp"]}
+summon marker ~ ~ ~ {Tags:["tmw237_killeffect","ui_temp"],data:{}}
 teleport @e[tag=ui_temp] ~ ~ ~ ~ ~
 scoreboard players operation $hpart ui_temp = @s ui_hpart
 execute if score @s ui_hpart matches ..1000 run scoreboard players set $hpart2 ui_temp 0
@@ -15,6 +15,7 @@ scoreboard players operation @e[tag=ui_temp] ui_id = @s ui_id
 scoreboard players operation @e[tag=ui_temp] ui_is = $hpart2 ui_temp
 execute if entity @s[tag=subdamage] run tag @e[tag=ui_temp] add subdamage
 execute if entity @s[tag=tmw237_has_bullet_data] run data modify entity @e[tag=ui_temp,limit=1] data.BulletData set from entity @s ArmorItems.[0].tag.BulletData
+data modify entity @e[tag=ui_temp,limit=1] data.DisplayName set from entity @s ArmorItems.[0].tag.display.Name
 execute if entity @s[tag=tmw237_has_bullet_data] run tag @e[tag=ui_temp,limit=1] add tmw237_has_bullet_data
 tag @e[tag=ui_temp] remove ui_temp
 scoreboard players set $Cache ui_temp 1

@@ -2,6 +2,9 @@
 
 # ダメージを与える
     scoreboard players operation $Attacker tds_dmg = $id ui_temp
+    execute if score $module ui_world matches 1 if entity @s[scores={module=8..9}] run scoreboard players operation $Attacker tds_dmg = @s ui_temp
+    tag @e[tag=ui_temp_team] remove ui_temp_team
+    execute as @e[predicate=ui:load_unhurtable] if score @s ui_team = $team ui_temp run tag @s add ui_temp_team
     #data modify storage ui:temp Name set value ""
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 60

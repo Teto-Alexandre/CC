@@ -37,6 +37,8 @@ scoreboard players reset @s ui_tmw237_energy_charge_count
 scoreboard players reset @s ui_tmw237_energy_charge_penalty
 scoreboard players reset @s ui_tmw237_energy_charge_time
 
+scoreboard players reset @s module_temp
+
 # 切削
 execute if score $gear_off party_mode matches 1 run tellraw @s [{"text":"> ","color": "gray"},{"text":"ギア読み込みは無効化されています","color": "gray"}]
 execute unless score $gear_off party_mode matches 1 if score $count ui_temp matches 1.. run function ui:tmw/243/core/gear_reader/1.burn

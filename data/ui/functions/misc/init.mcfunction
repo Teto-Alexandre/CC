@@ -13,6 +13,7 @@ scoreboard players set $life ui_world -1
     scoreboard objectives add party_mode dummy
     scoreboard objectives add unlock dummy
     scoreboard objectives add module dummy
+    scoreboard objectives add module_temp dummy
     scoreboard objectives add advancements dummy
     scoreboard players set $phase game_state 0
     scoreboard objectives add wool_count dummy
@@ -181,6 +182,7 @@ scoreboard players set $limited_weapon party_mode 0
     scoreboard objectives add ui_asiba_team dummy
     scoreboard objectives add ui_asiba_progress_blue dummy
     scoreboard objectives add ui_asiba_progress_yellow dummy
+    scoreboard objectives add ui_hop_damage_ct dummy
 
 ## 復活、ゲームモード関連
     #復活までの時間

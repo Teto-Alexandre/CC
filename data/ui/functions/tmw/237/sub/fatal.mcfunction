@@ -6,3 +6,5 @@ scoreboard players set $ink.sub ui_temp 0
 scoreboard players set $ink.sp ui_temp 0
 
 tag @s remove fatal_weapon
+
+scoreboard players set @s module_temp 1200

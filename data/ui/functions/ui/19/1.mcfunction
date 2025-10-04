@@ -7,19 +7,19 @@
 # 上のプレイヤーカウント
     scoreboard players set $temp ui_temp 0
     scoreboard players set $temp2 ui_temp 0
-    execute positioned ~-2 ~ ~-2 if entity @e[type=player,gamemode=!spectator,dx=3,dy=1,dz=3,scores={ui_team=1}] run scoreboard players add $temp ui_temp 1
-    execute positioned ~-2 ~ ~-2 if entity @e[type=player,gamemode=!spectator,dx=3,dy=1,dz=3,scores={ui_team=3}] run scoreboard players remove $temp ui_temp 1
-    execute positioned ~-2 ~ ~-2 if entity @e[type=player,gamemode=!spectator,dx=3,dy=1,dz=3] run scoreboard players add $temp2 ui_temp 1
+    execute positioned ~-2 ~-1 ~-2 if entity @e[type=player,gamemode=!spectator,dx=3,dy=4,dz=3,scores={ui_team=1}] run scoreboard players add $temp ui_temp 1
+    execute positioned ~-2 ~-1 ~-2 if entity @e[type=player,gamemode=!spectator,dx=3,dy=4,dz=3,scores={ui_team=3}] run scoreboard players remove $temp ui_temp 1
+    execute positioned ~-2 ~-1 ~-2 if entity @e[type=player,gamemode=!spectator,dx=3,dy=4,dz=3] run scoreboard players add $temp2 ui_temp 1
     execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run playsound block.note_block.snare block @a ~ ~ ~ 1 0.5 1
-    execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run tellraw @a [{"text":"青チームがアシバを確保！","color": "aqua"}]
+    #execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run tellraw @a [{"text":"青チームがアシバを確保！","color": "aqua"}]
     execute if score $temp ui_temp matches 1 if score @s ui_asiba_team matches ..0 run team join blue @s
     execute if score $temp ui_temp matches 1 run scoreboard players set @s ui_asiba_team 1
     execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run playsound block.note_block.snare block @a ~ ~ ~ 1 1 1
-    execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run tellraw @a [{"text":"アシバが停止！","color": "white"}]
+    #execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run tellraw @a [{"text":"アシバが停止！","color": "white"}]
     execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. unless score @s ui_asiba_team matches 0 run team leave @s
     execute if score $temp ui_temp matches 0 if score $temp2 ui_temp matches 1.. run scoreboard players set @s ui_asiba_team 0
     execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run playsound block.note_block.snare block @a ~ ~ ~ 1 1 1
-    execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run tellraw @a [{"text":"黄チームがアシバを確保！","color": "yellow"}]
+    #execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run tellraw @a [{"text":"黄チームがアシバを確保！","color": "yellow"}]
     execute if score $temp ui_temp matches -1 if score @s ui_asiba_team matches 0.. run team join yellow @s
     execute if score $temp ui_temp matches -1 run scoreboard players set @s ui_asiba_team -1
 

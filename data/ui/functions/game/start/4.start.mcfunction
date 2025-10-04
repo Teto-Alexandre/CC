@@ -141,6 +141,8 @@ execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 a
 
 # ガチアシバ
 execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run function ui:ui/19/nofunc/start
+execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 40 run function ui:ui/19/nofunc/start
+execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 41 run function ui:ui/19/nofunc/start
 
 execute as @a[tag=!spectate] at @s run spawnpoint @s ~ ~ ~
 

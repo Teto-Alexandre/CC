@@ -4,3 +4,5 @@ function tds:attack
 
 data modify storage ui:temp Effect set value [{id:"glowing",duration:160,amplifier:0b},{id:"fire_resistance",duration:160,amplifier:0b}]
 function ui:tmw/237/misc/giveeffect/
+
+scoreboard players set @s ui_hop_damage_ct 2

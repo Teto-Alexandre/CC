@@ -6,5 +6,7 @@ execute if score $bursttype ui_temp matches 12 run scoreboard players add $multi
 #tellraw @a [{"text":"[Recycle] Burst:"},{"score":{"objective":"ui_temp","name":"$burst"}}]
 
 function ui:tmw/237/changed/core
-particle minecraft:wax_on ~ ~1 ~ 0.6 0.4 0.6 1 8
-playsound minecraft:entity.fishing_bobber.retrieve player @s ~ ~ ~ 1 0 0
+particle minecraft:wax_on ~ ~1 ~ 0.6 0.4 0.6 1 10
+particle minecraft:electric_spark ~ ~1 ~ 0.6 0.4 0.6 1 10
+particle minecraft:flash ~ ~1 ~ 0 0 0 0 0
+playsound entity.zombie.attack_iron_door player @s ~ ~ ~ 1.5 0.8 0

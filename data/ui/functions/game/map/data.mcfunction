@@ -48,3 +48,10 @@ data modify storage ui:map maps append value {ID:37,upper:[-108,52,163],downer:[
 data modify storage ui:map maps append value {ID:38,upper:[-277,42,39],downer:[-323,30,-39],blue:[-298,43,37],yellow:[-302,43,-37],color:2,Area:true}
 # -243 37 309 -290 30 210   :   -250 37 216 -283 37 303
 data modify storage ui:map maps append value {ID:39,upper:[-243,37,309],downer:[-290,30,210],blue:[-250,37,216],yellow:[-283,37,303],color:2}
+
+# アシバ-4vの高低差すごいアレ
+data modify storage ui:map maps append value {ID:40,upper:[171,47,295],downer:[119,31,205],blue:[144,46,202],yellow:[146,46,298],color:2,Asiba:true}
+data modify storage ui:map maps append value {ID:41,upper:[114,60,298],downer:[44,33,206],blue:[102,61,209],yellow:[56,61,295],color:2,Asiba:true}
+
+ #33 39 
+#data modify storage ui:map maps append value {ID:42,upper:[225,39,403],downer:[151,33,303],blue:[102,61,209],yellow:[56,61,295],color:2,Asiba:true}

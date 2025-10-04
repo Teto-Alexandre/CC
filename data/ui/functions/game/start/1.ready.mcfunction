@@ -16,13 +16,6 @@ execute store result score $map ui_world run data get storage ui:map map.ID
 execute store result score $default_color ui_temp run data get storage ui:map map.color
 function ui:game/map/core_tp
 
-# ガチアシバ
-execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run summon bat -117 32 0 {Silent:1b,NoAI:1b,Tags:["ui_egg","ui_19"]}
-execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 30 -1 -19 33 -28 light_blue_concrete replace white_concrete
-execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 30 -1 -19 33 -28 light_blue_concrete replace yellow_concrete
-execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 30 1 -19 33 28 yellow_concrete replace white_concrete
-execute if data storage ui:map {mode:"Asiba"} if score $map ui_world matches 33 run fill -117 30 1 -19 33 28 yellow_concrete replace light_blue_concrete
-
 # レイドボス
 execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 run spreadplayers -188 -175 1 25 under 40 false @a[scores={ui_team=1}]
 execute if data storage ui:map {mode:"Boss"} if score $map ui_world matches 34 as @a[scores={ui_team=1}] positioned -188 30 -175 facing entity @s eyes rotated ~180 ~ positioned as @s run teleport @s ~ ~ ~ ~ ~

@@ -1,5 +1,6 @@
 #見た目
     data modify storage ui:temp Name set value '{"text":"爆風","color":"gray"}'
+    execute if data entity @s data.DisplayName run data modify storage ui:temp Name set from entity @s data.DisplayName
     function ui:template/sphere_particle/4.5
     scoreboard players set $damage_type ui_temp 3
     scoreboard players set $damage ui_temp 30
