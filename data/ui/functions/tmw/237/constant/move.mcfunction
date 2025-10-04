@@ -3,6 +3,7 @@
 # チャージキープ
     execute if score $ishold ui_temp matches 2.. run function ui:tmw/237/constant/charge_cancel
     execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run function ui:tmw/237/burst/burst11.mode_2_to_1
+    execute if score $bursttype ui_temp matches 11 if score $shotmode ui_temp matches 2 run scoreboard players set $shottime ui_temp 0
     execute if score $bursttype ui_temp matches 12 if score $multibullet ui_temp matches 1.. run function ui:tmw/237/constant/charge_cancel
     execute if score @s ui_tmw237_speedcover matches 1.. run scoreboard players remove @s ui_tmw237_speedcover 1
     execute if score @s ui_tmw237_speedcover matches 1.. run effect give @s glowing 1 0 false
