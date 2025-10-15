@@ -92,5 +92,5 @@
     execute if score $activator ui_temp matches 259 run playsound item.goat_horn.sound.2 player @a ~ ~ ~ 2 1 0
     execute if score $activator ui_temp matches 259 run particle firework ~ ~ ~ 5 5 5 0.02 20 force
     execute if score $activator ui_temp matches 259 run particle lava ~ ~ ~ 5 5 5 0.02 20 force
-    execute if score $activator ui_temp matches 259 run data modify storage ui:temp Effect set value [{id:"instant_health",duration:20,amplifier:1b},{id:"resistance",duration:160,amplifier:2b},{id:"luck",duration:160,amplifier:0b,show_particles:0b}]
+    execute if score $activator ui_temp matches 259 run data modify storage ui:temp Effect set value [{id:"instant_health",duration:20,amplifier:3b},{id:"resistance",duration:160,amplifier:2b},{id:"luck",duration:160,amplifier:0b,show_particles:0b}]
     execute if score $activator ui_temp matches 259 run function ui:tmw/237/misc/giveeffect/

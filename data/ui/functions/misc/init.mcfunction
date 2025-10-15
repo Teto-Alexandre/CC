@@ -316,37 +316,37 @@ scoreboard players set $limited_weapon party_mode 0
     team add blue
     team modify blue color aqua
     team modify blue friendlyFire false
-    team modify blue collisionRule always
+    team modify blue collisionRule pushOwnTeam
     team modify blue nametagVisibility hideForOtherTeams
     team modify blue seeFriendlyInvisibles false
     team add red
     team modify red color light_purple
     team modify red friendlyFire false
-    team modify red collisionRule always
+    team modify red collisionRule pushOwnTeam
     team modify red nametagVisibility hideForOtherTeams
     team modify red seeFriendlyInvisibles false
     team add yellow
     team modify yellow color yellow
     team modify yellow friendlyFire false
-    team modify yellow collisionRule always
+    team modify yellow collisionRule pushOwnTeam
     team modify yellow nametagVisibility hideForOtherTeams
     team modify yellow seeFriendlyInvisibles false
     team add green
     team modify green color green
     team modify green friendlyFire false
-    team modify green collisionRule always
+    team modify green collisionRule pushOwnTeam
     team modify green nametagVisibility hideForOtherTeams
     team modify green seeFriendlyInvisibles false
     team add chaos
     team modify chaos color red
     team modify chaos friendlyFire false
-    team modify chaos collisionRule always
+    team modify chaos collisionRule pushOwnTeam
     team modify chaos nametagVisibility hideForOtherTeams
     team modify chaos seeFriendlyInvisibles false
     team add spectate
     team modify spectate color gray
     team modify spectate friendlyFire false
-    team modify spectate collisionRule always
+    team modify spectate collisionRule pushOwnTeam
     team modify spectate nametagVisibility hideForOtherTeams
     team modify spectate seeFriendlyInvisibles false
     team add rainbow

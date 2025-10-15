@@ -1,5 +1,10 @@
 # ポイズン
 
+# 設置数上限デストロイ
+    scoreboard players set $count ui_temp 0
+    execute as @e[tag=tmw_237_sub,tag=!ui_237_sub_explode] if score @s ui_id = $id ui_temp run scoreboard players add $count ui_temp 1
+    execute if score $count ui_temp matches 3.. run function ui:tmw/237/sub/explosive/mult_lim.ex
+
 # 常時実行
     scoreboard players operation $temp ui_temp = @s ui_team
     execute as @a unless score @s ui_team = $temp ui_temp run tag @s add ui_temp_temp_team

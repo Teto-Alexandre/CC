@@ -1,3 +1,5 @@
+execute as @e[tag=tmw_237_sub] if score @s ui_id = $victim_id ui_id run tag @s add ui_237_sub_explode
+
 gamerule showDeathMessages false
 scoreboard players set $Lethal tds_dmg 1
 scoreboard players reset @s tds_recent_attacked_by
