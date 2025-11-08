@@ -20,9 +20,9 @@ execute if score $rand ui_calc1 matches 15 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 16 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 202
 execute if score $rand ui_calc1 matches 17 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 301
 execute if score $rand ui_calc1 matches 18 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 401
-execute if score $rand ui_calc1 matches 19 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 402
+execute if score $rand ui_calc1 matches 19 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 207
 execute if score $rand ui_calc1 matches 20 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 206
-execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 404
+execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 208
 execute if score $rand ui_calc1 matches 22 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 405
 execute if score $rand ui_calc1 matches 23 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 203
 execute if score $rand ui_calc1 matches 24 run data modify storage ui:common input.Item.tag.tmw.gun.SubType set value 117
@@ -54,9 +54,9 @@ execute if score $rand ui_calc1 matches 15 run data modify storage ui:common inp
 execute if score $rand ui_calc1 matches 16 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ハイジャンプ"
 execute if score $rand ui_calc1 matches 17 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "トラップ"
 execute if score $rand ui_calc1 matches 18 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ブロードソード"
-execute if score $rand ui_calc1 matches 19 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ヘルハウンド"
+execute if score $rand ui_calc1 matches 19 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ヘルハウンドQ"
 execute if score $rand ui_calc1 matches 20 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ラインマーカー"
-execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ブーメラン"
+execute if score $rand ui_calc1 matches 21 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ブーメランQ"
 execute if score $rand ui_calc1 matches 22 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "ペネトレイター"
 execute if score $rand ui_calc1 matches 23 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "スライド"
 execute if score $rand ui_calc1 matches 24 run data modify storage ui:common input.Item.tag.tmw.gun.SubName set value "チョコレートボムB"

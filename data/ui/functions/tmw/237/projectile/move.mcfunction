@@ -13,10 +13,7 @@
     execute if score $sub464 ui_temp matches 1 run function ui:tmw/237/projectile/inkvac
 
 # 貫通リセット
-    execute if entity @s[tag=Pierce,tag=tmw_237_pierce_attacked,tag=!tmw_237_pierce_unattacked] run tag @s remove tmw_237_pierce_attacked
-    execute if entity @e[tag=tmw_237_pierce_hit,tag=!tmw_237_pierce_unhit] run tag @e[tag=tmw_237_pierce_hit,tag=!tmw_237_pierce_unhit] remove tmw_237_pierce_hit
-    tag @s[tag=tmw_237_pierce_unattacked] remove tmw_237_pierce_unattacked
-    tag @e[tag=tmw_237_pierce_unhit] remove tmw_237_pierce_unhit
+    execute if entity @s[tag=Pierce] run function ui:tmw/237/projectile/move_pierce
 
 # 塗り値を初期化
     scoreboard players set $paint ui_temp 0
@@ -80,15 +77,12 @@
     execute if score @s ui_bpart matches 115 run function ui:tmw/237/projectile/move/115
     #キューインキ
     execute if score @s ui_bpart matches 116 run function ui:tmw/237/projectile/move/116
-    #execute unless score @s ui_bpart matches 104 unless score @s ui_bpart matches 13 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
-    #execute if score @s ui_bpart matches 104 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
-    #execute if score @s ui_bpart matches 13 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint.total ui_temp
-    execute unless score @s ui_bpart matches 104 unless score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run function ui:tmw/237/misc/player_paint
-    execute if score @s ui_bpart matches 104 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
-    execute if score @s ui_bpart matches 113 as @a if score @s ui_id = $id ui_temp run scoreboard players operation @s ui_s_paint += $paint ui_temp
+    #槍
+    execute if score @s ui_bpart matches 117 run function ui:tmw/237/projectile/move/117/
+    execute if score $paint ui_temp matches 1.. run function ui:tmw/237/misc/player_paint
 
 # タグ除去
-    tag @e[tag=tmw_237_hit_at_this_move] remove tmw_237_hit_at_this_move
+    execute if entity @e[tag=tmw_237_hit_at_this_move] run tag @e[tag=tmw_237_hit_at_this_move] remove tmw_237_hit_at_this_move
 
 # 移動値が無くなるまで繰り返す
     execute as @s[scores={ui_temp=10..},tag=!ui_proj_common_nocol,tag=!ui_proj_common_hit,tag=!ui_temp_col] if score @s ui_br_temp < @s ui_br at @s run function ui:tmw/237/projectile/move

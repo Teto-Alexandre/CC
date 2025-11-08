@@ -31,6 +31,8 @@ execute if score $type ui_temp matches 203 run scoreboard players set $w.ink ui_
 execute if score $type ui_temp matches 204 run scoreboard players set $w.ink ui_temp 50
 execute if score $type ui_temp matches 205 run scoreboard players set $w.ink ui_temp 400
 execute if score $type ui_temp matches 206 run scoreboard players set $w.ink ui_temp 300
+execute if score $type ui_temp matches 207 run scoreboard players set $w.ink ui_temp 600
+execute if score $type ui_temp matches 208 run scoreboard players set $w.ink ui_temp 400
 execute if score $type ui_temp matches 301 run scoreboard players set $w.ink ui_temp 600
 execute if score $type ui_temp matches 399 run scoreboard players set $w.ink ui_temp 500
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ink ui_temp 700
@@ -93,6 +95,8 @@ execute if score $type ui_temp matches 119 run scoreboard players set $w.ct ui_t
 execute if score $type ui_temp matches 121 run scoreboard players set $w.ct ui_temp 6
 execute if score $type ui_temp matches 203 run scoreboard players set $w.ct ui_temp 0
 execute if score $type ui_temp matches 205 run scoreboard players set $w.ct ui_temp 10
+execute if score $type ui_temp matches 207 run scoreboard players set $w.ct ui_temp 5
+execute if score $type ui_temp matches 208 run scoreboard players set $w.ct ui_temp 8
 execute if score $type ui_temp matches 401 run scoreboard players set $w.ct ui_temp 3
 execute if score $type ui_temp matches 405 run scoreboard players set $w.ct ui_temp 6
 execute if score $type ui_temp matches 151 run scoreboard players set $w.ct ui_temp 10
@@ -162,6 +166,8 @@ execute if score $type ui_temp matches 203 run data modify storage ui:temp temp.
 execute if score $type ui_temp matches 204 run data modify storage ui:temp temp.Name set value " - SUB:サーキュレーター"
 execute if score $type ui_temp matches 205 run data modify storage ui:temp temp.Name set value " - SUB:スピードカバー"
 execute if score $type ui_temp matches 206 run data modify storage ui:temp temp.Name set value " - SUB:ラインマーカー"
+execute if score $type ui_temp matches 207 run data modify storage ui:temp temp.Name set value " - SUB:ヘルハウンドQ"
+execute if score $type ui_temp matches 208 run data modify storage ui:temp temp.Name set value " - SUB:ブーメランQ"
 execute if score $type ui_temp matches 301 run data modify storage ui:temp temp.Name set value " - SUB:トラップ"
 execute if score $type ui_temp matches 351 run data modify storage ui:temp temp.Name set value " - SUB:メガホンレーザー"
 execute if score $type ui_temp matches 399 run data modify storage ui:temp temp.Name set value " - ELSE:ナイスダマの着弾部分"

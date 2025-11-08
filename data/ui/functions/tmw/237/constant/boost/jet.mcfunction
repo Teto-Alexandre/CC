@@ -3,6 +3,7 @@ scoreboard players add @s ui_tmw237_boost 1
 scoreboard players operation $boost ui_temp = @s ui_tmw237_boost
 scoreboard players remove $boost ui_temp 2
 
+execute if score $boost ui_temp matches 0 run scoreboard players set @s module_shot 0
 execute if score $boost ui_temp matches 0 run execute store result score $cooltime ui_temp run time query gametime
 execute if score $boost ui_temp matches 0 run scoreboard players add $cooltime ui_temp 20
 execute if score $boost ui_temp matches 0.. run scoreboard players remove $ink ui_temp 1

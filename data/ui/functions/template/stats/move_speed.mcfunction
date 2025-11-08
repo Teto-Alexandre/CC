@@ -2,8 +2,8 @@ scoreboard players operation $template ui_temp = @s move_speed
 scoreboard players operation $template ui_temp += @s wep_speed
 execute if entity @s[nbt={active_effects:[{id:"minecraft:poison"}]}] run scoreboard players set $template ui_temp 180
 execute if entity @s[nbt={active_effects:[{id:"minecraft:darkness"}]}] run scoreboard players set $template ui_temp 180
-execute if score @s shoot_speed matches 1.. run scoreboard players add $template ui_temp 200
-execute if score @s shoot_speed matches 1.. run scoreboard players operation $template ui_temp /= #2 ui_num
+execute if score @s ui_tmw237_speedcover matches 1.. run scoreboard players add $template ui_temp 200
+execute if score @s ui_tmw237_speedcover matches 1.. run scoreboard players operation $template ui_temp /= #2 ui_num
 scoreboard players remove $template ui_temp 100
 scoreboard players operation $template ui_temp *= #333 ui_num
 scoreboard players operation $template ui_temp /= #100 ui_num

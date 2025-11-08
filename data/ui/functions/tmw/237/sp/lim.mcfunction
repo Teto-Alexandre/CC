@@ -11,6 +11,7 @@ execute if score $sptype ui_temp matches 202 run scoreboard players set $quick_u
 execute if score $sptype ui_temp matches 203 run scoreboard players set $quick_use ui_temp 1
 
 #
+execute if score $module ui_world matches 1 if score @s module matches 60 run scoreboard players set $quick_use ui_temp 1
 execute if score $sub_quick party_mode matches 1 run scoreboard players set $quick_use ui_temp 1
 
 # クイック - スペシャルウェポン発動

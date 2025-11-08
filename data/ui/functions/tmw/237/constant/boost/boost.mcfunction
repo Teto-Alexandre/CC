@@ -12,6 +12,7 @@
     execute if score $module ui_world matches 1 if score @s module matches 1 if score $boost ui_temp matches 181 run scoreboard players reset @s ui_tmw237_boost
 
 #
+    execute if score $boost ui_temp matches 0 run scoreboard players set @s module_shot 0
     execute if score $boost ui_temp matches 0 if entity @s[advancements={ui:add/basic/boost=false}] run advancement grant @s only ui:add/basic/boost
     execute if score $boost ui_temp matches 0 run execute store result score $cooltime ui_temp run time query gametime
     execute if score $boost ui_temp matches 0 run scoreboard players add $cooltime ui_temp 70

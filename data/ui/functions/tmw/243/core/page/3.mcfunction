@@ -9,6 +9,8 @@
     execute if score $slot ui_temp matches 4 run scoreboard players set $sub ui_temp 123
     execute if score $slot ui_temp matches 5 run scoreboard players set $sub ui_temp 122
     execute if score $slot ui_temp matches 6 run scoreboard players set $sub ui_temp 124
+    execute if score $slot ui_temp matches 11 run scoreboard players set $sub ui_temp 207
+    execute if score $slot ui_temp matches 12 run scoreboard players set $sub ui_temp 208
 
     execute if score $slot ui_temp matches 19 run scoreboard players set $page ui_temp 2
     execute if score $slot ui_temp matches 26 run scoreboard players set $page ui_temp 0
@@ -20,6 +22,8 @@
     execute if score $slot ui_temp matches 4 run data modify storage ui:gun temp.tmw.gun.SubName set value "フライングタレット"
     execute if score $slot ui_temp matches 5 run data modify storage ui:gun temp.tmw.gun.SubName set value "ハッキングボム"
     execute if score $slot ui_temp matches 6 run data modify storage ui:gun temp.tmw.gun.SubName set value "テレポートボム"
+    execute if score $slot ui_temp matches 11 run data modify storage ui:gun temp.tmw.gun.SubName set value "ヘルハウンドQ"
+    execute if score $slot ui_temp matches 12 run data modify storage ui:gun temp.tmw.gun.SubName set value "ブーメランQ"
 
 # 逆変換
     execute if score $changed ui_temp matches 1 run function ui:tmw/243/core/changed

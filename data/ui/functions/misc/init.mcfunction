@@ -14,6 +14,8 @@ scoreboard players set $life ui_world -1
     scoreboard objectives add unlock dummy
     scoreboard objectives add module dummy
     scoreboard objectives add module_temp dummy
+    scoreboard objectives add module_shot dummy
+    scoreboard objectives add module_killcount dummy
     scoreboard objectives add advancements dummy
     scoreboard players set $phase game_state 0
     scoreboard objectives add wool_count dummy

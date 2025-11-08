@@ -40,6 +40,8 @@
 
 # 新ラインマーカー
     execute if score $activator ui_temp matches 206 at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/237/activator/here/206
+    execute if score $activator ui_temp matches 207 at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/237/activator/here/207
+    execute if score $activator ui_temp matches 208 at @s anchored eyes positioned ^ ^ ^ run function ui:tmw/237/activator/here/208
 
 # ノヴァ
     execute if score $activator ui_temp matches 251 run playsound entity.wither.death player @a ~ ~ ~ 1 0.8 0

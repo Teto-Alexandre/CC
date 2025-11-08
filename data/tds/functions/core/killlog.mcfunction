@@ -23,6 +23,8 @@
 
 ## キルカウント
     scoreboard players add @a[tag=tds_tempa] ui_s_kill 1
+    scoreboard players add @a[tag=tds_tempa] module_killcount 1
+    execute as @a[tag=tds_tempa,scores={module=59,module_killcount=2..}] run function tds:core/module_kill/59
     scoreboard players add @a[tag=tds_tempa] ui_s_kill_streak 1
     scoreboard players operation @a[tag=tds_tempa] ui_r_kill_streak > @a[tag=tds_tempa] ui_s_kill_streak
     scoreboard players set @a[tag=tds_tempa] ui_s_kill_time 40

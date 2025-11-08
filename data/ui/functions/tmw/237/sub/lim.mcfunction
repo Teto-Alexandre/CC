@@ -14,6 +14,7 @@ execute unless entity @s[tag=drain] if score $subtype ui_temp matches 1013 run s
 
 #
 execute if score $sub_quick party_mode matches 1 run scoreboard players set $quick_use ui_temp 1
+execute if score $module ui_world matches 1 if score @s module matches 60 run scoreboard players set $quick_use ui_temp 1
 
 # クイック - サブウェポン２発動
 execute if score $quick_use ui_temp matches 1 if score $success ui_temp matches 0 if score $qf ui_temp matches 1..2 if score $ink ui_temp < $ink.sub ui_temp run function ui:tmw/237/sub/fail_lim

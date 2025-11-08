@@ -3,6 +3,8 @@
     ##. -1:スペシャル(sp) -2:サブ(sub)
 
 # -1,-2.装備型サブスペを発動中なら最優先で適応する
+    execute if score @s module_shot matches 1.. if score @s module_temp matches ..0 run function ui:tmw/237/constant/boost/shot2
+    execute if score @s module_shot matches 1.. if score @s module_temp matches 1.. if score $burst ui_temp matches 0 if score $cooltime ui_temp matches 0 as @s[scores={ui_use1=1..}] run function ui:tmw/237/basetype/module
     execute if score $subtype ui_temp matches 401..500 if score $subtime ui_temp matches 1.. run function ui:tmw/237/basetype/sub
     execute if score $sptype ui_temp matches 401..500 if score $sptime ui_temp matches 1.. run function ui:tmw/237/basetype/sp
     execute if score $fusion_plus party_mode matches 1 if score $subtime ui_temp matches 1.. run function ui:tmw/237/basetype/sub
@@ -24,3 +26,6 @@
 # 4.チャージ&パルス型なら0入力でct増加開始とホールドON、1以上でmain射撃を読み込み
     #チャージ時間の記録値をnow内部に持つ
     execute if score $basetype ui_temp matches 5 run function ui:tmw/237/basetype/5
+
+# モジュール射撃状態なら条件が整ってない時何も起こさない
+    execute if score @s module_shot matches 1.. run scoreboard players set $basetype ui_temp -3

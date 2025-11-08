@@ -71,9 +71,9 @@ item replace entity @s enderchest.17 with arrow{display:{Name:'{"text":"次の�
 #execute if score $slot ui_temp matches 17 run scoreboard players set @s module_page 3
 
 item replace entity @s enderchest.19 with player_head{display:{Name:'{"text":"スペランカー","color":"yellow","italic":false}',Lore:['[{"text":"体力が1に固定され、地形ダメージでも死に至る","color":"gray","italic":false}]','[{"text":"全てのギアの効力が3倍になる","color":"gray","italic":false}]','[{"text":"一種類につき9個分までしか効果がない","color":"gray","italic":false}]']},ui:{ismenu:1}}
-item replace entity @s enderchest.20 with paper{display:{Name:'{"text":"インク銀行券","color":"yellow","italic":false}',Lore:['[{"text":"定額返済率 2%/秒","color":"gray","italic":false}]','[{"text":"あなたのインク回復で返済できます","color":"gray","italic":false}]','[{"text":"メイン武器のインク消費を代替する","color":"blue","italic":false}]','[{"text":"メインインク消費が10%増える","color":"red","italic":false}]']},ui:{ismenu:1}}
-item replace entity @s enderchest.21 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
-item replace entity @s enderchest.22 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
+item replace entity @s enderchest.20 with paper{display:{Name:'{"text":"インク銀行券","color":"dark_red","italic":false}',Lore:['[{"text":"定額返済率 2%/秒","color":"gray","italic":false}]','[{"text":"あなたのインク回復で返済できます","color":"gray","italic":false}]','[{"text":"メイン武器のインク消費を代替する","color":"blue","italic":false}]','[{"text":"メインインク消費が10%増える","color":"red","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.21 with carrot_on_a_stick{CustomModelData:110876,display:{Name:'{"text":"インクスピア","color":"gold","italic":false,"bold":true}',Lore:['[{"text":"武装型モジュール","color":"gray","italic":false}]','[{"text":"2キルで補充されるインクの槍を打ち出す","color":"gray","italic":false}]','[{"text":"壁や敵に当たるとインクを撒き散らして爆発","color":"gray","italic":false}]','[{"text":"最大4本まで","color":"blue","italic":false}]']},ui:{ismenu:1}}
+item replace entity @s enderchest.22 with golden_sword{display:{Name:'{"text":"クイックパーティ","color":"green","italic":true,"bold":true}',Lore:['[{"text":"サブとスペシャルがとても","color":"gray","italic":false},{"text":"クイック","color":"green","italic":true,"bold":true},{"text":"になり","color":"gray","italic":false}]','[{"text":"武器のクールタイムを無視して発動できる","color":"gray","italic":false}]']},ui:{ismenu:1},HideFlags:255}
 item replace entity @s enderchest.23 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.24 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
 item replace entity @s enderchest.25 with gray_stained_glass_pane{CustomModelData:120001,display:{Name:'{"text":""}'},ui:{ismenu:1}}
@@ -82,6 +82,7 @@ execute if score $slot ui_temp matches 19 run scoreboard players set @s module 5
 execute if score $slot ui_temp matches 19 run scoreboard players set @s health -199
 execute if score $slot ui_temp matches 20 run scoreboard players set @s module 58
 execute if score $slot ui_temp matches 21 run scoreboard players set @s module 59
+execute if score $slot ui_temp matches 21 run scoreboard players set @s module_temp 4
 execute if score $slot ui_temp matches 22 run scoreboard players set @s module 60
 execute if score $slot ui_temp matches 23 run scoreboard players set @s module 61
 execute if score $slot ui_temp matches 24 run scoreboard players set @s module 62

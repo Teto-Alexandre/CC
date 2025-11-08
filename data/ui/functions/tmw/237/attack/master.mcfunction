@@ -11,3 +11,4 @@
     execute if score $basetype ui_temp matches -1 run function ui:tmw/237/attack/sp
     scoreboard players set $deathmessage ui_temp 0
     execute if score $basetype ui_temp matches -2 run function ui:tmw/237/attack/sub
+    execute if score $basetype ui_temp matches -3 run function ui:tmw/237/attack/module
